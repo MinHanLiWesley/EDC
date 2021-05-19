@@ -1,0 +1,16 @@
+            Experiment name: 0320_FPC_lowparam_norm
+            Training Data: training_data_FPC_cracking_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            ncpus = 8
+        

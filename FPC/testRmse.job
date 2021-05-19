@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+#PBS -l select=1:ncpus=10:mpiprocs=1:ompthreads=10
+#PBS -q workq
+#PBS -j oe
+source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
+cd /home/wesley/EDC/FPC/ML
+echo "=========================================================="
+echo "Starting on : $(date)"
+echo "Running on node : $(hostname)"
+echo "Current directory : $(pwd)"
+echo "Current job ID : $PBS_JOBID"
+echo "=========================================================="
+
+START_TIME=$SECONDS
+
+NAME='0201_mseAdam'
+
+# --data training_dataV4_15_5_50.csv
+
+mkdir /home/wesley/EDC/FPC/ML/results/$NAME
+
+python  -u -m ML_model --name $NAME  --batch 100  --no_train   |tee /home/wesley/EDC/FPC/ML/results/$NAME/test2.log
+
+
+ELAPSED_TIME=$(($SECONDS - $START_TIME))
+echo "$(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"
+echo "Job Ended at $(date)"
+echo '======================================================='
+
+conda deactivate

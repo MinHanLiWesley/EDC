@@ -1,0 +1,86 @@
+training_dataV3_10_5_20.csv
+            Experiment name: 0126_batch90
+            Training Data: training_dataV3_10_5_20.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.009473002611731772 
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.005348263232601046 
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.003361009973596122 
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.0036307777787213816 
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.003050609783389404 
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.003519907371360505 
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.0035896208961895973 
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.003643365244504108 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.002743709419146026 
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.0022191002538751907 
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.0035229621795327478 
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.0025034861562690408 
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.0022592187340520543 
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.0019036167703754762 
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.001858249983417982 
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.0018995329394820206 
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.0017192757741381077 
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.001533204264395389 
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.001552293990681684 
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.0016342008917964639 
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.0017012037804449139 
+['/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_0.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_125.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_250.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_375.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_500.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_625.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_750.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_875.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1000.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1125.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1250.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1375.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1500.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1625.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1750.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1875.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2000.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2125.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2250.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2375.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2500.000000_mass_36_temp_322_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_0.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_125.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_250.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_375.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_500.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_625.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_750.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_875.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1000.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1125.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1250.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1375.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1500.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1625.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1750.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_1875.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2000.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2125.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2250.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2375.000000_mass_36_temp_320_20.png', '/home/wesley/EDC/FPC/ML/results/0126_batch90/plots/predict/CCl4_2500.000000_mass_36_temp_320_20.png']

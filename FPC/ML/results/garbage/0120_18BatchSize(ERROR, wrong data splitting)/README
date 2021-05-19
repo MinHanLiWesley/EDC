@@ -1,0 +1,2 @@
+Batchsize: 128->18
+Data Splitting: random->group spltting

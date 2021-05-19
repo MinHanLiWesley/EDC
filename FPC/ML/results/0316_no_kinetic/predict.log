@@ -1,0 +1,3435 @@
+training_dataV3_10_5_20.csv
+            Experiment name: 0316_no_kinetic
+            Training Data: training_dataV3_10_5_20.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06767475505665234 
+loss in 0.001: 0.07237468861399035 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06581367026862686 
+cracking 0.001
+loss in 0.001: 0.06976917255060427 
+loss in 0.001: 0.06698284740774296 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06573937796264985 
+cracking 0.001
+loss in 0.001: 0.06763635873401296 
+cracking 0.001
+loss in 0.001: 0.06689475703865846 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06813810634165123 
+loss in 0.001: 0.07298761930089527 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07051568753645998 
+cracking 0.001
+loss in 0.001: 0.06621275585856373 
+loss in 0.001: 0.06590259338507305 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06709606477059321 
+cracking 0.001
+loss in 0.001: 0.06802646492649908 
+cracking 0.001
+loss in 0.001: 0.06635558486548729 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06677738793544641 
+loss in 0.001: 0.073527799803952 
+cracking 0.001cracking 0.001
+
+loss in 0.001: 0.0666658644999272 
+loss in 0.001: 0.06712290649736578 
+loss in 0.001: 0.06647723402706797 
+loss in 0.001: 0.07114754603294812 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06843142675951235 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06541734697189076 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07389991532193323 
+loss in 0.001: 0.06541867050053857 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06728911473198455 
+cracking 0.001
+loss in 0.001: 0.07177504794208114 
+cracking 0.001
+loss in 0.001: 0.06674866477397143 
+cracking 0.001
+loss in 0.001: 0.06712136004723054 
+cracking 0.001
+loss in 0.001: 0.06904825670748098 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06536658842046644 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07429483904569818 
+cracking 0.001
+loss in 0.001: 0.07559390899778425 
+cracking 0.001
+loss in 0.001: 0.07364106023114095 
+cracking 0.001
+loss in 0.001: 0.06952710203474266 
+cracking 0.001
+loss in 0.001: 0.051639500317858286 
+loss in 0.001: 0.06258896210355476 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.043308521490017834 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.034090170533023656 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07468926166485657 
+cracking 0.001
+loss in 0.001: 0.07526519868319854 
+cracking 0.001
+loss in 0.001: 0.07262421116958573 
+cracking 0.001
+loss in 0.001: 0.06916286104105289 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0594774386248898 
+cracking 0.001
+loss in 0.001: 0.0413361972906175 
+cracking 0.001
+loss in 0.001: 0.04930369817344522 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0325247444073059 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07503454156149955 
+cracking 0.001
+loss in 0.001: 0.07485751369427047 
+cracking 0.001
+loss in 0.001: 0.07159892425136145 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.06803158768286298 
+cracking 0.001
+loss in 0.001: 0.047327283654979915 
+cracking 0.001
+loss in 0.001: 0.056558511625935795 
+cracking 0.001
+loss in 0.001: 0.03938689765223915 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.031054696454687846 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07539471211932912 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07407368810382903 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07051212289499023 
+cracking 0.001
+loss in 0.001: 0.06557423782862802 
+cracking 0.001
+loss in 0.001: 0.045304218603262336 
+cracking 0.001
+loss in 0.001: 0.05417952726904716 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03656733189296127 
+cracking 0.001
+loss in 0.001: 0.029281124999429645 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.027377929876384263 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02286190460002888 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.022279670024476565 
+cracking 0.001
+loss in 0.001: 0.021242062353280897 
+cracking 0.001
+loss in 0.001: 0.024115517241181446 
+cracking 0.001
+loss in 0.001: 0.02878700985864797 
+cracking 0.001
+loss in 0.001: 0.0338169590320286 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03801542669606436 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02603656992899656 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02261334307179433 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021981076608450556 
+cracking 0.001
+loss in 0.001: 0.025246946332455233 
+cracking 0.001
+loss in 0.001: 0.030096243641407644 
+cracking 0.001
+loss in 0.001: 0.021327540169828553 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03497476699857119 
+cracking 0.001
+loss in 0.001: 0.039045253604773 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02473991143340211 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.022534255748819017 
+cracking 0.001
+loss in 0.001: 0.021845594617365377 
+cracking 0.001
+loss in 0.001: 0.026385525314886336 
+cracking 0.001
+loss in 0.001: 0.031212556521481815 
+cracking 0.001
+loss in 0.001: 0.03606995414795749 
+cracking 0.001
+loss in 0.001: 0.022129767969710896 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0399857605275941 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.023291735158464385 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021508997971446776 
+loss in 0.001: 0.022473703540380367 
+loss in 0.001: 0.027615237475057255 
+loss in 0.001: 0.032410581772624625 
+loss in 0.001: 0.03705967775107413 
+loss in 0.001: 0.023053888037490134 
+loss in 0.001: 0.0409554316193448 
+loss in 0.001: 0.04193880470474404 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.043079294394569055 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.04423333624833352 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.04527802591667728 
+Error in 45.0 mass flow rate is 0.067675 
+Error in 45.37373737373738 mass flow rate is 0.068138 
+Error in 45.74747474747475 mass flow rate is 0.066777 
+Error in 46.121212121212125 mass flow rate is 0.065419 
+Error in 46.494949494949495 mass flow rate is 0.065739 
+Error in 46.86868686868687 mass flow rate is 0.065903 
+Error in 47.24242424242424 mass flow rate is 0.066666 
+Error in 47.61616161616162 mass flow rate is 0.067121 
+Error in 47.98989898989899 mass flow rate is 0.066895 
+Error in 48.36363636363637 mass flow rate is 0.066356 
+Error in 48.73737373737374 mass flow rate is 0.065417 
+Error in 49.111111111111114 mass flow rate is 0.065367 
+Error in 49.484848484848484 mass flow rate is 0.065814 
+Error in 49.85858585858586 mass flow rate is 0.066213 
+Error in 50.23232323232323 mass flow rate is 0.066477 
+Error in 50.60606060606061 mass flow rate is 0.066749 
+Error in 50.97979797979798 mass flow rate is 0.066983 
+Error in 51.35353535353536 mass flow rate is 0.067096 
+Error in 51.72727272727273 mass flow rate is 0.067123 
+Error in 52.101010101010104 mass flow rate is 0.067289 
+Error in 52.474747474747474 mass flow rate is 0.067636 
+Error in 52.84848484848485 mass flow rate is 0.068026 
+Error in 53.22222222222222 mass flow rate is 0.068431 
+Error in 53.5959595959596 mass flow rate is 0.069048 
+Error in 53.96969696969697 mass flow rate is 0.069769 
+Error in 54.343434343434346 mass flow rate is 0.070516 
+Error in 54.717171717171716 mass flow rate is 0.071148 
+Error in 55.09090909090909 mass flow rate is 0.071775 
+Error in 55.464646464646464 mass flow rate is 0.072375 
+Error in 55.83838383838384 mass flow rate is 0.072988 
+Error in 56.21212121212121 mass flow rate is 0.073528 
+Error in 56.58585858585859 mass flow rate is 0.073900 
+Error in 56.95959595959596 mass flow rate is 0.074295 
+Error in 57.333333333333336 mass flow rate is 0.074689 
+Error in 57.707070707070706 mass flow rate is 0.075035 
+Error in 58.08080808080808 mass flow rate is 0.075395 
+Error in 58.45454545454545 mass flow rate is 0.075594 
+Error in 58.82828282828283 mass flow rate is 0.075265 
+Error in 59.2020202020202 mass flow rate is 0.074858 
+Error in 59.57575757575758 mass flow rate is 0.074074 
+Error in 59.94949494949495 mass flow rate is 0.073641 
+Error in 60.323232323232325 mass flow rate is 0.072624 
+Error in 60.696969696969695 mass flow rate is 0.071599 
+Error in 61.07070707070707 mass flow rate is 0.070512 
+Error in 61.44444444444444 mass flow rate is 0.069527 
+Error in 61.81818181818182 mass flow rate is 0.069163 
+Error in 62.1919191919192 mass flow rate is 0.068032 
+Error in 62.56565656565657 mass flow rate is 0.065574 
+Error in 62.93939393939394 mass flow rate is 0.062589 
+Error in 63.313131313131315 mass flow rate is 0.059477 
+Error in 63.68686868686869 mass flow rate is 0.056559 
+Error in 64.06060606060606 mass flow rate is 0.054180 
+Error in 64.43434343434343 mass flow rate is 0.051640 
+Error in 64.8080808080808 mass flow rate is 0.049304 
+Error in 65.18181818181819 mass flow rate is 0.047327 
+Error in 65.55555555555556 mass flow rate is 0.045304 
+Error in 65.92929292929293 mass flow rate is 0.043309 
+Error in 66.30303030303031 mass flow rate is 0.041336 
+Error in 66.67676767676768 mass flow rate is 0.039387 
+Error in 67.05050505050505 mass flow rate is 0.036567 
+Error in 67.42424242424242 mass flow rate is 0.034090 
+Error in 67.79797979797979 mass flow rate is 0.032525 
+Error in 68.17171717171718 mass flow rate is 0.031055 
+Error in 68.54545454545455 mass flow rate is 0.029281 
+Error in 68.91919191919192 mass flow rate is 0.027378 
+Error in 69.2929292929293 mass flow rate is 0.026037 
+Error in 69.66666666666667 mass flow rate is 0.024740 
+Error in 70.04040404040404 mass flow rate is 0.023292 
+Error in 70.41414141414141 mass flow rate is 0.022862 
+Error in 70.78787878787878 mass flow rate is 0.022613 
+Error in 71.16161616161617 mass flow rate is 0.022534 
+Error in 71.53535353535354 mass flow rate is 0.022474 
+Error in 71.9090909090909 mass flow rate is 0.022280 
+Error in 72.28282828282829 mass flow rate is 0.021981 
+Error in 72.65656565656566 mass flow rate is 0.021846 
+Error in 73.03030303030303 mass flow rate is 0.021509 
+Error in 73.4040404040404 mass flow rate is 0.021242 
+Error in 73.77777777777777 mass flow rate is 0.021328 
+Error in 74.15151515151516 mass flow rate is 0.022130 
+Error in 74.52525252525253 mass flow rate is 0.023054 
+Error in 74.8989898989899 mass flow rate is 0.024116 
+Error in 75.27272727272728 mass flow rate is 0.025247 
+Error in 75.64646464646465 mass flow rate is 0.026386 
+Error in 76.02020202020202 mass flow rate is 0.027615 
+Error in 76.39393939393939 mass flow rate is 0.028787 
+Error in 76.76767676767676 mass flow rate is 0.030096 
+Error in 77.14141414141415 mass flow rate is 0.031213 
+Error in 77.51515151515152 mass flow rate is 0.032411 
+Error in 77.88888888888889 mass flow rate is 0.033817 
+Error in 78.26262626262627 mass flow rate is 0.034975 
+Error in 78.63636363636364 mass flow rate is 0.036070 
+Error in 79.01010101010101 mass flow rate is 0.037060 
+Error in 79.3838383838384 mass flow rate is 0.038015 
+Error in 79.75757575757575 mass flow rate is 0.039045 
+Error in 80.13131313131314 mass flow rate is 0.039986 
+Error in 80.5050505050505 mass flow rate is 0.040955 
+Error in 80.87878787878788 mass flow rate is 0.041939 
+Error in 81.25252525252526 mass flow rate is 0.043079 
+Error in 81.62626262626263 mass flow rate is 0.044233 
+Error in 82.0 mass flow rate is 0.045278 
+Mass flow rate generalization takes 4.433972938855489 min 26.038376331329346 sec.
+Case2: CCl4 concentration...
+cracking 0.0003846153846153846
+cracking 0.000641025641025641
+cracking 0.0cracking 0.0005128205128205128
+
+cracking 0.0007692307692307692
+cracking 0.0002564102564102564
+cracking 0.0001282051282051282
+cracking 0.0008974358974358974
+cracking 0.0
+cracking 0.0005128205128205128
+cracking 0.0002564102564102564
+cracking 0.0001282051282051282
+cracking 0.0003846153846153846
+cracking 0.0007692307692307692
+cracking 0.000641025641025641
+cracking 0.0008974358974358974
+loss in 0.0005128205128205128: 0.02073530990147333 
+cracking 0.0005769230769230769
+loss in 0.0002564102564102564: 0.02270880896769842 
+cracking 0.0003205128205128205
+loss in 0.0003846153846153846: 0.02085172310411411 
+cracking 0.0004487179487179487
+loss in 0.0007692307692307692: 0.020408031238029426 
+loss in 0.000641025641025641: 0.019218274738263583 
+cracking 0.0008333333333333334
+cracking 0.0007051282051282051
+loss in 0.0008974358974358974: 0.021480202935034127 
+cracking 0.0009615384615384616
+loss in 0.0001282051282051282: 0.024598477458735838 
+cracking 0.0001923076923076923
+loss in 0.0: 0.03995740589003247 
+cracking 6.41025641025641e-05
+cracking 0.0005769230769230769
+cracking 0.0004487179487179487
+cracking 0.0008333333333333334
+cracking 0.0007051282051282051
+cracking 0.0003205128205128205
+cracking 0.0009615384615384616
+cracking 0.0001923076923076923
+cracking 6.41025641025641e-05
+loss in 0.0005769230769230769: 0.019954140697215312 
+cracking 0.0010256410256410256
+loss in 0.0004487179487179487: 0.02148271025575953 
+cracking 0.0011538461538461537
+loss in 0.0007051282051282051: 0.01974008531763861 
+cracking 0.001282051282051282
+loss in 0.0008333333333333334: 0.0209629640906817 
+cracking 0.0014102564102564101
+loss in 0.0003205128205128205: 0.020866078303111834 
+cracking 0.0015384615384615385
+loss in 0.0001923076923076923: 0.025623365267501114 
+cracking 0.0016666666666666668
+loss in 0.0009615384615384616: 0.02195961487360282 
+loss in 6.41025641025641e-05: 0.025152294941287536 
+cracking 0.0017948717948717949
+cracking 0.0019230769230769232
+cracking 0.0010256410256410256
+cracking 0.0011538461538461537
+cracking 0.001282051282051282
+cracking 0.0015384615384615385
+cracking 0.0014102564102564101
+cracking 0.0016666666666666668
+cracking 0.0017948717948717949
+cracking 0.0019230769230769232
+loss in 0.0010256410256410256: 0.022377140516389466 
+cracking 0.00108974358974359
+loss in 0.0011538461538461537: 0.02301065595568389 
+cracking 0.001217948717948718
+loss in 0.0015384615384615385: 0.024758210755328657 
+cracking 0.0016025641025641025
+loss in 0.0014102564102564101: 0.024013506727012985 
+cracking 0.0014743589743589744
+loss in 0.001282051282051282: 0.023473381367459464 
+cracking 0.001346153846153846
+loss in 0.0016666666666666668: 0.02548446779037582 
+cracking 0.0017307692307692308
+loss in 0.0017948717948717949: 0.02632960867285236 
+cracking 0.001858974358974359
+cracking 0.00108974358974359
+loss in 0.0019230769230769232: 0.02731502981762353 
+cracking 0.0019871794871794872
+cracking 0.001217948717948718
+cracking 0.0016025641025641025
+cracking 0.0014743589743589744
+cracking 0.001346153846153846
+cracking 0.0017307692307692308
+cracking 0.001858974358974359
+cracking 0.0019871794871794872
+loss in 0.00108974358974359: 0.02274983340637042 
+cracking 0.0020512820512820513
+loss in 0.001217948717948718: 0.023204194565411885 
+cracking 0.00217948717948718
+loss in 0.001346153846153846: 0.02372426044746996 
+cracking 0.0023076923076923075
+loss in 0.0016025641025641025: 0.025118001245833105 
+loss in 0.0014743589743589744: 0.024367137551040613 
+cracking 0.002435897435897436
+loss in 0.0017307692307692308: 0.025894286077876617 
+loss in 0.001858974358974359: 0.02680011913883315 
+cracking 0.0020512820512820513
+loss in 0.0019871794871794872: 0.02792380022161786 
+cracking 0.00217948717948718
+cracking 0.0023076923076923075
+cracking 0.002435897435897436
+loss in 0.0020512820512820513: 0.028565385656080647 
+cracking 0.0021153846153846153
+loss in 0.0023076923076923075: 0.03152000568546204 
+cracking 0.0023717948717948715
+loss in 0.00217948717948718: 0.029958153579908713 
+cracking 0.002243589743589744
+cracking 0.0021153846153846153
+loss in 0.002435897435897436: 0.0330866025676275 
+cracking 0.0025
+cracking 0.0023717948717948715
+cracking 0.002243589743589744
+cracking 0.0025
+loss in 0.0021153846153846153: 0.02925860772511967 
+loss in 0.0023717948717948715: 0.03231891369855241 
+loss in 0.002243589743589744: 0.030750677012101445 
+loss in 0.0025: 0.03374821351972044 
+Error in concentration in 0.0ppm is 0.039957 
+Error in concentration in 64.1025641025641ppm is 0.025152 
+Error in concentration in 128.2051282051282ppm is 0.024598 
+Error in concentration in 192.30769230769232ppm is 0.025623 
+Error in concentration in 256.4102564102564ppm is 0.022709 
+Error in concentration in 320.5128205128205ppm is 0.020866 
+Error in concentration in 384.61538461538464ppm is 0.020852 
+Error in concentration in 448.71794871794873ppm is 0.021483 
+Error in concentration in 512.8205128205128ppm is 0.020735 
+Error in concentration in 576.9230769230769ppm is 0.019954 
+Error in concentration in 641.025641025641ppm is 0.019218 
+Error in concentration in 705.1282051282051ppm is 0.019740 
+Error in concentration in 769.2307692307693ppm is 0.020408 
+Error in concentration in 833.3333333333334ppm is 0.020963 
+Error in concentration in 897.4358974358975ppm is 0.021480 
+Error in concentration in 961.5384615384615ppm is 0.021960 
+Error in concentration in 1025.6410256410256ppm is 0.022377 
+Error in concentration in 1089.7435897435898ppm is 0.022750 
+Error in concentration in 1153.8461538461538ppm is 0.023011 
+Error in concentration in 1217.948717948718ppm is 0.023204 
+Error in concentration in 1282.051282051282ppm is 0.023473 
+Error in concentration in 1346.1538461538462ppm is 0.023724 
+Error in concentration in 1410.2564102564102ppm is 0.024014 
+Error in concentration in 1474.3589743589744ppm is 0.024367 
+Error in concentration in 1538.4615384615386ppm is 0.024758 
+Error in concentration in 1602.5641025641025ppm is 0.025118 
+Error in concentration in 1666.6666666666667ppm is 0.025484 
+Error in concentration in 1730.7692307692307ppm is 0.025894 
+Error in concentration in 1794.871794871795ppm is 0.026330 
+Error in concentration in 1858.974358974359ppm is 0.026800 
+Error in concentration in 1923.076923076923ppm is 0.027315 
+Error in concentration in 1987.179487179487ppm is 0.027924 
+Error in concentration in 2051.2820512820513ppm is 0.028565 
+Error in concentration in 2115.3846153846152ppm is 0.029259 
+Error in concentration in 2179.4871794871797ppm is 0.029958 
+Error in concentration in 2243.5897435897436ppm is 0.030751 
+Error in concentration in 2307.6923076923076ppm is 0.031520 
+Error in concentration in 2371.7948717948716ppm is 0.032319 
+Error in concentration in 2435.897435897436ppm is 0.033087 
+Error in concentration in 2500.0ppm is 0.033748 
+CCl4 concentration generalization takes 1.802808113892873 min 48.16848683357239 sec.
+Case3: Initial pressure...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.025551883361774812 
+loss in 0.001: 0.02175520656506713 
+cracking 0.001
+loss in 0.001: 0.022510514794868985 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02397165685435188 
+cracking 0.001
+loss in 0.001: 0.030077865558372618 
+cracking 0.001
+loss in 0.001: 0.021814418598036685 
+cracking 0.001
+loss in 0.001: 0.021540959849649998 
+cracking 0.001
+loss in 0.001: 0.025904088838411613 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.027398220868289743 
+loss in 0.001: 0.028960742153457505 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.030260508144225505 
+cracking 0.001
+loss in 0.001: 0.032135663253716265 
+loss in 0.001: 0.030688156324672484 
+cracking 0.001
+loss in 0.001: 0.03134623380672653 
+loss in 0.001: 0.03169412175914425 
+loss in 0.001: 0.03330263559916056 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03374947306244882 
+loss in 0.001: 0.03458169947868181 
+loss in 0.001: 0.033570743243758173 
+loss in 0.001: 0.03176239182187363 
+Error in 10.4atm is 0.030078 
+Error in 10.610526315789475atm is 0.025904 
+Error in 10.821052631578947atm is 0.021755 
+Error in 11.031578947368422atm is 0.021814 
+Error in 11.242105263157896atm is 0.021541 
+Error in 11.452631578947368atm is 0.022511 
+Error in 11.663157894736843atm is 0.023972 
+Error in 11.873684210526315atm is 0.025552 
+Error in 12.08421052631579atm is 0.027398 
+Error in 12.294736842105264atm is 0.028961 
+Error in 12.505263157894737atm is 0.030261 
+Error in 12.715789473684211atm is 0.030688 
+Error in 12.926315789473684atm is 0.031346 
+Error in 13.136842105263158atm is 0.031694 
+Error in 13.347368421052632atm is 0.032136 
+Error in 13.557894736842105atm is 0.033303 
+Error in 13.76842105263158atm is 0.033749 
+Error in 13.978947368421053atm is 0.034582 
+Error in 14.189473684210526atm is 0.033571 
+Error in 14.4atm is 0.031762 
+Initial pressure generalization takes 0.9118810057640075 min 54.712860345840454 sec.
+Case4: Number of tubes...
+cracking 0.001cracking 0.001cracking 0.001
+
+
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005474137930232164 
+cracking 0.001
+loss in 0.001: 0.007915561390919446 
+cracking 0.001
+loss in 0.001: 0.008637198447353955 
+loss in 0.001: 0.008982740345944889 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008660470722160536 
+cracking 0.001
+loss in 0.001: 0.010981817433661905 
+cracking 0.001
+loss in 0.001: 0.009175876611700488 
+cracking 0.001
+loss in 0.001: 0.009913424185639726 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013126218185919159 
+cracking 0.001
+loss in 0.001: 0.008320371613111962 
+cracking 0.001
+loss in 0.001: 0.013051672907267614 
+cracking 0.001
+loss in 0.001: 0.006735481907243668 
+cracking 0.001
+loss in 0.001: 0.0051523667165002205 
+loss in 0.001: 0.007974250097989856 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00933352154796832 
+cracking 0.001
+loss in 0.001: 0.009151687904518894 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008296142334652099 
+cracking 0.001
+loss in 0.001: 0.009007138423140878 
+cracking 0.001
+loss in 0.001: 0.0073695013048650825 
+cracking 0.001
+loss in 0.001: 0.009293682358951323 
+cracking 0.001
+loss in 0.001: 0.009441389308543201 
+cracking 0.001
+loss in 0.001: 0.011823496572413645 
+cracking 0.001
+loss in 0.001: 0.007163469121078179 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00658787863699317 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006902103529133833 
+cracking 0.001
+loss in 0.001: 0.006087949873741974 
+cracking 0.001
+loss in 0.001: 0.007351438735389482 
+cracking 0.001
+loss in 0.001: 0.008411613121022435 
+cracking 0.001
+loss in 0.001: 0.01019756696026451 
+cracking 0.001
+loss in 0.001: 0.006845452853199831 
+cracking 0.001
+loss in 0.001: 0.006481450641417506 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008134167416895039 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007361461522564345 
+cracking 0.001
+loss in 0.001: 0.008578075365729928 
+cracking 0.001
+loss in 0.001: 0.009504405912589402 
+cracking 0.001
+loss in 0.001: 0.008063111083444348 
+cracking 0.001
+loss in 0.001: 0.009889075838541697 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010797903724501071 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01274799740344621 
+cracking 0.001
+loss in 0.001: 0.006608046131468786 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008128797311667857 
+cracking 0.001
+loss in 0.001: 0.007994705252243673 
+cracking 0.001
+loss in 0.001: 0.00994334861757109 
+cracking 0.001
+loss in 0.001: 0.009942222701552051 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008189564960420889 
+cracking 0.001
+loss in 0.001: 0.0097239750504541 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007515353880860582 
+cracking 0.001
+loss in 0.001: 0.007470856881597976 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00963303072026318 
+cracking 0.001
+loss in 0.001: 0.00844183185473542 
+cracking 0.001
+loss in 0.001: 0.009978048025742082 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0099545013609322 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012865205082794295 
+cracking 0.001
+loss in 0.001: 0.007171306395225395 
+loss in 0.001: 0.0119494417668029 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010896375756870767 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009348471565801231 
+cracking 0.001
+loss in 0.001: 0.011241764886279699 
+cracking 0.001
+loss in 0.001: 0.005133243726351007 
+cracking 0.001
+loss in 0.001: 0.013030551178156213 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008191463816674165 
+cracking 0.001
+loss in 0.001: 0.011314621424114414 
+cracking 0.001
+loss in 0.001: 0.011141319453052348 
+loss in 0.001: 0.00823629204628744 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008071144968734633 
+cracking 0.001
+loss in 0.001: 0.008377138683508367 
+cracking 0.001
+loss in 0.001: 0.008904181706731537 
+cracking 0.001
+loss in 0.001: 0.008360943526937666 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008052480624232815 
+cracking 0.001
+loss in 0.001: 0.008966332948873886 
+cracking 0.001
+loss in 0.001: 0.009742186462265441 
+cracking 0.001
+loss in 0.001: 0.007648046091894742 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009422586857024372 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0089934968471779 
+cracking 0.001
+loss in 0.001: 0.010491365678366171 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00885371145017216 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009012707533839173 
+loss in 0.001: 0.008488215021346819 
+loss in 0.001: 0.009797445873564565 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010200339560671413 
+cracking 0.001
+loss in 0.001: 0.008115430322173317 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010566682271275258 
+cracking 0.001
+loss in 0.001: 0.006476958856451246 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007115832586345223 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007512346824438479 
+cracking 0.001
+loss in 0.001: 0.008744433999412583 
+cracking 0.001
+loss in 0.001: 0.011834200107567269 
+loss in 0.001: 0.007762051076011921 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006822573679969871 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008923853315230549 
+loss in 0.001: 0.009383167578405464 
+cracking 0.001
+loss in 0.001: 0.007258510514312368 
+loss in 0.001: 0.006903269604581041 
+loss in 0.001: 0.011235935958278724 
+loss in 0.001: 0.008220693798952183 
+loss in 0.001: 0.005704270151234845 
+loss in 0.001: 0.00920694774260058 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008399968592209879 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009274984861230361 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010758649394046728 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007767735808540304 
+cracking 0.001
+loss in 0.001: 0.01019821843345518 
+cracking 0.001
+loss in 0.001: 0.0064095312692057215 
+cracking 0.001
+loss in 0.001: 0.005878554597352157 
+cracking 0.001
+loss in 0.001: 0.010523684443454903 
+cracking 0.001
+loss in 0.001: 0.007629682800925661 
+cracking 0.001
+loss in 0.001: 0.00805158474939012 
+cracking 0.001
+loss in 0.001: 0.00949354673460588 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007402348725675238 
+cracking 0.001
+loss in 0.001: 0.00852065451880217 
+cracking 0.001
+loss in 0.001: 0.007951811087286874 
+cracking 0.001
+loss in 0.001: 0.00673709554502281 
+cracking 0.001
+loss in 0.001: 0.008880455576326458 
+loss in 0.001: 0.007210630835262775 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006054796611381525 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0068540041188083975 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006451008944674034 
+cracking 0.001
+loss in 0.001: 0.007454725064821046 
+cracking 0.001
+loss in 0.001: 0.0074553385206759595 
+cracking 0.001
+loss in 0.001: 0.008766216724710266 
+cracking 0.001
+loss in 0.001: 0.01193508797063068 
+cracking 0.001
+loss in 0.001: 0.008669883167314995 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012614544285131174 
+cracking 0.001
+loss in 0.001: 0.006065222273574548 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00972642211563612 
+cracking 0.001
+loss in 0.001: 0.007504473945800007 
+cracking 0.001
+loss in 0.001: 0.006946504468434373 
+cracking 0.001
+loss in 0.001: 0.008439216397150975 
+cracking 0.001
+loss in 0.001: 0.009215621858453052 
+loss in 0.001: 0.011680493953486639 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007177821215426214 
+cracking 0.001
+loss in 0.001: 0.013830571465300284 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013032567032319507 
+cracking 0.001
+loss in 0.001: 0.008311777295955804 
+cracking 0.001
+loss in 0.001: 0.006071964510008071 
+cracking 0.001
+loss in 0.001: 0.008280729151205746 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005766260939752589 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006631906219526328 
+cracking 0.001
+loss in 0.001: 0.008183664260028757 
+cracking 0.001
+loss in 0.001: 0.0076779351078033655 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012855455120380636 
+cracking 0.001
+loss in 0.001: 0.009446469028559798 
+cracking 0.001
+loss in 0.001: 0.010610214547352614 
+loss in 0.001: 0.010577280793151383 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006713721215085894 
+cracking 0.001
+loss in 0.001: 0.00975760039886057 
+cracking 0.001
+loss in 0.001: 0.005375465062472561 
+cracking 0.001
+loss in 0.001: 0.005678479345015372 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007086073279618594 
+cracking 0.001
+loss in 0.001: 0.0072435442353971525 
+cracking 0.001
+loss in 0.001: 0.008019940754914993 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0048175690519459665 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008203217568073295 
+cracking 0.001
+loss in 0.001: 0.0043076070288480635 
+cracking 0.001
+loss in 0.001: 0.006440837328176296 
+cracking 0.001
+loss in 0.001: 0.005971162528183338 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0043818517430483294 
+cracking 0.001
+loss in 0.001: 0.006761575920210965 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00722472831307312 
+cracking 0.001
+loss in 0.001: 0.005785705223262976 
+cracking 0.001
+loss in 0.001: 0.0069298355028378274 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011322105877567192 
+cracking 0.001
+loss in 0.001: 0.00956954948546586 
+cracking 0.001
+loss in 0.001: 0.010354035762210516 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006493400085768598 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005866076964105072 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007456997801794556 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006971476402552725 
+cracking 0.001
+loss in 0.001: 0.005574487435560168 
+cracking 0.001
+loss in 0.001: 0.007191538687145732 
+cracking 0.001
+loss in 0.001: 0.00862050101275221 
+cracking 0.001
+loss in 0.001: 0.006604318489281003 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007326697535979487 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007410904949919162 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006065185737100987 
+cracking 0.001
+loss in 0.001: 0.006305737572316596 
+cracking 0.001
+loss in 0.001: 0.005428285737916854 
+cracking 0.001
+loss in 0.001: 0.009290287916845566 
+cracking 0.001
+loss in 0.001: 0.011459822166288498 
+cracking 0.001
+loss in 0.001: 0.006185268900607707 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008821382655273319 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010123894727681585 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007360113761218972 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011103638072220753 
+cracking 0.001
+loss in 0.001: 0.008317423414624632 
+cracking 0.001
+loss in 0.001: 0.008675896261111916 
+cracking 0.001
+loss in 0.001: 0.010036159611199396 
+cracking 0.001
+loss in 0.001: 0.007991714137612856 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007011106875072322 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006186897376033182 
+cracking 0.001
+loss in 0.001: 0.005495898498708924 
+loss in 0.001: 0.005442204529276711 
+loss in 0.001: 0.0055033085971070185 
+loss in 0.001: 0.009958947865530674 
+loss in 0.001: 0.009910703032420799 
+loss in 0.001: 0.011191018777646018 
+loss in 0.001: 0.007319700400663934 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009699078372567742 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00836453215725698 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0076753981386449965 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007667203956981905 
+cracking 0.001
+loss in 0.001: 0.010158115008750936 
+loss in 0.001: 0.010960687684860379 
+cracking 0.001
+loss in 0.001: 0.010116548940196937 
+cracking 0.001
+loss in 0.001: 0.00572617744398074 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008432948726278653 
+cracking 0.001
+loss in 0.001: 0.009720278762265094 
+cracking 0.001
+loss in 0.001: 0.006627241236259709 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0060876688194107355 
+loss in 0.001: 0.006919192315855447 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008829922966171088 
+loss in 0.001: 0.00590493013676045 
+loss in 0.001: 0.009371090143910464 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007013682130828221 
+cracking 0.001
+loss in 0.001: 0.0097511561308004 
+cracking 0.001
+loss in 0.001: 0.00688968166055084 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012655462841580102 
+cracking 0.001
+loss in 0.001: 0.008966710288030543 
+cracking 0.001
+loss in 0.001: 0.006952756985706086 
+cracking 0.001
+loss in 0.001: 0.004772205981374123 
+cracking 0.001
+loss in 0.001: 0.007081664613980612 
+loss in 0.001: 0.010355664310064629 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007899104317626957 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006274860454240085 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008723445997236724 
+cracking 0.001
+loss in 0.001: 0.009865604367598056 
+cracking 0.001
+loss in 0.001: 0.004837840487468414 
+cracking 0.001
+loss in 0.001: 0.005761824986624722 
+cracking 0.001
+loss in 0.001: 0.006674432847310478 
+cracking 0.001
+loss in 0.001: 0.008717151074546563 
+loss in 0.001: 0.008508099588054052 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0058127274610186574 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01537771531707712 
+cracking 0.001
+loss in 0.001: 0.007226477902001883 
+cracking 0.001
+loss in 0.001: 0.008579273954525518 
+cracking 0.001
+loss in 0.001: 0.005550185540197223 
+cracking 0.001
+loss in 0.001: 0.009714300028740555 
+cracking 0.001
+loss in 0.001: 0.009991721072903878 
+cracking 0.001
+loss in 0.001: 0.007772758095041482 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007904020175840331 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00812921231532392 
+cracking 0.001
+loss in 0.001: 0.00587506109781754 
+cracking 0.001
+loss in 0.001: 0.00645175807318935 
+cracking 0.001
+loss in 0.001: 0.0072521138840223156 
+cracking 0.001
+loss in 0.001: 0.012210724641722475 
+cracking 0.001
+loss in 0.001: 0.00598731586080899 
+cracking 0.001
+loss in 0.001: 0.007373276665534854 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009712396426787848 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011782415705918158 
+cracking 0.001
+loss in 0.001: 0.007389141752322481 
+cracking 0.001
+loss in 0.001: 0.006036319860792607 
+cracking 0.001
+loss in 0.001: 0.009692706826520408 
+cracking 0.001
+loss in 0.001: 0.010564532092266916 
+cracking 0.001
+loss in 0.001: 0.01105101323494324 
+cracking 0.001
+loss in 0.001: 0.007542488214659047 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005115128356678416 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.004001190715473959 
+cracking 0.001
+loss in 0.001: 0.009917205835908821 
+cracking 0.001
+loss in 0.001: 0.01040466182884396 
+cracking 0.001
+loss in 0.001: 0.007211743401462893 
+cracking 0.001
+loss in 0.001: 0.014633600196788188 
+cracking 0.001
+loss in 0.001: 0.00870175992952488 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007301826347129428 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00519755144233421 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011952549193964017 
+cracking 0.001
+loss in 0.001: 0.01398825278120606 
+cracking 0.001
+loss in 0.001: 0.010170944436335696 
+cracking 0.001
+loss in 0.001: 0.013737996258828508 
+cracking 0.001
+loss in 0.001: 0.015303060101760368 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010903427469071657 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005530923203728785 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.004849018718216796 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00855247147737759 
+cracking 0.001
+loss in 0.001: 0.008512758710721586 
+loss in 0.001: 0.011558979501238624 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0073323387548994215 
+cracking 0.001
+loss in 0.001: 0.0070625741861014965 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008494959115541678 
+loss in 0.001: 0.00931633397918225 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00428815513027273 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00683795784389059 
+cracking 0.001
+loss in 0.001: 0.006429486224002766 
+cracking 0.001
+loss in 0.001: 0.008781309983134575 
+cracking 0.001
+loss in 0.001: 0.013442306444951715 
+cracking 0.001
+loss in 0.001: 0.007127858514803455 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007946259578059504 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007053780135177684 
+cracking 0.001
+loss in 0.001: 0.009461640274822531 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007507361722488123 
+cracking 0.001
+loss in 0.001: 0.00977100358046969 
+loss in 0.001: 0.01054512819198899 
+loss in 0.001: 0.01047203091503178 
+cracking 0.001
+loss in 0.001: 0.008131425003436289 
+loss in 0.001: 0.00509735236646324 
+loss in 0.001: 0.007144750216364679 
+loss in 0.001: 0.00682921927693849 
+loss in 0.001: 0.0069060934063898335 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.014765123204278507 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006321223309975881 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007473071313703028 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009197307359579807 
+cracking 0.001
+loss in 0.001: 0.004766644560385861 
+loss in 0.001: 0.010033124923104353 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01023897097220652 
+cracking 0.001
+loss in 0.001: 0.008246601176236715 
+loss in 0.001: 0.007689268926026703 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00589348326932589 
+cracking 0.001
+loss in 0.001: 0.011897762665129881 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013721360510171858 
+cracking 0.001
+loss in 0.001: 0.00865425413971182 
+cracking 0.001
+loss in 0.001: 0.008365351569990149 
+cracking 0.001
+loss in 0.001: 0.008840883314775162 
+cracking 0.001
+loss in 0.001: 0.011216461136023896 
+cracking 0.001
+loss in 0.001: 0.01013785119653322 
+cracking 0.001
+loss in 0.001: 0.007187635972236301 
+cracking 0.001
+loss in 0.001: 0.011069168511436177 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009648513906508198 
+cracking 0.001
+loss in 0.001: 0.009955377560548971 
+cracking 0.001
+loss in 0.001: 0.014351919523609556 
+cracking 0.001
+loss in 0.001: 0.01409011243940188 
+cracking 0.001
+loss in 0.001: 0.010068388391580156 
+loss in 0.001: 0.006834686838646362 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.004702302703125803 
+cracking 0.001
+loss in 0.001: 0.007626159169605829 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006430458543339892 
+cracking 0.001
+loss in 0.001: 0.011082785541079339 
+cracking 0.001
+loss in 0.001: 0.0036029653866104486 
+cracking 0.001
+loss in 0.001: 0.006452934546408353 
+cracking 0.001
+loss in 0.001: 0.014861765546903914 
+cracking 0.001
+loss in 0.001: 0.006627135510804425 
+cracking 0.001
+loss in 0.001: 0.00801678955276445 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006100834481050229 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006659082138792518 
+cracking 0.001
+loss in 0.001: 0.005226149005843514 
+cracking 0.001
+loss in 0.001: 0.007442093763389071 
+cracking 0.001
+loss in 0.001: 0.005426919135022824 
+loss in 0.001: 0.012997934054970718 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005329769461470665 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006824130246028649 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007379193046953602 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008745422015085286 
+cracking 0.001
+loss in 0.001: 0.015261886540194622 
+cracking 0.001
+loss in 0.001: 0.004913050576149757 
+cracking 0.001
+loss in 0.001: 0.015781994062198483 
+cracking 0.001
+loss in 0.001: 0.016051092639110472 
+cracking 0.001
+loss in 0.001: 0.004571277229022246 
+cracking 0.001
+loss in 0.001: 0.006702991106008686 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015444748342363541 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015570661554207478 
+cracking 0.001
+loss in 0.001: 0.009034101332819035 
+cracking 0.001
+loss in 0.001: 0.00882730026430447 
+cracking 0.001
+loss in 0.001: 0.0055791406236328275 
+cracking 0.001
+loss in 0.001: 0.006155208506713839 
+loss in 0.001: 0.006633172110731301 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005269260290176501 
+cracking 0.001
+loss in 0.001: 0.010434730478610868 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012366739233242094 
+cracking 0.001
+loss in 0.001: 0.010396564373921417 
+cracking 0.001
+loss in 0.001: 0.010947717066488331 
+cracking 0.001
+loss in 0.001: 0.009009190166887063 
+cracking 0.001
+loss in 0.001: 0.01983129905869264 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005791199029388481 
+loss in 0.001: 0.007653239203250736 
+loss in 0.001: 0.005910614694513485 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00769161654953492 
+cracking 0.001
+loss in 0.001: 0.00937880068166257 
+cracking 0.001
+loss in 0.001: 0.005916173994434496 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005519735696081106 
+cracking 0.001
+loss in 0.001: 0.011013347322210541 
+cracking 0.001
+loss in 0.001: 0.007498890932008984 
+cracking 0.001
+loss in 0.001: 0.00798777989986825 
+loss in 0.001: 0.007838764501195765 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011357070547691875 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005813295955862409 
+loss in 0.001: 0.010236643477875293 
+loss in 0.001: 0.005018900324226551 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008371842403803424 
+cracking 0.001
+loss in 0.001: 0.009940686970914662 
+cracking 0.001
+loss in 0.001: 0.010157981534940316 
+cracking 0.001
+loss in 0.001: 0.005310062362799693 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006683084406416677 
+cracking 0.001
+loss in 0.001: 0.009552498950369769 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010907056225592468 
+cracking 0.001
+loss in 0.001: 0.008282534853228558 
+cracking 0.001
+loss in 0.001: 0.008005639091112002 
+cracking 0.001
+loss in 0.001: 0.007769678297962165 
+cracking 0.001
+loss in 0.001: 0.008581762381590974 
+cracking 0.001
+loss in 0.001: 0.010199455392030165 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00779071549638778 
+cracking 0.001
+loss in 0.001: 0.005911283117081495 
+cracking 0.001
+loss in 0.001: 0.01178488586906527 
+loss in 0.001: 0.005798728850111626 
+loss in 0.001: 0.0062338012411615 
+loss in 0.001: 0.0066626260197566 
+loss in 0.001: 0.005666826673407628 
+loss in 0.001: 0.008750116296012436 
+loss in 0.001: 0.00798797543273352 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013170286605280425 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005531596363014247 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008310405145259917 
+cracking 0.001cracking 0.001
+
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015219268791526831 
+loss in 0.001: 0.006442476892838294 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009264318097943895 
+loss in 0.001: 0.017811725262572634 
+loss in 0.001: 0.015173860229229336 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009748433750664132 
+cracking 0.001
+loss in 0.001: 0.008199695051586166 
+loss in 0.001: 0.010601824589204993 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013003518996690383 
+cracking 0.001
+loss in 0.001: 0.007475598775342175 
+cracking 0.001
+loss in 0.001: 0.021027558735312223 
+cracking 0.001
+loss in 0.001: 0.005109779687060897 
+cracking 0.001
+loss in 0.001: 0.00840329349168648 
+loss in 0.001: 0.009102159789431335 
+cracking 0.001
+loss in 0.001: 0.014370869445918491 
+loss in 0.001: 0.007893386619134874 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005488892714556537 
+cracking 0.001
+loss in 0.001: 0.00849245836549932 
+cracking 0.001
+loss in 0.001: 0.007887413231083171 
+cracking 0.001
+loss in 0.001: 0.014776691430065858 
+cracking 0.001
+loss in 0.001: 0.015319326122193578 
+cracking 0.001
+loss in 0.001: 0.005612997175125219 
+cracking 0.001
+loss in 0.001: 0.011610112201647208 
+cracking 0.001
+loss in 0.001: 0.013313955778304007 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011821706809366478 
+cracking 0.001
+loss in 0.001: 0.01005428534600617 
+cracking 0.001
+loss in 0.001: 0.012056265778059247 
+cracking 0.001
+loss in 0.001: 0.01380825706610053 
+cracking 0.001
+loss in 0.001: 0.008533077283379212 
+cracking 0.001
+loss in 0.001: 0.015886996612453148 
+cracking 0.001
+loss in 0.001: 0.010490627404236983 
+cracking 0.001
+loss in 0.001: 0.01327939569341961 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01704098768329987 
+cracking 0.001
+loss in 0.001: 0.00652013008750565 
+cracking 0.001
+loss in 0.001: 0.008625687175368015 
+loss in 0.001: 0.011939768288217608 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008796217665428357 
+cracking 0.001
+loss in 0.001: 0.0056577410152963865 
+cracking 0.001
+loss in 0.001: 0.004768885401028197 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01657819017853029 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018610930684350466 
+cracking 0.001
+loss in 0.001: 0.007536268907554582 
+cracking 0.001
+loss in 0.001: 0.009220004774780684 
+cracking 0.001
+loss in 0.001: 0.006187002055153458 
+cracking 0.001
+loss in 0.001: 0.01411781094467795 
+cracking 0.001
+loss in 0.001: 0.009856296489416456 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0066791582245570415 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006189780091939583 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013142033003061505 
+cracking 0.001
+loss in 0.001: 0.008495560112482148 
+cracking 0.001
+loss in 0.001: 0.004690599339126874 
+cracking 0.001
+loss in 0.001: 0.007983713243367031 
+cracking 0.001
+loss in 0.001: 0.007910904409554676 
+cracking 0.001
+loss in 0.001: 0.010524457046207353 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005504090254682957 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006073987952861365 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007413195890326738 
+cracking 0.001
+loss in 0.001: 0.011423799259152032 
+cracking 0.001
+loss in 0.001: 0.021710748102667654 
+cracking 0.001
+loss in 0.001: 0.013188903298858398 
+cracking 0.001
+loss in 0.001: 0.01638906389883268 
+cracking 0.001
+loss in 0.001: 0.011464629325746187 
+cracking 0.001
+loss in 0.001: 0.014374989050962817 
+loss in 0.001: 0.01600009063315283 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006291092227798511 
+cracking 0.001
+loss in 0.001: 0.006372425880207597 
+cracking 0.001
+loss in 0.001: 0.01274888239770556 
+cracking 0.001
+loss in 0.001: 0.009234841490253137 
+cracking 0.001
+loss in 0.001: 0.009378734357495233 
+cracking 0.001
+loss in 0.001: 0.015883976716803104 
+cracking 0.001
+loss in 0.001: 0.0077434979404069374 
+cracking 0.001
+loss in 0.001: 0.012393856451742825 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006857490011219186 
+cracking 0.001
+loss in 0.001: 0.006654900048252316 
+loss in 0.001: 0.014346506304707176 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021352180709547332 
+cracking 0.001
+loss in 0.001: 0.007244549987507558 
+cracking 0.001
+loss in 0.001: 0.00523533731991012 
+cracking 0.001
+loss in 0.001: 0.022111368179919755 
+cracking 0.001
+loss in 0.001: 0.013071324863374086 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008375344396964529 
+cracking 0.001
+loss in 0.001: 0.004717796187729662 
+cracking 0.001
+loss in 0.001: 0.008621062766298102 
+loss in 0.001: 0.011017567071177797 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008715503599398156 
+cracking 0.001
+loss in 0.001: 0.013438526987625795 
+cracking 0.001
+loss in 0.001: 0.011676345954536328 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005938985606227538 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008140586001760309 
+cracking 0.001
+loss in 0.001: 0.008776162420754866 
+loss in 0.001: 0.008309587140561426 
+loss in 0.001: 0.008852142312797517 
+loss in 0.001: 0.015309808059973817 
+loss in 0.001: 0.01067841869566889 
+cracking 0.001
+loss in 0.001: 0.0038749810797943907 
+loss in 0.001: 0.009476212903814289 
+loss in 0.001: 0.0075142127226950645 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.016668565258359982 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012357509276497052 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008507638212328736 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.024038163689003706 
+cracking 0.001
+loss in 0.001: 0.008634731774569394 
+cracking 0.001
+loss in 0.001: 0.015296371949733194 
+cracking 0.001
+loss in 0.001: 0.015196494586554999 
+cracking 0.001
+loss in 0.001: 0.009545799179299186 
+cracking 0.001
+loss in 0.001: 0.006982410952229179 
+cracking 0.001
+loss in 0.001: 0.013992751556927436 
+cracking 0.001
+loss in 0.001: 0.009853186423198185 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007366263927283125 
+cracking 0.001
+loss in 0.001: 0.01526958180098478 
+cracking 0.001
+loss in 0.001: 0.013546150655197653 
+cracking 0.001
+loss in 0.001: 0.004516782309126066 
+cracking 0.001
+loss in 0.001: 0.009551602780976266 
+cracking 0.001
+loss in 0.001: 0.006236296971623249 
+cracking 0.001
+loss in 0.001: 0.018223167533776126 
+cracking 0.001
+loss in 0.001: 0.008339238683603456 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015158841392356038 
+loss in 0.001: 0.005185457513250903 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018815409108150973 
+cracking 0.001
+loss in 0.001: 0.0058286908695243484 
+cracking 0.001
+loss in 0.001: 0.008200838342634593 
+cracking 0.001
+loss in 0.001: 0.01043055560043024 
+cracking 0.001
+loss in 0.001: 0.008554538894354903 
+cracking 0.001
+loss in 0.001: 0.012628111604810144 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.016345282369232224 
+cracking 0.001
+loss in 0.001: 0.009416440469149641 
+cracking 0.001
+loss in 0.001: 0.011857634856048831 
+cracking 0.001
+loss in 0.001: 0.013332858305557565 
+cracking 0.001
+loss in 0.001: 0.011231721106543736 
+cracking 0.001
+loss in 0.001: 0.015168886064479933 
+cracking 0.001
+loss in 0.001: 0.004239867251673857 
+cracking 0.001
+loss in 0.001: 0.006029181898007432 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009722896576748252 
+cracking 0.001
+loss in 0.001: 0.00855063595216846 
+cracking 0.001
+loss in 0.001: 0.015472002042514466 
+loss in 0.001: 0.008592381806293797 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01388490277812775 
+cracking 0.001
+loss in 0.001: 0.007958913149033497 
+cracking 0.001
+loss in 0.001: 0.00642101365530393 
+cracking 0.001
+loss in 0.001: 0.016049050467916708 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01999271648224299 
+cracking 0.001
+loss in 0.001: 0.008877073308764197 
+cracking 0.001
+loss in 0.001: 0.01754604962753599 
+cracking 0.001
+loss in 0.001: 0.017297623880319104 
+cracking 0.001
+loss in 0.001: 0.009772070034597255 
+cracking 0.001
+loss in 0.001: 0.011325151444940257 
+loss in 0.001: 0.009310546151775682 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006123412413393988 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006947150383545361 
+cracking 0.001
+loss in 0.001: 0.01241083757241446 
+cracking 0.001
+loss in 0.001: 0.014805114134569095 
+cracking 0.001
+loss in 0.001: 0.009669397764535705 
+cracking 0.001
+loss in 0.001: 0.008198475045948925 
+cracking 0.001
+loss in 0.001: 0.023765341207493823 
+cracking 0.001
+loss in 0.001: 0.007270100792320222 
+cracking 0.001
+loss in 0.001: 0.013003993513586859 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018756073246684657 
+cracking 0.001
+loss in 0.001: 0.012140438234773655 
+cracking 0.001
+loss in 0.001: 0.009879636120305155 
+cracking 0.001
+loss in 0.001: 0.010470170165779221 
+cracking 0.001
+loss in 0.001: 0.006301755049464885 
+cracking 0.001
+loss in 0.001: 0.008083648079097196 
+cracking 0.001
+loss in 0.001: 0.01770293651063496 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0046890183124017465 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0044810756462837515 
+cracking 0.001
+loss in 0.001: 0.0169017078538656 
+cracking 0.001
+loss in 0.001: 0.0070088548207106124 
+cracking 0.001
+loss in 0.001: 0.010477201692251196 
+cracking 0.001
+loss in 0.001: 0.017300739856784833 
+cracking 0.001
+loss in 0.001: 0.015906679799118174 
+cracking 0.001
+loss in 0.001: 0.006434935094856242 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018133325587223133 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01846337866354812 
+cracking 0.001
+loss in 0.001: 0.014466567886772363 
+loss in 0.001: 0.009400760596737352 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010476268480764916 
+cracking 0.001
+loss in 0.001: 0.014421796442037763 
+cracking 0.001
+loss in 0.001: 0.013237683982073135 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006375340561264285 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013425563190951607 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007783901545195126 
+cracking 0.001
+loss in 0.001: 0.014895057516099274 
+cracking 0.001
+loss in 0.001: 0.007597177570706737 
+cracking 0.001
+loss in 0.001: 0.010128877141363412 
+cracking 0.001
+loss in 0.001: 0.005024949896498118 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013289665145233909 
+cracking 0.001
+loss in 0.001: 0.00976914637754549 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00788015431308063 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007366352901125775 
+cracking 0.001
+loss in 0.001: 0.00498772599947834 
+loss in 0.001: 0.015272040665483688 
+loss in 0.001: 0.009833053285470341 
+loss in 0.001: 0.014824494867491794 
+cracking 0.001
+loss in 0.001: 0.007462646578363411 
+loss in 0.001: 0.016226920966581314 
+loss in 0.001: 0.007650411861532277 
+loss in 0.001: 0.00867280745529077 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015048861492774073 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.005465238182623597 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.004396176044835184 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.019674222128217685 
+loss in 0.001: 0.01686265410470304 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01245332615650955 
+cracking 0.001
+loss in 0.001: 0.012155012308021816 
+cracking 0.001
+loss in 0.001: 0.00897397796579238 
+cracking 0.001
+loss in 0.001: 0.01170892752095283 
+loss in 0.001: 0.01338043995968668 
+loss in 0.001: 0.010247499814982105 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011975088058010952 
+cracking 0.001
+loss in 0.001: 0.007770495109310204 
+cracking 0.001
+loss in 0.001: 0.017639940203021252 
+cracking 0.001
+loss in 0.001: 0.006209718708845854 
+cracking 0.001
+loss in 0.001: 0.02950974293411256 
+cracking 0.001
+loss in 0.001: 0.018578445508801188 
+cracking 0.001
+loss in 0.001: 0.0206269383955561 
+cracking 0.001
+loss in 0.001: 0.02758227787148303 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011870873514669115 
+cracking 0.001
+loss in 0.001: 0.02203874105711392 
+cracking 0.001
+loss in 0.001: 0.0116314562012623 
+cracking 0.001
+loss in 0.001: 0.02288111583869944 
+cracking 0.001
+loss in 0.001: 0.008310375351266963 
+cracking 0.001
+loss in 0.001: 0.023009439522871225 
+cracking 0.001
+loss in 0.001: 0.015121061744462224 
+cracking 0.001
+loss in 0.001: 0.01874552300377641 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00609227448648224 
+cracking 0.001
+loss in 0.001: 0.016612793670550057 
+cracking 0.001
+loss in 0.001: 0.008521979279440465 
+cracking 0.001
+loss in 0.001: 0.014834223768024294 
+cracking 0.001
+loss in 0.001: 0.014908470587111457 
+cracking 0.001
+loss in 0.001: 0.008686198153419976 
+loss in 0.001: 0.025976723930762405 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0184051484845106 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010400312202544703 
+cracking 0.001
+loss in 0.001: 0.0076559497151944544 
+cracking 0.001
+loss in 0.001: 0.01054748622501493 
+cracking 0.001
+loss in 0.001: 0.012937065341934041 
+cracking 0.001
+loss in 0.001: 0.013948110096376063 
+loss in 0.001: 0.008694336562522486 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01707067740785306 
+cracking 0.001
+loss in 0.001: 0.006378200857797479 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02375065288831427 
+cracking 0.001
+loss in 0.001: 0.016592109256138705 
+cracking 0.001
+loss in 0.001: 0.022969591654474302 
+cracking 0.001
+loss in 0.001: 0.015296711043245814 
+cracking 0.001
+loss in 0.001: 0.016176257129135993 
+cracking 0.001
+loss in 0.001: 0.028774147264207878 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009085830776461905 
+cracking 0.001
+loss in 0.001: 0.007393805417866143 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.014960581032323233 
+cracking 0.001
+loss in 0.001: 0.01452155463428513 
+loss in 0.001: 0.01578547116717486 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.004553233240083198 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021056567669458435 
+loss in 0.001: 0.011398844292882742 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013673356732857415 
+cracking 0.001
+loss in 0.001: 0.008577512017848385 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018270264953963403 
+cracking 0.001
+loss in 0.001: 0.016951101901704718 
+loss in 0.001: 0.011774787307759046 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015365764211276176 
+cracking 0.001
+loss in 0.001: 0.005811329007874132 
+cracking 0.001
+loss in 0.001: 0.02188580695583883 
+cracking 0.001
+loss in 0.001: 0.01583938158813764 
+cracking 0.001
+loss in 0.001: 0.009375651603551569 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007837918904427943 
+cracking 0.001
+loss in 0.001: 0.02927160616937702 
+loss in 0.001: 0.01839155387136544 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.020307028200598657 
+cracking 0.001
+loss in 0.001: 0.016932712489199656 
+cracking 0.001
+loss in 0.001: 0.015534716412284126 
+cracking 0.001
+loss in 0.001: 0.004649927107661961 
+cracking 0.001
+loss in 0.001: 0.006399103516618236 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.014314632312164248 
+cracking 0.001
+loss in 0.001: 0.014163004699064122 
+cracking 0.001
+loss in 0.001: 0.009842567885220147 
+cracking 0.001
+loss in 0.001: 0.012736803747700148 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009487104529484064 
+cracking 0.001
+loss in 0.001: 0.005756114190553768 
+cracking 0.001
+loss in 0.001: 0.009761299611213569 
+cracking 0.001
+loss in 0.001: 0.021633409735925476 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012115883341816352 
+cracking 0.001
+loss in 0.001: 0.02000749081711921 
+cracking 0.001
+loss in 0.001: 0.01140199624189421 
+cracking 0.001
+loss in 0.001: 0.01344192562539402 
+cracking 0.001
+loss in 0.001: 0.020667147217091602 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02025262779863623 
+cracking 0.001
+loss in 0.001: 0.0077117823608802 
+cracking 0.001
+loss in 0.001: 0.020220535053106253 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015268795610671985 
+cracking 0.001
+loss in 0.001: 0.009027568315619109 
+loss in 0.001: 0.012375343430880854 
+loss in 0.001: 0.010674313859902038 
+loss in 0.001: 0.015354901647113511 
+cracking 0.001
+loss in 0.001: 0.015099056716956983 
+loss in 0.001: 0.014239485438932678 
+loss in 0.001: 0.013508043893592055 
+loss in 0.001: 0.02557634050654623 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.016391607039528296 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.016204952608297025 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015273615283558892 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02482268245196762 
+cracking 0.001
+loss in 0.001: 0.009335990435758381 
+cracking 0.001
+loss in 0.001: 0.006480856705035951 
+cracking 0.001
+loss in 0.001: 0.019500343370664197 
+loss in 0.001: 0.01565762637197392 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02022387649158011 
+cracking 0.001
+loss in 0.001: 0.0227810360829777 
+cracking 0.001
+loss in 0.001: 0.018542578967313757 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018145454978663045 
+cracking 0.001
+loss in 0.001: 0.012291453088292452 
+cracking 0.001
+loss in 0.001: 0.025680552666782687 
+cracking 0.001
+loss in 0.001: 0.028582705002493478 
+cracking 0.001
+loss in 0.001: 0.030053508059042052 
+cracking 0.001
+loss in 0.001: 0.030067468240551034 
+cracking 0.001
+loss in 0.001: 0.01650551758447546 
+cracking 0.001
+loss in 0.001: 0.0196490202768918 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02002248172749874 
+cracking 0.001
+loss in 0.001: 0.009854543418070799 
+cracking 0.001
+loss in 0.001: 0.005804038383308793 
+cracking 0.001
+loss in 0.001: 0.02096669320394009 
+cracking 0.001
+loss in 0.001: 0.009067934343507068 
+cracking 0.001
+loss in 0.001: 0.013979669142303003 
+cracking 0.001
+loss in 0.001: 0.008636551328044056 
+cracking 0.001
+loss in 0.001: 0.024813651480686524 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.028114816305857313 
+cracking 0.001
+loss in 0.001: 0.00794001184471428 
+cracking 0.001
+loss in 0.001: 0.009096163641451329 
+cracking 0.001
+loss in 0.001: 0.009808401180318099 
+cracking 0.001
+loss in 0.001: 0.018892487486133615 
+cracking 0.001
+loss in 0.001: 0.02235223010249462 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02758614372299347 
+cracking 0.001
+loss in 0.001: 0.006830605016171782 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01869758481944918 
+cracking 0.001
+loss in 0.001: 0.017351237730941396 
+cracking 0.001
+loss in 0.001: 0.019827422479935942 
+cracking 0.001
+loss in 0.001: 0.014398274724710962 
+cracking 0.001
+loss in 0.001: 0.021463105824401613 
+loss in 0.001: 0.017452077729428934 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.025032541759749935 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010776777609657357 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.015970715420034687 
+cracking 0.001
+loss in 0.001: 0.023244124274837033 
+cracking 0.001
+loss in 0.001: 0.016115020716238534 
+cracking 0.001
+loss in 0.001: 0.012077792434037093 
+cracking 0.001
+loss in 0.001: 0.008969431736734552 
+cracking 0.001
+loss in 0.001: 0.012704388521816339 
+cracking 0.001
+loss in 0.001: 0.034484310119196164 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01877074497084453 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.024923049259387972 
+cracking 0.001
+loss in 0.001: 0.00934753698255935 
+cracking 0.001
+loss in 0.001: 0.025719242700235956 
+cracking 0.001
+loss in 0.001: 0.022464653931565725 
+cracking 0.001
+loss in 0.001: 0.011612784720741372 
+cracking 0.001
+loss in 0.001: 0.006731525742373767 
+cracking 0.001
+loss in 0.001: 0.023629580467613594 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010534675995556263 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013124099833610374 
+cracking 0.001
+loss in 0.001: 0.0055592935819609906 
+cracking 0.001
+loss in 0.001: 0.026697381173307843 
+cracking 0.001
+loss in 0.001: 0.01730590582367285 
+cracking 0.001
+loss in 0.001: 0.012965422913864877 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.00864990707473434 
+loss in 0.001: 0.030908340274869738 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.014540520682441084 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.014709058406075566 
+cracking 0.001
+loss in 0.001: 0.017131590537779014 
+cracking 0.001
+loss in 0.001: 0.026806568791660445 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007095748725064036 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01681597329808869 
+cracking 0.001
+loss in 0.001: 0.019774708302980493 
+cracking 0.001
+loss in 0.001: 0.02066024922417906 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007136733100860452 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01906305995600113 
+cracking 0.001
+loss in 0.001: 0.019260366988591227 
+cracking 0.001
+loss in 0.001: 0.02202725931330438 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012469709810376135 
+cracking 0.001
+loss in 0.001: 0.021284439088326838 
+cracking 0.001
+loss in 0.001: 0.015928009800973558 
+cracking 0.001
+loss in 0.001: 0.02903297166791625 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021771629778564706 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02511618496715128 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03304416774819717 
+cracking 0.001
+loss in 0.001: 0.018246886294934657 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.02412029200990504 
+cracking 0.001
+loss in 0.001: 0.028024596500328812 
+cracking 0.001
+loss in 0.001: 0.016775134787238747 
+cracking 0.001
+loss in 0.001: 0.012982049890106968 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.013422111687132376 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.028486604622580694 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018991045133328253 
+loss in 0.001: 0.013124600191951892 
+cracking 0.001
+loss in 0.001: 0.0269626555828866 
+loss in 0.001: 0.00934229359751295 
+loss in 0.001: 0.006303549452103826 
+loss in 0.001: 0.013612996870317985 
+loss in 0.001: 0.01620862774740279 
+loss in 0.001: 0.010555271460087307 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021896056760691836 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.020380487896235814 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01718686249625428 
+cracking 0.001cracking 0.001
+
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01854539378812862 
+cracking 0.001
+loss in 0.001: 0.023507224015798068 
+loss in 0.001: 0.015088180666271808 
+loss in 0.001: 0.010303349939346637 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012386308941623644 
+loss in 0.001: 0.010588496783552587 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.024175106801327492 
+cracking 0.001
+loss in 0.001: 0.02257084765828032 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.029340630088796938 
+cracking 0.001
+loss in 0.001: 0.016013570894040464 
+cracking 0.001
+loss in 0.001: 0.018167365229963373 
+cracking 0.001
+loss in 0.001: 0.013527744750973169 
+cracking 0.001
+loss in 0.001: 0.005745957628916773 
+cracking 0.001
+loss in 0.001: 0.029138735273287107 
+cracking 0.001
+loss in 0.001: 0.008025629991430756 
+cracking 0.001
+loss in 0.001: 0.028829348868365544 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.017494733783501682 
+cracking 0.001
+loss in 0.001: 0.028675918780410807 
+cracking 0.001
+loss in 0.001: 0.006032995972596616 
+cracking 0.001
+loss in 0.001: 0.019792096402183258 
+cracking 0.001
+loss in 0.001: 0.0366623749422229 
+cracking 0.001
+loss in 0.001: 0.017697602000195357 
+cracking 0.001
+loss in 0.001: 0.01549615587728232 
+cracking 0.001
+loss in 0.001: 0.017749994811131205 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.033027873723353134 
+cracking 0.001
+loss in 0.001: 0.006575879632403762 
+cracking 0.001
+loss in 0.001: 0.02277066445290627 
+cracking 0.001
+loss in 0.001: 0.03173979078131277 
+cracking 0.001
+loss in 0.001: 0.024430486708773003 
+cracking 0.001
+loss in 0.001: 0.025052697408999493 
+cracking 0.001
+loss in 0.001: 0.021700791832389564 
+cracking 0.001
+loss in 0.001: 0.022918439912458444 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.014516582980900127 
+cracking 0.001
+loss in 0.001: 0.01899355053096091 
+cracking 0.001
+loss in 0.001: 0.019715441794987743 
+cracking 0.001
+loss in 0.001: 0.013281493634317373 
+loss in 0.001: 0.019040423968079662 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012422240149391157 
+cracking 0.001
+loss in 0.001: 0.02995263714862857 
+cracking 0.001
+loss in 0.001: 0.01325798153489797 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01241471689082575 
+cracking 0.001
+loss in 0.001: 0.02392718081756467 
+cracking 0.001
+loss in 0.001: 0.029992741930697696 
+cracking 0.001
+loss in 0.001: 0.021855098630581948 
+cracking 0.001
+loss in 0.001: 0.01893116994122025 
+cracking 0.001
+loss in 0.001: 0.02122088273273681 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.017347347916599812 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.030349452004485456 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.006827585796773835 
+cracking 0.001
+loss in 0.001: 0.019774908117113407 
+cracking 0.001
+loss in 0.001: 0.009489386316857699 
+cracking 0.001
+loss in 0.001: 0.02734936722823705 
+cracking 0.001
+loss in 0.001: 0.016482259593660363 
+loss in 0.001: 0.018383349134886148 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.016943538031161956 
+cracking 0.001
+loss in 0.001: 0.01009213569484838 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01597477731362735 
+cracking 0.001
+loss in 0.001: 0.03752158632339684 
+cracking 0.001
+loss in 0.001: 0.030923988473281067 
+cracking 0.001
+loss in 0.001: 0.031241355058758226 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.029947720568389003 
+cracking 0.001
+loss in 0.001: 0.011347747824841275 
+cracking 0.001
+loss in 0.001: 0.01272100673667327 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01630141107495665 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.021138419233710296 
+cracking 0.001
+loss in 0.001: 0.012120826785950865 
+cracking 0.001
+loss in 0.001: 0.0075825397010548775 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01512463107725567 
+cracking 0.001
+loss in 0.001: 0.012550378537659761 
+cracking 0.001
+loss in 0.001: 0.0063360554861660555 
+cracking 0.001
+loss in 0.001: 0.024021239801450274 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010466968934269455 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.016804901931616486 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03287164558220947 
+cracking 0.001
+loss in 0.001: 0.015879448541828167 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.012695531861160786 
+cracking 0.001
+loss in 0.001: 0.014478075027903376 
+cracking 0.001
+loss in 0.001: 0.026146980645029884 
+cracking 0.001
+loss in 0.001: 0.023334517200388035 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.010281423657478564 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.025283905252705165 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01993484108291953 
+cracking 0.001
+loss in 0.001: 0.034228331100771225 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.027056409972072246 
+cracking 0.001
+loss in 0.001: 0.03600382963609663 
+cracking 0.001
+loss in 0.001: 0.028023580793993946 
+cracking 0.001
+loss in 0.001: 0.008043174410178513 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0290959441590061 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.03753062593771215 
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.025752759852533422 
+cracking 0.001
+loss in 0.001: 0.020489495914204427 
+loss in 0.001: 0.029773487622821747 
+loss in 0.001: 0.02764510472155536 
+loss in 0.001: 0.020385229643755727 
+loss in 0.001: 0.01540704727531645 
+loss in 0.001: 0.019051081734006187 
+loss in 0.001: 0.01088889942092543 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.018211318627159377 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.009213737067286681 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.026785537671570533 
+Figures saved in /home/wesley/EDC/FPC/ML/results/0316_no_kinetic/plots
+Number of tubes generalization takes 37.40913672844569 min 24.548203706741333 sec.
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.082950756235707 
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.08470927824632928 
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.08189315428956004 
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.07511660014097955 
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.07400785506407143 
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.07504063008845648 
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.07423449990464305 
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.07381374204622553 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.07462377599185975 
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.07522601503375699 
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.0756311670053854 
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.0761298313984106 
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.07654081170338368 
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.07802146541180266 
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.0789932207678094 
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.07946001621598757 
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.07971289370747207 
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.0798939937812891 
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.08001595095519858 
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.08000853082212465 
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.07991721029872774 

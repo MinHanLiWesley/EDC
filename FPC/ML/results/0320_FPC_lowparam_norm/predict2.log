@@ -1,0 +1,64 @@
+training_data_FPC_cracking_V4_3m_irrev.csv
+            Experiment name: 0320_FPC_lowparam_norm
+            Training Data: training_data_FPC_cracking_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Starting prediction...
+cracking 0.001
+1000.0
+11.4
+32
+[320, 348, 374.7, 399.3, 424, 451.3, 460.7, 466, 471.3, 476.7, 478.7, 479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3]
+[348, 374.7, 399.3, 424, 451.3, 460.7, 466, 471.3, 476.7, 478.7, 479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3, 486.7]
+15858     0.561497
+15859     1.396553
+15860     2.613682
+15861     4.573115
+15862     9.056328
+15863    13.886201
+15864    18.862894
+15865    24.644770
+15866    30.986332
+15867    35.120247
+15868    38.140572
+15869    41.111214
+15870    44.426151
+15871    47.421146
+15872    50.326134
+15873    53.146721
+15874    55.887318
+15875    58.851036
+21529     2.061319
+21530     3.977252
+21533    17.765987
+21534    23.482344
+21535    29.778053
+21536    33.986713
+21537    37.104710
+21538    40.152061
+21539    43.517235
+21540    46.557972
+21541    49.499695
+21542    52.349857
+21543    55.112770
+Name: X, dtype: float64
+19
+ML:{'cracking_rates': [0, 0.0054502785205841064, 0.013389647006988525, 0.02458605170249939, 0.046240001916885376, 0.0990903377532959, 0.15176349878311157, 0.204685777425766, 0.27627259492874146, 0.3464277982711792, 0.37884068489074707, 0.41086211800575256, 0.4419407546520233, 0.47171181440353394, 0.49774688482284546, 0.5224306583404541, 0.5464990139007568, 0.5684536695480347, 0.5891126990318298]}
+FPC:{'cracking_rates': [0, 0.0056149745, 0.01396553397, 0.0261368227, 0.04573115349, 0.0905632782, 0.13886200899999998, 0.1886289406, 0.2464476967, 0.3098633194, 0.35120246889999995, 0.3814057159, 0.41111213679999997, 0.4442615128, 0.47421146389999996, 0.5032613373, 0.5314672089, 0.5588731766, 0.5885103607]}
+['/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1250.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1000.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1625.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1375.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1125.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1750.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1875.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_1500.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_2000.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_2250.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_2375.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_2125.000000_mass_32_temp_320_20_320_12.4_32_org.png', '/home/wesley/EDC/FPC/ML/results/0320_FPC_lowparam_norm/plots/predict/20_320_12.4_32_org/CCl4_2500.000000_mass_32_temp_320_20_320_12.4_32_org.png']

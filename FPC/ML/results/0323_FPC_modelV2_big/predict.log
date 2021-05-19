@@ -1,0 +1,398 @@
+training_data_FPC_V4_3m_irrev.csv
+            Experiment name: 0323_FPC_modelV2
+            Training Data: training_data_FPC_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = False
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.20344642533172658 
+4518      0.666102
+4519      1.658687
+4520      3.108509
+4521      5.457591
+4522     10.910141
+4523     16.678337
+4524     22.318094
+4525     28.588341
+4526     35.283260
+4527     39.598507
+4528     42.738537
+4529     45.811749
+4530     49.217445
+4531     52.280338
+4532     55.236675
+4533     58.092232
+4534     60.852192
+4535     63.812344
+10189     2.445217
+10190     4.726597
+10193    20.927475
+10194    27.162149
+10195    33.845566
+10196    38.258156
+10197    41.511074
+10198    44.674374
+10199    48.143726
+10200    51.264187
+10201    54.268074
+10202    57.162872
+10203    59.954998
+Name: X, dtype: float64
+19
+loss in 0.001: 0.22445508652256682 
+15858     0.561497
+15859     1.396553
+15860     2.613682
+15861     4.573115
+15862     9.056328
+15863    13.886201
+15864    18.862894
+15865    24.644770
+15866    30.986332
+15867    35.120247
+15868    38.140572
+15869    41.111214
+15870    44.426151
+15871    47.421146
+15872    50.326134
+15873    53.146721
+15874    55.887318
+15875    58.851036
+21529     2.061319
+21530     3.977252
+21533    17.765987
+21534    23.482344
+21535    29.778053
+21536    33.986713
+21537    37.104710
+21538    40.152061
+21539    43.517235
+21540    46.557972
+21541    49.499695
+21542    52.349857
+21543    55.112770
+Name: X, dtype: float64
+19
+loss in 0.001: 0.23788904186785034 
+27198     0.498813
+27199     1.239803
+27200     2.316923
+27201     4.044648
+27202     7.952158
+27203    12.175834
+27204    16.656191
+27205    22.041237
+27206    28.088306
+27207    32.065742
+27208    34.977886
+27209    37.851376
+27210    41.073231
+27211    43.990482
+27212    46.828388
+27213    49.592281
+27214    52.285259
+27215    55.213360
+32869     1.830757
+32870     3.527285
+32873    15.755860
+32874    21.066385
+32875    27.050220
+32876    31.089109
+32877    34.089897
+32878    37.032177
+32879    40.296383
+32880    43.252800
+32881    46.121750
+32882    48.908863
+32883    51.619415
+Name: X, dtype: float64
+19
+Error in 27 mass flow rate is 0.131712 
+Error in 32 mass flow rate is 0.129758 
+Error in 36 mass flow rate is 0.128882 
+Mass flow rate generalization takes 0.33029282093048096 min 19.817569255828857 sec.
+Case2: CCl4 concentration...
+cracking 0.000625
+cracking 0.00075
+cracking 0.000375
+cracking 0.0005
+cracking 0.000125
+cracking 0.00025
+cracking 0.000875
+cracking 0.0
+cracking 0.0
+cracking 0.000375
+cracking 0.00025
+cracking 0.000125
+cracking 0.0005
+cracking 0.00075
+cracking 0.000625
+cracking 0.000875
+loss in 0.000375: 0.2938171765885887 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.0: 0.3035347985623593 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.000125: 0.30085747190732554 
+cracking 0.001125
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.00125
+loss in 0.0005: 0.2908085581452041 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001375
+loss in 0.00025: 0.2968168365778292 
+loss in 0.000625: 0.2875966995907216 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.000875: 0.28182790166788607 
+cracking 0.001625
+cracking 0.0015
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.00175
+loss in 0.00075: 0.28468079902338933 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001875
+cracking 0.001
+cracking 0.00125
+cracking 0.001125
+cracking 0.001375
+cracking 0.00175
+cracking 0.001625
+cracking 0.0015
+cracking 0.001875
+loss in 0.001: 0.2790765620333082 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002
+loss in 0.00125: 0.27456585781101134 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002125
+loss in 0.001375: 0.27262202175461697 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.00225
+loss in 0.001125: 0.2766616819315624 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002375
+loss in 0.001625: 0.26843109198777804 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.0025
+loss in 0.00175: 0.26634067210577356 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.0015: 0.2705011491018235 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001875: 0.2643542394043182 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002
+cracking 0.002125
+cracking 0.00225
+cracking 0.002375
+cracking 0.0025
+loss in 0.002: 0.262290285964599 
+loss in 0.00225: 0.2580269156800415 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.002125: 0.26009321018204323 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.002375: 0.2561425059307366 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.0025: 0.2541773795677074 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Error in concentration in 0.0ppm is 0.303535 
+Error in concentration in 125.0ppm is 0.300857 
+Error in concentration in 250.0ppm is 0.296817 
+Error in concentration in 375.0ppm is 0.293817 
+Error in concentration in 500.0ppm is 0.290809 
+Error in concentration in 625.0ppm is 0.287597 
+Error in concentration in 750.0ppm is 0.284681 
+Error in concentration in 875.0ppm is 0.281828 
+Error in concentration in 1000.0ppm is 0.279077 
+Error in concentration in 1125.0ppm is 0.276662 
+Error in concentration in 1250.0ppm is 0.274566 
+Error in concentration in 1375.0ppm is 0.272622 
+Error in concentration in 1500.0ppm is 0.270501 
+Error in concentration in 1625.0ppm is 0.268431 
+Error in concentration in 1750.0ppm is 0.266341 
+Error in concentration in 1875.0ppm is 0.264354 
+Error in concentration in 2000.0ppm is 0.262290 
+Error in concentration in 2125.0ppm is 0.260093 
+Error in concentration in 2250.0ppm is 0.258027 
+Error in concentration in 2375.0ppm is 0.256143 
+Error in concentration in 2500.0ppm is 0.254177 
+CCl4 concentration generalization takes 0.9396932204564412 min 56.381593227386475 sec.
+Case3: Initial pressure...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.26963447429274207 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.25239989043788286 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.2608206282579481 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.288872566653496 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.2790765620333082 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Error in 10.4atm is 0.288873 
+Error in 11.4atm is 0.279077 
+Error in 12.4atm is 0.269634 
+Error in 13.4atm is 0.260821 
+Error in 14.4atm is 0.252400 
+Initial pressure generalization takes 0.3405388911565145 min 20.43233346939087 sec.
+Case5: Initial T_in...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.30081754166109204 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.24876194417765654 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.2844678247839461 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.26369406791256084 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.29169202958590557 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.2790765620333082 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Error in 300°C is 0.248762 
+Error in 310°C is 0.263694 
+Error in 320°C is 0.279077 
+Error in 330°C is 0.284468 
+Error in 340°C is 0.291692 
+Error in 350°C is 0.300818 
+Initial temperature generalization takes 0.35274752775828044 min 21.164851665496826 sec.
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.3351896696376869 
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.3288269230342456 
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.32121414553461647 
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.31189761982583103 
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.3059503852178737 
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.30145316374308206 
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.29846917957093727 
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.2953813200759774 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.29341104905609905 
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.2917209250872192 
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.28912699029859484 
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.28681341018800405 
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.2846917331339353 
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.2827406009491666 
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.280936462897079 
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.27906509827083803 
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.2769855623648607 
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.2748199030792528 
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.27283381418093544 
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.2709579790269684 
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.2689322122454725 
+['/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_0.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_125.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_250.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_375.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_500.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_625.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_750.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_875.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1000.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1125.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1250.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1375.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1500.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1625.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1750.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_1875.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_2000.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_2125.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_2250.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_2375.000000_mass_36_temp_350_20_4random.png', '/home/wesley/EDC/FPC/ML/results/0323_FPC_modelV2/plots/predict/CCl4_2500.000000_mass_36_temp_350_20_4random.png']

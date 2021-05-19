@@ -1,0 +1,14 @@
+            Experiment name: 0121_smalldata
+            Training Data: training_dataSmall.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 1000
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+        

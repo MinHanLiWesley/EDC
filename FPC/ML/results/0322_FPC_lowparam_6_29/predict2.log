@@ -1,0 +1,62 @@
+training_data_FPC_cracking_V4_3m_irrev.csv
+            Experiment name: 0322_FPC_lowparam_6_29
+            Training Data: training_data_FPC_cracking_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Starting prediction...
+cracking 0.001
+1000.0
+12.4
+36
+[320, 348, 374.7, 399.3, 424, 451.3, 460.7, 466, 471.3, 476.7, 478.7, 479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3]
+[348, 374.7, 399.3, 424, 451.3, 460.7, 466, 471.3, 476.7, 478.7, 479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3, 486.7]
+27216     0.542458
+27217     1.348509
+27218     2.519060
+27219     4.391415
+27220     8.616336
+27221    13.183365
+27222    17.979229
+27223    23.657576
+27224    29.959951
+27225    34.078899
+27226    37.084000
+27227    40.041294
+27228    43.348572
+27229    46.334602
+27230    49.232445
+27231    52.046650
+27232    54.781319
+27233    57.745777
+32887     1.988156
+32888     3.823128
+32891    16.964336
+32892    22.569231
+32893    28.816078
+32894    33.005142
+32895    36.106174
+32896    39.138523
+32897    42.493961
+32898    45.524872
+32899    48.458012
+32900    51.300186
+32901    54.056561
+Name: X, dtype: float64
+19
+['/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_0.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_125.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_250.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_375.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_500.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_625.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_750.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_875.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1000.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1125.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1250.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1375.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1500.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1625.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1750.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_1875.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_2000.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_2125.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_2250.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_2375.000000_mass_36_temp_320_20_320_11.4_36_org.png', '/home/wesley/EDC/FPC/ML/results/0322_FPC_lowparam_6_29/plots/predict/20_320_11.4_36_org/CCl4_2500.000000_mass_36_temp_320_20_320_11.4_36_org.png']

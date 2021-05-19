@@ -1,0 +1,126 @@
+training_data.csv
+            Experiment name: 0201_rmseAdam
+            Training Data: training_data.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 100
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = False
+            inital pressure = False
+            number of tubes = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+Error in 45.0 mass flow rate is 0.007992 
+Error in 45.37373737373738 mass flow rate is 0.007637 
+Error in 45.74747474747475 mass flow rate is 0.007310 
+Error in 46.121212121212125 mass flow rate is 0.007082 
+Error in 46.494949494949495 mass flow rate is 0.006833 
+Error in 46.86868686868687 mass flow rate is 0.006588 
+Error in 47.24242424242424 mass flow rate is 0.006350 
+Error in 47.61616161616162 mass flow rate is 0.006151 
+Error in 47.98989898989899 mass flow rate is 0.005971 
+Error in 48.36363636363637 mass flow rate is 0.005809 
+Error in 48.73737373737374 mass flow rate is 0.005646 
+Error in 49.111111111111114 mass flow rate is 0.005493 
+Error in 49.484848484848484 mass flow rate is 0.005370 
+Error in 49.85858585858586 mass flow rate is 0.005320 
+Error in 50.23232323232323 mass flow rate is 0.005294 
+Error in 50.60606060606061 mass flow rate is 0.005341 
+Error in 50.97979797979798 mass flow rate is 0.005383 
+Error in 51.35353535353536 mass flow rate is 0.005419 
+Error in 51.72727272727273 mass flow rate is 0.005414 
+Error in 52.101010101010104 mass flow rate is 0.005387 
+Error in 52.474747474747474 mass flow rate is 0.005297 
+Error in 52.84848484848485 mass flow rate is 0.005249 
+Error in 53.22222222222222 mass flow rate is 0.005214 
+Error in 53.5959595959596 mass flow rate is 0.005190 
+Error in 53.96969696969697 mass flow rate is 0.005158 
+Error in 54.343434343434346 mass flow rate is 0.005111 
+Error in 54.717171717171716 mass flow rate is 0.005069 
+Error in 55.09090909090909 mass flow rate is 0.005026 
+Error in 55.464646464646464 mass flow rate is 0.004979 
+Error in 55.83838383838384 mass flow rate is 0.004934 
+Error in 56.21212121212121 mass flow rate is 0.004894 
+Error in 56.58585858585859 mass flow rate is 0.004844 
+Error in 56.95959595959596 mass flow rate is 0.004786 
+Error in 57.333333333333336 mass flow rate is 0.004902 
+Error in 57.707070707070706 mass flow rate is 0.004883 
+Error in 58.08080808080808 mass flow rate is 0.004864 
+Error in 58.45454545454545 mass flow rate is 0.004855 
+Error in 58.82828282828283 mass flow rate is 0.004832 
+Error in 59.2020202020202 mass flow rate is 0.004806 
+Error in 59.57575757575758 mass flow rate is 0.004773 
+Error in 59.94949494949495 mass flow rate is 0.004718 
+Error in 60.323232323232325 mass flow rate is 0.004651 
+Error in 60.696969696969695 mass flow rate is 0.004579 
+Error in 61.07070707070707 mass flow rate is 0.004501 
+Error in 61.44444444444444 mass flow rate is 0.004436 
+Error in 61.81818181818182 mass flow rate is 0.004406 
+Error in 62.1919191919192 mass flow rate is 0.004372 
+Error in 62.56565656565657 mass flow rate is 0.004352 
+Error in 62.93939393939394 mass flow rate is 0.004335 
+Error in 63.313131313131315 mass flow rate is 0.004309 
+Error in 63.68686868686869 mass flow rate is 0.004280 
+Error in 64.06060606060606 mass flow rate is 0.004253 
+Error in 64.43434343434343 mass flow rate is 0.004226 
+Error in 64.8080808080808 mass flow rate is 0.004200 
+Error in 65.18181818181819 mass flow rate is 0.004195 
+Error in 65.55555555555556 mass flow rate is 0.004204 
+Error in 65.92929292929293 mass flow rate is 0.004200 
+Error in 66.30303030303031 mass flow rate is 0.004187 
+Error in 66.67676767676768 mass flow rate is 0.004174 
+Error in 67.05050505050505 mass flow rate is 0.004165 
+Error in 67.42424242424242 mass flow rate is 0.004152 
+Error in 67.79797979797979 mass flow rate is 0.004133 
+Error in 68.17171717171718 mass flow rate is 0.004115 
+Error in 68.54545454545455 mass flow rate is 0.004099 
+Error in 68.91919191919192 mass flow rate is 0.004082 
+Error in 69.2929292929293 mass flow rate is 0.004065 
+Error in 69.66666666666667 mass flow rate is 0.004048 
+Error in 70.04040404040404 mass flow rate is 0.004035 
+Error in 70.41414141414141 mass flow rate is 0.004022 
+Error in 70.78787878787878 mass flow rate is 0.004010 
+Error in 71.16161616161617 mass flow rate is 0.003995 
+Error in 71.53535353535354 mass flow rate is 0.003979 
+Error in 71.9090909090909 mass flow rate is 0.003962 
+Error in 72.28282828282829 mass flow rate is 0.003937 
+Error in 72.65656565656566 mass flow rate is 0.003907 
+Error in 73.03030303030303 mass flow rate is 0.003879 
+Error in 73.4040404040404 mass flow rate is 0.003849 
+Error in 73.77777777777777 mass flow rate is 0.003817 
+Error in 74.15151515151516 mass flow rate is 0.003767 
+Error in 74.52525252525253 mass flow rate is 0.003730 
+Error in 74.8989898989899 mass flow rate is 0.003691 
+Error in 75.27272727272728 mass flow rate is 0.003677 
+Error in 75.64646464646465 mass flow rate is 0.003657 
+Error in 76.02020202020202 mass flow rate is 0.003637 
+Error in 76.39393939393939 mass flow rate is 0.003619 
+Error in 76.76767676767676 mass flow rate is 0.003603 
+Error in 77.14141414141415 mass flow rate is 0.003590 
+Error in 77.51515151515152 mass flow rate is 0.003579 
+Error in 77.88888888888889 mass flow rate is 0.003557 
+Error in 78.26262626262627 mass flow rate is 0.003536 
+Error in 78.63636363636364 mass flow rate is 0.003506 
+Error in 79.01010101010101 mass flow rate is 0.003473 
+Error in 79.3838383838384 mass flow rate is 0.003453 
+Error in 79.75757575757575 mass flow rate is 0.003440 
+Error in 80.13131313131314 mass flow rate is 0.003423 
+Error in 80.5050505050505 mass flow rate is 0.003399 
+Error in 80.87878787878788 mass flow rate is 0.003373 
+Error in 81.25252525252526 mass flow rate is 0.003322 
+Error in 81.62626262626263 mass flow rate is 0.003281 
+Error in 82.0 mass flow rate is 0.003243 
+Mass flow rate generalization takes 4.16540117263794 min 9.924070358276367 sec.
+Starting prediction...
+Mean absolute error of `0201_rmseAdam` is 0.00899
+9

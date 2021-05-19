@@ -1,0 +1,107 @@
+training_data_FPC_V4_3m_irrev.csv
+            Experiment name: 0323_FPC_model_no_model
+            Training Data: training_data_FPC_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.32956576471647486 
+19
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.34623454688655686 
+19
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.35122314544658 
+19
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.35358709135890953 
+19
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.3549225933289942 
+19
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.3557710964931391 
+19
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.35635439039893435 
+19
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.35679443792746196 
+19
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.35708318617444507 
+19
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.35728242240422775 
+19
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.3574160214314017 
+19
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.35748137528668034 
+19
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.35752217416383286 
+19
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.357569813196687 
+19
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.3576090492075959 
+19
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.3576472796373424 
+19
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.35767342930818674 
+19
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.357680938565264 
+19
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.35767304735911304 
+19
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.3576552923908819 
+19
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.35762805523908997 
+19
+[]

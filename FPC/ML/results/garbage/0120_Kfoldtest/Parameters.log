@@ -1,0 +1,9 @@
+Experiment name: 01201_Kfoldtest
+                Training Data: training_data.csv
+                Do k-fold: True
+                Folds num: 10
+                Learning rate: 0.001
+                Batch size: 18
+                Epoch: 1000
+                Training vebose: 0
+        

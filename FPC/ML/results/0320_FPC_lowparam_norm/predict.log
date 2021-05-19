@@ -1,0 +1,178 @@
+training_data_FPC_V1_3m_5p_6t_21Clppm.csv
+            Experiment name: 0320_FPC_lowparam_norm
+            Training Data: training_data_FPC_V1_3m_5p_6t_21Clppm.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = False
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.6045484180610241 
+loss in 0.001: 0.5894956199620704 
+loss in 0.001: 0.5591356680604685 
+loss in 0.001: 0.5401622096863935 
+loss in 0.001: 0.578576247037054 
+Error in 54 mass flow rate is 0.604548 
+Error in 64 mass flow rate is 0.589496 
+Error in 72 mass flow rate is 0.578576 
+Error in 88 mass flow rate is 0.559136 
+Error in 106 mass flow rate is 0.540162 
+Mass flow rate generalization takes 0.3428295652071635 min 20.56977391242981 sec.
+Case2: CCl4 concentration...
+cracking 0.000875
+cracking 0.000375
+cracking 0.00025
+cracking 0.0005
+cracking 0.000125
+cracking 0.0
+cracking 0.000625
+cracking 0.00075
+cracking 0.0
+cracking 0.000125
+cracking 0.000875
+cracking 0.000625
+cracking 0.000375
+cracking 0.0005
+cracking 0.00025
+cracking 0.00075
+loss in 0.0: 0.5390215172915687 
+cracking 0.001
+loss in 0.000875: 0.5412098648069787 
+cracking 0.001125
+loss in 0.000375: 0.5420956667405035 
+loss in 0.000125: 0.5414995099167267 
+loss in 0.000625: 0.541625028178693 
+cracking 0.00125
+cracking 0.0015
+loss in 0.00025: 0.5420963038627878 
+cracking 0.001375
+cracking 0.001625
+loss in 0.0005: 0.5418845604016486 
+cracking 0.00175
+loss in 0.00075: 0.541361765541874 
+cracking 0.001875
+cracking 0.001
+cracking 0.001125
+cracking 0.00125
+cracking 0.001375
+cracking 0.0015
+cracking 0.001625
+cracking 0.00175
+cracking 0.001875
+loss in 0.001: 0.5411500889865268 
+cracking 0.002
+loss in 0.001125: 0.5410554591401379 
+cracking 0.002125
+loss in 0.00125: 0.5409418505988416 
+cracking 0.00225
+loss in 0.0015: 0.5406701368277362 
+loss in 0.001375: 0.5408118835377556 
+cracking 0.002375
+loss in 0.001625: 0.5405199611384878 
+cracking 0.0025
+loss in 0.00175: 0.540363721806242 
+loss in 0.001875: 0.5402033213261229 
+cracking 0.002125
+cracking 0.002
+cracking 0.00225
+cracking 0.0025
+cracking 0.002375
+loss in 0.002: 0.5400399642387772 
+loss in 0.00225: 0.5397076633025082 
+loss in 0.002125: 0.5398744952203463 
+loss in 0.0025: 0.5393608846445866 
+loss in 0.002375: 0.5395347583898995 
+Error in concentration in 0.0ppm is 0.539022 
+Error in concentration in 125.0ppm is 0.541500 
+Error in concentration in 250.0ppm is 0.542096 
+Error in concentration in 375.0ppm is 0.542096 
+Error in concentration in 500.0ppm is 0.541885 
+Error in concentration in 625.0ppm is 0.541625 
+Error in concentration in 750.0ppm is 0.541362 
+Error in concentration in 875.0ppm is 0.541210 
+Error in concentration in 1000.0ppm is 0.541150 
+Error in concentration in 1125.0ppm is 0.541055 
+Error in concentration in 1250.0ppm is 0.540942 
+Error in concentration in 1375.0ppm is 0.540812 
+Error in concentration in 1500.0ppm is 0.540670 
+Error in concentration in 1625.0ppm is 0.540520 
+Error in concentration in 1750.0ppm is 0.540364 
+Error in concentration in 1875.0ppm is 0.540203 
+Error in concentration in 2000.0ppm is 0.540040 
+Error in concentration in 2125.0ppm is 0.539874 
+Error in concentration in 2250.0ppm is 0.539708 
+Error in concentration in 2375.0ppm is 0.539535 
+Error in concentration in 2500.0ppm is 0.539361 
+CCl4 concentration generalization takes 0.9066252787907918 min 54.39751672744751 sec.
+Case3: Initial pressure...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.5537450503289368 
+loss in 0.001: 0.5411500889865268 
+loss in 0.001: 0.5251801214863455 
+loss in 0.001: 0.5336127029567604 
+loss in 0.001: 0.5478130156406263 
+Error in 10.4atm is 0.525180 
+Error in 11.4atm is 0.533613 
+Error in 12.4atm is 0.541150 
+Error in 13.4atm is 0.547813 
+Error in 14.4atm is 0.553745 
+Initial pressure generalization takes 0.339819339911143 min 20.38916039466858 sec.
+Case5: Initial T_in...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.5755364139386107 
+loss in 0.001: 0.49638539253517683 
+loss in 0.001: 0.5411500889865268 
+loss in 0.001: 0.5295861264541939 
+loss in 0.001: 0.46562935578045606 
+loss in 0.001: 0.5567973378481109 
+Error in 300°C is 0.465629 
+Error in 310°C is 0.496385 
+Error in 320°C is 0.529586 
+Error in 330°C is 0.541150 
+Error in 340°C is 0.556797 
+Error in 350°C is 0.575536 
+Initial temperature generalization takes 0.34304092327753705 min 20.58245539665222 sec.

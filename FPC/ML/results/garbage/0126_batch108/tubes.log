@@ -1,0 +1,26 @@
+training_dataV3_10_5_20.csv
+            Experiment name: 0126_batch108
+            Training Data: training_dataV3_10_5_20.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 108
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = False
+            CCl4 = False
+            inital pressure = False
+            number of tubes = True
+            ncpus = 6
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case4: Number of tubes...
+Figures saved in /home/wesley/EDC/FPC/ML/results/0126_batch108/plots
+Number of tubes generalization takes 42.20228160619736 min 12.13689637184143 sec.
+Starting prediction...
+Mean absolute error of `0126_batch108` is 0.00167

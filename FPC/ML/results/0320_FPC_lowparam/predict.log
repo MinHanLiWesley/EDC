@@ -1,0 +1,2283 @@
+training_data_FPC_V1_3m_5p_6t_21Clppm.csv
+            Experiment name: 0320_FPC_lowparam
+            Training Data: training_data_FPC_V1_3m_5p_6t_21Clppm.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+cracking 0.001cracking 0.001
+
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.2653444014587367 
+4518      0.666102
+4519      1.658687
+4520      3.108509
+4521      5.457591
+4522     10.910141
+4523     16.678337
+4524     22.318094
+4525     28.588341
+4526     35.283260
+4527     39.598507
+4528     42.738537
+4529     45.811749
+4530     49.217445
+4531     52.280338
+4532     55.236675
+4533     58.092232
+4534     60.852192
+4535     63.812344
+10189     2.445217
+10190     4.726597
+10193    20.927475
+10194    27.162149
+10195    33.845566
+10196    38.258156
+10197    41.511074
+10198    44.674374
+10199    48.143726
+10200    51.264187
+10201    54.268074
+10202    57.162872
+10203    59.954998
+Name: X, dtype: float64
+19
+loss in 0.001: 0.2643838178386793 
+15858     0.561497
+15859     1.396553
+15860     2.613682
+15861     4.573115
+15862     9.056328
+15863    13.886201
+15864    18.862894
+15865    24.644770
+15866    30.986332
+15867    35.120247
+15868    38.140572
+15869    41.111214
+15870    44.426151
+15871    47.421146
+15872    50.326134
+15873    53.146721
+15874    55.887318
+15875    58.851036
+21529     2.061319
+21530     3.977252
+21533    17.765987
+21534    23.482344
+21535    29.778053
+21536    33.986713
+21537    37.104710
+21538    40.152061
+21539    43.517235
+21540    46.557972
+21541    49.499695
+21542    52.349857
+21543    55.112770
+Name: X, dtype: float64
+19
+loss in 0.001: 0.2630583890541398 
+27198     0.498813
+27199     1.239803
+27200     2.316923
+27201     4.044648
+27202     7.952158
+27203    12.175834
+27204    16.656191
+27205    22.041237
+27206    28.088306
+27207    32.065742
+27208    34.977886
+27209    37.851376
+27210    41.073231
+27211    43.990482
+27212    46.828388
+27213    49.592281
+27214    52.285259
+27215    55.213360
+32869     1.830757
+32870     3.527285
+32873    15.755860
+32874    21.066385
+32875    27.050220
+32876    31.089109
+32877    34.089897
+32878    37.032177
+32879    40.296383
+32880    43.252800
+32881    46.121750
+32882    48.908863
+32883    51.619415
+Name: X, dtype: float64
+19
+Error in 27 mass flow rate is 0.139454 
+Error in 32 mass flow rate is 0.152750 
+Error in 36 mass flow rate is 0.165292 
+Mass flow rate generalization takes 0.34271240234375 min 20.562744140625 sec.
+Case2: CCl4 concentration...
+cracking 0.000625
+cracking 0.00025
+cracking 0.000125
+cracking 0.0
+cracking 0.000375
+cracking 0.00075
+cracking 0.0005
+cracking 0.000875
+cracking 0.0
+cracking 0.00025
+cracking 0.000375
+cracking 0.000625
+cracking 0.000125
+cracking 0.0005
+cracking 0.000875
+cracking 0.00075
+loss in 0.0: 0.28188128174691834 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.0005: 0.2611847509191533 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001125
+loss in 0.00025: 0.2655516990939263 
+loss in 0.000375: 0.26314081437945214 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001375
+cracking 0.00125
+loss in 0.000625: 0.2596779123418505 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.00075: 0.25840231085105647 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.0015
+cracking 0.001625
+loss in 0.000875: 0.2573309295312585 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.00175
+loss in 0.000125: 0.2694621229262754 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001875
+cracking 0.001
+cracking 0.001125
+cracking 0.001375
+cracking 0.00125
+cracking 0.0015
+cracking 0.00175
+cracking 0.001875
+cracking 0.001625
+loss in 0.001: 0.25646473186398727 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.00125: 0.25497670023253444 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002
+cracking 0.002125
+loss in 0.001375: 0.25431746421004786 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.00225
+loss in 0.001125: 0.25568908003560026 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002375
+loss in 0.001875: 0.25203756144852263 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.0025
+loss in 0.0015: 0.2536853134784394 
+loss in 0.001625: 0.2531023696122023 
+loss in 0.00175: 0.2525576710082025 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.002
+cracking 0.002125
+cracking 0.00225
+cracking 0.002375
+cracking 0.0025
+loss in 0.00225: 0.2506120110788547 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.002: 0.25153819202016914 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.002125: 0.2510564304580457 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.002375: 0.2502001238521732 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.0025: 0.24982093852855147 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Error in concentration in 0.0ppm is 0.281881 
+Error in concentration in 125.0ppm is 0.269462 
+Error in concentration in 250.0ppm is 0.265552 
+Error in concentration in 375.0ppm is 0.263141 
+Error in concentration in 500.0ppm is 0.261185 
+Error in concentration in 625.0ppm is 0.259678 
+Error in concentration in 750.0ppm is 0.258402 
+Error in concentration in 875.0ppm is 0.257331 
+Error in concentration in 1000.0ppm is 0.256465 
+Error in concentration in 1125.0ppm is 0.255689 
+Error in concentration in 1250.0ppm is 0.254977 
+Error in concentration in 1375.0ppm is 0.254317 
+Error in concentration in 1500.0ppm is 0.253685 
+Error in concentration in 1625.0ppm is 0.253102 
+Error in concentration in 1750.0ppm is 0.252558 
+Error in concentration in 1875.0ppm is 0.252038 
+Error in concentration in 2000.0ppm is 0.251538 
+Error in concentration in 2125.0ppm is 0.251056 
+Error in concentration in 2250.0ppm is 0.250612 
+Error in concentration in 2375.0ppm is 0.250200 
+Error in concentration in 2500.0ppm is 0.249821 
+CCl4 concentration generalization takes 0.9834661324818929 min 59.007967948913574 sec.
+Case3: Initial pressure...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.2569654899924588 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.2556814775874003 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.2568484012807919 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.25682340287459976 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.25646473186398727 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Error in 10.4atm is 0.255681 
+Error in 11.4atm is 0.256465 
+Error in 12.4atm is 0.256823 
+Error in 13.4atm is 0.256965 
+Error in 14.4atm is 0.256848 
+Initial pressure generalization takes 0.3482694943745931 min 20.896169662475586 sec.
+Case4: Number of tubes...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1482097487636754 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16751419772706475 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1644774448924298 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1504300606380987 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.13124202574898516 
+cracking 0.001
+loss in 0.001: 0.1524394726615292 
+loss in 0.001: 0.13834943725265195 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1614983562182926 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13451244946892002 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1484995349365004 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15346267062716537 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1440767388951983 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16014016917757468 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1599678764685159 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15214869639644527 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16989014620311416 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1608257873920521 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15259530526721807 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1419379902187601 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15223698376806608 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13905808379450135 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1452012125862206 
+loss in 0.001: 0.1428867384522106 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16929307438792998 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.158296457799145 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15607724761705669 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15828296397716166 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1823501517355285 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17582874292394363 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13876924321710565 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15737175360335212 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14826529815635853 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15929441301807937 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15331682451987677 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13523320879259854 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16954010745858744 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16550690842062038 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14820667361436665 
+loss in 0.001: 0.17222051955414752 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17432243655555038 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15269444356565334 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13918663226006509 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14714890170973702 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1354862139384166 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14017541112696805 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14072551348323933 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1540460341473955 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1580405925148863 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14547408194202224 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13406977236696366 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14254714822247036 
+loss in 0.001: 0.18769435675610424 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1645765142575962 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17234770152643905 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18259700787366834 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.18527895494454416 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14811860409037136 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16042094202762017 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16323568081533116 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17761669927027335 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1652259465305735 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14905442499452617 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1836341115426738 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1360288735554956 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1475987960336626 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1533073322699715 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17917549208154143 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.20838018089279808 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17189951183301136 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14800870627608204 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.13508699850977154 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.12707441158584587 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1746746052944969 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1590612345534899 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14376418439178085 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14496553533853057 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18925376388690177 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1723658211505067 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15991726455893135 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16860334182236927 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14355256935208177 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14019192119546725 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14438691652858568 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16175332577254922 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14490676661978227 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17019244591686208 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1684682021591217 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13898264439942784 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1402164082766863 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15344005930498458 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14000447798378762 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15010006018112249 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17143913049682766 
+loss in 0.001: 0.15945535030849634 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1613581527426545 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14443991042504833 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14998295739910486 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.11374345015827843 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13766652513327607 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15450337837699152 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001cracking 0.001
+
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14328506817654005 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14300388755627613 
+loss in 0.001: 0.16084003186864354 
+Series([], Name: X, dtype: float64)Series([], Name: X, dtype: float64)
+
+FPC data not foundFPC data not found
+
+loss in 0.001: 0.17245641565931197 
+loss in 0.001: 0.16028231759476577 
+loss in 0.001: 0.1617358606051488 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.13933355839553735 
+cracking 0.001cracking 0.001
+
+cracking 0.001
+loss in 0.001: 0.14499243424892597 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16560452716533952 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1838849998217159 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15485526451877368 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16100301387194887 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15299982727863892 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14258630528236155 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17194454977983592 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15460498937874204 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14809596121916765 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15254432533541593 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15974157499476604 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1500908229160107 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16822172219160242 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14871588493255677 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.13530706891608268 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15607120004869346 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13427930899554108 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15150557301555698 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1418066068256193 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16156633263674636 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16334998308308424 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14469287630214953 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1848475389736458 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16888554443603518 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13938636380584246 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14146343631735409 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1738365693106117 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.12739942573356153 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17975975168793842 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15614788743299246 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14466810511164319 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15853298791804593 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14098213446931565 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18701257899792756 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1698353350673176 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14388014736487262 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1638226531753795 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13146199396026398 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1416873405030304 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1471040030524181 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16689183799576346 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1576035638573648 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.174282691667056 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1600581474344304 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1689883301322742 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16156577881173978 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.19461138920556154 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15875435314075775 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15692946290597887 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1438414548598614 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13632188530239406 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.12990190352800096 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1363226974319935 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13307021733924826 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16734946526296038 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1763164792818476 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16333121236381826 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16667263459485274 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15815964226366275 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1588773043006884 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17411993579955512 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1753141312801732 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1724261233064504 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15894377276746718 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14452107995505473 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1563406496364005 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16718624707247065 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15863000362454543 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16009679425882795 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16384662394935295 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1563927495729916 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16323446216724566 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1463538232375534 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1678574818003562 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16622984441188993 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13918919514669917 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17108770346747804 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1696090167590392 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14340527211646437 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17996242233360074 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14058817799459528 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14592003353204253 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1558568423620198 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14945431916883964 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1744835985099366 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16109259620879332 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16170783198007277 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14994865722072157 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16914796711396501 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1677211107903383 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14510686501083353 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16331521541421729 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001cracking 0.001
+
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1645476183390209 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15025698393937684 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16311221198883202 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.20763857968241922 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17999202091313793 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16727056079069905 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16495465100878093 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17392866782767488 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14922231486038193 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17335128094521976 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16036690064367207 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.18396696582700897 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18517580989960672 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18078309483671665 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1584143514335865 
+cracking 0.001
+loss in 0.001: 0.15240410645893482 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17258235561346288 
+loss in 0.001: 0.15087392751893547 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1510152403952299 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16372299410229996 
+loss in 0.001: 0.14641081526325297 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.18163481203390552 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14309882027988255 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14915333713975715 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1630307696740847 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17925933949154854 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14538491038631304 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15913342583092902 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14303101737472798 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15046390180998462 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1812214235920277 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16090891473287053 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15326263637669837 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1355096193807076 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15680386546770037 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1787228323420523 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17796157828575865 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18042536908454493 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16616216415891558 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1723532592004248 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1676056121917978 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13530862859755283 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14110838401846393 
+loss in 0.001: 0.17584330605346316 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13838732803640083 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16722710898591406 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17768075405783812 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.20401041075580817 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14527631041671016 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1751920130411954 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15101085781819498 
+loss in 0.001: 0.14671701462576744 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1723102681613313 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15766126254474452 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1729671026181417 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16002870192003496 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17151833693693708 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1813079269021444 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14562063403730613 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1436856359963438 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15784119544517883 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16070668021808932 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13419110823798597 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16166535542937202 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14618891758483143 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16635212487102186 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1668278251822859 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16166690003331835 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16653971370596451 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1528208985133463 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17848286992508458 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17254106442690342 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1628549160938659 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15010254326372918 
+loss in 0.001: 0.1527187178213723 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17123480883356207 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16268143264795853 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16622413224635982 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15856191325068722 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.20540967389894524 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.18244038765296924 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14354045753694386 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16318834084650877 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1642658961727517 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14172581524001585 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1634425108582463 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15716058662110752 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14950737673744058 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14524844762338313 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16772510415157035 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16820748656804158 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16941744436394773 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16850501367639883 
+loss in 0.001: 0.14337279537449307 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16293865015449965 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14198841241310364 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1582451774891575 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1673829964377881 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.13669265878045683 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16437746012566765 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15283896974673672 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17703549260970508 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16667449510035584 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.165383322504988 
+loss in 0.001: 0.16945129633809858 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15531089546876115 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16205240799525938 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1631344591771024 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15550371063042764 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1473127370817647 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1705645573090927 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16164817411181756 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14493801238002602 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18066171695554792 
+loss in 0.001: 0.17562111098195593 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15718378598797358 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.15671843431859694 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16106187390418164 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16567215398028434 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15501058225976122 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15048171027737206 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.18484656845288805 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16670909745894813 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1651464267915981 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1411028744057538 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15353730747519276 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1691047298432037 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17327964812691027 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17621652966088236 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14826258423873268 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1661917441824106 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17495158675074252 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.18155389256823268 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16225786725890368 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15021458099046922 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.20175266552194332 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16036364004761314 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15101847647075384 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17950899792939168 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1566459237618011 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14447755003814367 
+loss in 0.001: 0.17183800078996178 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1735980342242003 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14237733134380276 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17200498814186155 
+loss in 0.001: 0.1735352596273202 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1545071706485387 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14666120275098646 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1327049514284345 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15373166255818166 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1498572368741529 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.18637448363784134 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.19542916058101667 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17684528221841903 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16018428655839065 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15104059857307128 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1699201336636153 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.13947076645110756 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1680155974607978 
+loss in 0.001: 0.15837292095643093 
+Series([], Name: X, dtype: float64)
+FPC data not found
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1729096114326486 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.15250689002393136 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.164769438075068 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1810599620135424 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14909775238895248 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1565667761393329 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1530639618911526 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1732691132864417 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14513246325667167 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.16660673171375384 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1540568983709037 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16693180260525858 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17151133732861193 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14779972744722375 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1651367674395885 
+Series([], Name: X, dtype: float64)cracking 0.001
+
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14983131928645493 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1456883488425127 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1586935405586216 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15102154099336276 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17174957350000686 
+cracking 0.001
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.14232933690997873 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17587345787694472 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1443455736569382 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15238153869299562 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.17649496174814394 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.16215431252174473 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.1551338483238381 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.17308176084568758 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.1553492372354348 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.14537258386219393 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.16152593998856019 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.14722414611214835 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1712976143676169 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.18400444748820444 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.1473533014328478 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+loss in 0.001: 0.15794613435527982 
+Series([], Name: X, dtype: float64)
+FPC data not found
+loss in 0.001: 0.17546434900924301 
+Series([], Name: X, dtype: float64)
+FPC data not found
+cracking 0.001
+cracking 0.001

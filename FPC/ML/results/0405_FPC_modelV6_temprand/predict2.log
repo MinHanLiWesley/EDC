@@ -1,0 +1,48 @@
+training_data_FPC_V7_addprev_Temprand.csv
+            Experiment name: 0405_FPC_modelV6_temprand
+            Training Data: training_data_FPC_V7_addprev_Temprand.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+(array([], dtype=int64), array([], dtype=int64), array([], dtype=int64))
+Starting prediction...
+cracking 0.000125
+cracking 0.000125
+prev_y: 0
+prev_y: 0.009010285139083862
+prev_y: 0.01681104302406311
+prev_y: 0.029878973960876465
+prev_y: 0.04546782374382019
+prev_y: 0.06096053123474121
+prev_y: 0.08107656240463257
+prev_y: 0.10920581221580505
+prev_y: 0.14069491624832153
+prev_y: 0.17390888929367065
+prev_y: 0.2055073380470276
+prev_y: 0.23889851570129395
+prev_y: 0.27404889464378357
+prev_y: 0.30351167917251587
+prev_y: 0.33108168840408325
+prev_y: 0.35771065950393677
+prev_y: 0.3838900923728943
+prev_y: 0.40986552834510803
+ML cracking rates
+{'cracking_rates': [0, 0.009010285139083862, 0.01681104302406311, 0.029878973960876465, 0.04546782374382019, 0.06096053123474121, 0.08107656240463257, 0.10920581221580505, 0.14069491624832153, 0.17390888929367065, 0.2055073380470276, 0.23889851570129395, 0.27404889464378357, 0.30351167917251587, 0.33108168840408325, 0.35771065950393677, 0.3838900923728943, 0.40986552834510803, 0.43572747707366943]}
+24687    25.038166
+Name: X, dtype: float64
+1

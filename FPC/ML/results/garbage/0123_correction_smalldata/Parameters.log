@@ -1,0 +1,16 @@
+            Experiment name: 0123_correction_smalldata
+            Training Data: training_data_correction_10_10_10_5.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 90
+            Epoch: 20000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            ncpus = 8
+        

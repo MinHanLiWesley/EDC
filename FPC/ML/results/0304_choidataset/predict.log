@@ -1,0 +1,87 @@
+training_dataV3_10_5_20.csv
+            Experiment name: 0304_choidataset
+            Training Data: training_dataV3_10_5_20.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+19
+19
+19
+Error in 27 mass flow rate is 0.311742 
+Error in 32 mass flow rate is 0.279480 
+Error in 36 mass flow rate is 0.257312 
+Mass flow rate generalization takes 0.44196902910868324 min 26.518141746520996 sec.
+Case2: CCl4 concentration...
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+Error in concentration in 0.0ppm is 0.303858 
+Error in concentration in 125.0ppm is 0.291201 
+Error in concentration in 250.0ppm is 0.294694 
+Error in concentration in 375.0ppm is 0.297956 
+Error in concentration in 500.0ppm is 0.301019 
+Error in concentration in 625.0ppm is 0.303911 
+Error in concentration in 750.0ppm is 0.306650 
+Error in concentration in 875.0ppm is 0.309256 
+Error in concentration in 1000.0ppm is 0.311742 
+Error in concentration in 1125.0ppm is 0.314119 
+Error in concentration in 1250.0ppm is 0.316398 
+Error in concentration in 1375.0ppm is 0.318587 
+Error in concentration in 1500.0ppm is 0.320694 
+Error in concentration in 1625.0ppm is 0.322725 
+Error in concentration in 1750.0ppm is 0.324686 
+Error in concentration in 1875.0ppm is 0.326583 
+Error in concentration in 2000.0ppm is 0.328418 
+Error in concentration in 2125.0ppm is 0.330198 
+Error in concentration in 2250.0ppm is 0.331925 
+Error in concentration in 2375.0ppm is 0.333603 
+Error in concentration in 2500.0ppm is 0.335234 
+CCl4 concentration generalization takes 1.2662978410720824 min 15.977870464324951 sec.
+Case3: Initial pressure...
+19
+19
+19
+19
+19
+Error in 10.4atm is 0.295458 
+Error in 11.4atm is 0.311742 
+Error in 12.4atm is 0.326744 
+Error in 13.4atm is 0.340635 
+Error in 14.4atm is 0.353549 
+Initial pressure generalization takes 0.4492209355036418 min 26.953256130218506 sec.
+Case4: Number of tubes...

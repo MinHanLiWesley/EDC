@@ -1,0 +1,304 @@
+training_data_FPC_V4_3m_irrev.csv
+            Experiment name: 0323_FPC_model_no_model
+            Training Data: training_data_FPC_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = False
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.35708318617444507 
+19
+loss in 0.001: 0.329028572032406 
+19
+loss in 0.001: 0.34724891442907485 
+19
+Error in 27 mass flow rate is 0.050671 
+Error in 32 mass flow rate is 0.052252 
+Error in 36 mass flow rate is 0.051168 
+Mass flow rate generalization takes 0.3079710602760315 min 18.47826361656189 sec.
+Case2: CCl4 concentration...
+cracking 0.000625
+cracking 0.0
+cracking 0.00025
+cracking 0.000125
+cracking 0.00075
+cracking 0.0005
+cracking 0.000875
+cracking 0.000375
+cracking 0.0
+cracking 0.000125
+cracking 0.00025
+cracking 0.00075
+cracking 0.0005
+cracking 0.000625
+cracking 0.000875
+cracking 0.000375
+loss in 0.0: 0.32956576471647486 
+19
+cracking 0.001
+loss in 0.00025: 0.35122314544658 
+19
+cracking 0.001125
+loss in 0.00075: 0.35635439039893435 
+loss in 0.0005: 0.3549225933289942 
+19
+19
+loss in 0.000125: 0.34623454688655686 
+loss in 0.000625: 0.3557710964931391 
+cracking 0.00125
+cracking 0.001375
+19
+19
+cracking 0.0015
+cracking 0.001625
+loss in 0.000375: 0.35358709135890953 
+loss in 0.000875: 0.35679443792746196 
+19
+19
+cracking 0.00175
+cracking 0.001875
+cracking 0.001
+cracking 0.001125
+cracking 0.00125
+cracking 0.001375
+cracking 0.0015
+cracking 0.001625
+cracking 0.00175
+cracking 0.001875
+loss in 0.001: 0.35708318617444507 
+19
+loss in 0.00125: 0.3574160214314017 
+19
+cracking 0.002
+loss in 0.001375: 0.35748137528668034 
+cracking 0.002125
+19
+cracking 0.00225
+loss in 0.00175: 0.3576090492075959 
+19
+cracking 0.002375
+loss in 0.001125: 0.35728242240422775 
+19
+cracking 0.0025
+loss in 0.0015: 0.35752217416383286 
+loss in 0.001625: 0.357569813196687 
+19
+19
+loss in 0.001875: 0.3576472796373424 
+19
+cracking 0.002125
+cracking 0.002
+cracking 0.00225
+cracking 0.002375
+cracking 0.0025
+loss in 0.00225: 0.35767304735911304 
+loss in 0.002: 0.35767342930818674 
+19
+19
+loss in 0.002375: 0.3576552923908819 
+19
+loss in 0.0025: 0.35762805523908997 
+19
+loss in 0.002125: 0.357680938565264 
+19
+Error in concentration in 0.0ppm is 0.003025 
+Error in concentration in 125.0ppm is 0.017905 
+Error in concentration in 250.0ppm is 0.026712 
+Error in concentration in 375.0ppm is 0.032636 
+Error in concentration in 500.0ppm is 0.037313 
+Error in concentration in 625.0ppm is 0.041313 
+Error in concentration in 750.0ppm is 0.044884 
+Error in concentration in 875.0ppm is 0.048165 
+Error in concentration in 1000.0ppm is 0.051168 
+Error in concentration in 1125.0ppm is 0.053964 
+Error in concentration in 1250.0ppm is 0.056589 
+Error in concentration in 1375.0ppm is 0.059050 
+Error in concentration in 1500.0ppm is 0.061399 
+Error in concentration in 1625.0ppm is 0.063675 
+Error in concentration in 1750.0ppm is 0.065868 
+Error in concentration in 1875.0ppm is 0.067992 
+Error in concentration in 2000.0ppm is 0.070039 
+Error in concentration in 2125.0ppm is 0.072009 
+Error in concentration in 2250.0ppm is 0.073908 
+Error in concentration in 2375.0ppm is 0.081948 
+Error in concentration in 2500.0ppm is 0.091166 
+CCl4 concentration generalization takes 0.7974432627360026 min 47.846595764160156 sec.
+Case3: Initial pressure...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001cracking 0.001
+
+cracking 0.001
+loss in 0.001: 0.3398036655842885 
+19
+loss in 0.001: 0.34886533586753954 
+19
+loss in 0.001: 0.3302217192813478 
+19
+loss in 0.001: 0.35708318617444507 
+19
+loss in 0.001: 0.3649129828042375 
+19
+Error in 10.4atm is 0.050616 
+Error in 11.4atm is 0.051168 
+Error in 12.4atm is 0.051033 
+Error in 13.4atm is 0.049781 
+Error in 14.4atm is 0.047765 
+Initial pressure generalization takes 0.2981676459312439 min 17.890058755874634 sec.
+Case5: Initial T_in...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.35708318617444507 
+loss in 0.001: 0.3377716667937155 
+19
+19
+loss in 0.001: 0.3666143232086379 
+19
+loss in 0.001: 0.3877132009612966 
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+19
+loss in 0.001: 0.3176251953550282 
+19
+loss in 0.001: 0.3773287586503626 
+19
+Error in 300°C is 0.046473 
+Error in 310°C is 0.049440 
+Error in 320°C is 0.051168 
+Error in 330°C is 0.054847 
+Error in 340°C is 0.057586 
+Error in 350°C is 0.058018 
+Initial temperature generalization takes 0.30219956636428835 min 18.1319739818573 sec.
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.32956576471647486 
+19
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.34623454688655686 
+19
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.35122314544658 
+19
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.35358709135890953 
+19
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.3549225933289942 
+19
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.3557710964931391 
+19
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.35635439039893435 
+19
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.35679443792746196 
+19
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.35708318617444507 
+19
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.35728242240422775 
+19
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.3574160214314017 
+19
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.35748137528668034 
+19
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.35752217416383286 
+19
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.357569813196687 
+19
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.3576090492075959 
+19
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.3576472796373424 
+19
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.35767342930818674 
+19
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.357680938565264 
+19
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.35767304735911304 
+19
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.3576552923908819 
+19
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.35762805523908997 
+19

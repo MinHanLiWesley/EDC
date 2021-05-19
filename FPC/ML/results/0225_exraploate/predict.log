@@ -1,0 +1,45 @@
+training_data_FPC_V1_2m_5p_6t_ppm_extrapolate.csv
+            Experiment name: 0225_exraploate
+            Training Data: training_data_FPC_V1_2m_5p_6t_ppm_extrapolate.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = False
+            CCl4 = True
+            inital pressure = False
+            number of tubes = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case2: CCl4 concentration...
+Error in concentration in 0.0ppm is 0.021676 
+Error in concentration in 125.0ppm is 0.017179 
+Error in concentration in 250.0ppm is 0.014896 
+Error in concentration in 375.0ppm is 0.015580 
+Error in concentration in 500.0ppm is 0.016988 
+Error in concentration in 625.0ppm is 0.017097 
+Error in concentration in 750.0ppm is 0.017465 
+Error in concentration in 875.0ppm is 0.017895 
+Error in concentration in 1000.0ppm is 0.017724 
+Error in concentration in 1125.0ppm is 0.018545 
+Error in concentration in 1250.0ppm is 0.019142 
+Error in concentration in 1375.0ppm is 0.019206 
+Error in concentration in 1500.0ppm is 0.019088 
+Error in concentration in 1625.0ppm is 0.019139 
+Error in concentration in 1750.0ppm is 0.019350 
+Error in concentration in 1875.0ppm is 0.019580 
+Error in concentration in 2000.0ppm is 0.019646 
+Error in concentration in 2125.0ppm is 0.019538 
+Error in concentration in 2250.0ppm is 0.019356 
+Error in concentration in 2375.0ppm is 0.019194 
+Error in concentration in 2500.0ppm is 0.018917 
+CCl4 concentration generalization takes 1.3751041253407796 min 22.506247520446777 sec.
+Case5: Initial T_in...

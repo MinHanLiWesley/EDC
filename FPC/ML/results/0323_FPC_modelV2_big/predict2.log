@@ -1,0 +1,29 @@
+training_data_FPC_V4_3m_irrev.csv
+            Experiment name: 0323_FPC_modelV2_big
+            Training Data: training_data_FPC_V4_3m_irrev.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Starting prediction...
+cracking 0.000125
+cracking 0.000125
+ML cracking rates
+{'cracking_rates': [0, 0.016101151704788208, 0.010126709938049316, 0.015970677137374878, 0.04150736331939697, 0.026680201292037964, 0.04158201813697815, 0.12490501999855042, 0.15771132707595825, 0.19549018144607544, 0.2067382037639618, 0.22301220893859863, 0.2599490284919739, 0.29181697964668274, 0.32247453927993774, 0.3534751236438751, 0.38314542174339294, 0.40956389904022217, 0.4348149001598358]}
+24687    25.038166
+Name: X, dtype: float64
+1

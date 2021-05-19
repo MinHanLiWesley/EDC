@@ -1,0 +1,235 @@
+training_data_cracking_V8_3m_choi_rev_big.csv
+            Experiment name: 0323_choi_V4
+            Training Data: training_data_cracking_V8_3m_choi_rev_big.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = False
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.008213669083553286 
+loss in 0.001: 0.009857515107618047 
+loss in 0.001: 0.008348188402604408 
+Error in 27 mass flow rate is 0.009858 
+Error in 32 mass flow rate is 0.008348 
+Error in 36 mass flow rate is 0.008214 
+Mass flow rate generalization takes 0.26903847058614094 min 16.142308235168457 sec.
+Case2: CCl4 concentration...
+cracking 0.00075
+cracking 0.000625
+cracking 0.000375
+cracking 0.00025
+cracking 0.000125
+cracking 0.0005
+cracking 0.000875
+cracking 0.0
+cracking 0.0
+cracking 0.000125
+cracking 0.000625
+cracking 0.0005
+cracking 0.00025
+cracking 0.00075
+cracking 0.000875
+cracking 0.000375
+loss in 0.0: 0.04850505319502771 
+cracking 0.001
+loss in 0.000125: 0.008124742100034095 
+cracking 0.001125
+loss in 0.00025: 0.006856925209823087 
+loss in 0.0005: 0.007434300672772968 
+loss in 0.000625: 0.0076244253777232205 
+cracking 0.00125
+loss in 0.000375: 0.0071771720756899195 
+cracking 0.001375
+cracking 0.0015
+loss in 0.000875: 0.007892929919499286 
+loss in 0.00075: 0.00796153659441307 
+cracking 0.001625
+cracking 0.00175
+cracking 0.001875
+cracking 0.001
+cracking 0.001125
+cracking 0.00125
+cracking 0.001375
+cracking 0.0015
+cracking 0.001625
+cracking 0.00175
+cracking 0.001875
+loss in 0.001: 0.008213669083553286 
+cracking 0.002
+loss in 0.001125: 0.008663985650293138 
+loss in 0.00125: 0.008933760458855767 
+cracking 0.002125
+loss in 0.001375: 0.008946692417513502 
+loss in 0.0015: 0.00900101057065935 
+cracking 0.00225
+cracking 0.002375
+cracking 0.0025
+loss in 0.001625: 0.009447369224972493 
+loss in 0.00175: 0.00987767360338692 
+loss in 0.001875: 0.010254481820638256 
+cracking 0.002
+cracking 0.002125
+cracking 0.00225
+cracking 0.002375
+cracking 0.0025
+loss in 0.002: 0.010546400353587199 
+loss in 0.002125: 0.010742650824071208 
+loss in 0.00225: 0.010828179444201861 
+loss in 0.002375: 0.010836372756993552 
+loss in 0.0025: 0.010806715073634392 
+Error in concentration in 0.0ppm is 0.048505 
+Error in concentration in 125.0ppm is 0.008125 
+Error in concentration in 250.0ppm is 0.006857 
+Error in concentration in 375.0ppm is 0.007177 
+Error in concentration in 500.0ppm is 0.007434 
+Error in concentration in 625.0ppm is 0.007624 
+Error in concentration in 750.0ppm is 0.007962 
+Error in concentration in 875.0ppm is 0.007893 
+Error in concentration in 1000.0ppm is 0.008214 
+Error in concentration in 1125.0ppm is 0.008664 
+Error in concentration in 1250.0ppm is 0.008934 
+Error in concentration in 1375.0ppm is 0.008947 
+Error in concentration in 1500.0ppm is 0.009001 
+Error in concentration in 1625.0ppm is 0.009447 
+Error in concentration in 1750.0ppm is 0.009878 
+Error in concentration in 1875.0ppm is 0.010254 
+Error in concentration in 2000.0ppm is 0.010546 
+Error in concentration in 2125.0ppm is 0.010743 
+Error in concentration in 2250.0ppm is 0.010828 
+Error in concentration in 2375.0ppm is 0.010836 
+Error in concentration in 2500.0ppm is 0.010807 
+CCl4 concentration generalization takes 0.696403706073761 min 41.78422236442566 sec.
+Case3: Initial pressure...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.007173002111144325 
+loss in 0.001: 0.00811921423164546 
+loss in 0.001: 0.009893158005343341 
+loss in 0.001: 0.00911884206825235 
+loss in 0.001: 0.008213669083553286 
+Error in 10.4atm is 0.007173 
+Error in 11.4atm is 0.008119 
+Error in 12.4atm is 0.008214 
+Error in 13.4atm is 0.009119 
+Error in 14.4atm is 0.009893 
+Initial pressure generalization takes 0.28000141779581705 min 16.800085067749023 sec.
+Case5: Initial T_in...
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.01322619023970734 
+loss in 0.001: 0.009480854912979309 
+loss in 0.001: 0.008639095141491923 
+loss in 0.001: 0.009903714335697611 
+loss in 0.001: 0.00924075838541191 
+loss in 0.001: 0.008213669083553286 
+Error in 300°C is 0.013226 
+Error in 310°C is 0.009481 
+Error in 320°C is 0.008214 
+Error in 330°C is 0.008639 
+Error in 340°C is 0.009241 
+Error in 350°C is 0.009904 
+Initial temperature generalization takes 0.2659131606419881 min 15.954789638519287 sec.
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.05428506682315583 
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.023093769775950825 
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.020527132403344694 
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.01897039459402272 
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.016334287381709583 
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.014748303923742835 
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.013166170187662017 
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.011863028884466298 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.011012189298551878 
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.010518756280884854 
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.011277589474527503 
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.012084499462290156 
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.01258696892375939 
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.012768959700032974 
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.013020777217455422 
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.013311879871758824 
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.013651995025780999 
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.013907234479812309 
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.01407476925143345 
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.014179708438988274 
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.014240266468594652 
+['/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_0.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_125.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_250.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_375.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_500.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_625.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_750.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_875.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1000.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1125.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1250.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1375.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1500.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1625.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1750.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_1875.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_2000.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_2125.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_2250.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_2375.000000_mass_25_temp_320_20_320_11.4_25_org.png', '/home/wesley/EDC/FPC/ML/results/0323_choi_V4/plots/predict/20_320_11.4_25_org/CCl4_2500.000000_mass_25_temp_320_20_320_11.4_25_org.png']

@@ -1,0 +1,85 @@
+training_dataV3_10_5_20.csv
+            Experiment name: 0304_choidataset
+            Training Data: training_dataV3_10_5_20.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Starting prediction...
+cracking 0.0
+cracking 0.0
+loss in 0.0: 0.004359759950369466 
+cracking 0.000125
+cracking 0.000125
+loss in 0.000125: 0.0028795475676930845 
+cracking 0.00025
+cracking 0.00025
+loss in 0.00025: 0.0037238611072203448 
+cracking 0.000375
+cracking 0.000375
+loss in 0.000375: 0.003824570021063781 
+cracking 0.0005
+cracking 0.0005
+loss in 0.0005: 0.0046331692339176035 
+cracking 0.000625
+cracking 0.000625
+loss in 0.000625: 0.005531254697136186 
+cracking 0.00075
+cracking 0.00075
+loss in 0.00075: 0.006259747464344487 
+cracking 0.000875
+cracking 0.000875
+loss in 0.000875: 0.005137685755996606 
+cracking 0.001
+cracking 0.001
+loss in 0.001: 0.0037783454608163037 
+cracking 0.001125
+cracking 0.001125
+loss in 0.001125: 0.0032734031425816633 
+cracking 0.00125
+cracking 0.00125
+loss in 0.00125: 0.0022742114362917934 
+cracking 0.001375
+cracking 0.001375
+loss in 0.001375: 0.002599549699901925 
+cracking 0.0015
+cracking 0.0015
+loss in 0.0015: 0.0025509234375826126 
+cracking 0.001625
+cracking 0.001625
+loss in 0.001625: 0.0018707092183070457 
+cracking 0.00175
+cracking 0.00175
+loss in 0.00175: 0.0011890849342400247 
+cracking 0.001875
+cracking 0.001875
+loss in 0.001875: 0.0007363091716300714 
+cracking 0.002
+cracking 0.002
+loss in 0.002: 0.0011111495953836734 
+cracking 0.002125
+cracking 0.002125
+loss in 0.002125: 0.0016738957525682546 
+cracking 0.00225
+cracking 0.00225
+loss in 0.00225: 0.002169576861783465 
+cracking 0.002375
+cracking 0.002375
+loss in 0.002375: 0.0025539968744982115 
+cracking 0.0025
+cracking 0.0025
+loss in 0.0025: 0.0029982590113374835 

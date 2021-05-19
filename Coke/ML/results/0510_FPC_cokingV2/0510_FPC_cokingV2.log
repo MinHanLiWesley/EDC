@@ -1,0 +1,28 @@
+../Data/trainingdata_coking_V3_27_36_500ccl4.csv
+            Experiment name: 0510_FPC_cokingV2
+            Training Data: ../Data/trainingdata_coking_V3_27_36_500ccl4.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 1800
+            Epoch: 1000
+            CSTR num: 100
+            Training vebose: 0
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            CHCl3 = True
+            Tri = True
+            Cp = True
+            inital pressure = True
+            number of tubes = True
+            ncpus = 8
+            training = True
+            prediction only = False
+                
+Loading data...
+Bulid model...
+Training...
+  1/257 [..............................] - ETA: 6s - loss: 0.0429 - accuracy: 0.0000e+00 - mae: 0.0429 48/257 [====>.........................] - ETA: 0s - loss: 0.0451 - accuracy: 0.0000e+00 - mae: 0.0451 99/257 [==========>...................] - ETA: 0s - loss: 0.0455 - accuracy: 0.0000e+00 - mae: 0.0455157/257 [=================>............] - ETA: 0s - loss: 0.0454 - accuracy: 0.0000e+00 - mae: 0.0454215/257 [========================>.....] - ETA: 0s - loss: 0.0456 - accuracy: 0.0000e+00 - mae: 0.0456257/257 [==============================] - 0s 941us/step - loss: 0.0456 - accuracy: 0.0000e+00 - mae: 0.0456
+Testset loss/acc:0.04562676325440407
+Training takes 13.053217792510987 min 3.1930675506591797 sec.

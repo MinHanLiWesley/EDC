@@ -1,0 +1,71 @@
+training_data_FPC_V1_2m_5p_6t_21Clppm.csv
+            Experiment name: 0302_revised
+            Training Data: training_data_FPC_V1_2m_5p_6t_21Clppm.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = False
+            CCl4 = False
+            inital pressure = False
+            number of tubes = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case5: Initial T_in...
+19
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue19
+
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+19
+19
+19
+19
+Error in 300°C is 0.000628 
+Error in 310°C is 0.000352 
+Error in 320°C is 0.001410 
+Error in 330°C is 0.000622 
+Error in 340°C is 0.000253 
+Error in 350°C is 0.001163 
+Initial temperature generalization takes 0.23305588563283283 min 13.98335313796997 sec.
+Starting prediction...
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19

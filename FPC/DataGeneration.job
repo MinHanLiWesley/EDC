@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1
+#PBS -q workq
+#PBS -j oe
+#PBS -m abe
+source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
+cd /home/wesley/EDC/FPC/ML
+echo "=========================================================="
+echo "Starting on : $(date)"
+echo "Running on node : $(hostname)"
+echo "Current directory : $(pwd)"
+echo "Current job ID : $PBS_JOBID"
+echo "=========================================================="
+python createTrainingData_prevX.py  36 14.4 480 1500 350 
+
+echo "Job Ended at $(date)"
+echo '======================================================='
+
+conda deactivate

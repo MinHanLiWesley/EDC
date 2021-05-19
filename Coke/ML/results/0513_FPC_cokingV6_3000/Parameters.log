@@ -1,0 +1,19 @@
+            Experiment name: 0513_FPC_cokingV6_3000
+            Training Data: ../Data/trainingdata_coking_V3_27_36_500ccl4.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 10000
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 1
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            CHCl3 = True
+            Tri = True
+            Cp = True
+            inital pressure = True
+            number of tubes = False
+            ncpus = 8
+        

@@ -1,0 +1,21 @@
+            Experiment name: 0124_correction_full
+            Training Data: training_data_correction_10_10_10_10.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 90
+            Epoch: 20000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = False
+            CCl4 = True
+            inital pressure = False
+            number of tubes = False
+            ncpus = 8
+            training = True
+            prediction only = True
+                
+Loading data...
+Starting prediction...
+Mean absolute error of `0124_correction_full` is 0.00161

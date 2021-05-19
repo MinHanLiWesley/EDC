@@ -1,0 +1,31 @@
+training_data.csv
+            Experiment name: 0122_batch54
+            Training Data: training_data.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 54
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            ncpus = 8
+                
+Loading data...
+Training takes 1.1920928955078126e-08 min 7.152557373046875e-07 sec.
+Generalization test...
+Case1: Mass flow rate...
+Mass flow rate generalization takes 4.016975975036621 min 1.0185585021972656 sec.
+Case2: CCl4 concentration...
+CCl4 concentration generalization takes 4.106777755419413 min 6.406665325164795 sec.
+Case3: Initial pressure...
+Initial pressure generalization takes 4.103150073687235 min 6.189004421234131 sec.
+Case4: Number of tubes...
+Figures saved in /home/wesley/EDC/FPC/ML/results/0122_batch54/plots
+Number of tubes generalization takes 34.74222374757131 min 44.533424854278564 sec.
+Starting prediction...
+Mean absolute error of `0122_batch54` is 0.00156

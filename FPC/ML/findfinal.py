@@ -1,0 +1,302 @@
+from conversion_profile_new import *
+from hyperopt import fmin, tpe, hp, STATUS_OK, space_eval, Trials, anneal
+from hyperopt.fmin import generate_trials_to_calculate
+import pandas as pd
+import numpy as np
+import random as random
+from random import choice
+import pickle as pk
+from pickle import load
+from itertools import product
+from multiprocessing import Pool
+import os
+from keras.layers import Input, Dense, Activation, concatenate
+from keras.models import Model
+from keras import losses
+from keras import optimizers
+from numpy import zeros, arange, zeros_like, sum, hstack
+from cantera import Species, one_atm, Solution, IdealGasReactor, MassFlowController, Reservoir, SolutionArray, MassFlowController, PressureController, ReactorNet
+from silence_tensorflow import silence_tensorflow
+from sklearn.metrics import mean_absolute_error
+from typing import List
+silence_tensorflow()
+
+
+def build_model(lr=0.001):
+    first_input = Input(shape=(2,), name='Input_layer_1')
+    second_input = Input(shape=(33,), name='Input_layer_2')
+    third_input = Input(shape=(1,), name='Prev_cracking')
+
+    layer = Dense(6, name='Hinden_layer_1')(first_input)
+    layer = Activation('relu')(layer)
+
+    layer = concatenate([layer, second_input], name='Concatenate_layer')
+    layer = Activation('relu')(layer)
+    layer = Dense(12, name='Hinden_layer_4')(layer)
+    layer = Activation('relu')(layer)
+    layer = Dense(12, name='Hinden_layer_5')(layer)
+    layer = Activation('relu')(layer)
+    layer = concatenate([layer, third_input], name='Concatenate_layer_2')
+    layer = Dense(1, name='Hinden_layer_6')(layer)
+    output = Activation('sigmoid')(layer)
+
+    model = Model(inputs=[first_input, second_input, third_input],
+                  outputs=output)
+    model.compile(optimizer=optimizers.Adam(lr=lr),
+                  loss=losses.mean_absolute_error,
+                  metrics=['accuracy', 'mae'])
+    return model
+
+
+def EDC_cracking(
+        reaction_mech,
+        T_list,
+        pressure_0,
+        CCl4_X_0,
+        mass_flow_rate,
+        n_steps=1000,
+        n_pfr=18,
+        length=18,
+        area=0.03225097679
+):
+    if CCl4_X_0 > 1:  # ppm
+        CCl4_X_0 = float(CCl4_X_0) / 1000000
+    T_0 = 273.15 + T_list[0]  # inlet temperature [K]
+    pressure_0 *= one_atm
+    spcs = Species.listFromFile(reaction_mech)
+    for spc in spcs[::-1]:
+        if spc.composition == {'C': 2.0, 'Cl': 2.0, 'H': 4.0} and spc.charge == 0:
+            EDC_label = spc.name
+        if spc.composition == {'C': 1.0, 'Cl': 4.0} and spc.charge == 0:
+            CCl4_label = spc.name
+    EDC_X_0 = 1 - CCl4_X_0
+    composition_0 = '{}:{}, {}:{}'.format(
+        EDC_label, EDC_X_0, CCl4_label, CCl4_X_0)
+    mass_flow_rate *= 1000 / 3600  # T/H to kg/s
+    model = Solution(reaction_mech)
+    model.TPX = T_0, pressure_0, composition_0
+    dz = length / n_steps
+    r_vol = area * dz
+    r = IdealGasReactor(model)
+    r.volume = r_vol
+    upstream = Reservoir(model, name='upstream')
+    downstream = Reservoir(model, name='downstream')
+    m = MassFlowController(upstream, r, mdot=mass_flow_rate)
+    v = PressureController(r, downstream, master=m, K=1e-5)
+    sim = ReactorNet([r])
+
+    z = (arange(n_steps) + 1) * dz
+    t = zeros(n_pfr)  # residence time in each PFR reactor
+    compositions = [None] * n_pfr
+    states = SolutionArray(r.thermo)
+
+    cracking_rates = [0]
+    for i, T in enumerate(T_list[1:]):
+        Ti = T_list[i] + 273.15
+        Te = T + 273.15
+        dT = (Te - Ti) / n_steps
+        T = Ti
+        t_r = zeros_like(z)  # residence time in each CSTR reactor
+        for n in range(n_steps):
+            # simulate the linear T-profile in each reactor
+            T = Ti + (n + 1) * dT
+            model.TP = T, None
+            r.syncState()
+            # Set the state of the reservoir to match that of the previous reactor
+            model.TPX = r.thermo.TPX
+            upstream.syncState()
+            # integrate the reactor forward in time until steady state is reached
+            sim.reinitialize()
+            sim.set_initial_time(0)
+            sim.advance_to_steady_state()
+            # compute velocity and transform into time
+            t_r[n] = r.mass / mass_flow_rate  # residence time in this reactor
+            # write output data
+            states.append(r.thermo.state)
+        t[i] = sum(t_r)
+        compositions[i] = model.X[4:]
+        cracking_rate = (
+            EDC_X_0 - model.X[model.species_index(EDC_label)]) / EDC_X_0
+        cracking_rates.append(cracking_rate)
+    return compositions, t, cracking_rates
+
+
+def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
+            n_steps, n_pfr, length, area):
+    """
+    Load the saved parameters of StandardScaler() and rebuild the ML model to
+    do predictions.
+
+    =============== =============================================================
+    Attribute       Description
+    =============== =============================================================
+    `reaction_mech` Doctinary of Cantera reaction mechanism(s) (.cti file)
+    `T_list`        Temperature profile (°C)
+    `pressure_0`    Initial pressue (atm)
+    `CCl4_X_0`      Initial CCl4 concentration (mass fraction)
+    `mass_flow_rate`Mass flow rate of input gas (T/H)
+    `n_steps`       Number of iterations/number of CSTRs
+    `n_pfr`         Number of PFRs
+    `length`        Length of each PFR (m)
+    `area`          Cross-sectional area (m**2)
+    `save_fig`      Save figure to `plots` folder
+    `name`          The file name of the saving figure
+    =============== =============================================================
+
+
+    """
+    # Load scaler parameter
+    with open('clf.pickle', 'rb') as f:
+        scaler = load(f)
+    # Load model
+    model = build_model()
+    model.load_weights('model.h5')
+
+    if type(reaction_mech) != dict:
+        raise TypeError('The datatype of `reaction_mech` is {}.It should be a dict.'.format(
+            type(reaction_mech)))
+    results = {}
+    for label in reaction_mech.keys():
+        compositions, t, cracking_rates = EDC_cracking(
+            reaction_mech[label],
+            T_list,
+            pressure_0,
+            CCl4_X_0,
+            mass_flow_rate,
+            n_steps,
+            n_pfr,
+            length,
+            area
+        )
+        results[label] = {
+            'compositions': compositions,
+            't': t,
+            'cracking_rates': cracking_rates,
+        }
+    # Use ML model to predict
+    KM_label = 'Schirmeister'
+    y_predicted = [0]
+    prev_y = 0
+    for i, T in enumerate(T_list[1:]):
+        Ti = T_list[i]
+        Te = T
+        compositions = results[KM_label]['compositions'][i]
+        t = sum(results[KM_label]['t'][:i+1])
+        t_r = results[KM_label]['t'][i]
+
+        x_predict = [Ti, Te, compositions,
+                     pressure_0, CCl4_X_0, t, t_r, prev_y]
+        x_predict = hstack(x_predict).reshape(1, -1)
+        rescaled_X_predict = scaler.transform(x_predict)
+        x_predict = [rescaled_X_predict[:, 0:2],
+                     rescaled_X_predict[:, 2:-1], rescaled_X_predict[:, -1]]
+        y = float(model.predict(x_predict))
+        prev_y = y
+        y_predicted.append(y)
+    # [print(f"{(i * 100):.2f}", end=',') for i in y_predicted]
+    # print("\n")
+    return [i * 100 for i in y_predicted]
+
+
+def f(T_list=None,index_plt=None):
+    reaction_mech = {
+                'Schirmeister': 'chem_annotated_irreversible.xml'
+            }
+    ##TODO##
+    ## update k and E
+    k_update = None
+    E_update = None
+    T1=T_list[:-1]
+    T2 = T_list[1:]
+    AspenX = Cracking_func(Pin=13.4,k_update=k_update,E_update=E_update,EDC_mass=53,CCl4=1000,T1=T1,T2=T2,index_f=1,index_plt=index_plt)
+
+    MlX = predict(reaction_mech, T_list, 13, 1000, 53,
+            100, len(T_list)-1, 18, 3.14 * (262 / 1000) ** 2 / 4)
+
+    loss = mean_absolute_error(AspenX,MlX)
+    
+    loss += ((AspenX-55)*5+(MlX-55)*3)
+    return loss,(AspenX[-1],MlX[-1])
+
+def mainf(params):
+    global index_plt
+    global loss_dic
+    T_list = [350]
+    for __,value in params.items():
+        T_list.append(T_list[-1]+value)
+    loss,X = f(T_list=T_list,index_plt=index_plt)
+    (AspenX,MlX) =X
+    print(f"index_plt:{index_plt}")
+    print(f"T_list:{T_list}")
+    print(f"final cracking rates:")
+    print(f"Aspen: {AspenX}")
+    print(f"ML: {MlX}")
+    loss_dic.append({index_plt: loss})
+    index_plt +=1
+    
+    return {'loss': loss, 'status': STATUS_OK}
+
+if __name__ =='__main__':
+    loss_dic: List[float] = []
+
+    fspace={'t1' : hp.uniform('t1', low=5, high=40),
+            't2' : hp.uniform('t2', low=5, high=40),
+            't3' : hp.uniform('t3', low=5, high=40),
+            't4' : hp.uniform('t4', low=5, high=40),
+            't5' : hp.uniform('t5', low=5, high=40),
+            't6' : hp.uniform('t6', low=0, high=10),
+            't7' : hp.uniform('t7', low=0, high=10),
+            't8' : hp.uniform('t8', low=0, high=10),
+            't9' : hp.uniform('t9', low=0, high=10),
+            't10' : hp.uniform('t10', low=0, high=5),
+            't11' : hp.uniform('t11', low=0, high=5),
+            't12' : hp.uniform('t12', low=0, high=5),
+            't13' : hp.uniform('t13', low=0, high=5),
+            't14' : hp.uniform('t14', low=0, high=3),
+            't15' : hp.uniform('t15', low=0, high=3),
+            't16' : hp.uniform('t16', low=0, high=3),
+            't17' : hp.uniform('t17', low=0, high=3),
+            't18' : hp.uniform('t18', low=0, high=3),
+            't19' : hp.uniform('t19', low=0, high=3),
+            't20' : hp.uniform('t20', low=0, high=3),
+            't21' : hp.uniform('t21', low=0, high=3),
+            't22' : hp.uniform('t22', low=0, high=3),
+            }
+    try:
+        index_plt = 0
+        trials = pk.load(open("350_temp_results.pk",'rb'))
+    #初始的數值
+
+    except(FileNotFoundError):
+        index_plt = 0
+        trials = generate_trials_to_calculate([{
+            't1':15, 't2':15,
+            't3':15, 't4':15,
+            't5':15, 't6':10,
+            't7':5, 't8':2,  
+            't9':2, 't10':2,
+            't12':1, 't11':1,
+            't13':1, 't13':1,
+            't14':1, 't15':1,
+            't16':1, 't17':1,
+            't18':1, 't19':1,
+            't20':1, 't21':1,
+            't22':0
+        }])
+    max_evals = 1000
+    step = 1
+    for i in range(1,max_evals+1,step):
+        best = fmin(
+            fn=mainf,
+            space=fspace,
+            algo=anneal.suggest,
+            trials=trials,
+            max_evals=i,
+            rstate=random.seed(42),
+            verbose=True
+            )
+
+        print("####################################")
+        print(best)
+        pk.dump(loss_dic,open("350_loss_dic.pk","wb"))
+        pk.dump(trials,open("350_temp_results.pk","wb"))

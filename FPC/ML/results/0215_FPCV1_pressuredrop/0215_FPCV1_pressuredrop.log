@@ -1,0 +1,25 @@
+training_data_FPC_V1_WithPressureDrop.csv
+            Experiment name: 0215_FPCV1_pressuredrop
+            Training Data: training_data_FPC_V1_WithPressureDrop.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            ncpus = 8
+            training = True
+            prediction only = False
+                
+Loading data...
+Bulid model...
+Training...
+  1/378 [..............................] - ETA: 27s - loss: 0.0024 - mean_absolute_error: 0.0024 70/378 [====>.........................] - ETA: 0s - loss: 0.0020 - mean_absolute_error: 0.0020 143/378 [==========>...................] - ETA: 0s - loss: 0.0021 - mean_absolute_error: 0.0021215/378 [================>.............] - ETA: 0s - loss: 0.0020 - mean_absolute_error: 0.0020286/378 [=====================>........] - ETA: 0s - loss: 0.0021 - mean_absolute_error: 0.0021361/378 [===========================>..] - ETA: 0s - loss: 0.0021 - mean_absolute_error: 0.0021378/378 [==============================] - 0s 698us/step - loss: 0.0021 - mean_absolute_error: 0.0021
+Testset loss : 0.0021
+Training takes 74.8960082689921 min 53.76049613952637 sec.

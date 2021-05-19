@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+#PBS -l select=1:ncpus=1
+#PBS -q gpu
+#PBS -j oe
+source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
+cd /home/wesley/EDC/Coke/Data
+echo "=========================================================="
+echo "Starting on : $(date)"
+echo "Running on node : $(hostname)"
+echo "Current directory : $(pwd)"
+echo "Current job ID : $PBS_JOBID"
+echo "=========================================================="
+
+python combine.py
+# python merge.py
+
+echo "Job Ended at $(date)"
+echo '======================================================='
+
+conda deactivate

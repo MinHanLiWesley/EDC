@@ -1,0 +1,135 @@
+training_data_FPC_V1_2m_5p_6t_21Cl_extraplolate.csv
+            Experiment name: 0225_extrapolate
+            Training Data: training_data_FPC_V1_2m_5p_6t_21Cl_extraplolate.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            #Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = False
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Loading data...
+Generalization test...
+Case1: Mass flow rate...
+19
+19
+19
+Error in 27 mass flow rate is 0.028679 
+Error in 32 mass flow rate is 0.020644 
+Error in 36 mass flow rate is 0.001939 
+Mass flow rate generalization takes 0.48916298945744835 min 29.3497793674469 sec.
+Case2: CCl4 concentration...
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+Error in concentration in 0.0ppm is 0.037013 
+Error in concentration in 125.0ppm is 0.039486 
+Error in concentration in 250.0ppm is 0.037722 
+Error in concentration in 375.0ppm is 0.034203 
+Error in concentration in 500.0ppm is 0.032659 
+Error in concentration in 625.0ppm is 0.030821 
+Error in concentration in 750.0ppm is 0.029638 
+Error in concentration in 875.0ppm is 0.028881 
+Error in concentration in 1000.0ppm is 0.028679 
+Error in concentration in 1125.0ppm is 0.028875 
+Error in concentration in 1250.0ppm is 0.027680 
+Error in concentration in 1375.0ppm is 0.027467 
+Error in concentration in 1500.0ppm is 0.027345 
+Error in concentration in 1625.0ppm is 0.027373 
+Error in concentration in 1750.0ppm is 0.027375 
+Error in concentration in 1875.0ppm is 0.027216 
+Error in concentration in 2000.0ppm is 0.026994 
+Error in concentration in 2125.0ppm is 0.026650 
+Error in concentration in 2250.0ppm is 0.026060 
+Error in concentration in 2375.0ppm is 0.024796 
+Error in concentration in 2500.0ppm is 0.023175 
+CCl4 concentration generalization takes 1.3180624127388 min 19.083744764328003 sec.
+Case3: Initial pressure...
+19
+19
+19
+19
+19
+Error in 10.4atm is 0.031764 
+Error in 11.4atm is 0.028679 
+Error in 12.4atm is 0.028223 
+Error in 13.4atm is 0.025964 
+Error in 14.4atm is 0.024484 
+Initial pressure generalization takes 0.48903681834538776 min 29.342209100723267 sec.
+Case5: Initial T_in...
+19
+Index:1    Loss:0.00171 
+19
+Index:2    Loss:0.00191 
+19
+Index:3    Loss:0.02868 
+19
+Index:4    Loss:0.02429 
+19
+Index:5    Loss:0.02345 
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+19
+Index:6    Loss:0.00965 
+Initial temperature generalization takes 2.5342968463897706 min 32.05781078338623 sec.
+Starting prediction...
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
+19
