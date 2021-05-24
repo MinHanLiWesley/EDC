@@ -1,0 +1,48 @@
+training_data_FPC_V8_addprev_area.csv
+            Experiment name: 0522_FPC_modelV8_diffparam6
+            Training Data: training_data_FPC_V8_addprev_area.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 128
+            Epoch: 1500
+            CSTR num: 100
+            Training vebose: 0
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Starting prediction...
+cracking 0
+prev_y: 0
+prev_y: 0.01037648320198059
+prev_y: 0.01831415295600891
+prev_y: 0.030246973037719727
+prev_y: 0.04433894157409668
+prev_y: 0.06329655647277832
+prev_y: 0.07913190126419067
+prev_y: 0.10415259003639221
+prev_y: 0.13872355222702026
+prev_y: 0.1740887463092804
+prev_y: 0.21232861280441284
+prev_y: 0.24628594517707825
+prev_y: 0.28153496980667114
+prev_y: 0.3190979063510895
+prev_y: 0.3569656014442444
+prev_y: 0.3929687738418579
+prev_y: 0.425283282995224
+prev_y: 0.45467519760131836
+prev_y: 0.48174864053726196
+prev_y: 0.5063037276268005
+prev_y: 0.5291305184364319
+prev_y: 0.5512481331825256
+ML cracking rates
+{'cracking_rates': [0, 0.01037648320198059, 0.01831415295600891, 0.030246973037719727, 0.04433894157409668, 0.06329655647277832, 0.07913190126419067, 0.10415259003639221, 0.13872355222702026, 0.1740887463092804, 0.21232861280441284, 0.24628594517707825, 0.28153496980667114, 0.3190979063510895, 0.3569656014442444, 0.3929687738418579, 0.425283282995224, 0.45467519760131836, 0.48174864053726196, 0.5063037276268005, 0.5291305184364319, 0.5512481331825256, 0.5725134611129761]}
+Series([], Name: X, dtype: float64)
+FPC data not found

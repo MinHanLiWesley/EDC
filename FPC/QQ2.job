@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+#PBS -l select=1:ncpus=2:mpiprocs=1:ompthreads=2
+#PBS -q workq
+#PBS -j oe
+#PBS -N wes_hf_463
+
+# PIN=14.4
+# TIN=350
+# TOUT=460.1
+# NAME=$PIN~$TIN~$TOUT
+# DIR='0519'
+source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
+mkdir /home/wesley/EDC/FPC/ML/HyperOpt/$DIR
+cd /home/wesley/EDC/FPC/ML/Heatflux
+echo "=========================================================="
+echo "Starting on : $(date)"
+echo "Running on node : $(hostname)"
+echo "Current directory : $(pwd)"
+echo "Current job ID : $PBS_JOBID"
+echo "=========================================================="
+
+
+# python -u hyper_finaltemp.py --name $NAME --pin $PIN --tin $TIN --tout $TOUT --dir $DIR | tee $DIR/$NAME.log
+# python -u hyper_sc.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
+# python -u hyper_noconstraint.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
+# python -u hyper_470.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
+python -u hf_modelV1.py | tee hf4.log
+
+
+
+echo "Job Ended at $(date)"
+echo '======================================================='
+
+conda deactivate

@@ -31,15 +31,15 @@ def build_model(lr=0.001):
     second_input = Input(shape=(33,), name='Input_layer_2')
     third_input = Input(shape=(1,), name='Prev_cracking')
 
-    layer = Dense(6, name='Hinden_layer_1')(first_input)
+    layer = Dense(11, name='Hinden_layer_1')(first_input)
     layer = Activation('relu')(layer)
 
     layer = concatenate([layer, second_input], name='Concatenate_layer')
     layer = Activation('relu')(layer)
-    layer = Dense(12, name='Hinden_layer_4')(layer)
+    layer = Dense(8, name='Hinden_layer_4')(layer)
     layer = Activation('relu')(layer)
-    layer = Dense(12, name='Hinden_layer_5')(layer)
-    layer = Activation('relu')(layer)
+    # layer = Dense(12, name='Hinden_layer_5')(layer)
+    # layer = Activation('relu')(layer)
     layer = concatenate([layer, third_input], name='Concatenate_layer_2')
     layer = Dense(1, name='Hinden_layer_6')(layer)
     output = Activation('sigmoid')(layer)
@@ -126,7 +126,7 @@ def EDC_cracking(
 
 
 def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
-            n_steps, n_pfr, length, area):
+            n_steps, n_pfr, length, area,result_path=None):
     """
     Load the saved parameters of StandardScaler() and rebuild the ML model to
     do predictions.
@@ -150,11 +150,17 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
 
     """
     # Load scaler parameter
-    with open('../../results/0430_FPC_modelV6_area/clf.pickle', 'rb') as f:
+    # with open('../results/0430_FPC_modelV6_area/clf.pickle', 'rb') as f:
+    #     scaler = load(f)
+    # # Load model
+    # model = build_model()
+    # model.load_weights('../results/0430_FPC_modelV6_area/model.h5')
+    print("0522_FPC_modelV9/clf.pickle")
+    with open(f'../results/{result_path}/clf.pickle', 'rb') as f:
         scaler = load(f)
     # Load model
     model = build_model()
-    model.load_weights('../../results/0430_FPC_modelV6_area/model.h5')
+    model.load_weights(f'../results/{result_path}/model.h5')
 
     if type(reaction_mech) != dict:
         raise TypeError('The datatype of `reaction_mech` is {}.It should be a dict.'.format(
@@ -203,7 +209,7 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
 
 def f(T_list=None):
     reaction_mech = {
-        'Schirmeister': '../../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
+        'Schirmeister': '../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
     }
     ##TODO##
     head_flux = [18796.31, 21664.45, 22274.44, 23715.35, 24412.25, 24762.11, 25061.39, 24661.78, 23877.03, 21651.58,

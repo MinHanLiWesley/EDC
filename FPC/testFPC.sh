@@ -1,6 +1,6 @@
 #!/usr/bin/bash
-#PBS -l select=1:vnode=c8-eno1[5]:ncpus=1
-#PBS -q gpu
+#PBS -l select=1:ncpus=8:mpiprocs=1:ompthreads=8
+#PBS -q workq
 #PBS -j oe
 source ~/.bashrc
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
@@ -22,8 +22,12 @@ START_TIME=$SECONDS
 # NAME='0404_FPC_modelV5'
 # NAME='0405_FPC_modelV6'
 # NAME='0323_FPC_modelV2_big'
-# NAME='0405_FPC_modelV6_temprand'
-NAME='0430_FPC_modelV6_area'
+# NAME='0405_FPC_modelV6'
+# NAME='0430_FPC_modelV_area'
+# NAME='0522_FPC_modelV6_fittransform'
+# NAME='0522_FPC_modelV8_diffparam6'
+# NAME='0522_FPC_modelV9_testrandtemp'
+NAME='0522_FPC_modelV9'
 # NAME='0406_test'
 # DATA='training_data_FPC_V1_3m_5p_6t_21Clppm.csv'
 # DATA='training_data_cracking_V7_3m_choi_rev.csv'
@@ -34,15 +38,18 @@ DATA='training_data_FPC_V8_addprev_area.csv'
 # DATA='training_data_FPC_V3_3m_5p_6t_21Cl_rev.csv'
 # MODEL='ML_model_V2'
 # MODEL='ML_model_V5'
-MODEL='ML_model_V6'
+# MODEL='ML_model_V6'
+# MODEL='ML_model_V8'
+MODEL='ML_model_V9'
+# MODEL='ML_model_V7'
 
 # MODEL='ML_model_V2_allin'
 # MODEL='ML_model_no_kinetic'
 
 mkdir /home/wesley/EDC/FPC/ML/results/$NAME
-python  -u -m $MODEL --no_gene --no_predict --name $NAME  --FPC --data $DATA |tee /home/wesley/EDC/FPC/ML/results/$NAME/$NAME.log
-python  -u -m $MODEL --no_train    --name $NAME  --no_tubes   --FPC --data $DATA |tee /home/wesley/EDC/FPC/ML/results/$NAME/predict.log
-# python  -u -m $MODEL --no_train --no_gene --name $NAME   --FPC  --data $DATA |tee /home/wesley/EDC/FPC/ML/results/$NAME/predict2.log
+# python  -u -m $MODEL --no_gene --no_predict --name $NAME --batch 97 --epoch 947 --FPC --data $DATA |tee /home/wesley/EDC/FPC/ML/results/$NAME/$NAME.log
+# python  -u -m $MODEL --no_train    --name $NAME  --no_tubes   --FPC --data $DATA |tee /home/wesley/EDC/FPC/ML/results/$NAME/predict.log
+python  -u -m $MODEL --no_train --no_gene --name $NAME   --FPC  --data $DATA |tee /home/wesley/EDC/FPC/ML/results/$NAME/predict2.log
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 echo "$(($ELAPSED_TIME/60)) min $(($ELAPSED_TIME%60)) sec"

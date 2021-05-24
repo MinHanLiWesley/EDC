@@ -19,30 +19,73 @@ training_data_FPC_V7_addprev_Temprand.csv
             prediction only = False
                 
 Loading data...
-(array([], dtype=int64), array([], dtype=int64), array([], dtype=int64))
 Starting prediction...
-cracking 0.000125
-cracking 0.000125
+cracking 0.001
 prev_y: 0
-prev_y: 0.009010285139083862
-prev_y: 0.01681104302406311
-prev_y: 0.029878973960876465
-prev_y: 0.04546782374382019
-prev_y: 0.06096053123474121
-prev_y: 0.08107656240463257
-prev_y: 0.10920581221580505
-prev_y: 0.14069491624832153
-prev_y: 0.17390888929367065
-prev_y: 0.2055073380470276
-prev_y: 0.23889851570129395
-prev_y: 0.27404889464378357
-prev_y: 0.30351167917251587
-prev_y: 0.33108168840408325
-prev_y: 0.35771065950393677
-prev_y: 0.3838900923728943
-prev_y: 0.40986552834510803
+prev_y: 9.386549209011719e-06
+prev_y: 6.0557056713150814e-05
+prev_y: 0.0005849301815032959
+prev_y: 0.0080050528049469
+prev_y: 0.13434439897537231
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
+prev_y: 1.0
 ML cracking rates
-{'cracking_rates': [0, 0.009010285139083862, 0.01681104302406311, 0.029878973960876465, 0.04546782374382019, 0.06096053123474121, 0.08107656240463257, 0.10920581221580505, 0.14069491624832153, 0.17390888929367065, 0.2055073380470276, 0.23889851570129395, 0.27404889464378357, 0.30351167917251587, 0.33108168840408325, 0.35771065950393677, 0.3838900923728943, 0.40986552834510803, 0.43572747707366943]}
-24687    25.038166
+{'cracking_rates': [0, 9.386549209011719e-06, 6.0557056713150814e-05, 0.0005849301815032959, 0.0080050528049469, 0.13434439897537231, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]}
+27200     2.316923
+27201     4.044648
+27204    16.656191
+27205    22.041237
+27206    28.088306
+27207    32.065742
+27208    34.977886
+27209    37.851376
+27210    41.073231
+27211    43.990482
+27212    46.828388
+27213    49.592281
+27214    52.285259
+27215    55.213360
+32868     0.750919
+32869     1.830757
+32870     3.527285
+32871     6.941183
+32872    11.334592
+32873    15.755860
+32874    21.066385
+32875    27.050220
+32876    31.089109
+32877    34.089897
+32878    37.032177
+32879    40.296383
+32880    43.252800
+32881    46.121750
+32882    48.908863
+32883    51.619415
+32884    54.033859
+32885    56.382584
 Name: X, dtype: float64
-1
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+19

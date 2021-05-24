@@ -11,6 +11,6 @@
             mass flow rates = True
             CCl4 = True
             inital pressure = True
-            number of tubes = False
+            number of tubes = True
             ncpus = 8
         

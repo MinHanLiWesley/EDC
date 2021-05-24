@@ -1,0 +1,90 @@
+training_data_FPC_V8_addprev_area.csv
+            Experiment name: 0522_FPC_modelV6_fittransform
+            Training Data: training_data_FPC_V8_addprev_area.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 18
+            Epoch: 10000
+            CSTR num: 100
+            Training vebose: 0
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Starting prediction...
+cracking 0
+prev_y: 0
+prev_y: 0.007335841655731201
+prev_y: 0.01950165629386902
+prev_y: 0.03491401672363281
+prev_y: 0.060222119092941284
+prev_y: 0.09070590138435364
+prev_y: 0.11980414390563965
+prev_y: 0.16685444116592407
+prev_y: 0.21796509623527527
+prev_y: 0.2545856833457947
+prev_y: 0.28082144260406494
+prev_y: 0.3102811872959137
+prev_y: 0.34113430976867676
+prev_y: 0.368655800819397
+prev_y: 0.3976210057735443
+prev_y: 0.42510727047920227
+prev_y: 0.4514867663383484
+prev_y: 0.47495025396347046
+ML cracking rates
+{'cracking_rates': [0, 0.007335841655731201, 0.01950165629386902, 0.03491401672363281, 0.060222119092941284, 0.09070590138435364, 0.11980414390563965, 0.16685444116592407, 0.21796509623527527, 0.2545856833457947, 0.28082144260406494, 0.3102811872959137, 0.34113430976867676, 0.368655800819397, 0.3976210057735443, 0.42510727047920227, 0.4514867663383484, 0.47495025396347046, 0.4982469975948334]}
+26462     2.068016
+26463     3.490440
+26466    12.434540
+26467    16.702744
+26468    22.019615
+26469    25.755135
+26470    28.565926
+26471    31.362335
+26472    34.508217
+26473    37.380623
+26474    40.190296
+26475    42.940063
+26476    45.632751
+26477    48.571091
+32130     0.677017
+32131     1.627357
+32132     3.030701
+32133     5.530792
+32134     8.593330
+32135    11.819542
+32136    16.025185
+32137    21.245338
+32138    25.010567
+32139    27.887749
+32140    30.734428
+32141    33.904846
+32142    36.802013
+32143    39.629196
+32144    42.390434
+32145    45.089348
+32146    47.508736
+32147    49.872570
+Name: X, dtype: float64
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+19

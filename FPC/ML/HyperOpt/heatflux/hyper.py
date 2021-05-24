@@ -26,22 +26,49 @@ import argparse
 from scipy.interpolate import CubicSpline
 
 
+# def build_model(lr=0.001):
+#     first_input = Input(shape=(2,), name='Input_layer_1')
+#     second_input = Input(shape=(33,), name='Input_layer_2')
+#     third_input = Input(shape=(1,), name='Prev_cracking')
+
+#     layer = Dense(6, name='Hinden_layer_1')(first_input)
+#     layer = Activation('relu')(layer)
+
+#     layer = concatenate([layer, second_input], name='Concatenate_layer')
+#     layer = Activation('relu')(layer)
+#     layer = Dense(12, name='Hinden_layer_4')(layer)
+#     layer = Activation('relu')(layer)
+#     layer = Dense(12, name='Hinden_layer_5')(layer)
+#     layer = Activation('relu')(layer)
+#     layer = concatenate([layer, third_input], name='Concatenate_layer_2')
+#     layer = Dense(1, name='Hinden_layer_6')(layer)
+#     output = Activation('sigmoid')(layer)
+
+#     model = Model(inputs=[first_input, second_input, third_input],
+#                   outputs=output)
+#     model.compile(optimizer=optimizers.Adam(lr=lr),
+#                   loss=losses.mean_absolute_error,
+#                   metrics=['accuracy', 'mae'])
+#     return model
+
 def build_model(lr=0.001):
     first_input = Input(shape=(2,), name='Input_layer_1')
     second_input = Input(shape=(33,), name='Input_layer_2')
     third_input = Input(shape=(1,), name='Prev_cracking')
 
-    layer = Dense(6, name='Hinden_layer_1')(first_input)
+    layer = Dense(11, name='Hinden_layer_1')(first_input)
     layer = Activation('relu')(layer)
 
     layer = concatenate([layer, second_input], name='Concatenate_layer')
     layer = Activation('relu')(layer)
-    layer = Dense(12, name='Hinden_layer_4')(layer)
+    layer = Dense(8, name='Hinden_layer_2')(layer)
     layer = Activation('relu')(layer)
-    layer = Dense(12, name='Hinden_layer_5')(layer)
-    layer = Activation('relu')(layer)
+    # layer = Dense(10, name='Hinden_layer_4')(layer)
+    # layer = Activation('relu')(layer)
+    # layer = Dense(9, name='Hinden_layer_5')(layer)
+    # layer = Activation('relu')(layer)
     layer = concatenate([layer, third_input], name='Concatenate_layer_2')
-    layer = Dense(1, name='Hinden_layer_6')(layer)
+    layer = Dense(1, name='Hinden_layer_3')(layer)
     output = Activation('sigmoid')(layer)
 
     model = Model(inputs=[first_input, second_input, third_input],
@@ -50,7 +77,6 @@ def build_model(lr=0.001):
                   loss=losses.mean_absolute_error,
                   metrics=['accuracy', 'mae'])
     return model
-
 
 def EDC_cracking(
         reaction_mech,
@@ -150,11 +176,11 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
 
     """
     # Load scaler parameter
-    with open('../../results/0430_FPC_modelV6_area/clf.pickle', 'rb') as f:
+    with open('../../results/0522_FPC_modelV9/clf.pickle', 'rb') as f:
         scaler = load(f)
     # Load model
     model = build_model()
-    model.load_weights('../../results/0430_FPC_modelV6_area/model.h5')
+    model.load_weights('../../results/0522_FPC_modelV9/model.h5')
 
     if type(reaction_mech) != dict:
         raise TypeError('The datatype of `reaction_mech` is {}.It should be a dict.'.format(
@@ -206,8 +232,11 @@ def f(T_list=None):
         'Schirmeister': '../../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
     }
     ##TODO##
-    head_flux = [18796.31, 21664.45, 22274.44, 23715.35, 24412.25, 24762.11, 25061.39, 24661.78, 23877.03, 21651.58,
-                 20088.86, 18665.34, 17595.93, 16724.30, 15850.58, 15106.89, 14309.98, 13538.81, 12903.87, 12209.08, 11632.12, 11115.07]
+    # head_flux = [18796.31, 21664.45, 22274.44, 23715.35, 24412.25, 24762.11, 25061.39, 24661.78, 23877.03, 21651.58,
+    #              20088.86, 18665.34, 17595.93, 16724.30, 15850.58, 15106.89, 14309.98, 13538.81, 12903.87, 12209.08, 11632.12, 11115.07]
+    ratio = [0.045775715, 0.052760646, 0.054246201, 0.057755337, 0.059452529, 0.060304555, 0.06103342,
+             0.060060211, 0.058149083, 0.052729307, 0.048923541, 0.045456762, 0.042852356, 0.04072963,
+             0.038601821, 0.036790655, 0.0348499, 0.032971834, 0.031425517, 0.029733461, 0.028328363, 0.027069159]
 
     # update k and E
     # k_update = [params['r1_k'],params['r2_k'],params['r3_k'],params['r5_k'],params['r9_k'],params['r10_k'],params['r13_k'],params['r15_k'],params['r16_k'],params['r19_k'],params['r22_k'],params['r26_k'],params['r19_k'],params['r19_k']]
@@ -220,15 +249,18 @@ def f(T_list=None):
     mass_flow_kg = 53053
     Cp = 0.29
     mole_cracking_heat = 171
-    T_delta = [T_list[i] - T_list[i-1] for i in range(1,23)]
-    X_delta = [MlX[i] - MlX[i-1] for i in range(1,23)]
+    T_delta = [T_list[i] - T_list[i-1] for i in range(1, 23)]
+    X_delta = [MlX[i] - MlX[i-1] for i in range(1, 23)]
     Q1 = [mass_flow_kg * Cp * t_delta for t_delta in T_delta]
-    Q2 = [mass_flow_kg / 100 *mole_cracking_heat* x_delta for x_delta in X_delta]
-    head_flux_mine = [(a+b)/15.94 for a,b in zip(Q1,Q2)]
-
-    hf_delta = mean_absolute_error(head_flux,head_flux_mine)
-
-    loss = abs((MlX[-1]-55)+hf_delta)
+    Q2 = [mass_flow_kg / 100 * mole_cracking_heat *
+          x_delta for x_delta in X_delta]
+    head_flux_mine = [(a+b)/15.94 for a, b in zip(Q1, Q2)]
+    total_heat_flux = (T_list[-1]-T_list[0])*mass_flow_kg*Cp + \
+        mole_cracking_heat * (MlX[-1]-0) * mass_flow_kg/100
+    head_flux = [i * total_heat_flux for i in ratio]
+    hf_delta = mean_absolute_error(head_flux, head_flux_mine)
+    print(f"hf_delta:{hf_delta}")
+    loss = abs((MlX[-1]-55)+hf_delta/2000)
 
     return loss, MlX
 
@@ -260,6 +292,7 @@ if __name__ == '__main__':
     parser.add_argument('--pin', required=True, type=float)
     parser.add_argument('--tin', required=True, type=float)
     parser.add_argument('--tout', type=float)
+    parser.add_argument('--dir',type=str)
     args = parser.parse_args()
     NAME = args.name
     global Pin
@@ -268,18 +301,19 @@ if __name__ == '__main__':
     Pin = args.pin
     Tin = args.tin
     Tout = args.tout
+    Dir = args.dir
     loss_dic = []
-
-    fspace = {'t00': hp.uniform('t00', low=63, high=100),
+    os.mkdir(f"/home/wesley/EDC/FPC/ML/HyperOpt/0524/{Dir}")
+    fspace = {'t00': hp.uniform('t00', low=60, high=100),
               't04': hp.uniform('t04', low=32, high=45),
               't07': hp.uniform('t07', low=10, high=25),
-              't10': hp.uniform('t10', low=0, high=5),
-              't13': hp.uniform('t13', low=0, high=3),
-              't18': hp.uniform('t18', low=0, high=3),
+              't10': hp.uniform('t10', low=1, high=5),
+              't13': hp.uniform('t13', low=1, high=3),
+              't18': hp.uniform('t18', low=1, high=3),
               }
     try:
         index_plt = 0
-        trials = pk.load(open(f"{NAME}_trials.pk", 'rb'))
+        trials = pk.load(open(f"{Dir}/{NAME}_trials.pk", 'rb'))
     # 初始的數值
 
     except(FileNotFoundError):
@@ -311,6 +345,6 @@ if __name__ == '__main__':
         print("####################################")
         print(best)
         # pk.dump(loss_dic, open(f"{NAME}loss_dic.pk", "wb"))
-        pk.dump(trials, open(f"{NAME}_trials.pk", "wb"))
-head_flux = [18796.31, 21664.45, 22274.44, 23715.35, 24412.25, 24762.11, 25061.39, 24661.78, 23877.03, 21651.58,
-             20088.86, 18665.34, 17595.93, 16724.30, 15850.58, 15106.89, 14309.98, 13538.81, 12903.87, 12209.08, 11632.12, 11115.07]
+        pk.dump(trials, open(f"{Dir}/{NAME}_trials.pk", "wb"))
+# head_flux = [18796.31, 21664.45, 22274.44, 23715.35, 24412.25, 24762.11, 25061.39, 24661.78, 23877.03, 21651.58,
+#              20088.86, 18665.34, 17595.93, 16724.30, 15850.58, 15106.89, 14309.98, 13538.81, 12903.87, 12209.08, 11632.12, 11115.07]
