@@ -453,7 +453,7 @@ def main():
     length = 18
     area = 3.14 * ((8 * 2.54 - 2 * 0.818)/ 100) ** 2 / 4
     
-    n = 1
+    # n = 1
     End = float(sys.argv[1])
     write_header = True
     #50 CCl4
@@ -501,15 +501,15 @@ def main():
                 # T_list.sort()
 
                 # print('{}/10000 Cantera simulation...'.format(n))
-                # success = False
-                # while not success:
-                #     while True:
-                #         T_list = [322, 486]
-                #         for i in range(n_pfr-1):
-                #             T_list.append(random.uniform(322, 486))
-                #         T_list.sort()
-                #         if all(T_list >= np.linspace(322, 486, n_pfr+1)):
-                #             break
+                success = False
+                while not success:
+                    while True:
+                        T_list = [322, 486]
+                        for i in range(n_pfr-1):
+                            T_list.append(random.uniform(322, 486))
+                        T_list.sort()
+                        if all(T_list >= np.linspace(322, 486, n_pfr+1)):
+                            break
 
                 # T_list = [322, 350, 375, 399, 424, 451, 461, 466, 471, 477, 479, 479, 480, 481, 482, 483, 484, 485, 486]
                 # pressure_0 = 11.4
