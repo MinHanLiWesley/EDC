@@ -4,12 +4,17 @@ Created on Wed Jan 13 16:34:12 2021
 ML2 use old data
 @author: Shih-Cheng Li
 """
+
+DATE="0529"
+DIR = "plt5"
+
 import numpy as np
 import json
 import traceback
 import time
 from pandas import read_csv
 import pickle as pk
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 import dill
@@ -31,8 +36,8 @@ from tensorflow.python.keras.utils import layer_utils
 from createTrainingData import EDC_cracking
 import tensorflow.keras as keras
 from sklearn.metrics import mean_absolute_error
-
-
+import pickle
+import os
 # class TuneReporterCallback(keras.callbacks.Callback):
 #     """
 #     Tune Callback for Keras.
@@ -78,6 +83,30 @@ def get_data():
     x_train = [rescaled_X_train[:, 0:2],
                rescaled_X_train[:, 2:], X_train[:, -1]]
     x_test = [rescaled_X_test[:, 0:2], rescaled_X_test[:, 2::], X_test[:, -1]]
+    return x_train, y_train, x_test, y_test, scaler
+
+
+
+def get_data():
+    dataframe = read_csv('../training_data_FPC_V8_addprev_area.csv')
+    # dataframe = read_csv('../training_data_FPC_V7_addprev_Temprand.csv')
+    array = dataframe.values
+    # Separate array into input and output components
+    X = array[:, 0:-2]
+    Y = array[:, -1]
+    # Data spliting to training set and testing set
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, Y, test_size=0.33, random_state=777)
+    # Create the Scaler object
+    scaler = StandardScaler()
+    # Fit data on the scaler object
+    rescaled_X_train = scaler.fit_transform(X_train[:, :])
+    # Scale testing data
+    rescaled_X_test = scaler.transform(X_test[:, :])
+    # Change the shape of X
+    x_train = [rescaled_X_train[:, 0:2],
+               rescaled_X_train[:, 2:]]
+    x_test = [rescaled_X_test[:, 0:2], rescaled_X_test[:, 2::]]
     return x_train, y_train, x_test, y_test, scaler
 '''
 def create_model(params):
@@ -134,7 +163,7 @@ def create_model(params):
 def create_model(params):
     first_input = Input(shape=(2,),)
     second_input = Input(shape=(33,))
-    third_input = Input(shape=(1,), name='Prev_cracking')
+    # third_input = Input(shape=(1,), name='Prev_cracking')
 
     # layer = Dense(int(params['units1-1']))(first_input)
     # layer = Activation('relu')(layer)
@@ -168,12 +197,12 @@ def create_model(params):
         layer = Activation('relu')(layer)
         layer = Dense(int(params['choice2']['units2-4']))(layer)
         layer = Activation('relu')(layer)
-    layer = concatenate([layer, third_input])
-    layer = Dense(1)(layer)
+    # layer = concatenate([layer, third_input])
+    # layer = Dense(1)(layer)
     output = Activation('sigmoid')(layer)
 
-    model = Model(inputs=[first_input, second_input,
-                  third_input], outputs=output)
+    model = Model(inputs=[first_input, second_input
+                 ], outputs=output)
 
     model.compile(optimizer=optimizers.Adam(lr=params['lr']),
                   loss=losses.mean_absolute_error,
@@ -245,15 +274,17 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
         y_predicted.append(y)
     # [print(f"{(i * 100):.2f}", end=',') for i in y_predicted]
     # print("\n")
-    return [i * 100 for i in y_predicted]
+    return [i * 100 for i in y_predicted], scaler
 
 
 def tune_model(config):
+    global index
     print(config)
+    print(f"index:{index}")
     x_train, y_train, x_test, y_test, scalar = get_data()
     model = create_model(config)
     checkpoint_callback = ModelCheckpoint(
-        "model4.h5", monitor='loss', save_best_only=True)
+        "{DATE}/model3.h5", monitor='loss', save_best_only=True)
 
     # Enable Tune to make intermediate decisions by using a Tune Callback hook. This is Keras specific.
     callbacks = [checkpoint_callback]
@@ -264,8 +295,7 @@ def tune_model(config):
         validation_data=(x_test, y_test),
         verbose=0,
         batch_size=int(config['batch_size']),
-        epochs=int(config['epochs']),
-        callbacks=callbacks)
+        epochs=int(config['epochs']))
 
     loss, acc, *is_anything_else_being_returned = model.evaluate(
         x=x_test, y=y_test, batch_size=int(config['batch_size']))
@@ -276,13 +306,82 @@ def tune_model(config):
     reaction_mech = {
         'Schirmeister': '../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
     }
-    mine_X = predict(reaction_mech, T_list, 10.33, 0, 48.15, 100, len(
+    mine_X,scalar = predict(reaction_mech, T_list, 10.33, 0, 48.15, 100, len(
         T_list)-1, 16.3, 3.14 * (238.76 / 1000) ** 2 / 4, scalar, model)
+        
+    if not os.path.exists(f"{DATE}/{DIR}/{index}"):
+        os.mkdir(f"{DATE}/{DIR}/{index}")
+    with open(f"{DATE}/{DIR}/{index}/clf.pk",'wb') as f:
+        pickle.dump(scalar,f)
+    model.save_weights(f"{DATE}/{DIR}/{index}/model.h5")
+
     texas_loss = mean_absolute_error(texas_X, mine_X)
+    results= {}
+    results['ML'] = mine_X
+    results['Texas'] = texas_X
     print(f"ML: {mine_X}")
     print(f"val:{loss}")
     print(f"Mine texas %: {mine_X[-1]}")
     print(f"texas_loss = {texas_loss}")
+    ndata = len(T_list)
+    fig, ax1 = plt.subplots()
+    # scale = 30
+    # if area < 3.14 * (210 / 1000) ** 2 / 4:
+    #     scale = 20
+    # print("Schi cracking rates")
+    # print(results['Schirmeister']*100)
+
+    ln = ax1.plot(range(ndata), T_list, color='r',
+                    marker='o', label='Temperature ($^\circ$C)')
+    ax1.set_ylabel('Temperature ($^\circ$C)')
+    ax1.set_ylim(0, 600)
+    # textstr = '\n'.join(
+    #     (r'CCl4=%dppm' % (CCl4_X_0),
+    #      r'Pin=%.2fkg/cm2G' % (pressure_0),
+    #      r'Tin=%d°C' % (T_list[0]),
+    #      r'Mass=%dT/H' % (mass_flow_rate),
+    #      r'scale=texas'
+    #      )
+    # )
+    textstr = '\n'.join(
+        (r'CCl4=%dppm' % (0),
+            r'Pin=%.2fkg/cm2G' % (10.33),
+            r'Tin=%d°C' % (T_list[0]),
+            #  r'Tout=%d°C' % (T_list[-1]),
+            r'Mass=%dT/H' % (48.15),
+             r'scale=texas'
+            # r'scale=%d' % (scale)
+            )
+    )
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    ax1.text(0.05, 0.95, textstr, transform=ax1.transAxes,
+                fontsize=8, verticalalignment='top', bbox=props)
+    ax2 = ax1.twinx()
+    lns = ln
+    import itertools
+    marker = itertools.cycle(('D', 'x', '.', 'o', '*'))
+    for label in results.keys():
+        cracking_rates = [
+            i for i in results[label]]
+        lns += ax2.plot(range(ndata), cracking_rates,
+                        marker=next(marker), label=label)
+    # cracking_rates = [
+    #         i * 100 for i in results['ML']['cracking_rates']]
+    # lns += ax2.plot(range(ndata), cracking_rates,
+    #                     marker='o', label='AI')
+    ax2.set_ylabel('Cracking rates (%)')
+    ax2.set_ylim(-5, 100)
+    text_crack = f"final:{(mine_X[-1]):.2f}%"
+    fig.text(0.85, 0.90, text_crack, fontsize=9)
+    labs = [l.get_label() for l in lns]
+    ax1.legend(lns, labs, loc='lower right', frameon=True)
+
+    plt.title('Temperature and cracking rates curves')
+    ax1.set_xlabel('PFR index')
+    plt.xticks(range(ndata))
+    plt.savefig(f'{DATE}/{DIR}/{index}/{index}.png')
+    index+=1
+
     return {'loss': (loss + texas_loss), 'status': STATUS_OK,'Trained_Model': model.get_weights()}
 
 
@@ -334,9 +433,9 @@ hyperparameter_space = {'choice1': hp.choice('num_layers1',
                         'units2-2': hp.quniform('units2-2', 5, 20, 1),
                         'units1-2': hp.quniform('units1-2', 5, 20, 1),
 
-                        'batch_size': hp.quniform('batch_size', 62, 128, 1),
+                        'batch_size': hp.quniform('batch_size', 24, 60, 1),
 
-                        'epochs': hp.quniform('epochs', 500, 1500, 1),
+                        'epochs': hp.quniform('epochs', 200, 500, 1),
                         # 'optimizer': hp.choice('optimizer',['adadelta','adam','rmsprop']),
                         'lr': 0.001,
                         }
@@ -349,7 +448,7 @@ hyperparameter_space = {'choice1': hp.choice('num_layers1',
 #                        'lr': 0.001}]
 try:
     index_plt = 0
-    trials = dill.load(open("ML/mlhp4.pk", 'rb'))
+    trials = dill.load(open(f"{DATE}/mlhp5.pk", 'rb'))
 # 初始的數值
 
 except(FileNotFoundError):
@@ -361,8 +460,13 @@ except(FileNotFoundError):
 
 import random
 loss_dic = []
-max_evals = 100
+max_evals = 300
 step = 1
+
+index = 0
+if not os.path.exists(f"{DATE}/{DIR}"):
+    os.mkdir(f"{DATE}/{DIR}")
+
 for i in range(1, max_evals+1, step):
     best = fmin(
         fn=tune_model,
@@ -377,9 +481,9 @@ for i in range(1, max_evals+1, step):
 
     print("####################################")
     print(best)
-    dill.dump(loss_dic, open("ML/mlhp_loss4.pk", "wb"))
-    dill.dump(trials, open("ML/mlhp4.pk", "wb"))
+    dill.dump(loss_dic, open(f"{DATE}/mlhp_loss5.pk", "wb"))
+    dill.dump(trials, open(f"{DATE}/mlhp5.pk", "wb"))
 
 model_wei= getBestModelfromTrials(trials)
-dill.dump(model_wei,open("ML/bestmodel4.h5", "wb"))
+dill.dump(model_wei,open(f"{DATE}/bestmodel5.h5", "wb"))
 # print(config)

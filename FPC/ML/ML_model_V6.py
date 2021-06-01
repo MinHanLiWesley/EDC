@@ -267,18 +267,22 @@ def DataPreprocessor():
         # Test generalization-Data splitting
         # Group data together for each pyrolysis process
 
-        Xi, Yi = [], []
-        for i in range(len(dataframe)//18):
-            Xi.append(X[18*i:18*(i+1)])
-            Yi.append(Y[18*i:18*(i+1)])
-        # print(np.where(np.isnan(Xi)))
-        Xi_train, Xi_test, yi_train, yi_test = train_test_split(
-            Xi, Yi, test_size=0.2, random_state=42)
-        # sys.exit()
-        y_train = np.ravel(yi_train)
-        y_test = np.ravel(yi_test)
-        X_train = np.ravel(Xi_train).reshape(len(y_train), 36)
-        X_test = np.ravel(Xi_test).reshape(len(y_test), 36)
+        # Xi, Yi = [], []
+        # for i in range(len(dataframe)//18):
+        #     Xi.append(X[18*i:18*(i+1)])
+        #     Yi.append(Y[18*i:18*(i+1)])
+        # # print(np.where(np.isnan(Xi)))
+        # Xi_train, Xi_test, yi_train, yi_test = train_test_split(
+        #     Xi, Yi, test_size=0.2, random_state=42)
+        # # sys.exit()
+        # y_train = np.ravel(yi_train)
+        # y_test = np.ravel(yi_test)
+        # X_train = np.ravel(Xi_train).reshape(len(y_train), 36)
+        # X_test = np.ravel(Xi_test).reshape(len(y_test), 36)
+
+
+        X_train , X_test, y_train,y_test = train_test_split(
+            X, Y, test_size=0.2, random_state=42)
         # # Shuffle the lists
         # tmp_train = list(zip(X_train, y_train))
         # random.shuffle(tmp_train)
@@ -294,10 +298,10 @@ def DataPreprocessor():
         # print(np.where(np.isnan(X_train)))
         # Fit data on the scaler object
         # rescaled_X_train = scaler.fit_transform(X_train[:, :-1])
-        rescaled_X_train = scaler.fit_transform(X_train[:, :])
+        rescaled_X_train = scaler.fit_transform(X_train[:, :-1])
         # Scale testing data
         # rescaled_X_test = scaler.transform(X_test[:, :-1])
-        rescaled_X_test = scaler.transform(X_test[:, :])
+        rescaled_X_test = scaler.transform(X_test[:, :-1])
         # Save scaler parameter
         with open(os.path.join(RESULTPATH, 'clf.pickle'), 'wb') as f:
             pickle.dump(scaler, f)
@@ -342,7 +346,7 @@ def train_model(X_train=None, X_test=None, y_train=None, y_test=None, fold_no=No
         print(f'Training for fold {fold_no} ...')
     else:
         print('Training...')
-
+    np.random.seed(0)
     hist = model.fit(X_train, y_train,
                      batch_size=batch_size,
                      epochs=epoch,
@@ -452,12 +456,14 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
         x_predict = [Ti, Te, compositions,
                      pressure_0, CCl4_X_0, t, t_r, prev_y]
         print(f"prev_y: {prev_y}")
+        # print(x_predict)
         # x_predict = np.hstack(x_predict).reshape(1, -1)
         # rescaled_X_predict = scaler.transform(x_predict[:, :])
         x_predict = np.hstack(x_predict).reshape(1, -1)
         rescaled_X_predict = scaler.transform(x_predict[:, :-1])
+        # print(rescaled_X_predict.shape)
         x_predict = [rescaled_X_predict[:, 0:2],
-                     rescaled_X_predict[:, 2:], x_predict[:,-1 ]]
+                     rescaled_X_predict[:, 2:], x_predict[:,-1]]
         # rescaled_X_predict = scaler.transform(x_predict)
         # x_predict = [rescaled_X_predict[:, 0:2],
                     #  rescaled_X_predict[:, 2:-1], rescaled_X_predict[:, -1]]
@@ -467,7 +473,8 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
     results['ML'] = {'cracking_rates': y_predicted}
     if print_cracking:
         print("ML cracking rates")
-        print(results['ML'])
+        ml_X = [i*100 for i in results['ML']['cracking_rates']]
+        print(','.join([str(v) for v in np.round(ml_X,2)]))
     # if loss:
     #     from sklearn.metrics import mean_absolute_error
     #     loss = mean_absolute_error(results['Choi']['cracking_rates'],
@@ -512,9 +519,10 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
     if FPC:
         results.pop('Choi', None)
         results.pop('Schirmeister', None)
-    # results['texas'] = {'cracking_rates': [0, 0.0052, 0.0136, 0.0264, 0.0442, 0.0676, 0.0960, 0.1284,
-    #                     0.1636, 0.2002, 0.2367, 0.2719, 0.3055, 0.3373,
-    #                     0.3675, 0.3962, 0.4234, 0.4493, 0.4739, 0.4972, 0.5194, 0.5405, 0.5605]}
+    if 'texas' in name:
+        results['texas'] = {'cracking_rates': [0, 0.0052, 0.0136, 0.0264, 0.0442, 0.0676, 0.0960, 0.1284,
+                            0.1636, 0.2002, 0.2367, 0.2719, 0.3055, 0.3373,
+                            0.3675, 0.3962, 0.4234, 0.4493, 0.4739, 0.4972, 0.5194, 0.5405, 0.5605]}
     # results['Aspen'] = {'cracking_rates': [0, 0, 0, 0, 0.009762839, 0.026548915, 0.073863337, 0.14168, 0.2089, 0.2604, 0.29861, 0.3256, 0.3471, 0.3672, 0.3865, 0.4052, 0.4234, 0.4408, 0.4570, 0.4719, 0.4859, 0.4992, 0.5119
     #                                         ]}
     if CCl4_X_0 < 1:  # ppm
@@ -1146,18 +1154,21 @@ if __name__ == '__main__':
             # T_list=[350, 380, 396, 413, 428, 436, 444, 453, 459,463, 465, 467, 469, 470, 471, 472, 473, 474, 475]
             T_list = [348.3, 368.3, 388.3, 405.8, 421.8, 435.3, 446.3, 455.3, 462.3, 467.7, 470.7,
                       472.7, 474.1, 475.3, 476.5, 477.6, 478.7, 479.7, 480.6, 481.5, 482.3, 483.1, 483.9]
+            # T_list=[350.0, 366.97, 383.41, 398.97, 413.3, 426.04, 436.84, 445.35, 451.37, 455.29, 457.67, 459.03, 459.74, 460.17, 460.59, 461.05, 461.5, 461.93, 462.31, 462.6, 462.78, 462.81, 462.85]
+
             # T_list=[348.3,362.9,387.2,413.5,442.7,458.1,459.6,461.8,464.7,466.9,467.6,469.8,470.5,472.0,473.4,475.7,477.8,478.6,479.3,480.1,480.8,482.2,483.9]
             # T_list = [347,358,383,413,438,454,456,458,460,462,464,466,468,470,472,474,476,477,477,478,479,480,481]
             
             # T_list = [347, 358, 383, 413, 438, 454, 456, 458, 460, 462, 464, 466, 468, 470, 472, 474, 476, 477, 477, 478, 479, 480, 481]
-            # pressure_0 = 10.4
+            # pressure_0 = 13
             pressure_0 = 10.33
             CCl4_X_0 = 0
             mass_flow_rate = 48.15
+            # mass_flow_rate = 53
             n_steps = CSTR
             n_pfr = len(T_list)-1
-            # length = 18
             length = 16.3
+            # length = 18
             n_pfr = len(T_list)-1
             # area = 3.14 * (186.3 / 1000) ** 2 / 4
             # area = 3.14 * (202.3 / 1000) ** 2 / 4
@@ -1170,8 +1181,8 @@ if __name__ == '__main__':
             #     area = 3.14 * ((262) / 1000) ** 2 / 4
             # area = 3.14 * ((7.21 * 2.54)/100) ** 2 / 4
             # name = '36_11.4_320_orginal'
-            name = 'texas9'
-            # name = '30_53_320_h465'
+            name = 'texas10'
+            # name = '30_53_350_h465'
             single = True
             # Prediction
             print('Starting prediction...')

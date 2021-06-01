@@ -274,12 +274,12 @@ def DataPreprocessor():
             Xi.append(X[18*i:18*(i+1)])
             Yi.append(Y[18*i:18*(i+1)])
         # print(np.where(np.isnan(Xi)))
-        Xi_train = Xi[:int(len(Xi)*2/3)]
-        Xi_test = Xi[int(len(Xi)*2/3):]
-        yi_train = Yi[:int(len(Xi)*2/3)]
-        yi_test = Yi[int(len(Xi)*2/3):]
-        # Xi_train, Xi_test, yi_train, yi_test = train_test_split(
-        #     Xi, Yi, test_size=0.33, random_state=777)
+        # Xi_train = Xi[:int(len(Xi)*2/3)]
+        # Xi_test = Xi[int(len(Xi)*2/3):]
+        # yi_train = Yi[:int(len(Xi)*2/3)]
+        # yi_test = Yi[int(len(Xi)*2/3):]
+        Xi_train, Xi_test, yi_train, yi_test = train_test_split(
+            Xi, Yi, test_size=0.33, random_state=777)
         # sys.exit()
         y_train = np.ravel(yi_train)
         y_test = np.ravel(yi_test)
@@ -325,7 +325,7 @@ def DataPreprocessor():
         return X_train, X_test, y_train, y_test
 
 
-def train_model(X_train=None, X_test=None, y_train=None, y_test=None, fold_no=None, verbose=1):
+def train_model(X_train=None, X_test=None, y_train=None, y_test=None,X_texas=None,y_texas=None,fold_no=None, verbose=1):
 
     # Set model parameters
     # print(np.where(np.isnan(X_train[2])))
@@ -356,11 +356,13 @@ def train_model(X_train=None, X_test=None, y_train=None, y_test=None, fold_no=No
     #                  callbacks=[early_stopping, csvLogger_callback],
     #                  verbose=verbose
     #                  )
+
+
     hist = model.fit(X_train, y_train,
+                    validation_data=(texas_X,texas,Y),
                     batch_size=batch_size,
                     epochs=epoch,
                     callbacks=[early_stopping, csvLogger_callback],
-                    validation_split=0.2,
                     verbose=verbose
                     )
     # early_stopping = callbacks.EarlyStopping(
@@ -463,6 +465,10 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
     # Use ML model to predict
     KM_label = 'Schirmeister'
     y_predicted = [0]
+    texas_X =[0, 0.0052, 0.0136, 0.0264, 0.0442, 0.0676, 0.0960, 0.1284,
+                        0.1636, 0.2002, 0.2367, 0.2719, 0.3055, 0.3373,
+                        0.3675, 0.3962, 0.4234, 0.4493, 0.4739, 0.4972, 0.5194, 0.5405, 0.5605]
+    texas_training = []
     prev_y = 0
     for i, T in enumerate(T_list[1:]):
         Ti = T_list[i]
@@ -475,6 +481,8 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
                      pressure_0, CCl4_X_0, t, t_r, prev_y]
         print(f"prev_y: {prev_y}")
         x_predict = np.hstack(x_predict).reshape(1, -1)
+        texas_training.append(np.hstack([Ti, Te, compositions,
+                     pressure_0, CCl4_X_0, t, t_r, texas_X[i],texas_X[i+1]]).reshape(-1,))
         # rescaled_X_predict = scaler.transform(x_predict[:, :])
         # x_predict = np.hstack(x_predict).reshape(1, -1)
         rescaled_X_predict = scaler.transform(x_predict[:, :-1])
@@ -495,7 +503,12 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
     #     loss = mean_absolute_error(results['Choi']['cracking_rates'],
     #                                results['ML']['cracking_rates'])
     #     print(f"loss in {CCl4_X_0}: {loss} ")
-
+    df = pd.read_csv("training_data_FPC_V9_addtexas.csv")
+    a_series = pd.DataFrame(texas_training,columns=df.columns)
+    df = df.append(a_series,ignore_index=True)
+    print(df.iloc[len(df)-1])
+    df.to_csv("training_data_FPC_V9_addtexas.csv",index=False)
+    # print(texas_training)
     if FPC:
         Ti = T_list[:-1]
         Te = T_list[1:]
@@ -1162,7 +1175,7 @@ if __name__ == '__main__':
             #   457, 457, 457, 457, 457, 457, 458, 458, 458, 458, 458, 458]
             
             # T_list=[330,358,388,408,426,432,437,442.5,447,451.5,456,459,462.4,465,467.7,468.8,469.6,470,470]
-            T_list=[330,340,370,405,428,436,440,442.5,449.7,452.5,455,458,460,462,463,464,465,465,465]
+            # T_list=[330,340,370,405,428,436,440,442.5,449.7,452.5,455,458,460,462,463,464,465,465,465]
             # loss 5
             # T_list = [350, 368, 377, 391, 408, 421, 427, 434, 441, 445, 448, 448, 449, 450, 451, 451, 452, 454,
             #           455, 455, 456, 458, 460]
@@ -1171,8 +1184,8 @@ if __name__ == '__main__':
             #           448, 449, 449, 450, 450, 451, 453, 454, 454, 455, 457, 459]
             # T_list=[350, 368, 377, 391, 408, 421, 427, 434, 441, 445, 445, 446, 450, 451, 451, 451, 453, 454, 455, 457, 458, 459, 459]
             # T_list=[350, 380, 396, 413, 428, 436, 444, 453, 459,463, 465, 467, 469, 470, 471, 472, 473, 474, 475]
-            # T_list = [348.3, 368.3, 388.3, 405.8, 421.8, 435.3, 446.3, 455.3, 462.3, 467.7, 470.7,
-            #           472.7, 474.1, 475.3, 476.5, 477.6, 478.7, 479.7, 480.6, 481.5, 482.3, 483.1, 483.9]
+            T_list = [348.3, 368.3, 388.3, 405.8, 421.8, 435.3, 446.3, 455.3, 462.3, 467.7, 470.7,
+                      472.7, 474.1, 475.3, 476.5, 477.6, 478.7, 479.7, 480.6, 481.5, 482.3, 483.1, 483.9]
             # T_list=[350.0, 366.97, 383.41, 398.97, 413.3, 426.04, 436.84, 445.35, 451.37, 455.29, 457.67, 459.03, 459.74, 460.17, 460.59, 461.05, 461.5, 461.93, 462.31, 462.6, 462.78, 462.81, 462.85]
             # T_list=[348.3,362.9,387.2,413.5,442.7,458.1,459.6,461.8,464.7,466.9,467.6,469.8,470.5,472.0,473.4,475.7,477.8,478.6,479.3,480.1,480.8,482.2,483.9]
             # T_list = [347,358,383,413,438,454,456,458,460,462,464,466,468,470,472,474,476,477,477,478,479,480,481]

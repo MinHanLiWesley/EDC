@@ -21,86 +21,66 @@ training_data_FPC_V8_addprev_area.csv
 Starting prediction...
 cracking 0.0005
 prev_y: 0
-prev_y: 0.0024034976959228516
-prev_y: 0.02017626166343689
-prev_y: 0.03753200173377991
-prev_y: 0.06999853253364563
-prev_y: 0.10387125611305237
-prev_y: 0.13370630145072937
-prev_y: 0.16687655448913574
-prev_y: 0.2231292426586151
-prev_y: 0.2638372778892517
-prev_y: 0.303716778755188
-prev_y: 0.34997716546058655
-prev_y: 0.3907346725463867
-prev_y: 0.43061569333076477
-prev_y: 0.46511149406433105
-prev_y: 0.49813467264175415
-prev_y: 0.5303945541381836
-prev_y: 0.5548967123031616
+prev_y: 0.01144397258758545
+prev_y: 0.024091482162475586
+prev_y: 0.04707193374633789
+prev_y: 0.0757845938205719
+prev_y: 0.11384528875350952
+prev_y: 0.16285237669944763
+prev_y: 0.22518488764762878
+prev_y: 0.289523720741272
+prev_y: 0.35217350721359253
+prev_y: 0.40282905101776123
+prev_y: 0.4453822672367096
+prev_y: 0.4842176139354706
+prev_y: 0.5208885669708252
+prev_y: 0.5562627911567688
+prev_y: 0.5891754627227783
+prev_y: 0.6200160384178162
+prev_y: 0.646938145160675
+prev_y: 0.6718140840530396
+prev_y: 0.6953067183494568
+prev_y: 0.7163487076759338
+prev_y: 0.7351526021957397
 ML cracking rates
-{'cracking_rates': [0, 0.0024034976959228516, 0.02017626166343689, 0.03753200173377991, 0.06999853253364563, 0.10387125611305237, 0.13370630145072937, 0.16687655448913574, 0.2231292426586151, 0.2638372778892517, 0.303716778755188, 0.34997716546058655, 0.3907346725463867, 0.43061569333076477, 0.46511149406433105, 0.49813467264175415, 0.5303945541381836, 0.5548967123031616, 0.5778719186782837]}
-57       7.844772
-62      26.429800
-63      30.408007
-64      34.742222
-65      38.516735
-66      42.266209
-67      45.313698
-68      48.294243
-69      51.212177
-70      53.389145
-71      55.513042
-87      50.978828
-88      53.815044
-89      55.925316
-98      30.472576
-99      34.388405
-100     38.272541
-101     40.828560
-102     43.922199
-103     46.282375
-104     49.222393
-105     51.433243
-106     54.249626
-107     56.345760
-508     12.166055
-515     42.259918
-530     30.472538
-533     42.771797
-928     39.141987
-936      1.207284
-1356    25.357471
-Name: X, dtype: float64
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-index + 17 dont exist in y_ground_df, continue
-10
+{'cracking_rates': [0, 0.01144397258758545, 0.024091482162475586, 0.04707193374633789, 0.0757845938205719, 0.11384528875350952, 0.16285237669944763, 0.22518488764762878, 0.289523720741272, 0.35217350721359253, 0.40282905101776123, 0.4453822672367096, 0.4842176139354706, 0.5208885669708252, 0.5562627911567688, 0.5891754627227783, 0.6200160384178162, 0.646938145160675, 0.6718140840530396, 0.6953067183494568, 0.7163487076759338, 0.7351526021957397, 0.7515129446983337]}
+Ti            4.831000e+02
+Te            4.839000e+02
+X1            4.515536e-03
+X2            1.730571e-10
+X3            7.113294e-13
+X4            7.113294e-13
+X5            1.818199e-05
+X6            3.983266e-07
+X7            5.205183e-01
+X8            2.135750e-12
+X9            7.836802e-13
+X10           4.269777e-01
+X11           7.836802e-13
+X12           9.624523e-09
+X13           9.907451e-08
+X14           8.307164e-04
+X15           4.341070e-15
+X16           4.744178e-05
+X17           4.341070e-15
+X18           1.147894e-21
+X19           5.386470e-12
+X20           1.147894e-21
+X21           5.386470e-12
+X22           2.388143e-04
+X23           1.320414e-05
+X24           1.320414e-05
+X25           3.528107e-02
+X26           1.135373e-02
+X27           9.576578e-05
+X28           9.576578e-05
+X29           2.836722e-11
+pressure_0    1.240000e+01
+CCl4_X_0      5.000000e+02
+t             2.745959e+01
+tr            9.628968e-01
+X_prev        5.405000e-01
+X             5.605000e-01
+Name: 38793, dtype: float64
+Series([], Name: X, dtype: float64)
+FPC data not found

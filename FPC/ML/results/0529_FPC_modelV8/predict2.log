@@ -1,0 +1,90 @@
+training_data_FPC_V9_addtexas.csv
+            Experiment name: 0529_FPC_modelV8
+            Training Data: training_data_FPC_V9_addtexas.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 128
+            Epoch: 1500
+            CSTR num: 100
+            Training vebose: 0
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            T_in = True
+            ncpus = 8
+            training = False
+            prediction only = False
+                
+Starting prediction...
+cracking 0
+prev_y: 0
+prev_y: 0.010589569807052612
+prev_y: 0.023994356393814087
+prev_y: 0.03913456201553345
+prev_y: 0.06174367666244507
+prev_y: 0.09277117252349854
+prev_y: 0.12765222787857056
+prev_y: 0.17641201615333557
+prev_y: 0.23199117183685303
+prev_y: 0.2658376693725586
+prev_y: 0.293340802192688
+prev_y: 0.3253345191478729
+prev_y: 0.3569950461387634
+prev_y: 0.38312166929244995
+prev_y: 0.40801772475242615
+prev_y: 0.43241578340530396
+prev_y: 0.4567648470401764
+prev_y: 0.47946134209632874
+ML cracking rates
+0.0, 1.06, 2.4, 3.91, 6.17, 9.28, 12.77, 17.64, 23.2, 26.58, 29.33, 32.53, 35.7, 38.31, 40.8, 43.24, 45.68, 47.95, 50.34
+26462     2.068016
+26463     3.490440
+26466    12.434540
+26467    16.702744
+26468    22.019615
+26469    25.755135
+26470    28.565926
+26471    31.362335
+26472    34.508217
+26473    37.380623
+26474    40.190296
+26475    42.940063
+26476    45.632751
+26477    48.571091
+32130     0.677017
+32131     1.627357
+32132     3.030701
+32133     5.530792
+32134     8.593330
+32135    11.819542
+32136    16.025185
+32137    21.245338
+32138    25.010567
+32139    27.887749
+32140    30.734428
+32141    33.904846
+32142    36.802013
+32143    39.629196
+32144    42.390434
+32145    45.089348
+32146    47.508736
+32147    49.872570
+Name: X, dtype: float64
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+index + 17 dont exist in y_ground_df, continue
+19

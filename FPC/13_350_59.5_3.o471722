@@ -1,881 +1,0 @@
-Can't locate local/lib.pm in @INC (you may need to install the local::lib module) (@INC contains: /home/wesley/perl5/lib/perl5 /home/wesley/anaconda3/lib/site_perl/5.26.2/x86_64-linux-thread-multi /home/wesley/anaconda3/lib/site_perl/5.26.2 /home/wesley/anaconda3/lib/5.26.2/x86_64-linux-thread-multi /home/wesley/anaconda3/lib/5.26.2 .).
-BEGIN failed--compilation aborted.
-mkdir: cannot create directory ‘/home/wesley/EDC/FPC/ML/HyperOpt/0524’: File exists
-mkdir: cannot create directory ‘/home/wesley/EDC/FPC/ML/HyperOpt/0524/13~350~59.5_3’: File exists
-==========================================================
-Starting on : Mon May 24 15:21:49 CST 2021
-Running on node : centos77-g1
-Current directory : /home/wesley/EDC/FPC/ML/HyperOpt/0524
-Current job ID : 471722.centos77-h1
-==========================================================
-2021-05-24 15:21:50.582219: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/libfabric/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib/release:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/ipp/lib/intel64:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/debugger_2020/python/intel64/lib:/opt/intel-2020U1/debugger_2020/libipt/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.8:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../tbb/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../compiler/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../mkl/lib/intel64_lin:/home/wesley/anaconda3/lib/
-2021-05-24 15:21:50.582281: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
-  0%|          | 0/1 [00:00<?, ?trial/s, best loss=?]2021-05-24 15:21:52.013933: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2021-05-24 15:21:52.014945: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
-2021-05-24 15:21:52.135844: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
-pciBusID: 0000:1b:00.0 name: GeForce RTX 2080 Ti computeCapability: 7.5
-coreClock: 1.545GHz coreCount: 68 deviceMemorySize: 10.76GiB deviceMemoryBandwidth: 573.69GiB/s
-2021-05-24 15:21:52.136155: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/libfabric/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib/release:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/ipp/lib/intel64:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/debugger_2020/python/intel64/lib:/opt/intel-2020U1/debugger_2020/libipt/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.8:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../tbb/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../compiler/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../mkl/lib/intel64_lin:/home/wesley/anaconda3/lib/
-2021-05-24 15:21:52.136358: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/libfabric/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib/release:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/ipp/lib/intel64:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/debugger_2020/python/intel64/lib:/opt/intel-2020U1/debugger_2020/libipt/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.8:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../tbb/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../compiler/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../mkl/lib/intel64_lin:/home/wesley/anaconda3/lib/
-2021-05-24 15:21:52.136522: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/libfabric/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib/release:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/ipp/lib/intel64:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/debugger_2020/python/intel64/lib:/opt/intel-2020U1/debugger_2020/libipt/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.8:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../tbb/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../compiler/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../mkl/lib/intel64_lin:/home/wesley/anaconda3/lib/
-2021-05-24 15:21:52.138799: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2021-05-24 15:21:52.139305: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2021-05-24 15:21:52.142296: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2021-05-24 15:21:52.142621: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/libfabric/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib/release:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mpi/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/ipp/lib/intel64:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/mkl/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/tbb/lib/intel64/gcc4.8:/opt/intel-2020U1/debugger_2020/python/intel64/lib:/opt/intel-2020U1/debugger_2020/libipt/intel64/lib:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/lib/intel64_lin:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.4:/opt/intel-2020U1/compilers_and_libraries_2020.1.217/linux/daal/../tbb/lib/intel64_lin/gcc4.8:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../tbb/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../compiler/lib/intel64_lin:/opt/intel-2020U1/parallel_studio_xe_2020.1.102/compilers_and_libraries_2020/linux/../../mkl/lib/intel64_lin:/home/wesley/anaconda3/lib/
-2021-05-24 15:21:52.142936: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2021-05-24 15:21:52.142960: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1757] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
-Skipping registering GPU devices...
-2021-05-24 15:21:52.143436: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX512F
-To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2021-05-24 15:21:52.169388: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2021-05-24 15:21:52.169477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
-2021-05-24 15:21:52.169488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      
-2021-05-24 15:22:00.061590: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
-2021-05-24 15:22:00.062238: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2300000000 Hz
-                                                     hf_delta: 3618.050987607523
-  0%|          | 0/1 [00:09<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 367.97, 382.76, 394.92, 404.98, 413.47, 420.93, 427.88, 434.62, 440.48, 444.52, 446.16, 446.13, 445.53, 445.22, 445.31, 445.69, 446.25, 446.9, 447.53, 448.04, 448.33, 448.29]
-  0%|          | 0/1 [00:09<?, ?trial/s, best loss=?]                                                     T_end: 448.29
-  0%|          | 0/1 [00:09<?, ?trial/s, best loss=?]                                                     loss:1018.2292237829032
-  0%|          | 0/1 [00:09<?, ?trial/s, best loss=?]                                                     final cracking rates:
-  0%|          | 0/1 [00:09<?, ?trial/s, best loss=?]                                                     ML: 44.888827204704285
-  0%|          | 0/1 [00:09<?, ?trial/s, best loss=?]100%|██████████| 1/1 [00:09<00:00,  9.26s/trial, best loss: 1018.2292237829032]100%|██████████| 1/1 [00:09<00:00,  9.26s/trial, best loss: 1018.2292237829032]
-####################################
-{'t00': 54.97802603675155, 't04': 22.903810995725884, 't07': 16.644868922499207, 't10': 1.0134988243382046, 't13': 1.3715627006577702, 't18': 1.387656140543018}
- 50%|█████     | 1/2 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 6684.465876311627
- 50%|█████     | 1/2 [00:07<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 370.73, 385.24, 394.98, 401.36, 405.83, 409.83, 414.78, 421.55, 428.68, 434.15, 436.51, 436.6, 435.87, 435.48, 435.58, 436.05, 436.78, 437.66, 438.57, 439.4, 440.03, 440.36]
- 50%|█████     | 1/2 [00:07<?, ?trial/s, best loss=?]                                                     T_end: 440.36
- 50%|█████     | 1/2 [00:07<?, ?trial/s, best loss=?]                                                     loss:43.190978756636945
- 50%|█████     | 1/2 [00:07<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 50%|█████     | 1/2 [00:07<?, ?trial/s, best loss=?]                                                     ML: 22.993487119674683
- 50%|█████     | 1/2 [00:07<?, ?trial/s, best loss=?]100%|██████████| 2/2 [00:07<00:00,  7.80s/trial, best loss: 43.190978756636945]100%|██████████| 2/2 [00:07<00:00,  7.80s/trial, best loss: 43.190978756636945]
-####################################
-{'t00': 51.35937906075072, 't04': 13.418683241130456, 't07': 19.365853045019925, 't10': 1.7246832807600208, 't13': 1.7860565041236058, 't18': 2.7024485620616003}
- 67%|██████▋   | 2/3 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 6482.54356511513
- 67%|██████▋   | 2/3 [00:07<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 370.79, 386.24, 397.54, 405.84, 412.33, 418.16, 424.53, 432.1, 439.62, 445.32, 447.97, 448.4, 447.98, 447.82, 448.06, 448.58, 449.28, 450.05, 450.78, 451.35, 451.67, 451.62]
- 67%|██████▋   | 2/3 [00:07<?, ?trial/s, best loss=?]                                                     T_end: 451.62
- 67%|██████▋   | 2/3 [00:07<?, ?trial/s, best loss=?]                                                     loss:1017.7940479291289
- 67%|██████▋   | 2/3 [00:07<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 67%|██████▋   | 2/3 [00:07<?, ?trial/s, best loss=?]                                                     ML: 48.18849563598633
- 67%|██████▋   | 2/3 [00:07<?, ?trial/s, best loss=?]100%|██████████| 3/3 [00:07<00:00,  7.79s/trial, best loss: 43.190978756636945]100%|██████████| 3/3 [00:07<00:00,  7.79s/trial, best loss: 43.190978756636945]
-####################################
-{'t00': 51.35937906075072, 't04': 13.418683241130456, 't07': 19.365853045019925, 't10': 1.7246832807600208, 't13': 1.7860565041236058, 't18': 2.7024485620616003}
- 75%|███████▌  | 3/4 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 3550.4486744200735
- 75%|███████▌  | 3/4 [00:08<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 371.91, 389.67, 403.92, 415.3, 424.44, 431.97, 438.53, 444.56, 449.69, 453.35, 455.19, 455.78, 455.87, 456.11, 456.57, 457.17, 457.83, 458.5, 459.09, 459.53, 459.75, 459.68]
- 75%|███████▌  | 3/4 [00:08<?, ?trial/s, best loss=?]                                                     T_end: 459.68
- 75%|███████▌  | 3/4 [00:08<?, ?trial/s, best loss=?]                                                     loss:1011.492204446057
- 75%|███████▌  | 3/4 [00:08<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 75%|███████▌  | 3/4 [00:08<?, ?trial/s, best loss=?]                                                     ML: 51.55824422836304
- 75%|███████▌  | 3/4 [00:08<?, ?trial/s, best loss=?]100%|██████████| 4/4 [00:08<00:00,  8.04s/trial, best loss: 43.190978756636945]100%|██████████| 4/4 [00:08<00:00,  8.04s/trial, best loss: 43.190978756636945]
-####################################
-{'t00': 51.35937906075072, 't04': 13.418683241130456, 't07': 19.365853045019925, 't10': 1.7246832807600208, 't13': 1.7860565041236058, 't18': 2.7024485620616003}
- 80%|████████  | 4/5 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 4227.364153750658
- 80%|████████  | 4/5 [00:07<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 369.4, 385.71, 399.44, 411.07, 421.09, 430.0, 438.29, 446.21, 453.04, 457.82, 459.95, 460.24, 459.82, 459.65, 459.83, 460.29, 460.94, 461.68, 462.43, 463.1, 463.6, 463.84]
- 80%|████████  | 4/5 [00:07<?, ?trial/s, best loss=?]                                                     T_end: 463.84
- 80%|████████  | 4/5 [00:07<?, ?trial/s, best loss=?]                                                     loss:1008.1678601216156
- 80%|████████  | 4/5 [00:07<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 80%|████████  | 4/5 [00:07<?, ?trial/s, best loss=?]                                                     ML: 55.55950403213501
- 80%|████████  | 4/5 [00:07<?, ?trial/s, best loss=?]100%|██████████| 5/5 [00:07<00:00,  7.81s/trial, best loss: 43.190978756636945]100%|██████████| 5/5 [00:07<00:00,  7.81s/trial, best loss: 43.190978756636945]
-####################################
-{'t00': 51.35937906075072, 't04': 13.418683241130456, 't07': 19.365853045019925, 't10': 1.7246832807600208, 't13': 1.7860565041236058, 't18': 2.7024485620616003}
- 83%|████████▎ | 5/6 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 3484.5904608768196
- 83%|████████▎ | 5/6 [00:06<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 367.7, 382.33, 394.37, 404.32, 412.65, 419.85, 426.39, 432.57, 437.88, 441.63, 443.38, 443.72, 443.51, 443.45, 443.65, 444.03, 444.55, 445.15, 445.77, 446.37, 446.87, 447.23]
- 83%|████████▎ | 5/6 [00:06<?, ?trial/s, best loss=?]                                                     T_end: 447.23
- 83%|████████▎ | 5/6 [00:06<?, ?trial/s, best loss=?]                                                     loss:21.850668122391102
- 83%|████████▎ | 5/6 [00:06<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 83%|████████▎ | 5/6 [00:06<?, ?trial/s, best loss=?]                                                     ML: 41.13392233848572
- 83%|████████▎ | 5/6 [00:06<?, ?trial/s, best loss=?]100%|██████████| 6/6 [00:06<00:00,  6.95s/trial, best loss: 21.850668122391102]100%|██████████| 6/6 [00:06<00:00,  6.95s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 86%|████████▌ | 6/7 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 1873.2774419697187
- 86%|████████▌ | 6/7 [00:07<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 365.92, 379.55, 391.16, 401.03, 409.42, 416.61, 422.87, 428.38, 432.95, 436.29, 438.25, 439.21, 439.69, 440.11, 440.54, 440.99, 441.44, 441.89, 442.33, 442.76, 443.17, 443.55]
- 86%|████████▌ | 6/7 [00:07<?, ?trial/s, best loss=?]                                                     T_end: 443.55
- 86%|████████▌ | 6/7 [00:07<?, ?trial/s, best loss=?]                                                     loss:31.09143270682415
- 86%|████████▌ | 6/7 [00:07<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 86%|████████▌ | 6/7 [00:07<?, ?trial/s, best loss=?]                                                     ML: 30.28184473514557
- 86%|████████▌ | 6/7 [00:07<?, ?trial/s, best loss=?]100%|██████████| 7/7 [00:07<00:00,  7.74s/trial, best loss: 21.850668122391102]100%|██████████| 7/7 [00:07<00:00,  7.75s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 88%|████████▊ | 7/8 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 3125.9091434260213
- 88%|████████▊ | 7/8 [00:07<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 364.62, 378.51, 391.53, 403.51, 414.31, 423.76, 431.73, 438.09, 442.9, 446.25, 448.29, 449.38, 449.96, 450.38, 450.74, 451.06, 451.36, 451.68, 452.04, 452.47, 452.98, 453.62]
- 88%|████████▊ | 7/8 [00:07<?, ?trial/s, best loss=?]                                                     T_end: 453.62
- 88%|████████▊ | 7/8 [00:07<?, ?trial/s, best loss=?]                                                     loss:1013.7681218919536
- 88%|████████▊ | 7/8 [00:07<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 88%|████████▊ | 7/8 [00:07<?, ?trial/s, best loss=?]                                                     ML: 48.85778725147247
- 88%|████████▊ | 7/8 [00:07<?, ?trial/s, best loss=?]100%|██████████| 8/8 [00:07<00:00,  7.68s/trial, best loss: 21.850668122391102]100%|██████████| 8/8 [00:07<00:00,  7.68s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 89%|████████▉ | 8/9 [00:00<?, ?trial/s, best loss=?]                                                     hf_delta: 4341.791439262481
- 89%|████████▉ | 8/9 [00:08<?, ?trial/s, best loss=?]                                                     T_list:[350.0, 369.56, 385.88, 399.51, 410.98, 420.85, 429.66, 437.96, 446.02, 453.0, 457.81, 459.74, 459.67, 458.89, 458.45, 458.48, 458.85, 459.46, 460.2, 460.95, 461.6, 462.04, 462.15]
- 89%|████████▉ | 8/9 [00:08<?, ?trial/s, best loss=?]                                                     T_end: 462.15
- 89%|████████▉ | 8/9 [00:08<?, ?trial/s, best loss=?]                                                     loss:1009.6519127370988
- 89%|████████▉ | 8/9 [00:08<?, ?trial/s, best loss=?]                                                     final cracking rates:
- 89%|████████▉ | 8/9 [00:08<?, ?trial/s, best loss=?]                                                     ML: 54.189878702163696
- 89%|████████▉ | 8/9 [00:08<?, ?trial/s, best loss=?]100%|██████████| 9/9 [00:08<00:00,  8.17s/trial, best loss: 21.850668122391102]100%|██████████| 9/9 [00:08<00:00,  8.17s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 90%|█████████ | 9/10 [00:00<?, ?trial/s, best loss=?]                                                      hf_delta: 3949.0016783967462
- 90%|█████████ | 9/10 [00:07<?, ?trial/s, best loss=?]                                                      T_list:[350.0, 367.96, 382.67, 394.7, 404.64, 413.06, 420.55, 427.68, 434.76, 441.01, 445.38, 447.19, 447.23, 446.64, 446.37, 446.53, 447.02, 447.72, 448.55, 449.39, 450.15, 450.71, 450.99]
- 90%|█████████ | 9/10 [00:07<?, ?trial/s, best loss=?]                                                      T_end: 450.99
- 90%|█████████ | 9/10 [00:07<?, ?trial/s, best loss=?]                                                      loss:1016.0173688020005
- 90%|█████████ | 9/10 [00:07<?, ?trial/s, best loss=?]                                                      final cracking rates:
- 90%|█████████ | 9/10 [00:07<?, ?trial/s, best loss=?]                                                      ML: 47.43163287639618
- 90%|█████████ | 9/10 [00:07<?, ?trial/s, best loss=?]100%|██████████| 10/10 [00:07<00:00,  7.80s/trial, best loss: 21.850668122391102]100%|██████████| 10/10 [00:07<00:00,  7.80s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 91%|█████████ | 10/11 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4938.727543693392
- 91%|█████████ | 10/11 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 371.5, 387.15, 398.12, 405.56, 410.64, 414.51, 418.34, 422.91, 427.5, 431.02, 432.69, 433.03, 432.87, 432.9, 433.19, 433.68, 434.31, 435.0, 435.69, 436.3, 436.78, 437.05]
- 91%|█████████ | 10/11 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 437.05
- 91%|█████████ | 10/11 [00:07<?, ?trial/s, best loss=?]                                                       loss:46.37555782590469
- 91%|█████████ | 10/11 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 91%|█████████ | 10/11 [00:07<?, ?trial/s, best loss=?]                                                       ML: 18.063169717788696
- 91%|█████████ | 10/11 [00:07<?, ?trial/s, best loss=?]100%|██████████| 11/11 [00:07<00:00,  7.75s/trial, best loss: 21.850668122391102]100%|██████████| 11/11 [00:07<00:00,  7.75s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 92%|█████████▏| 11/12 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3655.3613936755137
- 92%|█████████▏| 11/12 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 370.02, 385.27, 396.61, 404.87, 410.91, 415.59, 419.75, 424.0, 427.97, 431.06, 432.84, 433.63, 433.94, 434.18, 434.45, 434.75, 435.1, 435.5, 435.97, 436.51, 437.14, 437.87]
- 92%|█████████▏| 11/12 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 437.87
- 92%|█████████▏| 11/12 [00:08<?, ?trial/s, best loss=?]                                                       loss:44.024228433355994
- 92%|█████████▏| 11/12 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 92%|█████████▏| 11/12 [00:08<?, ?trial/s, best loss=?]                                                       ML: 19.13113296031952
- 92%|█████████▏| 11/12 [00:08<?, ?trial/s, best loss=?]100%|██████████| 12/12 [00:08<00:00,  8.00s/trial, best loss: 21.850668122391102]100%|██████████| 12/12 [00:08<00:00,  8.00s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 92%|█████████▏| 12/13 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 7771.094948467876
- 92%|█████████▏| 12/13 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 374.77, 391.99, 403.35, 410.53, 415.2, 419.06, 423.77, 430.41, 437.56, 443.19, 445.84, 446.3, 445.9, 445.75, 446.0, 446.54, 447.27, 448.1, 448.92, 449.63, 450.13, 450.33]
- 92%|█████████▏| 12/13 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 450.33
- 92%|█████████▏| 12/13 [00:07<?, ?trial/s, best loss=?]                                                       loss:1020.9380412403914
- 92%|█████████▏| 12/13 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 92%|█████████▏| 12/13 [00:07<?, ?trial/s, best loss=?]                                                       ML: 46.33305370807648
- 92%|█████████▏| 12/13 [00:07<?, ?trial/s, best loss=?]100%|██████████| 13/13 [00:07<00:00,  7.90s/trial, best loss: 21.850668122391102]100%|██████████| 13/13 [00:07<00:00,  7.90s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 93%|█████████▎| 13/14 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 6778.129331010809
- 93%|█████████▎| 13/14 [00:13<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 373.22, 389.67, 400.77, 407.97, 412.68, 416.33, 420.36, 425.69, 431.29, 435.63, 437.61, 437.86, 437.45, 437.26, 437.4, 437.8, 438.37, 439.03, 439.71, 440.33, 440.81, 441.07]
- 93%|█████████▎| 13/14 [00:13<?, ?trial/s, best loss=?]                                                       T_end: 441.07
- 93%|█████████▎| 13/14 [00:13<?, ?trial/s, best loss=?]                                                       loss:42.01175820006751
- 93%|█████████▎| 13/14 [00:13<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 93%|█████████▎| 13/14 [00:13<?, ?trial/s, best loss=?]                                                       ML: 24.2663711309433
- 93%|█████████▎| 13/14 [00:13<?, ?trial/s, best loss=?]100%|██████████| 14/14 [00:13<00:00, 13.78s/trial, best loss: 21.850668122391102]100%|██████████| 14/14 [00:13<00:00, 13.78s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 93%|█████████▎| 14/15 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4300.840402546765
- 93%|█████████▎| 14/15 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 371.32, 386.87, 397.76, 405.08, 409.93, 413.41, 416.61, 420.32, 424.03, 426.95, 428.49, 429.0, 429.04, 429.1, 429.26, 429.51, 429.85, 430.27, 430.75, 431.3, 431.89, 432.52]
- 93%|█████████▎| 14/15 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 432.52
- 93%|█████████▎| 14/15 [00:07<?, ?trial/s, best loss=?]                                                       loss:50.125409985485916
- 93%|█████████▎| 14/15 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 93%|█████████▎| 14/15 [00:07<?, ?trial/s, best loss=?]                                                       ML: 13.675430417060852
- 93%|█████████▎| 14/15 [00:07<?, ?trial/s, best loss=?]100%|██████████| 15/15 [00:07<00:00,  7.81s/trial, best loss: 21.850668122391102]100%|██████████| 15/15 [00:07<00:00,  7.81s/trial, best loss: 21.850668122391102]
-####################################
-{'t00': 54.323043258810934, 't04': 22.07010456000029, 't07': 15.236692783416945, 't10': 1.8834717411155966, 't13': 1.6388062818404836, 't18': 2.084879970919169}
- 94%|█████████▍| 15/16 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4418.328817769379
- 94%|█████████▍| 15/16 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 370.05, 385.7, 397.77, 407.07, 414.42, 420.65, 426.56, 432.67, 438.3, 442.46, 444.47, 444.93, 444.75, 444.68, 444.84, 445.17, 445.62, 446.14, 446.68, 447.19, 447.62, 447.92]
- 94%|█████████▍| 15/16 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 447.92
- 94%|█████████▍| 15/16 [00:07<?, ?trial/s, best loss=?]                                                       loss:20.513624485417694
- 94%|█████████▍| 15/16 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 94%|█████████▍| 15/16 [00:07<?, ?trial/s, best loss=?]                                                       ML: 43.404704332351685
- 94%|█████████▍| 15/16 [00:07<?, ?trial/s, best loss=?]100%|██████████| 16/16 [00:07<00:00,  7.80s/trial, best loss: 20.513624485417694]100%|██████████| 16/16 [00:07<00:00,  7.80s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 94%|█████████▍| 16/17 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 5805.214463363644
- 94%|█████████▍| 16/17 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 370.87, 386.45, 397.86, 406.18, 412.51, 417.96, 423.61, 430.14, 436.54, 441.34, 443.54, 443.85, 443.41, 443.17, 443.27, 443.61, 444.12, 444.74, 445.38, 445.96, 446.41, 446.66]
- 94%|█████████▍| 16/17 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 446.66
- 94%|█████████▍| 16/17 [00:07<?, ?trial/s, best loss=?]                                                       loss:25.38523012269592
- 94%|█████████▍| 16/17 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 94%|█████████▍| 16/17 [00:07<?, ?trial/s, best loss=?]                                                       ML: 39.919984340667725
- 94%|█████████▍| 16/17 [00:07<?, ?trial/s, best loss=?]100%|██████████| 17/17 [00:07<00:00,  7.55s/trial, best loss: 20.513624485417694]100%|██████████| 17/17 [00:07<00:00,  7.55s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 94%|█████████▍| 17/18 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3086.5362966538173
- 94%|█████████▍| 17/18 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.62, 383.65, 395.66, 405.2, 412.84, 419.13, 424.65, 429.77, 434.2, 437.44, 439.2, 439.9, 440.13, 440.38, 440.74, 441.16, 441.61, 442.08, 442.52, 442.92, 443.23, 443.43]
- 94%|█████████▍| 17/18 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 443.43
- 94%|█████████▍| 17/18 [00:07<?, ?trial/s, best loss=?]                                                       loss:32.478966602134776
- 94%|█████████▍| 17/18 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 94%|█████████▍| 17/18 [00:07<?, ?trial/s, best loss=?]                                                       ML: 30.107569694519043
- 94%|█████████▍| 17/18 [00:07<?, ?trial/s, best loss=?]100%|██████████| 18/18 [00:07<00:00,  7.95s/trial, best loss: 20.513624485417694]100%|██████████| 18/18 [00:07<00:00,  7.95s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 95%|█████████▍| 18/19 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 7044.795283745939
- 95%|█████████▍| 18/19 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 374.05, 391.03, 402.43, 409.71, 414.36, 417.86, 421.68, 426.81, 432.26, 436.53, 438.55, 438.9, 438.58, 438.41, 438.51, 438.81, 439.25, 439.75, 440.26, 440.71, 441.04, 441.18]
- 95%|█████████▍| 18/19 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 441.18
- 95%|█████████▍| 18/19 [00:07<?, ?trial/s, best loss=?]                                                       loss:42.00439775891226
- 95%|█████████▍| 18/19 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 95%|█████████▍| 18/19 [00:07<?, ?trial/s, best loss=?]                                                       ML: 24.54039752483368
- 95%|█████████▍| 18/19 [00:07<?, ?trial/s, best loss=?]100%|██████████| 19/19 [00:07<00:00,  7.94s/trial, best loss: 20.513624485417694]100%|██████████| 19/19 [00:07<00:00,  7.94s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 95%|█████████▌| 19/20 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 6026.592823589229
- 95%|█████████▌| 19/20 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 371.94, 388.06, 399.54, 407.57, 413.32, 417.97, 422.7, 428.27, 433.79, 437.91, 439.72, 439.88, 439.43, 439.25, 439.42, 439.85, 440.45, 441.1, 441.72, 442.19, 442.44, 442.35]
- 95%|█████████▌| 19/20 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 442.35
- 95%|█████████▌| 19/20 [00:07<?, ?trial/s, best loss=?]                                                       loss:38.14325937899389
- 95%|█████████▌| 19/20 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 95%|█████████▌| 19/20 [00:07<?, ?trial/s, best loss=?]                                                       ML: 27.383333444595337
- 95%|█████████▌| 19/20 [00:07<?, ?trial/s, best loss=?]100%|██████████| 20/20 [00:07<00:00,  7.63s/trial, best loss: 20.513624485417694]100%|██████████| 20/20 [00:07<00:00,  7.63s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 95%|█████████▌| 20/21 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 5437.333272346879
- 95%|█████████▌| 20/21 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 371.25, 387.3, 399.16, 407.88, 414.47, 419.95, 425.35, 431.32, 437.02, 441.22, 443.08, 443.28, 442.85, 442.66, 442.82, 443.25, 443.84, 444.53, 445.23, 445.84, 446.3, 446.51]
- 95%|█████████▌| 20/21 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 446.51
- 95%|█████████▌| 20/21 [00:08<?, ?trial/s, best loss=?]                                                       loss:25.46650271261635
- 95%|█████████▌| 20/21 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 95%|█████████▌| 20/21 [00:08<?, ?trial/s, best loss=?]                                                       ML: 39.47083055973053
- 95%|█████████▌| 20/21 [00:08<?, ?trial/s, best loss=?]100%|██████████| 21/21 [00:08<00:00,  8.03s/trial, best loss: 20.513624485417694]100%|██████████| 21/21 [00:08<00:00,  8.03s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 95%|█████████▌| 21/22 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2185.5919423699384
- 95%|█████████▌| 21/22 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.64, 383.26, 396.99, 408.96, 419.29, 428.11, 435.55, 441.69, 446.39, 449.49, 450.95, 451.29, 451.21, 451.25, 451.49, 451.88, 452.36, 452.89, 453.41, 453.88, 454.24, 454.45]
- 95%|█████████▌| 21/22 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 454.45
- 95%|█████████▌| 21/22 [00:07<?, ?trial/s, best loss=?]                                                       loss:1013.4609937730431
- 95%|█████████▌| 21/22 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 95%|█████████▌| 21/22 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.22459816932678
- 95%|█████████▌| 21/22 [00:07<?, ?trial/s, best loss=?]100%|██████████| 22/22 [00:07<00:00,  7.68s/trial, best loss: 20.513624485417694]100%|██████████| 22/22 [00:07<00:00,  7.68s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 96%|█████████▌| 22/23 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4259.278360100523
- 96%|█████████▌| 22/23 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 369.6, 385.18, 397.48, 407.25, 415.24, 422.2, 428.88, 435.71, 441.89, 446.31, 448.22, 448.37, 447.88, 447.66, 447.82, 448.27, 448.92, 449.68, 450.46, 451.18, 451.73, 452.03]
- 96%|█████████▌| 22/23 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 452.03
- 96%|█████████▌| 22/23 [00:07<?, ?trial/s, best loss=?]                                                       loss:1015.3548052937706
- 96%|█████████▌| 22/23 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 96%|█████████▌| 22/23 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.404473066329956
- 96%|█████████▌| 22/23 [00:07<?, ?trial/s, best loss=?]100%|██████████| 23/23 [00:07<00:00,  7.54s/trial, best loss: 20.513624485417694]100%|██████████| 23/23 [00:07<00:00,  7.54s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 96%|█████████▌| 23/24 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3039.886958397328
- 96%|█████████▌| 23/24 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.1, 382.98, 395.12, 404.99, 413.09, 419.89, 425.88, 431.38, 436.02, 439.28, 440.84, 441.22, 441.13, 441.16, 441.4, 441.8, 442.29, 442.84, 443.39, 443.9, 444.31, 444.58]
- 96%|█████████▌| 23/24 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 444.58
- 96%|█████████▌| 23/24 [00:07<?, ?trial/s, best loss=?]                                                       loss:29.263427383697927
- 96%|█████████▌| 23/24 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 96%|█████████▌| 23/24 [00:07<?, ?trial/s, best loss=?]                                                       ML: 33.2764595746994
- 96%|█████████▌| 23/24 [00:07<?, ?trial/s, best loss=?]100%|██████████| 24/24 [00:07<00:00,  7.91s/trial, best loss: 20.513624485417694]100%|██████████| 24/24 [00:07<00:00,  7.91s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 96%|█████████▌| 24/25 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4137.099762759015
- 96%|█████████▌| 24/25 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 370.16, 386.15, 398.74, 408.7, 416.79, 423.76, 430.4, 437.16, 443.29, 447.75, 449.84, 450.24, 449.97, 449.86, 450.03, 450.41, 450.94, 451.55, 452.17, 452.74, 453.19, 453.45]
- 96%|█████████▌| 24/25 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 453.45
- 96%|█████████▌| 24/25 [00:07<?, ?trial/s, best loss=?]                                                       loss:1015.2786146601055
- 96%|█████████▌| 24/25 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 96%|█████████▌| 24/25 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.3584851026535
- 96%|█████████▌| 24/25 [00:07<?, ?trial/s, best loss=?]100%|██████████| 25/25 [00:07<00:00,  7.60s/trial, best loss: 20.513624485417694]100%|██████████| 25/25 [00:07<00:00,  7.60s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 96%|█████████▌| 25/26 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 5488.518697922037
- 96%|█████████▌| 25/26 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 371.48, 387.21, 398.35, 406.07, 411.53, 415.91, 420.36, 425.65, 430.93, 434.94, 436.81, 437.12, 436.83, 436.73, 436.92, 437.33, 437.88, 438.49, 439.1, 439.62, 439.99, 440.13]
- 96%|█████████▌| 25/26 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 440.13
- 96%|█████████▌| 25/26 [00:07<?, ?trial/s, best loss=?]                                                       loss:42.406184417908
- 96%|█████████▌| 25/26 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 96%|█████████▌| 25/26 [00:07<?, ?trial/s, best loss=?]                                                       ML: 22.582334280014038
- 96%|█████████▌| 25/26 [00:07<?, ?trial/s, best loss=?]100%|██████████| 26/26 [00:07<00:00,  7.80s/trial, best loss: 20.513624485417694]100%|██████████| 26/26 [00:07<00:00,  7.80s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 96%|█████████▋| 26/27 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2723.0877405008655
- 96%|█████████▋| 26/27 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.81, 384.36, 397.07, 407.39, 415.75, 422.59, 428.34, 433.32, 437.37, 440.21, 441.68, 442.21, 442.32, 442.48, 442.75, 443.11, 443.53, 443.98, 444.44, 444.89, 445.29, 445.63]
- 96%|█████████▋| 26/27 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 445.63
- 96%|█████████▋| 26/27 [00:07<?, ?trial/s, best loss=?]                                                       loss:25.38821597154945
- 96%|█████████▋| 26/27 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 96%|█████████▋| 26/27 [00:07<?, ?trial/s, best loss=?]                                                       ML: 36.834871768951416
- 96%|█████████▋| 26/27 [00:07<?, ?trial/s, best loss=?]100%|██████████| 27/27 [00:07<00:00,  7.84s/trial, best loss: 20.513624485417694]100%|██████████| 27/27 [00:07<00:00,  7.84s/trial, best loss: 20.513624485417694]
-####################################
-{'t00': 57.072235275179665, 't04': 19.490073843914594, 't07': 15.895592571238772, 't10': 2.28780984810155, 't13': 1.3895781482572844, 't18': 1.77930444054516}
- 96%|█████████▋| 27/28 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3540.929183187185
- 96%|█████████▋| 27/28 [00:06<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 369.19, 384.83, 397.47, 407.69, 416.04, 423.09, 429.4, 435.33, 440.42, 444.04, 445.76, 446.15, 446.0, 445.96, 446.13, 446.46, 446.9, 447.4, 447.91, 448.39, 448.79, 449.05]
- 96%|█████████▋| 27/28 [00:06<?, ?trial/s, best loss=?]                                                       T_end: 449.05
- 96%|█████████▋| 27/28 [00:06<?, ?trial/s, best loss=?]                                                       loss:16.800721630277334
- 96%|█████████▋| 27/28 [00:06<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 96%|█████████▋| 27/28 [00:06<?, ?trial/s, best loss=?]                                                       ML: 46.24020755290985
- 96%|█████████▋| 27/28 [00:06<?, ?trial/s, best loss=?]100%|██████████| 28/28 [00:06<00:00,  6.39s/trial, best loss: 16.800721630277334]100%|██████████| 28/28 [00:06<00:00,  6.39s/trial, best loss: 16.800721630277334]
-####################################
-{'t00': 57.690102488258695, 't04': 21.70814313001575, 't07': 14.635548227978648, 't10': 1.9619863576721412, 't13': 1.4030078602638683, 't18': 1.6487993142638713}
- 97%|█████████▋| 28/29 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4149.5636502393845
- 97%|█████████▋| 28/29 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.81, 383.13, 393.83, 401.81, 407.94, 413.11, 418.2, 423.77, 429.07, 433.04, 434.94, 435.34, 435.13, 435.06, 435.24, 435.6, 436.09, 436.67, 437.27, 437.85, 438.34, 438.7]
- 97%|█████████▋| 28/29 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 438.7
- 97%|█████████▋| 28/29 [00:07<?, ?trial/s, best loss=?]                                                       loss:43.35830078517286
- 97%|█████████▋| 28/29 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 28/29 [00:07<?, ?trial/s, best loss=?]                                                       ML: 20.29126286506653
- 97%|█████████▋| 28/29 [00:07<?, ?trial/s, best loss=?]100%|██████████| 29/29 [00:07<00:00,  7.85s/trial, best loss: 16.800721630277334]100%|██████████| 29/29 [00:07<00:00,  7.85s/trial, best loss: 16.800721630277334]
-####################################
-{'t00': 57.690102488258695, 't04': 21.70814313001575, 't07': 14.635548227978648, 't10': 1.9619863576721412, 't13': 1.4030078602638683, 't18': 1.6487993142638713}
- 97%|█████████▋| 29/30 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3010.2893529357775
- 97%|█████████▋| 29/30 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 369.56, 385.78, 399.14, 410.11, 419.14, 426.72, 433.29, 439.18, 444.08, 447.52, 449.24, 449.75, 449.75, 449.82, 450.04, 450.38, 450.82, 451.3, 451.8, 452.28, 452.72, 453.06]
- 97%|█████████▋| 29/30 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 453.06
- 97%|█████████▋| 29/30 [00:07<?, ?trial/s, best loss=?]                                                       loss:1014.3039033828201
- 97%|█████████▋| 29/30 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 29/30 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.20638597011566
- 97%|█████████▋| 29/30 [00:07<?, ?trial/s, best loss=?]100%|██████████| 30/30 [00:07<00:00,  7.71s/trial, best loss: 16.800721630277334]100%|██████████| 30/30 [00:07<00:00,  7.71s/trial, best loss: 16.800721630277334]
-####################################
-{'t00': 57.690102488258695, 't04': 21.70814313001575, 't07': 14.635548227978648, 't10': 1.9619863576721412, 't13': 1.4030078602638683, 't18': 1.6487993142638713}
- 97%|█████████▋| 30/31 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 5818.561664619999
- 97%|█████████▋| 30/31 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 371.09, 386.84, 398.36, 406.73, 413.03, 418.34, 423.76, 429.96, 435.99, 440.49, 442.51, 442.75, 442.31, 442.09, 442.21, 442.59, 443.13, 443.75, 444.37, 444.9, 445.25, 445.34]
- 97%|█████████▋| 30/31 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 445.34
- 97%|█████████▋| 30/31 [00:07<?, ?trial/s, best loss=?]                                                       loss:29.31089507679041
- 97%|█████████▋| 30/31 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 30/31 [00:07<?, ?trial/s, best loss=?]                                                       ML: 36.00766658782959
- 97%|█████████▋| 30/31 [00:07<?, ?trial/s, best loss=?]100%|██████████| 31/31 [00:07<00:00,  7.65s/trial, best loss: 16.800721630277334]100%|██████████| 31/31 [00:07<00:00,  7.65s/trial, best loss: 16.800721630277334]
-####################################
-{'t00': 57.690102488258695, 't04': 21.70814313001575, 't07': 14.635548227978648, 't10': 1.9619863576721412, 't13': 1.4030078602638683, 't18': 1.6487993142638713}
- 97%|█████████▋| 31/32 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 7660.773171328634
- 97%|█████████▋| 31/32 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 373.09, 389.3, 400.16, 407.21, 411.98, 416.0, 420.82, 427.38, 434.32, 439.68, 442.05, 442.24, 441.59, 441.21, 441.24, 441.58, 442.14, 442.8, 443.47, 444.06, 444.45, 444.56]
- 97%|█████████▋| 31/32 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 444.56
- 97%|█████████▋| 31/32 [00:08<?, ?trial/s, best loss=?]                                                       loss:33.93094529046926
- 97%|█████████▋| 31/32 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 31/32 [00:08<?, ?trial/s, best loss=?]                                                       ML: 33.229827880859375
- 97%|█████████▋| 31/32 [00:08<?, ?trial/s, best loss=?]100%|██████████| 32/32 [00:08<00:00,  8.66s/trial, best loss: 16.800721630277334]100%|██████████| 32/32 [00:08<00:00,  8.66s/trial, best loss: 16.800721630277334]
-####################################
-{'t00': 57.690102488258695, 't04': 21.70814313001575, 't07': 14.635548227978648, 't10': 1.9619863576721412, 't13': 1.4030078602638683, 't18': 1.6487993142638713}
- 97%|█████████▋| 32/33 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2606.030543784398
- 97%|█████████▋| 32/33 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.25, 383.96, 397.41, 408.87, 418.63, 426.98, 434.19, 440.43, 445.44, 448.82, 450.39, 450.7, 450.54, 450.52, 450.71, 451.08, 451.56, 452.09, 452.63, 453.11, 453.49, 453.7]
- 97%|█████████▋| 32/33 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 453.7
- 97%|█████████▋| 32/33 [00:07<?, ?trial/s, best loss=?]                                                       loss:1013.8387286267083
- 97%|█████████▋| 32/33 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 32/33 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.26730191707611
- 97%|█████████▋| 32/33 [00:07<?, ?trial/s, best loss=?]100%|██████████| 33/33 [00:07<00:00,  7.62s/trial, best loss: 16.800721630277334]100%|██████████| 33/33 [00:07<00:00,  7.62s/trial, best loss: 16.800721630277334]
-####################################
-{'t00': 57.690102488258695, 't04': 21.70814313001575, 't07': 14.635548227978648, 't10': 1.9619863576721412, 't13': 1.4030078602638683, 't18': 1.6487993142638713}
- 97%|█████████▋| 33/34 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2094.727578876324
- 97%|█████████▋| 33/34 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.78, 383.59, 397.51, 409.63, 420.02, 428.78, 435.98, 441.69, 445.94, 448.74, 450.18, 450.68, 450.77, 450.87, 451.06, 451.32, 451.64, 452.01, 452.41, 452.84, 453.28, 453.71]
- 97%|█████████▋| 33/34 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 453.71
- 97%|█████████▋| 33/34 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.49280768942625
- 97%|█████████▋| 33/34 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 33/34 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.10191988945007
- 97%|█████████▋| 33/34 [00:07<?, ?trial/s, best loss=?]100%|██████████| 34/34 [00:07<00:00,  7.21s/trial, best loss: 13.49280768942625]100%|██████████| 34/34 [00:07<00:00,  7.21s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 97%|█████████▋| 34/35 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2518.215362025824
- 97%|█████████▋| 34/35 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.11, 382.43, 396.0, 407.84, 418.0, 426.5, 433.39, 438.71, 442.57, 445.07, 446.39, 446.9, 447.04, 447.16, 447.34, 447.56, 447.83, 448.13, 448.47, 448.84, 449.23, 449.64]
- 97%|█████████▋| 34/35 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 449.64
- 97%|█████████▋| 34/35 [00:07<?, ?trial/s, best loss=?]                                                       loss:14.442294541789618
- 97%|█████████▋| 34/35 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 34/35 [00:07<?, ?trial/s, best loss=?]                                                       ML: 47.575920820236206
- 97%|█████████▋| 34/35 [00:07<?, ?trial/s, best loss=?]100%|██████████| 35/35 [00:07<00:00,  7.69s/trial, best loss: 13.49280768942625]100%|██████████| 35/35 [00:07<00:00,  7.69s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 97%|█████████▋| 35/36 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2928.9948501134945
- 97%|█████████▋| 35/36 [00:13<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 369.5, 385.73, 399.14, 410.19, 419.34, 427.06, 433.79, 439.84, 444.84, 448.28, 449.85, 450.13, 449.89, 449.79, 449.93, 450.23, 450.67, 451.17, 451.69, 452.19, 452.6, 452.87]
- 97%|█████████▋| 35/36 [00:13<?, ?trial/s, best loss=?]                                                       T_end: 452.87
- 97%|█████████▋| 35/36 [00:13<?, ?trial/s, best loss=?]                                                       loss:1014.3306393184209
- 97%|█████████▋| 35/36 [00:13<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 35/36 [00:13<?, ?trial/s, best loss=?]                                                       ML: 48.098355531692505
- 97%|█████████▋| 35/36 [00:13<?, ?trial/s, best loss=?]100%|██████████| 36/36 [00:13<00:00, 13.19s/trial, best loss: 13.49280768942625]100%|██████████| 36/36 [00:13<00:00, 13.19s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 97%|█████████▋| 36/37 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4635.099814762212
- 97%|█████████▋| 36/37 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 369.41, 384.65, 396.51, 405.77, 413.23, 419.69, 425.93, 432.43, 438.41, 442.75, 444.71, 444.99, 444.61, 444.44, 444.6, 445.0, 445.57, 446.24, 446.92, 447.55, 448.05, 448.33]
- 97%|█████████▋| 36/37 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 448.33
- 97%|█████████▋| 36/37 [00:07<?, ?trial/s, best loss=?]                                                       loss:20.39361135803614
- 97%|█████████▋| 36/37 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 36/37 [00:07<?, ?trial/s, best loss=?]                                                       ML: 43.741488456726074
- 97%|█████████▋| 36/37 [00:07<?, ?trial/s, best loss=?]100%|██████████| 37/37 [00:07<00:00,  7.73s/trial, best loss: 13.49280768942625]100%|██████████| 37/37 [00:07<00:00,  7.73s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 97%|█████████▋| 37/38 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2170.844721778322
- 97%|█████████▋| 37/38 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.04, 384.41, 399.07, 411.97, 423.07, 432.34, 439.71, 445.2, 449.03, 451.43, 452.7, 453.22, 453.38, 453.53, 453.72, 453.96, 454.24, 454.55, 454.89, 455.26, 455.65, 456.06]
- 97%|█████████▋| 37/38 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 456.06
- 97%|█████████▋| 37/38 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.902591633780885
- 97%|█████████▋| 37/38 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 37/38 [00:07<?, ?trial/s, best loss=?]                                                       ML: 47.76825308799744
- 97%|█████████▋| 37/38 [00:07<?, ?trial/s, best loss=?]100%|██████████| 38/38 [00:07<00:00,  7.79s/trial, best loss: 13.49280768942625]100%|██████████| 38/38 [00:07<00:00,  7.79s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 97%|█████████▋| 38/39 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2068.175278569682
- 97%|█████████▋| 38/39 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.72, 380.83, 395.1, 408.24, 420.01, 430.14, 438.38, 444.56, 448.88, 451.63, 453.14, 453.8, 454.04, 454.22, 454.41, 454.62, 454.86, 455.13, 455.44, 455.81, 456.23, 456.71]
- 97%|█████████▋| 38/39 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 456.71
- 97%|█████████▋| 38/39 [00:07<?, ?trial/s, best loss=?]                                                       loss:1012.6563206538215
- 97%|█████████▋| 38/39 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 97%|█████████▋| 38/39 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.91185462474823
- 97%|█████████▋| 38/39 [00:07<?, ?trial/s, best loss=?]100%|██████████| 39/39 [00:07<00:00,  7.76s/trial, best loss: 13.49280768942625]100%|██████████| 39/39 [00:07<00:00,  7.76s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 39/40 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 4044.7731143857604
- 98%|█████████▊| 39/40 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 369.47, 384.76, 396.6, 405.72, 412.86, 418.74, 424.1, 429.42, 434.17, 437.59, 439.16, 439.42, 439.18, 439.1, 439.25, 439.59, 440.05, 440.57, 441.09, 441.55, 441.9, 442.06]
- 98%|█████████▊| 39/40 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 442.06
- 98%|█████████▊| 39/40 [00:07<?, ?trial/s, best loss=?]                                                       loss:37.03824783629433
- 98%|█████████▊| 39/40 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 39/40 [00:07<?, ?trial/s, best loss=?]                                                       ML: 26.50652527809143
- 98%|█████████▊| 39/40 [00:07<?, ?trial/s, best loss=?]100%|██████████| 40/40 [00:07<00:00,  7.61s/trial, best loss: 13.49280768942625]100%|██████████| 40/40 [00:07<00:00,  7.62s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 40/41 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 5313.20054001061
- 98%|█████████▊| 40/41 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 372.01, 388.5, 400.57, 409.33, 415.87, 421.31, 426.73, 432.85, 438.79, 443.26, 445.38, 445.78, 445.5, 445.37, 445.51, 445.85, 446.34, 446.9, 447.48, 448.01, 448.42, 448.66]
- 98%|█████████▊| 40/41 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 448.66
- 98%|█████████▊| 40/41 [00:08<?, ?trial/s, best loss=?]                                                       loss:19.758818454210438
- 98%|█████████▊| 40/41 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 40/41 [00:08<?, ?trial/s, best loss=?]                                                       ML: 45.05438208580017
- 98%|█████████▊| 40/41 [00:08<?, ?trial/s, best loss=?]100%|██████████| 41/41 [00:08<00:00,  8.08s/trial, best loss: 13.49280768942625]100%|██████████| 41/41 [00:08<00:00,  8.08s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 41/42 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2070.484172384308
- 98%|█████████▊| 41/42 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.29, 383.06, 397.22, 409.73, 420.52, 429.52, 436.67, 441.97, 445.66, 448.02, 449.36, 450.02, 450.33, 450.59, 450.85, 451.12, 451.41, 451.72, 452.05, 452.41, 452.81, 453.24]
- 98%|█████████▊| 41/42 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 453.24
- 98%|█████████▊| 41/42 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.52416349558072
- 98%|█████████▊| 41/42 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 41/42 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.04632067680359
- 98%|█████████▊| 41/42 [00:07<?, ?trial/s, best loss=?]100%|██████████| 42/42 [00:07<00:00,  7.74s/trial, best loss: 13.49280768942625]100%|██████████| 42/42 [00:07<00:00,  7.74s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 42/43 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2265.43432960095
- 98%|█████████▊| 42/43 [00:06<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.15, 384.34, 398.63, 411.06, 421.69, 430.57, 437.76, 443.32, 447.34, 449.93, 451.27, 451.75, 451.86, 451.98, 452.18, 452.46, 452.8, 453.19, 453.62, 454.09, 454.57, 455.07]
- 98%|█████████▊| 42/43 [00:06<?, ?trial/s, best loss=?]                                                       T_end: 455.07
- 98%|█████████▊| 42/43 [00:06<?, ?trial/s, best loss=?]                                                       loss:13.885443394275327
- 98%|█████████▊| 42/43 [00:06<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 42/43 [00:06<?, ?trial/s, best loss=?]                                                       ML: 47.87999093532562
- 98%|█████████▊| 42/43 [00:06<?, ?trial/s, best loss=?]100%|██████████| 43/43 [00:06<00:00,  6.81s/trial, best loss: 13.49280768942625]100%|██████████| 43/43 [00:06<00:00,  6.81s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 43/44 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2378.0774287233326
- 98%|█████████▊| 43/44 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.41, 382.89, 396.53, 408.41, 418.62, 427.24, 434.35, 440.03, 444.29, 447.12, 448.61, 449.18, 449.33, 449.48, 449.71, 449.99, 450.32, 450.68, 451.05, 451.42, 451.78, 452.1]
- 98%|█████████▊| 43/44 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 452.1
- 98%|█████████▊| 43/44 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.706628721142767
- 98%|█████████▊| 43/44 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 43/44 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.171448707580566
- 98%|█████████▊| 43/44 [00:07<?, ?trial/s, best loss=?]100%|██████████| 44/44 [00:07<00:00,  7.66s/trial, best loss: 13.49280768942625]100%|██████████| 44/44 [00:07<00:00,  7.66s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 44/45 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2723.3394950549223
- 98%|█████████▊| 44/45 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.58, 384.35, 397.61, 408.63, 417.71, 425.14, 431.19, 436.1, 439.87, 442.43, 443.8, 444.35, 444.52, 444.68, 444.89, 445.15, 445.47, 445.82, 446.21, 446.63, 447.08, 447.54]
- 98%|█████████▊| 44/45 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 447.54
- 98%|█████████▊| 44/45 [00:07<?, ?trial/s, best loss=?]                                                       loss:19.494826015822134
- 98%|█████████▊| 44/45 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 44/45 [00:07<?, ?trial/s, best loss=?]                                                       ML: 42.72851347923279
- 98%|█████████▊| 44/45 [00:07<?, ?trial/s, best loss=?]100%|██████████| 45/45 [00:07<00:00,  7.51s/trial, best loss: 13.49280768942625]100%|██████████| 45/45 [00:07<00:00,  7.51s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 45/46 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3450.0823024554647
- 98%|█████████▊| 45/46 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.79, 384.45, 397.43, 408.14, 417.02, 424.48, 430.97, 436.76, 441.57, 444.97, 446.7, 447.25, 447.28, 447.33, 447.5, 447.76, 448.09, 448.48, 448.9, 449.32, 449.73, 450.11]
- 98%|█████████▊| 45/46 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 450.11
- 98%|█████████▊| 45/46 [00:07<?, ?trial/s, best loss=?]                                                       loss:15.231870293979208
- 98%|█████████▊| 45/46 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 45/46 [00:07<?, ?trial/s, best loss=?]                                                       ML: 47.71821200847626
- 98%|█████████▊| 45/46 [00:07<?, ?trial/s, best loss=?]100%|██████████| 46/46 [00:07<00:00,  7.57s/trial, best loss: 13.49280768942625]100%|██████████| 46/46 [00:07<00:00,  7.57s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 46/47 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2483.1446011207922
- 98%|█████████▊| 46/47 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.9, 383.55, 397.11, 408.77, 418.7, 427.07, 434.06, 439.79, 444.18, 447.08, 448.47, 448.83, 448.77, 448.78, 448.94, 449.21, 449.57, 449.99, 450.44, 450.88, 451.29, 451.63]
- 98%|█████████▊| 46/47 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 451.63
- 98%|█████████▊| 46/47 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.818735202088199
- 98%|█████████▊| 46/47 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 46/47 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.16440939903259
- 98%|█████████▊| 46/47 [00:07<?, ?trial/s, best loss=?]100%|██████████| 47/47 [00:07<00:00,  7.70s/trial, best loss: 13.49280768942625]100%|██████████| 47/47 [00:07<00:00,  7.70s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 47/48 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2097.844651042327
- 98%|█████████▊| 47/48 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.64, 383.86, 398.54, 411.56, 422.8, 432.16, 439.5, 444.81, 448.4, 450.69, 452.06, 452.82, 453.23, 453.54, 453.8, 454.03, 454.26, 454.51, 454.79, 455.12, 455.53, 456.03]
- 98%|█████████▊| 47/48 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 456.03
- 98%|█████████▊| 47/48 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.732871105967863
- 98%|█████████▊| 47/48 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 47/48 [00:07<?, ?trial/s, best loss=?]                                                       ML: 47.86497354507446
- 98%|█████████▊| 47/48 [00:07<?, ?trial/s, best loss=?]100%|██████████| 48/48 [00:07<00:00,  7.93s/trial, best loss: 13.49280768942625]100%|██████████| 48/48 [00:07<00:00,  7.93s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 48/49 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3419.3679905717104
- 98%|█████████▊| 48/49 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.08, 383.29, 396.0, 406.59, 415.44, 422.94, 429.45, 435.23, 440.02, 443.41, 445.19, 445.81, 445.92, 446.04, 446.27, 446.57, 446.93, 447.33, 447.74, 448.15, 448.53, 448.86]
- 98%|█████████▊| 48/49 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 448.86
- 98%|█████████▊| 48/49 [00:07<?, ?trial/s, best loss=?]                                                       loss:16.571168742257807
- 98%|█████████▊| 48/49 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 48/49 [00:07<?, ?trial/s, best loss=?]                                                       ML: 46.348199248313904
- 98%|█████████▊| 48/49 [00:07<?, ?trial/s, best loss=?]100%|██████████| 49/49 [00:07<00:00,  7.71s/trial, best loss: 13.49280768942625]100%|██████████| 49/49 [00:07<00:00,  7.71s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 49/50 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2188.488157985886
- 98%|█████████▊| 49/50 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.34, 381.81, 396.15, 409.1, 420.41, 429.83, 437.1, 442.1, 445.26, 447.16, 448.3, 448.96, 449.35, 449.64, 449.89, 450.11, 450.33, 450.57, 450.85, 451.19, 451.61, 452.13]
- 98%|█████████▊| 49/50 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 452.13
- 98%|█████████▊| 49/50 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.60500994562932
- 98%|█████████▊| 49/50 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 49/50 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.08347821235657
- 98%|█████████▊| 49/50 [00:07<?, ?trial/s, best loss=?]100%|██████████| 50/50 [00:07<00:00,  7.79s/trial, best loss: 13.49280768942625]100%|██████████| 50/50 [00:07<00:00,  7.79s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 50/51 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2100.9901685768205
- 98%|█████████▊| 50/51 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.71, 383.61, 397.73, 410.09, 420.71, 429.62, 436.83, 442.39, 446.41, 449.03, 450.42, 450.99, 451.16, 451.31, 451.52, 451.77, 452.07, 452.41, 452.79, 453.22, 453.68, 454.17]
- 98%|█████████▊| 50/51 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 454.17
- 98%|█████████▊| 50/51 [00:08<?, ?trial/s, best loss=?]                                                       loss:13.563818804746255
- 98%|█████████▊| 50/51 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 50/51 [00:08<?, ?trial/s, best loss=?]                                                       ML: 48.037171363830566
- 98%|█████████▊| 50/51 [00:08<?, ?trial/s, best loss=?]100%|██████████| 51/51 [00:08<00:00,  8.84s/trial, best loss: 13.49280768942625]100%|██████████| 51/51 [00:08<00:00,  8.84s/trial, best loss: 13.49280768942625]
-####################################
-{'t00': 59.63340707592042, 't04': 26.35288026452082, 't07': 12.762240358170565, 't10': 2.0281192452767427, 't13': 1.2448383745437879, 't18': 1.7013739499570528}
- 98%|█████████▊| 51/52 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2204.554281752046
- 98%|█████████▊| 51/52 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.05, 381.13, 395.05, 407.67, 418.8, 428.28, 435.93, 441.66, 445.68, 448.24, 449.65, 450.28, 450.52, 450.7, 450.9, 451.12, 451.37, 451.66, 452.0, 452.39, 452.86, 453.39]
- 98%|█████████▊| 51/52 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 453.39
- 98%|█████████▊| 51/52 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.370307407896455
- 98%|█████████▊| 51/52 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 51/52 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.33424687385559
- 98%|█████████▊| 51/52 [00:07<?, ?trial/s, best loss=?]100%|██████████| 52/52 [00:07<00:00,  7.69s/trial, best loss: 13.370307407896455]100%|██████████| 52/52 [00:07<00:00,  7.69s/trial, best loss: 13.370307407896455]
-####################################
-{'t00': 57.66501006565494, 't04': 28.256695142696042, 't07': 12.308035129468964, 't10': 2.280903126634447, 't13': 1.135354386339569, 't18': 1.7262661831606727}
- 98%|█████████▊| 52/53 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2760.8858676821187
- 98%|█████████▊| 52/53 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 368.04, 383.61, 396.97, 408.36, 418.04, 426.26, 433.26, 439.21, 443.9, 447.06, 448.55, 448.89, 448.77, 448.75, 448.91, 449.21, 449.61, 450.06, 450.53, 450.98, 451.36, 451.64]
- 98%|█████████▊| 52/53 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 451.64
- 98%|█████████▊| 52/53 [00:07<?, ?trial/s, best loss=?]                                                       loss:1014.0841919513613
- 98%|█████████▊| 52/53 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 52/53 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.1766939163208
- 98%|█████████▊| 52/53 [00:07<?, ?trial/s, best loss=?]100%|██████████| 53/53 [00:07<00:00,  7.95s/trial, best loss: 13.370307407896455]100%|██████████| 53/53 [00:07<00:00,  7.95s/trial, best loss: 13.370307407896455]
-####################################
-{'t00': 57.66501006565494, 't04': 28.256695142696042, 't07': 12.308035129468964, 't10': 2.280903126634447, 't13': 1.135354386339569, 't18': 1.7262661831606727}
- 98%|█████████▊| 53/54 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 1889.9786355352655
- 98%|█████████▊| 53/54 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.27, 380.58, 395.46, 409.41, 421.96, 432.62, 440.92, 446.56, 450.04, 452.06, 453.22, 453.86, 454.2, 454.46, 454.69, 454.91, 455.14, 455.4, 455.7, 456.06, 456.5, 457.04]
- 98%|█████████▊| 53/54 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.04
- 98%|█████████▊| 53/54 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.44790743611815
- 98%|█████████▊| 53/54 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 53/54 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.942071199417114
- 98%|█████████▊| 53/54 [00:07<?, ?trial/s, best loss=?]100%|██████████| 54/54 [00:07<00:00,  7.91s/trial, best loss: 12.44790743611815]100%|██████████| 54/54 [00:07<00:00,  7.91s/trial, best loss: 12.44790743611815]
-####################################
-{'t00': 59.413226033818034, 't04': 31.507765625602175, 't07': 11.139509693865751, 't10': 2.1419999213687952, 't13': 1.2007746103950814, 't18': 1.6426597434961459}
- 98%|█████████▊| 54/55 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2040.7363660819422
- 98%|█████████▊| 54/55 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.59, 382.32, 396.92, 410.18, 421.84, 431.67, 439.43, 444.99, 448.68, 450.94, 452.2, 452.81, 453.07, 453.27, 453.46, 453.66, 453.89, 454.15, 454.46, 454.83, 455.28, 455.82]
- 98%|█████████▊| 54/55 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 455.82
- 98%|█████████▊| 54/55 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.651223588753451
- 98%|█████████▊| 54/55 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 54/55 [00:07<?, ?trial/s, best loss=?]                                                       ML: 47.88951277732849
- 98%|█████████▊| 54/55 [00:07<?, ?trial/s, best loss=?]100%|██████████| 55/55 [00:07<00:00,  7.38s/trial, best loss: 12.44790743611815]100%|██████████| 55/55 [00:07<00:00,  7.38s/trial, best loss: 12.44790743611815]
-####################################
-{'t00': 59.413226033818034, 't04': 31.507765625602175, 't07': 11.139509693865751, 't10': 2.1419999213687952, 't13': 1.2007746103950814, 't18': 1.6426597434961459}
- 98%|█████████▊| 55/56 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2054.8774688037443
- 98%|█████████▊| 55/56 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.72, 382.52, 397.18, 410.48, 422.2, 432.12, 440.03, 445.8, 449.69, 452.08, 453.34, 453.85, 454.01, 454.15, 454.33, 454.54, 454.8, 455.09, 455.42, 455.77, 456.16, 456.58]
- 98%|█████████▊| 55/56 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 456.58
- 98%|█████████▊| 55/56 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.153795906761507
- 98%|█████████▊| 55/56 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 55/56 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.401081562042236
- 98%|█████████▊| 55/56 [00:07<?, ?trial/s, best loss=?]100%|██████████| 56/56 [00:07<00:00,  7.82s/trial, best loss: 12.44790743611815]100%|██████████| 56/56 [00:07<00:00,  7.82s/trial, best loss: 12.44790743611815]
-####################################
-{'t00': 59.413226033818034, 't04': 31.507765625602175, 't07': 11.139509693865751, 't10': 2.1419999213687952, 't13': 1.2007746103950814, 't18': 1.6426597434961459}
- 98%|█████████▊| 56/57 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2053.92532638838
- 98%|█████████▊| 56/57 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.98, 382.9, 397.56, 410.76, 422.3, 431.99, 439.63, 445.12, 448.76, 450.95, 452.08, 452.54, 452.68, 452.82, 453.0, 453.24, 453.52, 453.84, 454.19, 454.58, 454.99, 455.42]
- 98%|█████████▊| 56/57 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 455.42
- 98%|█████████▊| 56/57 [00:08<?, ?trial/s, best loss=?]                                                       loss:13.944584181826613
- 98%|█████████▊| 56/57 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 56/57 [00:08<?, ?trial/s, best loss=?]                                                       ML: 47.60934114456177
- 98%|█████████▊| 56/57 [00:08<?, ?trial/s, best loss=?]100%|██████████| 57/57 [00:08<00:00,  8.28s/trial, best loss: 12.44790743611815]100%|██████████| 57/57 [00:08<00:00,  8.28s/trial, best loss: 12.44790743611815]
-####################################
-{'t00': 59.413226033818034, 't04': 31.507765625602175, 't07': 11.139509693865751, 't10': 2.1419999213687952, 't13': 1.2007746103950814, 't18': 1.6426597434961459}
- 98%|█████████▊| 57/58 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2074.7612476110953
- 98%|█████████▊| 57/58 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.65, 381.14, 396.04, 409.97, 422.51, 433.26, 441.82, 447.93, 451.93, 454.31, 455.55, 456.06, 456.22, 456.37, 456.56, 456.8, 457.06, 457.36, 457.68, 458.02, 458.37, 458.73]
- 98%|█████████▊| 57/58 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 458.73
- 98%|█████████▊| 57/58 [00:08<?, ?trial/s, best loss=?]                                                       loss:10.878722047781993
- 98%|█████████▊| 57/58 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 57/58 [00:08<?, ?trial/s, best loss=?]                                                       ML: 50.6960391998291
- 98%|█████████▊| 57/58 [00:08<?, ?trial/s, best loss=?]100%|██████████| 58/58 [00:08<00:00,  8.62s/trial, best loss: 10.878722047781993]100%|██████████| 58/58 [00:08<00:00,  8.62s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 58/59 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2154.5892558667315
- 98%|█████████▊| 58/59 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.53, 382.54, 397.68, 411.62, 424.01, 434.5, 442.77, 448.61, 452.4, 454.67, 455.91, 456.5, 456.75, 456.95, 457.16, 457.39, 457.64, 457.92, 458.24, 458.6, 459.02, 459.49]
- 98%|█████████▊| 58/59 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 459.49
- 98%|█████████▊| 58/59 [00:08<?, ?trial/s, best loss=?]                                                       loss:1010.4154384933088
- 98%|█████████▊| 58/59 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 58/59 [00:08<?, ?trial/s, best loss=?]                                                       ML: 51.23915076255798
- 98%|█████████▊| 58/59 [00:08<?, ?trial/s, best loss=?]100%|██████████| 59/59 [00:08<00:00,  8.48s/trial, best loss: 10.878722047781993]100%|██████████| 59/59 [00:08<00:00,  8.48s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 59/60 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 1997.4331867676217
- 98%|█████████▊| 59/60 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.49, 382.06, 396.48, 409.52, 420.95, 430.55, 438.08, 443.43, 446.96, 449.13, 450.37, 451.01, 451.33, 451.58, 451.81, 452.04, 452.29, 452.56, 452.87, 453.23, 453.66, 454.16]
- 98%|█████████▊| 59/60 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 454.16
- 98%|█████████▊| 59/60 [00:08<?, ?trial/s, best loss=?]                                                       loss:13.534737826583905
- 98%|█████████▊| 59/60 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 59/60 [00:08<?, ?trial/s, best loss=?]                                                       ML: 47.962695360183716
- 98%|█████████▊| 59/60 [00:08<?, ?trial/s, best loss=?]100%|██████████| 60/60 [00:08<00:00,  8.39s/trial, best loss: 10.878722047781993]100%|██████████| 60/60 [00:08<00:00,  8.39s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 60/61 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2194.2371798533018
- 98%|█████████▊| 60/61 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 367.17, 383.05, 397.53, 410.54, 421.97, 431.74, 439.75, 445.94, 450.38, 453.18, 454.51, 454.87, 454.82, 454.83, 454.97, 455.22, 455.53, 455.89, 456.26, 456.61, 456.91, 457.13]
- 98%|█████████▊| 60/61 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 457.13
- 98%|█████████▊| 60/61 [00:08<?, ?trial/s, best loss=?]                                                       loss:12.668302245237212
- 98%|█████████▊| 60/61 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 60/61 [00:08<?, ?trial/s, best loss=?]                                                       ML: 49.02593493461609
- 98%|█████████▊| 60/61 [00:08<?, ?trial/s, best loss=?]100%|██████████| 61/61 [00:08<00:00,  8.06s/trial, best loss: 10.878722047781993]100%|██████████| 61/61 [00:08<00:00,  8.06s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 61/62 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2035.949922344664
- 98%|█████████▊| 61/62 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.15, 381.87, 396.8, 410.59, 422.88, 433.3, 441.51, 447.29, 451.02, 453.22, 454.39, 454.9, 455.09, 455.24, 455.42, 455.62, 455.84, 456.09, 456.36, 456.66, 456.99, 457.34]
- 98%|█████████▊| 61/62 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.34
- 98%|█████████▊| 61/62 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.4035283096051
- 98%|█████████▊| 61/62 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 61/62 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.13242161273956
- 98%|█████████▊| 61/62 [00:07<?, ?trial/s, best loss=?]100%|██████████| 62/62 [00:07<00:00,  7.70s/trial, best loss: 10.878722047781993]100%|██████████| 62/62 [00:07<00:00,  7.70s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 62/63 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2123.8176296874967
- 98%|█████████▊| 62/63 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.97, 381.28, 395.66, 408.88, 420.69, 430.84, 439.09, 445.27, 449.55, 452.18, 453.45, 453.82, 453.83, 453.89, 454.07, 454.34, 454.67, 455.03, 455.4, 455.75, 456.04, 456.26]
- 98%|█████████▊| 62/63 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 456.26
- 98%|█████████▊| 62/63 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.255512661807249
- 98%|█████████▊| 62/63 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 62/63 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.36830496788025
- 98%|█████████▊| 62/63 [00:07<?, ?trial/s, best loss=?]100%|██████████| 63/63 [00:07<00:00,  7.52s/trial, best loss: 10.878722047781993]100%|██████████| 63/63 [00:07<00:00,  7.52s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 63/64 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2140.598567093439
- 98%|█████████▊| 63/64 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.13, 381.75, 396.57, 410.26, 422.53, 433.08, 441.6, 447.89, 452.21, 454.89, 456.31, 456.89, 457.07, 457.21, 457.39, 457.61, 457.85, 458.13, 458.43, 458.76, 459.12, 459.49]
- 98%|█████████▊| 63/64 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 459.49
- 98%|█████████▊| 63/64 [00:07<?, ?trial/s, best loss=?]                                                       loss:1010.090949328507
- 98%|█████████▊| 63/64 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 63/64 [00:07<?, ?trial/s, best loss=?]                                                       ML: 51.549649238586426
- 98%|█████████▊| 63/64 [00:07<?, ?trial/s, best loss=?]100%|██████████| 64/64 [00:07<00:00,  7.28s/trial, best loss: 10.878722047781993]100%|██████████| 64/64 [00:07<00:00,  7.28s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 64/65 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2015.3089798157623
- 98%|█████████▊| 64/65 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.32, 379.21, 394.08, 408.31, 421.31, 432.46, 441.17, 447.06, 450.65, 452.71, 453.9, 454.55, 454.91, 455.18, 455.43, 455.66, 455.9, 456.16, 456.46, 456.83, 457.27, 457.8]
- 98%|█████████▊| 64/65 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.8
- 98%|█████████▊| 64/65 [00:07<?, ?trial/s, best loss=?]                                                       loss:11.64210594064645
- 98%|█████████▊| 64/65 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 64/65 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.87320303916931
- 98%|█████████▊| 64/65 [00:07<?, ?trial/s, best loss=?]100%|██████████| 65/65 [00:07<00:00,  7.47s/trial, best loss: 10.878722047781993]100%|██████████| 65/65 [00:07<00:00,  7.47s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 98%|█████████▊| 65/66 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2348.742650743938
- 98%|█████████▊| 65/66 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 362.99, 377.43, 392.47, 407.27, 421.0, 432.8, 441.85, 447.61, 450.82, 452.5, 453.55, 454.25, 454.73, 455.09, 455.37, 455.61, 455.83, 456.06, 456.32, 456.64, 457.05, 457.58]
- 98%|█████████▊| 65/66 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.58
- 98%|█████████▊| 65/66 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.097866224047161
- 98%|█████████▊| 65/66 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 98%|█████████▊| 65/66 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.75087642669678
- 98%|█████████▊| 65/66 [00:07<?, ?trial/s, best loss=?]100%|██████████| 66/66 [00:07<00:00,  7.57s/trial, best loss: 10.878722047781993]100%|██████████| 66/66 [00:07<00:00,  7.57s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 66/67 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2047.1471891521585
- 99%|█████████▊| 66/67 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.6, 379.48, 394.13, 407.99, 420.54, 431.23, 439.54, 445.14, 448.56, 450.57, 451.81, 452.57, 453.03, 453.35, 453.59, 453.78, 453.96, 454.16, 454.41, 454.76, 455.22, 455.84]
- 99%|█████████▊| 66/67 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 455.84
- 99%|█████████▊| 66/67 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.329451237690368
- 99%|█████████▊| 66/67 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 66/67 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.21769595146179
- 99%|█████████▊| 66/67 [00:07<?, ?trial/s, best loss=?]100%|██████████| 67/67 [00:07<00:00,  7.76s/trial, best loss: 10.878722047781993]100%|██████████| 67/67 [00:07<00:00,  7.76s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 67/68 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2106.1851253309123
- 99%|█████████▊| 67/68 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.58, 382.37, 397.12, 410.59, 422.53, 432.7, 440.85, 446.83, 450.88, 453.34, 454.55, 454.96, 455.01, 455.09, 455.25, 455.49, 455.77, 456.09, 456.43, 456.76, 457.08, 457.37]
- 99%|█████████▊| 67/68 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.37
- 99%|█████████▊| 67/68 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.411071347216593
- 99%|█████████▊| 67/68 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 67/68 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.19511377811432
- 99%|█████████▊| 67/68 [00:07<?, ?trial/s, best loss=?]100%|██████████| 68/68 [00:07<00:00,  7.94s/trial, best loss: 10.878722047781993]100%|██████████| 68/68 [00:07<00:00,  7.94s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 68/69 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2007.5800888995848
- 99%|█████████▊| 68/69 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.97, 382.82, 397.36, 410.4, 421.76, 431.24, 438.65, 443.92, 447.39, 449.51, 450.72, 451.32, 451.61, 451.83, 452.03, 452.23, 452.43, 452.65, 452.89, 453.16, 453.47, 453.84]
- 99%|█████████▊| 68/69 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 453.84
- 99%|█████████▊| 68/69 [00:08<?, ?trial/s, best loss=?]                                                       loss:13.962871240900013
- 99%|█████████▊| 68/69 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 68/69 [00:08<?, ?trial/s, best loss=?]                                                       ML: 47.54470884799957
- 99%|█████████▊| 68/69 [00:08<?, ?trial/s, best loss=?]100%|██████████| 69/69 [00:08<00:00,  8.62s/trial, best loss: 10.878722047781993]100%|██████████| 69/69 [00:08<00:00,  8.62s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 69/70 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2815.470489980347
- 99%|█████████▊| 69/70 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 362.12, 376.07, 390.93, 405.73, 419.55, 431.43, 440.44, 445.99, 448.89, 450.33, 451.29, 452.0, 452.52, 452.9, 453.17, 453.38, 453.56, 453.75, 453.99, 454.32, 454.77, 455.38]
- 99%|█████████▊| 69/70 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 455.38
- 99%|█████████▊| 69/70 [00:07<?, ?trial/s, best loss=?]                                                       loss:14.006287369252808
- 99%|█████████▊| 69/70 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 69/70 [00:07<?, ?trial/s, best loss=?]                                                       ML: 48.30918312072754
- 99%|█████████▊| 69/70 [00:07<?, ?trial/s, best loss=?]100%|██████████| 70/70 [00:07<00:00,  7.80s/trial, best loss: 10.878722047781993]100%|██████████| 70/70 [00:07<00:00,  7.80s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 70/71 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2093.2563313899573
- 99%|█████████▊| 70/71 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.83, 381.26, 395.96, 409.6, 421.85, 432.39, 440.87, 447.09, 451.3, 453.85, 455.13, 455.59, 455.68, 455.79, 455.98, 456.23, 456.53, 456.87, 457.22, 457.58, 457.93, 458.24]
- 99%|█████████▊| 70/71 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 458.24
- 99%|█████████▊| 70/71 [00:07<?, ?trial/s, best loss=?]                                                       loss:11.332974768584782
- 99%|█████████▊| 70/71 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 70/71 [00:07<?, ?trial/s, best loss=?]                                                       ML: 50.260281562805176
- 99%|█████████▊| 70/71 [00:07<?, ?trial/s, best loss=?]100%|██████████| 71/71 [00:07<00:00,  7.85s/trial, best loss: 10.878722047781993]100%|██████████| 71/71 [00:07<00:00,  7.85s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 71/72 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2032.0770308716249
- 99%|█████████▊| 71/72 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.91, 381.43, 396.22, 409.91, 422.16, 432.61, 440.91, 446.85, 450.75, 453.1, 454.35, 454.89, 455.08, 455.24, 455.42, 455.64, 455.88, 456.16, 456.47, 456.82, 457.21, 457.63]
- 99%|█████████▊| 71/72 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.63
- 99%|█████████▊| 71/72 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.00562103245091
- 99%|█████████▊| 71/72 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 71/72 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.526455998420715
- 99%|█████████▊| 71/72 [00:07<?, ?trial/s, best loss=?]100%|██████████| 72/72 [00:07<00:00,  7.84s/trial, best loss: 10.878722047781993]100%|██████████| 72/72 [00:07<00:00,  7.84s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 72/73 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2435.203517872937
- 99%|█████████▊| 72/73 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.19, 380.6, 395.74, 410.11, 423.2, 434.51, 443.54, 449.96, 454.13, 456.6, 457.87, 458.38, 458.54, 458.68, 458.87, 459.11, 459.39, 459.7, 460.05, 460.43, 460.83, 461.25]
- 99%|█████████▊| 72/73 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 461.25
- 99%|█████████▊| 72/73 [00:07<?, ?trial/s, best loss=?]                                                       loss:1008.6761705531666
- 99%|█████████▊| 72/73 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 72/73 [00:07<?, ?trial/s, best loss=?]                                                       ML: 53.25903296470642
- 99%|█████████▊| 72/73 [00:07<?, ?trial/s, best loss=?]100%|██████████| 73/73 [00:07<00:00,  7.80s/trial, best loss: 10.878722047781993]100%|██████████| 73/73 [00:07<00:00,  7.80s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 73/74 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2517.647603786349
- 99%|█████████▊| 73/74 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.34, 379.28, 394.24, 408.65, 421.93, 433.5, 442.78, 449.38, 453.67, 456.2, 457.49, 458.0, 458.14, 458.28, 458.48, 458.72, 459.01, 459.32, 459.65, 459.99, 460.33, 460.66]
- 99%|█████████▊| 73/74 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 460.66
- 99%|█████████▊| 73/74 [00:07<?, ?trial/s, best loss=?]                                                       loss:1009.1010552442435
- 99%|█████████▊| 73/74 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 73/74 [00:07<?, ?trial/s, best loss=?]                                                       ML: 52.91659235954285
- 99%|█████████▊| 73/74 [00:07<?, ?trial/s, best loss=?]100%|██████████| 74/74 [00:07<00:00,  7.73s/trial, best loss: 10.878722047781993]100%|██████████| 74/74 [00:07<00:00,  7.73s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 74/75 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2020.74496374496
- 99%|█████████▊| 74/75 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.28, 381.7, 396.02, 409.02, 420.46, 430.12, 437.76, 443.26, 446.92, 449.17, 450.4, 450.97, 451.2, 451.38, 451.56, 451.76, 451.98, 452.23, 452.51, 452.83, 453.21, 453.63]
- 99%|█████████▊| 74/75 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 453.63
- 99%|█████████▊| 74/75 [00:08<?, ?trial/s, best loss=?]                                                       loss:13.626961513618312
- 99%|█████████▊| 74/75 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 74/75 [00:08<?, ?trial/s, best loss=?]                                                       ML: 47.89378345012665
- 99%|█████████▊| 74/75 [00:08<?, ?trial/s, best loss=?]100%|██████████| 75/75 [00:08<00:00,  8.11s/trial, best loss: 10.878722047781993]100%|██████████| 75/75 [00:08<00:00,  8.11s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 75/76 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2191.259316690955
- 99%|█████████▊| 75/76 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.82, 379.76, 394.38, 408.24, 420.89, 431.89, 440.8, 447.31, 451.7, 454.35, 455.69, 456.17, 456.27, 456.37, 456.54, 456.78, 457.06, 457.37, 457.71, 458.06, 458.41, 458.74]
- 99%|█████████▊| 75/76 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 458.74
- 99%|█████████▊| 75/76 [00:07<?, ?trial/s, best loss=?]                                                       loss:1010.7136179726206
- 99%|█████████▊| 75/76 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 75/76 [00:07<?, ?trial/s, best loss=?]                                                       ML: 50.977641344070435
- 99%|█████████▊| 75/76 [00:07<?, ?trial/s, best loss=?]100%|██████████| 76/76 [00:07<00:00,  7.81s/trial, best loss: 10.878722047781993]100%|██████████| 76/76 [00:07<00:00,  7.81s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 76/77 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 1903.4428441960335
- 99%|█████████▊| 76/77 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 365.11, 380.34, 395.18, 409.16, 421.77, 432.53, 440.93, 446.69, 450.27, 452.34, 453.51, 454.1, 454.4, 454.63, 454.84, 455.05, 455.29, 455.55, 455.86, 456.23, 456.69, 457.23]
- 99%|█████████▊| 76/77 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.23
- 99%|█████████▊| 76/77 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.257720454974843
- 99%|█████████▊| 76/77 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 76/77 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.14572238922119
- 99%|█████████▊| 76/77 [00:07<?, ?trial/s, best loss=?]100%|██████████| 77/77 [00:07<00:00,  7.79s/trial, best loss: 10.878722047781993]100%|██████████| 77/77 [00:07<00:00,  7.79s/trial, best loss: 10.878722047781993]
-####################################
-{'t00': 59.96611280419496, 't04': 31.847830476202617, 't07': 12.489136220716933, 't10': 1.9140792284924735, 't13': 1.138173100538876, 't18': 1.3721912706270918}
- 99%|█████████▊| 77/78 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2337.070198123631
- 99%|█████████▊| 77/78 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.86, 378.72, 393.84, 408.53, 422.06, 433.72, 442.79, 448.82, 452.41, 454.41, 455.58, 456.24, 456.62, 456.9, 457.15, 457.37, 457.6, 457.85, 458.15, 458.52, 458.97, 459.54]
- 99%|█████████▊| 77/78 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 459.54
- 99%|█████████▊| 77/78 [00:07<?, ?trial/s, best loss=?]                                                       loss:10.20745536810654
- 99%|█████████▊| 77/78 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 77/78 [00:07<?, ?trial/s, best loss=?]                                                       ML: 51.62961483001709
- 99%|█████████▊| 77/78 [00:07<?, ?trial/s, best loss=?]100%|██████████| 78/78 [00:07<00:00,  7.57s/trial, best loss: 10.20745536810654]100%|██████████| 78/78 [00:07<00:00,  7.57s/trial, best loss: 10.20745536810654]
-####################################
-{'t00': 58.52956822091402, 't04': 34.258431808141225, 't07': 11.615850096858257, 't10': 2.207822258193822, 't13': 1.2329824228549202, 't18': 1.691356748458334}
- 99%|█████████▊| 78/79 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2364.7195238591016
- 99%|█████████▊| 78/79 [00:05<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.99, 378.79, 393.75, 408.23, 421.57, 433.14, 442.27, 448.55, 452.47, 454.71, 455.93, 456.5, 456.75, 456.95, 457.16, 457.39, 457.65, 457.94, 458.28, 458.67, 459.13, 459.66]
- 99%|█████████▊| 78/79 [00:05<?, ?trial/s, best loss=?]                                                       T_end: 459.66
- 99%|█████████▊| 78/79 [00:05<?, ?trial/s, best loss=?]                                                       loss:10.054627789926606
- 99%|█████████▊| 78/79 [00:05<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▊| 78/79 [00:05<?, ?trial/s, best loss=?]                                                       ML: 51.810091733932495
- 99%|█████████▊| 78/79 [00:05<?, ?trial/s, best loss=?]100%|██████████| 79/79 [00:05<00:00,  5.83s/trial, best loss: 10.054627789926606]100%|██████████| 79/79 [00:05<00:00,  5.83s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 79/80 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2255.9565200840175
- 99%|█████████▉| 79/80 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.36, 382.26, 397.36, 411.31, 423.76, 434.36, 442.77, 448.77, 452.69, 455.0, 456.16, 456.59, 456.69, 456.79, 456.96, 457.18, 457.44, 457.74, 458.07, 458.41, 458.77, 459.12]
- 99%|█████████▉| 79/80 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 459.12
- 99%|█████████▉| 79/80 [00:07<?, ?trial/s, best loss=?]                                                       loss:1010.8804596557652
- 99%|█████████▉| 79/80 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 79/80 [00:07<?, ?trial/s, best loss=?]                                                       ML: 50.87549686431885
- 99%|█████████▉| 79/80 [00:07<?, ?trial/s, best loss=?]100%|██████████| 80/80 [00:07<00:00,  7.51s/trial, best loss: 10.054627789926606]100%|██████████| 80/80 [00:07<00:00,  7.51s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 80/81 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2465.1623227047667
- 99%|█████████▉| 80/81 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.1, 378.98, 394.01, 408.55, 421.96, 433.59, 442.81, 449.2, 453.22, 455.55, 456.82, 457.42, 457.69, 457.91, 458.14, 458.39, 458.67, 458.98, 459.34, 459.75, 460.23, 460.77]
- 99%|█████████▉| 80/81 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 460.77
- 99%|█████████▉| 80/81 [00:07<?, ?trial/s, best loss=?]                                                       loss:1009.0245671727108
- 99%|█████████▉| 80/81 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 80/81 [00:07<?, ?trial/s, best loss=?]                                                       ML: 52.9405951499939
- 99%|█████████▉| 80/81 [00:07<?, ?trial/s, best loss=?]100%|██████████| 81/81 [00:07<00:00,  8.00s/trial, best loss: 10.054627789926606]100%|██████████| 81/81 [00:07<00:00,  8.00s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 81/82 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 3027.732479348126
- 99%|█████████▉| 81/82 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.14, 377.85, 393.29, 408.59, 422.89, 435.34, 445.08, 451.54, 455.36, 457.44, 458.6, 459.21, 459.53, 459.78, 460.0, 460.23, 460.48, 460.75, 461.07, 461.45, 461.91, 462.46]
- 99%|█████████▉| 81/82 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 462.46
- 99%|█████████▉| 81/82 [00:07<?, ?trial/s, best loss=?]                                                       loss:1007.901577579751
- 99%|█████████▉| 81/82 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 81/82 [00:07<?, ?trial/s, best loss=?]                                                       ML: 54.62615489959717
- 99%|█████████▉| 81/82 [00:07<?, ?trial/s, best loss=?]100%|██████████| 82/82 [00:07<00:00,  7.57s/trial, best loss: 10.054627789926606]100%|██████████| 82/82 [00:07<00:00,  7.57s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 82/83 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2790.335046229684
- 99%|█████████▉| 82/83 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.44, 378.21, 393.52, 408.57, 422.57, 434.73, 444.26, 450.64, 454.45, 456.58, 457.78, 458.43, 458.77, 459.03, 459.27, 459.51, 459.75, 460.02, 460.33, 460.7, 461.15, 461.69]
- 99%|█████████▉| 82/83 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 461.69
- 99%|█████████▉| 82/83 [00:07<?, ?trial/s, best loss=?]                                                       loss:1008.4493759741166
- 99%|█████████▉| 82/83 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 82/83 [00:07<?, ?trial/s, best loss=?]                                                       ML: 53.84095907211304
- 99%|█████████▉| 82/83 [00:07<?, ?trial/s, best loss=?]100%|██████████| 83/83 [00:07<00:00,  7.66s/trial, best loss: 10.054627789926606]100%|██████████| 83/83 [00:07<00:00,  7.66s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 83/84 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2668.2655663069195
- 99%|█████████▉| 83/84 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.5, 378.17, 393.27, 408.07, 421.83, 433.82, 443.3, 449.79, 453.79, 456.07, 457.32, 457.92, 458.19, 458.4, 458.6, 458.81, 459.05, 459.32, 459.64, 460.03, 460.49, 461.04]
- 99%|█████████▉| 83/84 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 461.04
- 99%|█████████▉| 83/84 [00:07<?, ?trial/s, best loss=?]                                                       loss:1008.9332711548384
- 99%|█████████▉| 83/84 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 83/84 [00:07<?, ?trial/s, best loss=?]                                                       ML: 53.234994411468506
- 99%|█████████▉| 83/84 [00:07<?, ?trial/s, best loss=?]100%|██████████| 84/84 [00:07<00:00,  7.66s/trial, best loss: 10.054627789926606]100%|██████████| 84/84 [00:07<00:00,  7.66s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 84/85 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2159.947705125773
- 99%|█████████▉| 84/85 [00:08<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.82, 380.13, 395.31, 409.79, 422.96, 434.24, 443.02, 448.94, 452.56, 454.64, 455.87, 456.58, 456.98, 457.27, 457.51, 457.71, 457.92, 458.14, 458.41, 458.75, 459.18, 459.73]
- 99%|█████████▉| 84/85 [00:08<?, ?trial/s, best loss=?]                                                       T_end: 459.73
- 99%|█████████▉| 84/85 [00:08<?, ?trial/s, best loss=?]                                                       loss:1009.9420822380542
- 99%|█████████▉| 84/85 [00:08<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 84/85 [00:08<?, ?trial/s, best loss=?]                                                       ML: 51.71786546707153
- 99%|█████████▉| 84/85 [00:08<?, ?trial/s, best loss=?]100%|██████████| 85/85 [00:08<00:00,  8.57s/trial, best loss: 10.054627789926606]100%|██████████| 85/85 [00:08<00:00,  8.57s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 85/86 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2704.7141434080713
- 99%|█████████▉| 85/86 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 362.82, 377.32, 392.61, 407.79, 421.95, 434.2, 443.63, 449.67, 453.04, 454.8, 455.84, 456.48, 456.88, 457.17, 457.41, 457.61, 457.82, 458.05, 458.34, 458.71, 459.18, 459.8]
- 99%|█████████▉| 85/86 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 459.8
- 99%|█████████▉| 85/86 [00:07<?, ?trial/s, best loss=?]                                                       loss:10.305489623678458
- 99%|█████████▉| 85/86 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 85/86 [00:07<?, ?trial/s, best loss=?]                                                       ML: 51.899224519729614
- 99%|█████████▉| 85/86 [00:07<?, ?trial/s, best loss=?]100%|██████████| 86/86 [00:07<00:00,  7.85s/trial, best loss: 10.054627789926606]100%|██████████| 86/86 [00:07<00:00,  7.85s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 86/87 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2420.1170991834056
- 99%|█████████▉| 86/87 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.71, 379.91, 395.02, 409.48, 422.72, 434.17, 443.27, 449.65, 453.72, 456.12, 457.42, 458.01, 458.25, 458.43, 458.63, 458.85, 459.09, 459.38, 459.72, 460.11, 460.58, 461.13]
- 99%|█████████▉| 86/87 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 461.13
- 99%|█████████▉| 86/87 [00:07<?, ?trial/s, best loss=?]                                                       loss:1008.745311458009
- 99%|█████████▉| 86/87 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 86/87 [00:07<?, ?trial/s, best loss=?]                                                       ML: 53.174805641174316
- 99%|█████████▉| 86/87 [00:07<?, ?trial/s, best loss=?]100%|██████████| 87/87 [00:07<00:00,  7.62s/trial, best loss: 10.054627789926606]100%|██████████| 87/87 [00:07<00:00,  7.62s/trial, best loss: 10.054627789926606]
-####################################
-{'t00': 58.22975180195902, 't04': 34.04290217399088, 't07': 12.44319232928364, 't10': 2.0372794145857873, 't13': 1.1926677827763086, 't18': 1.7194353892750704}
- 99%|█████████▉| 87/88 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2418.4120555615405
- 99%|█████████▉| 87/88 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.93, 378.82, 393.98, 408.69, 422.25, 433.94, 443.07, 449.18, 452.84, 454.9, 456.08, 456.73, 457.09, 457.36, 457.61, 457.84, 458.08, 458.35, 458.66, 459.03, 459.49, 460.04]
- 99%|█████████▉| 87/88 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 460.04
- 99%|█████████▉| 87/88 [00:07<?, ?trial/s, best loss=?]                                                       loss:9.764806832859513
- 99%|█████████▉| 87/88 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 87/88 [00:07<?, ?trial/s, best loss=?]                                                       ML: 52.153605222702026
- 99%|█████████▉| 87/88 [00:07<?, ?trial/s, best loss=?]100%|██████████| 88/88 [00:07<00:00,  7.63s/trial, best loss: 9.764806832859513]100%|██████████| 88/88 [00:07<00:00,  7.63s/trial, best loss: 9.764806832859513]
-####################################
-{'t00': 58.68867147600763, 't04': 34.37709333451763, 't07': 11.829992574822162, 't10': 2.19079067656933, 't13': 1.262079208313117, 't18': 1.6896611167146829}
- 99%|█████████▉| 88/89 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 1875.9962451714382
- 99%|█████████▉| 88/89 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 364.78, 379.89, 394.79, 408.92, 421.72, 432.65, 441.15, 446.88, 450.37, 452.34, 453.46, 454.05, 454.37, 454.61, 454.84, 455.07, 455.32, 455.59, 455.91, 456.3, 456.76, 457.32]
- 99%|█████████▉| 88/89 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 457.32
- 99%|█████████▉| 88/89 [00:07<?, ?trial/s, best loss=?]                                                       loss:12.129139674927602
- 99%|█████████▉| 88/89 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 88/89 [00:07<?, ?trial/s, best loss=?]                                                       ML: 49.246856570243835
- 99%|█████████▉| 88/89 [00:07<?, ?trial/s, best loss=?]100%|██████████| 89/89 [00:07<00:00,  7.86s/trial, best loss: 9.764806832859513]100%|██████████| 89/89 [00:07<00:00,  7.86s/trial, best loss: 9.764806832859513]
-####################################
-{'t00': 58.68867147600763, 't04': 34.37709333451763, 't07': 11.829992574822162, 't10': 2.19079067656933, 't13': 1.262079208313117, 't18': 1.6896611167146829}
- 99%|█████████▉| 89/90 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2622.384382167298
- 99%|█████████▉| 89/90 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.7, 378.59, 393.89, 408.84, 422.66, 434.58, 443.83, 449.92, 453.48, 455.42, 456.54, 457.17, 457.53, 457.81, 458.07, 458.31, 458.55, 458.82, 459.12, 459.48, 459.91, 460.42]
- 99%|█████████▉| 89/90 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 460.42
- 99%|█████████▉| 89/90 [00:07<?, ?trial/s, best loss=?]                                                       loss:1009.6039152869372
- 99%|█████████▉| 89/90 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 89/90 [00:07<?, ?trial/s, best loss=?]                                                       ML: 52.5184690952301
- 99%|█████████▉| 89/90 [00:07<?, ?trial/s, best loss=?]100%|██████████| 90/90 [00:07<00:00,  7.61s/trial, best loss: 9.764806832859513]100%|██████████| 90/90 [00:07<00:00,  7.61s/trial, best loss: 9.764806832859513]
-####################################
-{'t00': 58.68867147600763, 't04': 34.37709333451763, 't07': 11.829992574822162, 't10': 2.19079067656933, 't13': 1.262079208313117, 't18': 1.6896611167146829}
- 99%|█████████▉| 90/91 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2581.8109424865665
- 99%|█████████▉| 90/91 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.9, 378.69, 393.71, 408.32, 421.85, 433.65, 443.06, 449.64, 453.83, 456.28, 457.59, 458.19, 458.42, 458.6, 458.8, 459.03, 459.28, 459.58, 459.92, 460.32, 460.79, 461.32]
- 99%|█████████▉| 90/91 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 461.32
- 99%|█████████▉| 90/91 [00:07<?, ?trial/s, best loss=?]                                                       loss:1008.5637242706573
- 99%|█████████▉| 90/91 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 90/91 [00:07<?, ?trial/s, best loss=?]                                                       ML: 53.518086671829224
- 99%|█████████▉| 90/91 [00:07<?, ?trial/s, best loss=?]100%|██████████| 91/91 [00:07<00:00,  7.95s/trial, best loss: 9.764806832859513]100%|██████████| 91/91 [00:07<00:00,  7.95s/trial, best loss: 9.764806832859513]
-####################################
-{'t00': 58.68867147600763, 't04': 34.37709333451763, 't07': 11.829992574822162, 't10': 2.19079067656933, 't13': 1.262079208313117, 't18': 1.6896611167146829}
- 99%|█████████▉| 91/92 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2864.963195598975
- 99%|█████████▉| 91/92 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 363.76, 378.73, 394.14, 409.23, 423.24, 435.42, 444.99, 451.47, 455.42, 457.66, 458.93, 459.6, 459.95, 460.21, 460.43, 460.65, 460.87, 461.12, 461.41, 461.76, 462.19, 462.72]
- 99%|█████████▉| 91/92 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 462.72
- 99%|█████████▉| 91/92 [00:07<?, ?trial/s, best loss=?]                                                       loss:1007.4808572748074
- 99%|█████████▉| 91/92 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 91/92 [00:07<?, ?trial/s, best loss=?]                                                       ML: 54.884105920791626
- 99%|█████████▉| 91/92 [00:07<?, ?trial/s, best loss=?]100%|██████████| 92/92 [00:07<00:00,  7.77s/trial, best loss: 9.764806832859513]100%|██████████| 92/92 [00:07<00:00,  7.77s/trial, best loss: 9.764806832859513]
-####################################
-{'t00': 58.68867147600763, 't04': 34.37709333451763, 't07': 11.829992574822162, 't10': 2.19079067656933, 't13': 1.262079208313117, 't18': 1.6896611167146829}
- 99%|█████████▉| 92/93 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2157.436238230022
- 99%|█████████▉| 92/93 [00:07<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 366.74, 382.32, 396.61, 409.48, 420.8, 430.45, 438.28, 444.23, 448.44, 451.13, 452.54, 453.09, 453.24, 453.36, 453.52, 453.73, 453.97, 454.25, 454.56, 454.9, 455.27, 455.66]
- 99%|█████████▉| 92/93 [00:07<?, ?trial/s, best loss=?]                                                       T_end: 455.66
- 99%|█████████▉| 92/93 [00:07<?, ?trial/s, best loss=?]                                                       loss:13.78420446962193
- 99%|█████████▉| 92/93 [00:07<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 92/93 [00:07<?, ?trial/s, best loss=?]                                                       ML: 47.87323176860809
- 99%|█████████▉| 92/93 [00:07<?, ?trial/s, best loss=?]100%|██████████| 93/93 [00:07<00:00,  7.75s/trial, best loss: 9.764806832859513]100%|██████████| 93/93 [00:07<00:00,  7.75s/trial, best loss: 9.764806832859513]
-####################################
-{'t00': 58.68867147600763, 't04': 34.37709333451763, 't07': 11.829992574822162, 't10': 2.19079067656933, 't13': 1.262079208313117, 't18': 1.6896611167146829}
- 99%|█████████▉| 93/94 [00:00<?, ?trial/s, best loss=?]                                                       hf_delta: 2829.8946022651376
- 99%|█████████▉| 93/94 [00:06<?, ?trial/s, best loss=?]                                                       T_list:[350.0, 362.83, 377.34, 392.63, 407.82, 422.02, 434.35, 443.91, 450.13, 453.69, 455.59, 456.68, 457.31, 457.67, 457.95, 458.2, 458.43, 458.67, 458.94, 459.26, 459.64, 460.11, 460.69]
- 99%|█████████▉| 93/94 [00:06<?, ?trial/s, best loss=?]                                                       T_end: 460.69
- 99%|█████████▉| 93/94 [00:06<?, ?trial/s, best loss=?]                                                       loss:9.474903643097658
- 99%|█████████▉| 93/94 [00:06<?, ?trial/s, best loss=?]                                                       final cracking rates:
- 99%|█████████▉| 93/94 [00:06<?, ?trial/s, best loss=?]                                                       ML: 52.85499095916748
- 99%|█████████▉| 93/94 [00:06<?, ?trial/s, best loss=?]100%|██████████| 94/94 [00:06<00:00,  6.68s/trial, best loss: 9.474903643097658]100%|██████████| 94/94 [00:06<00:00,  6.68s/trial, best loss: 9.474903643097658]
-####################################
-{'t00': 57.81846381019631, 't04': 36.08936015219241, 't07': 11.676316340063392, 't10': 2.082049675448966, 't13': 1.2716405824680346, 't18': 1.7513219290845203}
- 99%|█████████▉| 94/95 [00:00<?, ?trial/s, best loss=?]
