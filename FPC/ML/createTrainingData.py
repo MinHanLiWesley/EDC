@@ -68,7 +68,7 @@ def EDC_cracking(
     
     # import the gas model and set the initial conditions
     model = ct.Solution(reaction_mech)
-    model.TPX = T_0, pressure_0, composition_0
+    model.TPY = T_0, pressure_0, composition_0
     dz = length / n_steps
     r_vol = area * dz
     
@@ -115,7 +115,7 @@ def EDC_cracking(
             model.TP = T, None
             r.syncState()
             # Set the state of the reservoir to match that of the previous reactor
-            model.TPX = r.thermo.TPX
+            model.TPY = r.thermo.TPY
             upstream.syncState()
             # integrate the reactor forward in time until steady state is reached
             sim.reinitialize()

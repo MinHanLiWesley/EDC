@@ -243,52 +243,52 @@ END
 
 
 
-REACTIONS     KJOULES/MOLE   MOLES
+REACTIONS     KCAL/MOLE   MOLES
 
 ! Reaction index: Chemkin #1; RMG #1
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EDC(1), R1(2); EDC(1), R2-2(4); 
-EDC(1)=>R1(2)+R2-2(4)                                5.064257e+15 0.000     351.55282   
+EDC(1)=>R1(2)+R2-2(4)                                5.064257e+15 0.000     84.10355   
 
 ! Reaction index: Chemkin #2; RMG #2
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: CCl4(5), R1(2); CCl4(5), R8(6); 
-CCl4(5)=>R1(2)+R8(6)                                 5.504878e+11 0.000     393.03268   
+CCl4(5)=>R1(2)+R8(6)                                 5.504878e+11 0.000     94.02696   
 
 ! Reaction index: Chemkin #3; RMG #3
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EDC(1), R3(8); R1(2), HCl(7); 
-R1(2)+EDC(1)=>HCl(7)+R3(8)                           3.618386e+12 0.000     7.00000    
+R1(2)+EDC(1)=>HCl(7)+R3(8)                           3.618386e+12 0.000     1.67464    
 
 ! Reaction index: Chemkin #4; RMG #4
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EDC(1), R3(8); R5-2(11), VCM(10); 
-R5-2(11)+EDC(1)=>VCM(10)+R3(8)                       1.200000e+13 0.000     34.51402    
+R5-2(11)+EDC(1)=>VCM(10)+R3(8)                       1.200000e+13 0.000     8.25694    
 
 ! Reaction index: Chemkin #5; RMG #5
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EDC(1), R3(8); R2-2(4), EC(12); 
-R2-2(4)+EDC(1)=>R3(8)+EC(12)                         1.682202e+12 0.000     42.00000  
+R2-2(4)+EDC(1)=>R3(8)+EC(12)                         1.682202e+12 0.000     10.04785  
 
 ! Reaction index: Chemkin #6; RMG #6
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EDC(1), 1,1(14); R4(13), R3(8); 
-R4(13)+EDC(1)=>R3(8)+1,1(14)                         5.000000e+11 0.000     45.00000   
+R4(13)+EDC(1)=>R3(8)+1,1(14)                         5.000000e+11 0.000     10.76555   
 
 ! Reaction index: Chemkin #7; RMG #7
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R6-1(15), 1,1,2(16); EDC(1), R3(8); 
-R6-1(15)+EDC(1)=>R3(8)+1,1,2(16)                     2.000000e+11 0.000     48.00000   
+R6-1(15)+EDC(1)=>R3(8)+1,1,2(16)                     2.000000e+11 0.000     11.48325   
 
 ! Reaction index: Chemkin #8; RMG #8
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R7-1(18), 1,1,2,2(21); EDC(1), R3(8); 
-R7-1(18)+EDC(1)=>1,1,2,2(21)+R3(8)                   1.000000e+11 0.000     56.00000   
+R7-1(18)+EDC(1)=>1,1,2,2(21)+R3(8)                   1.000000e+11 0.000     13.39713   
 
 ! Reaction index: Chemkin #9; RMG #9
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EDC(1), R3(8); R8(6), CHCl3(22); 
-R8(6)+EDC(1)=>CHCl3(22)+R3(8)                        9.931347e+11 0.000     63.00000   
+R8(6)+EDC(1)=>CHCl3(22)+R3(8)                        9.931347e+11 0.000     15.07177   
 
 ! Reaction index: Chemkin #10; RMG #10
 ! Library reaction: 2009_Schirmeister_EDC
@@ -298,137 +298,137 @@ R1(2)+VCM(10)=>R4(13)                                7.485452e+10 0.000     0.00
 ! Reaction index: Chemkin #11; RMG #11
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: VCM(10), R5-2(11); R1(2), HCl(7); 
-R1(2)+VCM(10)=>HCl(7)+R5-2(11)                       1.200000e+14 0.000     51.76190   
+R1(2)+VCM(10)=>HCl(7)+R5-2(11)                       1.200000e+14 0.000     12.38323   
 
 ! Reaction index: Chemkin #12; RMG #12
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: VCM(10), 2-CP(24); R5-2(11), R1(2); 
-R5-2(11)+VCM(10)=>R1(2)+2-CP(24)                     5.000000e+11 0.000     31.00000    
+R5-2(11)+VCM(10)=>R1(2)+2-CP(24)                     5.000000e+11 0.000     7.41627    
 
 ! Reaction index: Chemkin #13; RMG #13
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R4(13), C4H6Cl2(25); VCM(10), R1(2); 
-VCM(10)+R4(13)=>R1(2)+C4H6Cl2(25)                    8.244045e+11 0.000     19.10078    
+VCM(10)+R4(13)=>R1(2)+C4H6Cl2(25)                    8.244045e+11 0.000     4.56956   
 
 ! Reaction index: Chemkin #14; RMG #14
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R2-2(4), EC(12); VCM(10), R5-2(11); 
-VCM(10)+R2-2(4)=>R5-2(11)+EC(12)                     3.000000e+11 0.000     61.00000   
+VCM(10)+R2-2(4)=>R5-2(11)+EC(12)                     3.000000e+11 0.000     14.59330   
 
 ! Reaction index: Chemkin #15; RMG #15
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R3(8), R1(2); R3(8), VCM(10); 
-R3(8)=>R1(2)+VCM(10)                                 1.589327e+14 0.000     80.18165   
+R3(8)=>R1(2)+VCM(10)                                 1.589327e+14 0.000     19.18221   
 
 ! Reaction index: Chemkin #16; RMG #16
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R5-2(11), R1(2); R5-2(11), C2H2(26); 
-R5-2(11)=>R1(2)+C2H2(26)                             4.602750e+11 0.000     92.97239  
+R5-2(11)=>R1(2)+C2H2(26)                             4.602750e+11 0.000     22.24220  
 
 ! Reaction index: Chemkin #17; RMG #17
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R6-1(15), R1(2); R6-1(15), 1,1-Di(27); 
-R6-1(15)=>R1(2)+1,1-Di(27)                           2.000000e+13 0.000     70.00000   
+R6-1(15)=>R1(2)+1,1-Di(27)                           2.000000e+13 0.000     16.74641   
 
 ! Reaction index: Chemkin #18; RMG #18
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R7-1(18), R1(2); R7-1(18), Tri(29); 
-R7-1(18)=>R1(2)+Tri(29)                              2.500000e+13 0.000     65.77083   
+R7-1(18)=>R1(2)+Tri(29)                              2.500000e+13 0.000     15.73465   
 
 ! Reaction index: Chemkin #19; RMG #19
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: C2H2(26), C6H6(30); R5-2(11), R1(2); 
-2C2H2(26)+R5-2(11)=>C6H6(30)+R1(2)                    1.053509e+14 0.000     20.00000   
+2C2H2(26)+R5-2(11)=>C6H6(30)+R1(2)                   1.053509e+14 0.000     4.78469   
 
 ! Reaction index: Chemkin #20; RMG #20
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: EC(12), R2-2(4); R1(2), HCl(7); 
-R1(2)+EC(12)=>HCl(7)+R2-2(4)                         7.081281e+12 0.000     4.00000    
+R1(2)+EC(12)=>HCl(7)+R2-2(4)                         7.081281e+12 0.000     0.95694    
 
 ! Reaction index: Chemkin #21; RMG #21
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: 1,1(14), R4(13); R1(2), HCl(7); 
-R1(2)+1,1(14)=>HCl(7)+R4(13)                         1.200000e+13 0.000     6.00000    
+R1(2)+1,1(14)=>HCl(7)+R4(13)                         1.200000e+13 0.000     1.43541    
 
 ! Reaction index: Chemkin #22; RMG #22
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: 1,1,2(16), R6-1(15); R1(2), HCl(7); 
-R1(2)+1,1,2(16)=>HCl(7)+R6-1(15)                     2.264436e+14 0.000     15.00000    
+R1(2)+1,1,2(16)=>HCl(7)+R6-1(15)                     2.264436e+14 0.000     3.58852   
 
 ! Reaction index: Chemkin #23; RMG #23
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: 1,1,2,2(21), R7-1(18); R1(2), HCl(7); 
-R1(2)+1,1,2,2(21)=>HCl(7)+R7-1(18)                   1.700000e+13 0.000     17.00000    
+R1(2)+1,1,2,2(21)=>HCl(7)+R7-1(18)                   1.700000e+13 0.000     4.06699    
 
 ! Reaction index: Chemkin #24; RMG #24
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: CHCl3(22), R8(6); R1(2), HCl(7); 
-R1(2)+CHCl3(22)=>HCl(7)+R8(6)                        1.600000e+13 0.000     14.00000    
+R1(2)+CHCl3(22)=>HCl(7)+R8(6)                        1.600000e+13 0.000     3.34928    
 
 ! Reaction index: Chemkin #25; RMG #25
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R5-2(11), 1,1-Di(27); CCl4(5), R8(6); 
-CCl4(5)+R5-2(11)=>R8(6)+1,1-Di(27)                   5.000000e+11 0.000     33.00000    
+CCl4(5)+R5-2(11)=>R8(6)+1,1-Di(27)                   5.000000e+11 0.000     7.89474  
 
 ! Reaction index: Chemkin #26; RMG #26
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R4(13), 1,1,2(16); CCl4(5), R8(6); 
-CCl4(5)+R4(13)=>R8(6)+1,1,2(16)                      3.460607e+11 0.000     34.64056   
+CCl4(5)+R4(13)=>R8(6)+1,1,2(16)                      3.460607e+11 0.000     8.28721  
 
 ! Reaction index: Chemkin #27; RMG #27
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R6-1(15), 1,1,2,2(21); CCl4(5), R8(6); 
-CCl4(5)+R6-1(15)=>R8(6)+1,1,2,2(21)                  5.000000e+11 0.000     33.00000   
+CCl4(5)+R6-1(15)=>R8(6)+1,1,2,2(21)                  5.000000e+11 0.000     7.89474   
 
 ! Reaction index: Chemkin #28; RMG #28
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R2-2(4), VCM(10); R1(2), HCl(7); 
-R1(2)+R2-2(4)=>HCl(7)+VCM(10)                        1.000000e+13 0.000     12.51403    
+R1(2)+R2-2(4)=>HCl(7)+VCM(10)                        1.000000e+13 0.000     2.99379    
 
 ! Reaction index: Chemkin #29; RMG #29
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R3(8), 1,1-Di(27); R1(2), HCl(7); 
-R1(2)+R3(8)=>HCl(7)+1,1-Di(27)                       8.992671e+12 0.000     12.00000    
+R1(2)+R3(8)=>HCl(7)+1,1-Di(27)                       8.992671e+12 0.000     2.87081    
 
 ! Reaction index: Chemkin #30; RMG #30
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R6-1(15), 1,1-Di(27); R8(6), CCl4(5); 
-R8(6)+R6-1(15)=>CCl4(5)+1,1-Di(27)                   1.000000e+13 0.000     13.00000    
+R8(6)+R6-1(15)=>CCl4(5)+1,1-Di(27)                   1.000000e+13 0.000     3.11005    
 
 ! Reaction index: Chemkin #32; RMG #32
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R1(2), R3(8) ; VCM(10), R3(8); 
-R1(2)+VCM(10)=>R3(8)                                 4.069139e+14 0.000     15.43885  
+R1(2)+VCM(10)=>R3(8)                                 4.069139e+14 0.000     3.69350 
 
 ! Reaction index: Chemkin #33; RMG #33
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R1(2), R5-2(11) ; C2H2(26), R5-2(11); 
-R1(2)+C2H2(26)=>R5-2(11)                             6.567441e+11 0.000     4.60834  
+R1(2)+C2H2(26)=>R5-2(11)                             6.567441e+11 0.000     1.10247 
 
 ! Reaction index: Chemkin #34; RMG #34
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R1(2), R6-1(15) ; 1,1-Di(27), R6-1(15); 
-R1(2)+1,1-Di(27)=>R6-1(15)                           4.329112e+13 0.000     9.26457   
+R1(2)+1,1-Di(27)=>R6-1(15)                           4.329112e+13 0.000     2.21640
 
 ! Reaction index: Chemkin #35; RMG #35
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: R1(2), R7-1(18) ; Tri(29), R7-1(18); 
-R1(2)+Tri(29)=>R7-1(18)                              3.303444e+13 0.000     21.43407  
+R1(2)+Tri(29)=>R7-1(18)                              3.303444e+13 0.000     5.12777  
 
 ! Reaction index: Chemkin #36; RMG #36
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: 1,1,2,2(21), R6-1(15) ; R8(6), CCl4(5); 
-R8(6)+1,1,2,2(21)=>CCl4(5)+R6-1(15)                  5.574840e+14 0.000     47.00000
+R8(6)+1,1,2,2(21)=>CCl4(5)+R6-1(15)                  5.574840e+14 0.000     11.24402
 
 ! Reaction index: Chemkin #37; RMG #37
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: S(25), C4H6CL(31) ; S(25), R1(2); 
-C4H6Cl2(25)=>C4H6CL(31)+R1(2)                        8.953933e+12 0.000     278.79387
+C4H6Cl2(25)=>C4H6CL(31)+R1(2)                        8.953933e+12 0.000     66.69710
 
 ! Reaction index: Chemkin #38; RMG #38
 ! Library reaction: 2009_Schirmeister_EDC
 ! Flux pairs: C4H6CL(31), C4H6(33) ; C4H6CL(31), R1(2); 
-C4H6CL(31)=>C4H6(33)+R1(2)                           2.624976e+13 0.000     144.08278
+C4H6CL(31)=>C4H6(33)+R1(2)                           2.624976e+13 0.000     34.46957
 
 END
 
