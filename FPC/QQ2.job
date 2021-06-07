@@ -8,10 +8,10 @@
 # TIN=350
 # TOUT=460.1
 # NAME=$PIN~$TIN~$TOUT
-# DIR='0519'
+DIR='0607_V2'
 source ~/.bashrc
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
-mkdir /home/wesley/EDC/FPC/ML/HyperOpt/$DIR
+mkdir /home/wesley/EDC/FPC/ML/HyperOpt//Heatflux/$DIR
 cd /home/wesley/EDC/FPC/ML/Heatflux
 echo "=========================================================="
 echo "Starting on : $(date)"
@@ -25,7 +25,7 @@ echo "=========================================================="
 # python -u hyper_sc.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
 # python -u hyper_noconstraint.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
 # python -u hyper_470.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
-python -u hf_modelV1.py | tee hf4.log
+python -u hf_modelV2.py | tee $DIR/hf1.log
 
 
 

@@ -1,0 +1,16 @@
+            Experiment name: 0602_FPC_modelV11_texas_aspenparam
+            Training Data: training_data_FPC_V10_addtexas_aspenparams.csv
+            Do k-fold: False
+            Folds num: 10
+            Learning rate: 0.001
+            Batch size: 128
+            Epoch: 1500
+            CSTR num: 100
+            Training vebose: 0
+            # Genearalization test
+            mass flow rates = True
+            CCl4 = True
+            inital pressure = True
+            number of tubes = True
+            ncpus = 8
+        

@@ -1,7 +1,6 @@
 
 
-
-from scipy.optimize import Bounds, LinearConstraint, minimize, minimize_scalar,fmin_powell,fmin
+from scipy.optimize import Bounds, LinearConstraint, minimize, minimize_scalar,fmin_powell,fmin,basinhopping
 from math import pi
 import cantera as ct
 import numpy as np
@@ -145,7 +144,7 @@ def EDC_cracking(
 
     # import the gas model and set the initial conditions
     model = ct.Solution(reaction_mech)
-    model.TPX = T_0, pressure_0, composition_0
+    model.TPY = T_0, pressure_0, composition_0
     dz = length / n_steps
     r_vol = area * dz
 
@@ -193,7 +192,7 @@ def EDC_cracking(
             model.TP = T, None
             r.syncState()
             # Set the state of the reservoir to match that of the previous reactor
-            model.TPX = r.thermo.TPX
+            model.TPY = r.thermo.TPY
             upstream.syncState()
             # integrate the reactor forward in time until steady state is reached
             sim.reinitialize()
@@ -204,9 +203,9 @@ def EDC_cracking(
             # write output data
             states.append(r.thermo.state)
         t[i] = np.sum(t_r)
-        compositions[i] = model.X[4:]
+        compositions[i] = model.Y[4:]
         cracking_rate = (
-            EDC_X_0 - model.X[model.species_index(EDC_label)]) / EDC_X_0
+            EDC_X_0 - model.Y[model.species_index(EDC_label)]) / EDC_X_0
         cracking_rates.append(cracking_rate)
         t_total = np.sum(t)
     return compositions[-1], t[-1], t_total
@@ -219,13 +218,15 @@ def optimize_hf(Te, Ti=350., target_X=55.0, mfr=53.053, p=13., CCl4=1000,
     ratio = [0.045775715, 0.052760646, 0.054246201, 0.057755337, 0.059452529, 0.060304555, 0.06103342,
              0.060060211, 0.058149083, 0.052729307, 0.048923541, 0.045456762, 0.042852356, 0.04072963,
              0.038601821, 0.036790655, 0.0348499, 0.032971834, 0.031425517, 0.029733461, 0.028328363, 0.027069159]
-    reaction_mech = '../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
+    reaction_mech = '../../KM/2009_Schirmeister_EDC/test.cti'
     T_list = [Ti]
     X=[0]
-    bounds=[[12,25],[12,25],[12,25],[12,25],[10,20],[5,18],[5,18],[5,18],[2,10],[1,8],[1,6],[0,3],[0,3],[0,2],[0,2],[0,1],[0,1],[0,1]]
+    bounds=[[8,25],[12,25],[12,25],[12,25],[10,20],[5,18],[5,18],[5,18],[2,10],[1,8],[1,6],[0,3],[0,3],[0,2],[0,2],[0,1],[0,1],[0,1]]
     for i in range(22):
-        res = fminbound(objective_function,bounds[i][0],bounds[i][1],args=(ratio[i]*Total_hf,X[-1],T_list),
-            disp=3)
+        # res = fminbound(objective_function,bounds[i][0],bounds[i][1],args=(ratio[i]*Total_hf,X[-1],T_list),
+            # disp=3)
+        # res = basinhopping(objective_function,bounds[i][0],interval=5)
+        res = minimize(objective_function,bounds[i][0],tol=0.001)
         # res = fmin(objective_function,2,ftol = 500,maxiter=1000,args=(ratio[i]*Total_hf,X[-1],T_list),
         #     disp=True)
         T_list.append(T_list[-1]+res)

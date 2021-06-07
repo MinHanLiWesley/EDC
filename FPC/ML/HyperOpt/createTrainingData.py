@@ -55,7 +55,7 @@ def EDC_cracking(
         CCl4_X_0 = float(CCl4_X_0) / 1000000
     print(f"cracking {CCl4_X_0}")
     T_0 = 273.15 + T_list[0]  # inlet temperature [K]
-    pressure_0 *= ct.one_atm
+    pressure_0 = pressure_0* 98066.5 + ct.one_atm
     spcs = ct.Species.listFromFile(reaction_mech)
     for spc in spcs[::-1]:
         if spc.composition == {'C': 2.0, 'Cl': 2.0, 'H': 4.0} and spc.charge == 0:
@@ -68,7 +68,7 @@ def EDC_cracking(
     
     # import the gas model and set the initial conditions
     model = ct.Solution(reaction_mech)
-    model.TPX = T_0, pressure_0, composition_0
+    model.TPY = T_0, pressure_0, composition_0
     dz = length / n_steps
     r_vol = area * dz
     
@@ -115,7 +115,7 @@ def EDC_cracking(
             model.TP = T, None
             r.syncState()
             # Set the state of the reservoir to match that of the previous reactor
-            model.TPX = r.thermo.TPX
+            model.TPY = r.thermo.TPY
             upstream.syncState()
             # integrate the reactor forward in time until steady state is reached
             sim.reinitialize()
@@ -126,8 +126,8 @@ def EDC_cracking(
             # write output data
             states.append(r.thermo.state)
         t[i] = np.sum(t_r)
-        compositions[i] = model.X[4:]
-        cracking_rate = (EDC_X_0 - model.X[model.species_index(EDC_label)]) / EDC_X_0
+        compositions[i] = model.Y[4:]
+        cracking_rate = (EDC_X_0 - model.Y[model.species_index(EDC_label)]) / EDC_X_0
         cracking_rates.append(cracking_rate)
     return compositions, t, cracking_rates
 '''

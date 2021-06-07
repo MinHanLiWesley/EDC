@@ -55,7 +55,7 @@ def EDC_cracking(
         CCl4_X_0 = float(CCl4_X_0) / 1000000
     print(f"cracking {CCl4_X_0}")
     T_0 = 273.15 + T_list[0]  # inlet temperature [K]
-    pressure_0 *= ct.one_atm
+    pressure_0 = pressure_0* 98066.5 + ct.one_atm
     spcs = ct.Species.listFromFile(reaction_mech)
     for spc in spcs[::-1]:
         if spc.composition == {'C': 2.0, 'Cl': 2.0, 'H': 4.0} and spc.charge == 0:
@@ -68,7 +68,7 @@ def EDC_cracking(
     
     # import the gas model and set the initial conditions
     model = ct.Solution(reaction_mech)
-    model.TPY = T_0, pressure_0, composition_0
+    model.TPX = T_0, pressure_0, composition_0
     dz = length / n_steps
     r_vol = area * dz
     
@@ -79,6 +79,7 @@ def EDC_cracking(
     # create a reservoir to represent the reactor immediately upstream. Note
     # that the gas object is set already to the state of the upstream reactor
     upstream = ct.Reservoir(model, name='upstream')
+    # upstream = ct.Reservoir(model, name='upstream')
     
     # create a reservoir for the reactor to exhaust into. The composition of
     # this reservoir is irrelevant.
@@ -92,6 +93,7 @@ def EDC_cracking(
     # pressure in the reactor. The value of K will only affect the transient
     # pressure difference.
     v = ct.PressureController(r, downstream, master=m, K=1e-5)
+    # v.set_pressure_coeff(1)
     
     sim = ct.ReactorNet([r])
     
@@ -115,20 +117,27 @@ def EDC_cracking(
             model.TP = T, None
             r.syncState()
             # Set the state of the reservoir to match that of the previous reactor
-            model.TPY = r.thermo.TPY
+            model.TPX = r.thermo.TPX
             upstream.syncState()
             # integrate the reactor forward in time until steady state is reached
             sim.reinitialize()
             sim.set_initial_time(0)
             sim.advance_to_steady_state()
+            # sim.step()
             # compute velocity and transform into time
             t_r[n] = r.mass / mass_flow_rate  # residence time in this reactor
             # write output data
             states.append(r.thermo.state)
         t[i] = np.sum(t_r)
         compositions[i] = model.X[4:]
+        
         cracking_rate = (EDC_X_0 - model.X[model.species_index(EDC_label)]) / EDC_X_0
         cracking_rates.append(cracking_rate)
+        # try:
+        #     print(model.X[model.species_index("C6H6(30)")])
+        #     print(f"HAHAHAHHAHAHAA:{model.X[-1]}")
+        # except:
+        #     pass
     return compositions, t, cracking_rates
 '''
 def EDC_cracking_C2H3Cl3(

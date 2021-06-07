@@ -489,7 +489,7 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
         print(f"prev_y: {prev_y}")
         x_predict = np.hstack(x_predict).reshape(1, -1)
         # texas_training.append(np.hstack([Ti, Te, compositions,
-        #              pressure_0, CCl4_X_0, t, t_r, texas_X[i],texas_X[i+1]]).reshape(-1,))
+                    #  pressure_0, CCl4_X_0, t, t_r, texas_X[i],texas_X[i+1]]).reshape(-1,))
         # rescaled_X_predict = scaler.transform(x_predict[:, :])
         # x_predict = np.hstack(x_predict).reshape(1, -1)
         rescaled_X_predict = scaler.transform(x_predict[:, :-1])
@@ -510,12 +510,15 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
     #     loss = mean_absolute_error(results['Choi']['cracking_rates'],
     #                                results['ML']['cracking_rates'])
     #     print(f"loss in {CCl4_X_0}: {loss} ")
-    # df = pd.read_csv("training_data_FPC_V8_addprev_area.csv")
+
+    # df = pd.read_csv("training_data_FPC_V10_addtexas_aspenparams.csv")
     # a_series = pd.DataFrame(texas_training,columns=df.columns)
     # df = df.append(a_series,ignore_index=True)
     # print(df.iloc[len(df)-1])
-    # df.to_csv("training_data_FPC_V9_addtexas.csv",index=False)
+    # df.to_csv("training_data_FPC_V11_addtexas_aspenparams.csv",index=False)
     # print(texas_training)
+
+
     if FPC:
         Ti = T_list[:-1]
         Te = T_list[1:]
@@ -545,7 +548,7 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
 
             print(len(y_ground))
             if len(y_ground) == len(T_list):
-                results['FPC'] = {'cracking_rates': y_ground}
+                # results['FPC'] = {'cracking_rates': y_ground}
                 print("FPC")
                 print(y_ground)
                 if loss:
@@ -556,14 +559,23 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
             print("FPC data not found")
     if FPC:
         results.pop('Choi', None)
+        results.pop('ML', None)
         # results.pop('Schirmeister', None)
         # results.pop('Aspen', None)
     if 'texas' in name:
         results['texas'] = {'cracking_rates': [0, 0.0052, 0.0136, 0.0264, 0.0442, 0.0676, 0.0960, 0.1284,
                             0.1636, 0.2002, 0.2367, 0.2719, 0.3055, 0.3373,
                             0.3675, 0.3962, 0.4234, 0.4493, 0.4739, 0.4972, 0.5194, 0.5405, 0.5605]}
-    # results['Aspen'] = {'cracking_rates': [0, 0, 0, 0, 0.009762839, 0.026548915, 0.073863337, 0.14168, 0.2089, 0.2604, 0.29861, 0.3256, 0.3471, 0.3672, 0.3865, 0.4052, 0.4234, 0.4408, 0.4570, 0.4719, 0.4859, 0.4992, 0.5119
-    #                                         ]}
+    # results['Aspen'] = {'cracking_rates': [0, 0.00010555656346777909, 0.00773889044657361, 0.12253220299847101, 0.4358534962862759, 1.4704257448060143, 5.112888346445432, 11.641819366330763, 18.94575052365951, 25.486337297202212, 30.76803285448039, 34.8256884542011, 38.00622976145317, 40.79299505753382, 43.378386743854904, 45.74631871484883, 48.01451925032849, 50.2036598439742, 52.28708883794319]
+                                            # }
+    results['Aspen(C2H)'] = {'cracking_rates': [0, -0.00010555656346777909, 0.00773889044657361, 0.12253220299847101, 0.43585404606004685, 1.47048814412869, 5.117649387277146, 11.601392851841474, 19.12288900617396, 26.333883381988322, 32.49788392076661, 37.367219464190484, 41.1977805632982, 44.45043981901448, 47.51081047648893, 50.350673472865914, 53.08358485483223, 55.73949602238679, 58.329231746136465]
+                                            }
+    # results['Aspen'] = {'cracking_rates': [0, -0.00010555656346777909, 0.008714738884951778, 0.04223719439451212, 2.495479485191854, 8.78244269982902, 14.88758500876889, 23.174706283364387, 35.270732518568614, 40.74208765592958, 44.5107282853106, 47.79165855750359, 50.66872721874949, 53.318720621464266, 55.87845409114149, 58.43739671125332, 60.97321474713156, 63.39783196714552, 65.7811817936919]
+                                            # }
+    results['Aspen(C2H)']['cracking_rates'] = [i/100 for i in results['Aspen(C2H)']['cracking_rates']]
+    results['Aspen(C)'] = {'cracking_rates':[0, -0.00010555656346777909, 0.00773889044657361, 0.12253220299847101, 0.4358534962862759, 1.4704257448060143, 5.112888346445432, 11.641819366330763, 18.94575052365951, 25.486337297202212, 30.76803285448039, 34.8256884542011, 38.00622976145317, 40.79299505753382, 43.378386743854904, 45.74631871484883, 48.01451925032849, 50.2036598439742, 52.28708883794319]}
+    results['Aspen(C)']['cracking_rates'] = [i/100 for i in results['Aspen(C)']['cracking_rates']]
+    
     if CCl4_X_0 < 1:  # ppm
         CCl4_X_0 = float(CCl4_X_0) * 1000000
     # print("Schi cracking rates")
@@ -618,8 +630,8 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
         #                     marker='o', label='AI')
         ax2.set_ylabel('Cracking rates (%)')
         ax2.set_ylim(-5, 100)
-        text_crack = f"final:{(results['ML']['cracking_rates'][-1]*100):.2f}%"
-        fig.text(0.85, 0.90, text_crack, fontsize=9)
+        # text_crack = f"final:{(results['ML']['cracking_rates'][-1]*100):.2f}%"
+        # fig.text(0.85, 0.90, text_crack, fontsize=9)
         labs = [l.get_label() for l in lns]
         ax1.legend(lns, labs, loc='lower right', frameon=True)
 
@@ -1120,7 +1132,10 @@ if __name__ == '__main__':
         reaction_mech = {
             'Schirmeister': '../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti',
             # 'Aspen': '../KM/2009_Schirmeister_EDC/chem_annotated_irreversible_aspen.cti',
-            'Aspen': '../KM/2009_Schirmeister_EDC/test.cti',
+            # 'CANSPEN(original)': '../KM/2009_Schirmeister_EDC/test_noC.cti',
+            'CANSPEN(C2H)': '../KM/2009_Schirmeister_EDC/test3.cti',
+            'CANSPEN(C)': '../KM/2009_Schirmeister_EDC/test.cti',
+            # 'Removed': '../KM/2009_Schirmeister_EDC/chem_annotated_irreversible_test.cti',
             # 'Choi': '../KM/2001_Choi_EDC/chem_annotated_irreversible.cti',
         }
 
@@ -1131,7 +1146,7 @@ if __name__ == '__main__':
             # T_list = [350, 380, 396, 413, 428, 436, 444, 453, 459,
             #   463, 465, 467, 469, 470, 471, 472, 473, 474, 475]
             # T_list = [350, 374.7, 399.3, 424, 449.3, 460.7, 466, 471.3, 476.7, 478.7,
-                    #   479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3, 486, 486.7]
+            #           479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3, 486, 486.7]
             # T_list = [320, 350, 375, 399, 424, 440, 445, 450, 452,
             #           456, 460, 462, 464, 467, 470, 474, 475, 476, 477]
             T_list = [320, 348, 374.7, 399.3, 424, 451.3, 460.7, 466, 471.3,476.7, 478.7, 479.3, 480, 481.3, 482.3, 483.3, 484.3, 485.3, 486.7]
@@ -1225,7 +1240,7 @@ if __name__ == '__main__':
             #     area = 3.14 * ((262) / 1000) ** 2 / 4
             # area = 3.14 * ((7.21 * 2.54)/100) ** 2 / 4
             # name = '36_11.4_350_orginal'
-            name = '36_11.4_320_orginal'
+            name = '36_12.4_320_orginal_test7'
             # name = 'texas48'
             # name = '30_350'
             # name = '20_330_random_470'

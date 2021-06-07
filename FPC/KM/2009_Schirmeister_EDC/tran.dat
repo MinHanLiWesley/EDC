@@ -36,4 +36,5 @@ EDC(1)              2     531.400     4.687     0.000     0.000     0.000    ! E
 C4H6CL(31)          2     341.100     5.784     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
 CL2(32)             1     110.700     4.443     0.000     0.000     0.000    ! Epsilon & sigma estimated with fixed Lennard Jones Parameters. This is the fallback method! Try improving transport databases!
 C4H6(33)            2     357.002     5.180     0.000     0.000     1.000    ! GRI-Mech
-C6H6(30)            2     438.897     5.913     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=570.00 K, Pc=40.06 bar (from Joback method)                
+C6H6(30)            2     438.897     5.913     0.000     0.000     0.000    ! Epsilon & sigma estimated with Tc=570.00 K, Pc=40.06 bar (from Joback method) 
+C(34)               0     141.400     3.746     0.000     2.600    13.000    ! GRI-Mech

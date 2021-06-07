@@ -316,7 +316,8 @@ def test():
 
 def main():
 
-    reaction_mech_x = '../KM//2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
+    # reaction_mech_x = '../KM//2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
+    reaction_mech_x = '../KM//2009_Schirmeister_EDC/test.cti'
     # reaction_mech_y = '../KM/2001_Choi_EDC/chem_annotated_irreversible.cti'
 
     # Cantera simulation parameters
@@ -351,7 +352,7 @@ def main():
     print('Training data creation initiated at {0}'.format(time.asctime()))
     if mass_flow_rate < 40:
         # DATADIR = 'Data/FPC_cracking_V6_prevX_normal'
-        DATADIR = 'Data/FPC_cracking_V6_prevX_random'
+        DATADIR = 'Data/FPCV8_newparams_rand'
         # DATADIR='Data/FPC_cracking_V4_3m_irrev'
     else:
         DATADIR = 'Data/training_data_cracking_V8_3m_choi_rev_big'
@@ -373,7 +374,7 @@ def main():
     f = open(f'{DATADIR}/{DATANAME}', 'a')
     if os.stat(f'{DATADIR}/{DATANAME}').st_size == 0:
         {
-            f.write('Ti,Te,X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X17,X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29,pressure_0,CCl4_X_0,t,tr,prev_X,X\n')
+            f.write('mass,Ti,Te,X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X17,X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29,pressure_0,CCl4_X_0,t,tr,prev_X,X\n')
             # f.write('Ti,Te,X1,X2,X3,X4,X5,X6,X7,X8,X9,X10,X11,X12,X13,X14,X15,X16,X17,X18,X19,X20,X21,X22,X23,X24,X25,X26,X27,X28,X29,pressure_0,CCl4_X_0,t,tr,X_sh,X_choi\n')
 
         }
@@ -498,7 +499,7 @@ def main():
 
     information = ''
     for j in range(n_pfr):
-        information += str(T_list[j]) + ',' + str(T_list[j+1]) + ','
+        information += str(mass_flow_rate)+','+str(T_list[j]) + ',' + str(T_list[j+1]) + ','
         for k in compositions[j]:
             information += str(k) + ','
         information += str(pressure_0) + ',' + str(CCl4_X_0) + \

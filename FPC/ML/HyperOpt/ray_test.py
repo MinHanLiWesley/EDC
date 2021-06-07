@@ -5,8 +5,8 @@ ML2 use old data
 @author: Shih-Cheng Li
 """
 
-DATE="0529"
-DIR = "plt5"
+DATE="0606"
+DIR = "plt2"
 
 import numpy as np
 import json
@@ -64,12 +64,13 @@ def getBestModelfromTrials(trials):
 
 
 def get_data():
-    dataframe = read_csv('../training_data_FPC_V8_addprev_area.csv')
+    # dataframe = read_csv('../training_data_FPC_V8_addprev_area.csv')
+    dataframe = read_csv('../training_data_FPC_V13_addtexas_aspenparams_Y.csv')
     # dataframe = read_csv('../training_data_FPC_V7_addprev_Temprand.csv')
     array = dataframe.values
     # Separate array into input and output components
-    X = array[:, 0:-1]
-    Y = array[:, -1]
+    X = array[:-22, 0:-1]
+    Y = array[:-22, -1]
     # Data spliting to training set and testing set
     X_train, X_test, y_train, y_test = train_test_split(
         X, Y, test_size=0.33, random_state=777)
@@ -86,7 +87,7 @@ def get_data():
     return x_train, y_train, x_test, y_test, scaler
 
 
-
+'''
 def get_data():
     dataframe = read_csv('../training_data_FPC_V8_addprev_area.csv')
     # dataframe = read_csv('../training_data_FPC_V7_addprev_Temprand.csv')
@@ -108,7 +109,7 @@ def get_data():
                rescaled_X_train[:, 2:]]
     x_test = [rescaled_X_test[:, 0:2], rescaled_X_test[:, 2::]]
     return x_train, y_train, x_test, y_test, scaler
-'''
+
 def create_model(params):
     first_input = Input(shape=(2,),)
     second_input = Input(shape=(33,))
@@ -162,8 +163,8 @@ def create_model(params):
 
 def create_model(params):
     first_input = Input(shape=(2,),)
-    second_input = Input(shape=(33,))
-    # third_input = Input(shape=(1,), name='Prev_cracking')
+    second_input = Input(shape=(31,))
+    third_input = Input(shape=(1,), name='Prev_cracking')
 
     # layer = Dense(int(params['units1-1']))(first_input)
     # layer = Activation('relu')(layer)
@@ -197,11 +198,11 @@ def create_model(params):
         layer = Activation('relu')(layer)
         layer = Dense(int(params['choice2']['units2-4']))(layer)
         layer = Activation('relu')(layer)
-    # layer = concatenate([layer, third_input])
-    # layer = Dense(1)(layer)
+    layer = concatenate([layer, third_input])
+    layer = Dense(1)(layer)
     output = Activation('sigmoid')(layer)
 
-    model = Model(inputs=[first_input, second_input
+    model = Model(inputs=[first_input, second_input,third_input
                  ], outputs=output)
 
     model.compile(optimizer=optimizers.Adam(lr=params['lr']),
@@ -253,7 +254,7 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
             't': t
         }
     # Use ML model to predict
-    KM_label = 'Schirmeister'
+    KM_label = 'CANSPEN(original)'
     y_predicted = [0]
     prev_y = 0
     for i, T in enumerate(T_list[1:]):
@@ -295,7 +296,8 @@ def tune_model(config):
         validation_data=(x_test, y_test),
         verbose=0,
         batch_size=int(config['batch_size']),
-        epochs=int(config['epochs']))
+        epochs=int(config['epochs']),
+        shuffle=False)
 
     loss, acc, *is_anything_else_being_returned = model.evaluate(
         x=x_test, y=y_test, batch_size=int(config['batch_size']))
@@ -304,7 +306,7 @@ def tune_model(config):
     texas_X = [0., 0.52, 1.36, 2.64, 4.42, 6.76, 9.60, 12.84, 16.36, 20.02, 23.67,
                27.19, 30.55, 33.73, 36.75, 39.62, 42.34, 44.93, 47.39, 49.72, 51.94, 54.05, 56.05]
     reaction_mech = {
-        'Schirmeister': '../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti'
+        'CANSPEN(original)': '../../KM/2009_Schirmeister_EDC/test.cti'
     }
     mine_X,scalar = predict(reaction_mech, T_list, 10.33, 0, 48.15, 100, len(
         T_list)-1, 16.3, 3.14 * (238.76 / 1000) ** 2 / 4, scalar, model)
@@ -382,7 +384,7 @@ def tune_model(config):
     plt.savefig(f'{DATE}/{DIR}/{index}/{index}.png')
     index+=1
 
-    return {'loss': (loss + texas_loss), 'status': STATUS_OK,'Trained_Model': model.get_weights()}
+    return {'loss': (loss*100 + texas_loss), 'status': STATUS_OK,'Trained_Model': model.get_weights()}
 
 
 # This seeds the hyperparameter sampling.
@@ -433,7 +435,7 @@ hyperparameter_space = {'choice1': hp.choice('num_layers1',
                         'units2-2': hp.quniform('units2-2', 5, 20, 1),
                         'units1-2': hp.quniform('units1-2', 5, 20, 1),
 
-                        'batch_size': hp.quniform('batch_size', 24, 60, 1),
+                        'batch_size': hp.quniform('batch_size', 24, 120, 1),
 
                         'epochs': hp.quniform('epochs', 200, 500, 1),
                         # 'optimizer': hp.choice('optimizer',['adadelta','adam','rmsprop']),
@@ -448,7 +450,7 @@ hyperparameter_space = {'choice1': hp.choice('num_layers1',
 #                        'lr': 0.001}]
 try:
     index_plt = 0
-    trials = dill.load(open(f"{DATE}/mlhp5.pk", 'rb'))
+    trials = dill.load(open(f"{DATE}/mlhp{DIR[-1]}.pk", 'rb'))
 # 初始的數值
 
 except(FileNotFoundError):
@@ -481,9 +483,9 @@ for i in range(1, max_evals+1, step):
 
     print("####################################")
     print(best)
-    dill.dump(loss_dic, open(f"{DATE}/mlhp_loss5.pk", "wb"))
-    dill.dump(trials, open(f"{DATE}/mlhp5.pk", "wb"))
+    dill.dump(loss_dic, open(f"{DATE}/mlhp_loss{DIR[-1]}.pk", "wb"))
+    dill.dump(trials, open(f"{DATE}/mlhpP{DIR[-1]}.pk", "wb"))
 
 model_wei= getBestModelfromTrials(trials)
-dill.dump(model_wei,open(f"{DATE}/bestmodel5.h5", "wb"))
+dill.dump(model_wei,open(f"{DATE}/bestmodel{DIR[-1]}.h5", "wb"))
 # print(config)

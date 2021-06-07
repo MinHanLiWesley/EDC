@@ -1,0 +1,1414 @@
+<?xml version="1.0"?>
+<ctml>
+  <validate species="yes" reactions="yes"/>
+  <elementData>
+    <element name="Ci" atomicWt="13.003" atomicNumber="0"/>
+    <element name="D" atomicWt="2.014" atomicNumber="0"/>
+    <element name="Oi" atomicWt="18.0" atomicNumber="0"/>
+    <element name="T" atomicWt="3.016" atomicNumber="0"/>
+    <element name="X" atomicWt="195.083" atomicNumber="0"/>
+    <element name="L" atomicWt="0.001" atomicNumber="0"/>
+  </elementData>
+
+  <!-- phase gas     -->
+  <phase id="gas" dim="3">
+    <elementArray datasrc="elements.xml">H D T C Ci O Oi N Ne Ar He Si S F Cl Br I X</elementArray>
+    <speciesArray datasrc="#species_data">
+      Ar           He           Ne           N2
+      EDC(1)       R1(2)        R2-2(4)      CCl4(5)
+      R8(6)        HCl(7)       R3(8)        VCM(10)
+      R5-2(11)     EC(12)       R4(13)       1,1(14)
+      R6-1(15)     1,1,2(16)    R7-1(18)     1,1,2,2(21)
+      CHCl3(22)    2-CP(24)     C4H6Cl2(25)  C2H2(26)
+      1,1-Di(27)   Tri(29)      C6H6(30)     C4H6CL(31)
+      CL2(32)      C4H6(33)     C(34)</speciesArray>
+    <reactionArray datasrc="#reaction_data"/>
+    <state>
+      <temperature units="K">300.0</temperature>
+      <pressure units="Pa">101325.0</pressure>
+    </state>
+    <thermo model="IdealGas"/>
+    <kinetics model="GasKinetics"/>
+    <transport model="Mix"/>
+  </phase>
+
+  <!-- species definitions     -->
+  <speciesData id="species_data">
+
+    <!-- species Ar    -->
+    <species name="Ar">
+      <atomArray>Ar:1 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.500000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00, 
+             0.000000000E+00,  -7.453750000E+02,   4.379670000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.500000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00, 
+             0.000000000E+00,  -7.453750000E+02,   4.379670000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">atom</string>
+        <LJ_welldepth units="K">136.501</LJ_welldepth>
+        <LJ_diameter units="A">3.330</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species He    -->
+    <species name="He">
+      <atomArray>He:1 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.500000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00, 
+             0.000000000E+00,  -7.453750000E+02,   9.287240000E-01</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.500000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00, 
+             0.000000000E+00,  -7.453750000E+02,   9.287240000E-01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">atom</string>
+        <LJ_welldepth units="K">10.200</LJ_welldepth>
+        <LJ_diameter units="A">2.576</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species Ne    -->
+    <species name="Ne">
+      <atomArray>Ne:1 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.500000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00, 
+             0.000000000E+00,  -7.453750000E+02,   3.355320000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.500000000E+00,   0.000000000E+00,   0.000000000E+00,   0.000000000E+00, 
+             0.000000000E+00,  -7.453750000E+02,   3.355320000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">atom</string>
+        <LJ_welldepth units="K">148.600</LJ_welldepth>
+        <LJ_diameter units="A">3.758</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species N2    -->
+    <species name="N2">
+      <atomArray>N:2 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.531010000E+00,  -1.236610000E-04,  -5.029990000E-07,   2.435310000E-09, 
+             -1.408810000E-12,  -1.046980000E+03,   2.967470000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.952580000E+00,   1.396900000E-03,  -4.926320000E-07,   7.860100000E-11, 
+             -4.607550000E-15,  -9.239490000E+02,   5.871890000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">linear</string>
+        <LJ_welldepth units="K">97.530</LJ_welldepth>
+        <LJ_diameter units="A">3.621</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">1.760</polarizability>
+        <rotRelax>4.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species EDC(1)    -->
+    <species name="EDC(1)">
+      <atomArray>C:2 Cl:2 H:4 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="355.37" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.912550000E+00,   6.980490000E-03,   1.076760000E-04,  -3.149300000E-07, 
+             2.862910000E-10,  -1.777230000E+04,   9.426480000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="355.37" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.286140000E+00,   2.514230000E-02,  -1.588390000E-05,   4.850630000E-09, 
+             -5.704740000E-13,  -1.779790000E+04,   1.081340000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R1(2)    -->
+    <species name="R1(2)">
+      <atomArray>Cl:1 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.260620000E+00,   1.541540000E-03,  -6.802840000E-07,  -1.599730000E-09, 
+             1.154170000E-12,   1.385530000E+04,   6.570210000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.946580000E+00,  -3.859850000E-04,   1.361390000E-07,  -2.170330000E-11, 
+             1.287510000E-15,   1.369700000E+04,   3.113300000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">atom</string>
+        <LJ_welldepth units="K">130.800</LJ_welldepth>
+        <LJ_diameter units="A">3.613</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>1.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R2-2(4)    -->
+    <species name="R2-2(4)">
+      <atomArray>C:2 Cl:1 H:4 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="473.11" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.880710000E+00,   9.572440000E-03,   2.185060000E-05,  -4.344650000E-08, 
+             2.423870000E-11,   7.499060000E+03,   8.886650000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="473.11" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.650110000E+00,   1.997690000E-02,  -1.113690000E-05,   3.036850000E-09, 
+             -3.240530000E-13,   7.615500000E+03,   1.390260000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">237.100</LJ_welldepth>
+        <LJ_diameter units="A">5.118</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species CCl4(5)    -->
+    <species name="CCl4(5)">
+      <atomArray>C:1 Cl:4 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="450.24" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.795810000E+00,   1.438380000E-02,   9.474600000E-05,  -3.219270000E-07, 
+             2.753440000E-10,  -1.399880000E+04,   9.509380000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="450.24" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             8.102270000E+00,   1.086110000E-02,  -9.245880000E-06,   3.413410000E-09, 
+             -4.554270000E-13,  -1.473870000E+04,  -1.174020000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">341.100</LJ_welldepth>
+        <LJ_diameter units="A">5.784</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R8(6)    -->
+    <species name="R8(6)">
+      <atomArray>C:1 Cl:3 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="474.92" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.887860000E+00,   7.603860000E-03,   5.875060000E-05,  -1.793610000E-07, 
+             1.427200000E-10,   6.418720000E+03,   1.056640000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="474.92" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             6.246180000E+00,   8.029030000E-03,  -6.670000000E-06,   2.420710000E-09, 
+             -3.189950000E-13,   5.965910000E+03,  -1.463950000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species HCl(7)    -->
+    <species name="HCl(7)">
+      <atomArray>Cl:1 H:1 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.463760000E+00,   4.764840000E-04,  -2.003010000E-06,   3.317140000E-09, 
+             -1.449580000E-12,  -1.214440000E+04,   2.664280000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.757580000E+00,   1.453870000E-03,  -4.796470000E-07,   7.779090000E-11, 
+             -4.795740000E-15,  -1.191380000E+04,   6.521970000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">linear</string>
+        <LJ_welldepth units="K">344.700</LJ_welldepth>
+        <LJ_diameter units="A">3.339</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>1.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R3(8)    -->
+    <species name="R3(8)">
+      <atomArray>C:2 Cl:2 H:3 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="449.06" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.891100000E+00,   7.548340000E-03,   9.183730000E-05,  -2.473470000E-07, 
+             1.929670000E-10,   4.681990000E+03,   1.194280000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="449.06" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.728270000E+00,   1.947370000E-02,  -1.274060000E-05,   4.025200000E-09, 
+             -4.872590000E-13,   4.411380000E+03,   6.398180000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species VCM(10)    -->
+    <species name="VCM(10)">
+      <atomArray>C:2 Cl:1 H:3 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="542.85" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.077170000E+00,  -7.120330000E-03,   8.815700000E-05,  -1.541610000E-07, 
+             8.847650000E-11,   1.226830000E+03,   7.864240000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="542.85" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.033700000E+00,   1.838730000E-02,  -1.120170000E-05,   3.321440000E-09, 
+             -3.806350000E-13,   1.294710000E+03,   1.505610000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">237.100</LJ_welldepth>
+        <LJ_diameter units="A">5.118</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R5-2(11)    -->
+    <species name="R5-2(11)">
+      <atomArray>C:2 Cl:1 H:2 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="566.8" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.974710000E+00,   1.466550000E-03,   3.904930000E-05,  -7.142320000E-08, 
+             4.021400000E-11,   2.928200000E+04,   7.938280000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="566.8" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.005830000E+00,   1.398090000E-02,  -9.092220000E-06,   2.870360000E-09, 
+             -3.483420000E-13,   2.930060000E+04,   1.125810000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">237.100</LJ_welldepth>
+        <LJ_diameter units="A">5.118</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species EC(12)    -->
+    <species name="EC(12)">
+      <atomArray>C:2 Cl:1 H:5 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="484.3" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.973910000E+00,   1.497270000E-03,   6.004070000E-05,  -9.892180000E-08, 
+             5.277720000E-11,  -1.489580000E+04,   8.168710000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="484.3" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             1.039420000E+00,   2.572490000E-02,  -1.496930000E-05,   4.294000000E-09, 
+             -4.831160000E-13,  -1.461140000E+04,   2.019940000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">237.100</LJ_welldepth>
+        <LJ_diameter units="A">5.118</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R4(13)    -->
+    <species name="R4(13)">
+      <atomArray>C:2 Cl:2 H:3 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="407.81" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.872540000E+00,   9.463220000E-03,   9.567460000E-05,  -2.928960000E-07, 
+             2.552790000E-10,   7.114380000E+03,   1.204740000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="407.81" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.968230000E+00,   1.874740000E-02,  -1.215420000E-05,   3.827610000E-09, 
+             -4.628310000E-13,   6.858440000E+03,   5.701850000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species 1,1(14)    -->
+    <species name="1,1(14)">
+      <atomArray>C:2 Cl:2 H:4 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="489.48" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.925140000E+00,   4.825650000E-03,   9.202610000E-05,  -2.044730000E-07, 
+             1.381860000E-10,  -1.796010000E+04,   1.027040000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="489.48" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.267800000E+00,   2.512860000E-02,  -1.594760000E-05,   4.904500000E-09, 
+             -5.812960000E-13,  -1.807470000E+04,   1.114490000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R6-1(15)    -->
+    <species name="R6-1(15)">
+      <atomArray>C:2 Cl:3 H:2 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="424.67" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.719340000E+00,   2.398920000E-02,   3.680830000E-05,  -1.760400000E-07, 
+             1.647560000E-10,   5.877410000E+02,   1.275840000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="424.67" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             5.996150000E+00,   2.057000000E-02,  -1.478610000E-05,   4.908910000E-09, 
+             -6.091530000E-13,   2.318130000E+02,   1.810230000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">341.100</LJ_welldepth>
+        <LJ_diameter units="A">5.784</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species 1,1,2(16)    -->
+    <species name="1,1,2(16)">
+      <atomArray>C:2 Cl:3 H:3 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="439.36" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.801310000E+00,   1.591960000E-02,   7.788410000E-05,  -2.306400000E-07, 
+             1.853860000E-10,  -1.995640000E+04,   1.264510000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="439.36" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.542550000E+00,   2.664200000E-02,  -1.836980000E-05,   5.918760000E-09, 
+             -7.189700000E-13,  -2.019010000E+04,   7.759720000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">341.100</LJ_welldepth>
+        <LJ_diameter units="A">5.784</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species R7-1(18)    -->
+    <species name="R7-1(18)">
+      <atomArray>C:2 Cl:4 H:1 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="804.12" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.475960000E+00,   4.434440000E-02,  -6.446490000E-05,   4.812420000E-08, 
+             -1.434680000E-11,  -1.092850000E+03,   1.457300000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="804.12" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             9.320670000E+00,   1.527080000E-02,  -1.023170000E-05,   3.161800000E-09, 
+             -3.681240000E-13,  -2.032820000E+03,  -1.235020000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">399.300</LJ_welldepth>
+        <LJ_diameter units="A">5.949</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species 1,1,2,2(21)    -->
+    <species name="1,1,2,2(21)">
+      <atomArray>C:2 Cl:4 H:2 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="849.09" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.636780000E+00,   4.076240000E-02,  -4.671530000E-05,   2.904810000E-08, 
+             -7.647520000E-12,  -2.150100000E+04,   1.275840000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="849.09" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             7.294740000E+00,   2.353000000E-02,  -1.627250000E-05,   5.145800000E-09, 
+             -6.098810000E-13,  -2.212220000E+04,  -4.290760000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">399.300</LJ_welldepth>
+        <LJ_diameter units="A">5.949</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species CHCl3(22)    -->
+    <species name="CHCl3(22)">
+      <atomArray>C:1 Cl:3 H:1 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="501.86" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.910050000E+00,   5.823910000E-03,   6.474810000E-05,  -1.657540000E-07, 
+             1.188370000E-10,  -1.388320000E+04,   9.950990000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="501.86" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             5.249410000E+00,   1.288890000E-02,  -9.391950000E-06,   3.169680000E-09, 
+             -3.997310000E-13,  -1.424100000E+04,   2.186990000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species 2-CP(24)    -->
+    <species name="2-CP(24)">
+      <atomArray>C:4 Cl:1 H:5 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="575.53" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.887620000E+00,   6.556410000E-03,   1.184540000E-04,  -2.360830000E-07, 
+             1.393230000E-10,   7.218780000E+03,   1.016850000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="575.53" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.573390000E+00,   3.493930000E-02,  -2.380220000E-05,   7.796160000E-09, 
+             -9.713060000E-13,   6.821050000E+03,   7.741250000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">341.100</LJ_welldepth>
+        <LJ_diameter units="A">5.784</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species C4H6Cl2(25)    -->
+    <species name="C4H6Cl2(25)">
+      <atomArray>C:4 Cl:2 H:6 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="799.23" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.452860000E+00,   4.667290000E-02,  -4.111890000E-05,   2.246410000E-08, 
+             -5.771680000E-12,  -9.551690000E+03,   1.226840000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="799.23" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             5.525270000E+00,   3.630080000E-02,  -2.165240000E-05,   6.226300000E-09, 
+             -6.924540000E-13,  -9.882960000E+03,   2.734650000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">399.300</LJ_welldepth>
+        <LJ_diameter units="A">5.949</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species C2H2(26)    -->
+    <species name="C2H2(26)">
+      <atomArray>C:2 H:2 </atomArray>
+      <thermo>
+        <NASA Tmin="100.0" Tmax="897.95" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.087436070E+00,   5.785838740E-03,   8.562866550E-06,  -1.728179220E-08, 
+             7.835632340E-12,   2.627377960E+04,   4.460832370E+00</floatArray>
+        </NASA>
+        <NASA Tmin="897.95" Tmax="5000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             5.890709750E+00,   2.090507300E-03,   4.887209680E-08,  -5.669656250E-11, 
+             4.151373890E-15,   2.541587910E+04,  -1.073531530E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">linear</string>
+        <LJ_welldepth units="K">209.001</LJ_welldepth>
+        <LJ_diameter units="A">4.100</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>2.500</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species 1,1-Di(27)    -->
+    <species name="1,1-Di(27)">
+      <atomArray>C:2 Cl:2 H:2 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="566.68" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.934660000E+00,   3.860220000E-03,   6.462440000E-05,  -1.331980000E-07, 
+             8.064150000E-11,  -1.463530000E+03,   9.187920000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="566.68" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.060020000E+00,   1.796340000E-02,  -1.238040000E-05,   4.068600000E-09, 
+             -5.072390000E-13,  -1.718390000E+03,   6.530960000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">531.400</LJ_welldepth>
+        <LJ_diameter units="A">4.687</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species Tri(29)    -->
+    <species name="Tri(29)">
+      <atomArray>C:2 Cl:3 H:1 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="440.81" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.847490000E+00,   1.087890000E-02,   9.186150000E-05,  -2.790090000E-07, 
+             2.311310000E-10,  -3.812610000E+03,   1.181320000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="440.81" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             5.825320000E+00,   1.726190000E-02,  -1.265050000E-05,   4.263500000E-09, 
+             -5.353800000E-13,  -4.223370000E+03,   1.210190000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">341.100</LJ_welldepth>
+        <LJ_diameter units="A">5.784</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species C6H6(30)    -->
+    <species name="C6H6(30)">
+      <atomArray>C:6 H:6 </atomArray>
+      <thermo>
+        <NASA Tmin="100.0" Tmax="949.23" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.887773050E+00,   3.396816130E-03,   1.009012840E-04,  -1.328523300E-07, 
+             5.084694880E-11,   8.300308140E+03,   1.145506830E+01</floatArray>
+        </NASA>
+        <NASA Tmin="949.23" Tmax="5000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             1.252093170E+01,   1.650261020E-02,  -4.665331990E-06,   8.857587520E-10, 
+             -7.161188030E-14,   4.052212040E+03,  -4.726074630E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">438.897</LJ_welldepth>
+        <LJ_diameter units="A">5.913</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species C4H6CL(31)    -->
+    <species name="C4H6CL(31)">
+      <atomArray>C:4 Cl:1 H:6 </atomArray>
+      <thermo>
+        <NASA Tmin="10.0" Tmax="958.97" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             3.686240000E+00,   2.816410000E-02,  -2.631840000E-06,  -1.261650000E-08, 
+             5.903250000E-12,   1.687370000E+04,   1.225960000E+01</floatArray>
+        </NASA>
+        <NASA Tmin="958.97" Tmax="3000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.912300000E+00,   2.991650000E-02,  -1.611340000E-05,   4.222320000E-09, 
+             -4.330790000E-13,   1.632280000E+04,   4.749690000E+00</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">341.100</LJ_welldepth>
+        <LJ_diameter units="A">5.784</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species CL2(32)    -->
+    <species name="CL2(32)">
+      <atomArray>Cl:2 </atomArray>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.736380000E+00,   7.835260000E-03,  -1.451050000E-05,   1.257310000E-08, 
+             -4.132470000E-12,  -1.058800000E+03,   9.445570000E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="6000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             4.747280000E+00,  -4.885820000E-04,   2.684450000E-07,  -2.434760000E-11, 
+             -1.036830000E-15,  -1.511020000E+03,  -3.445390000E-01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">linear</string>
+        <LJ_welldepth units="K">110.700</LJ_welldepth>
+        <LJ_diameter units="A">4.443</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>0.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species C4H6(33)    -->
+    <species name="C4H6(33)">
+      <atomArray>C:4 H:6 </atomArray>
+      <thermo>
+        <NASA Tmin="100.0" Tmax="946.05" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             2.806001430E+00,   1.025834470E-02,   6.172640260E-05,  -9.016478420E-08, 
+             3.591192750E-11,   1.165849680E+04,   1.206211380E+01</floatArray>
+        </NASA>
+        <NASA Tmin="946.05" Tmax="5000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             1.246934490E+01,   1.005543700E-02,  -2.412096100E-06,   4.570838290E-10, 
+             -3.931660200E-14,   8.010789070E+03,  -4.363732000E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">nonlinear</string>
+        <LJ_welldepth units="K">357.002</LJ_welldepth>
+        <LJ_diameter units="A">5.180</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">0.000</polarizability>
+        <rotRelax>1.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+
+    <!-- species C(34)    -->
+    <species name="C(34)">
+      <atomArray>C:1 </atomArray>
+      <note>L 8/88</note>
+      <thermo>
+        <NASA Tmin="200.0" Tmax="1000.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             5.149876130E+00,  -1.367097880E-02,   4.918005990E-05,  -4.847430260E-08, 
+             1.666939560E-11,  -1.024664760E+04,  -4.641303760E+00</floatArray>
+        </NASA>
+        <NASA Tmin="1000.0" Tmax="3500.0" P0="100000.0">
+           <floatArray size="7" name="coeffs">
+             7.485149500E-02,   1.339094670E-02,  -5.732858090E-06,   1.222925350E-09, 
+             -1.018152300E-13,  -9.468344590E+03,   1.843731800E+01</floatArray>
+        </NASA>
+      </thermo>
+      <transport model="gas_transport">
+        <string title="geometry">atom</string>
+        <LJ_welldepth units="K">141.400</LJ_welldepth>
+        <LJ_diameter units="A">3.750</LJ_diameter>
+        <dipoleMoment units="Debye">0.000</dipoleMoment>
+        <polarizability units="A3">2.600</polarizability>
+        <rotRelax>13.000</rotRelax>
+        <dispersion_coefficient units="A5">0.000</dispersion_coefficient>
+        <quadrupole_polarizability units="A5">0.000</quadrupole_polarizability>
+      </transport>
+    </species>
+  </speciesData>
+  <reactionData id="reaction_data">
+
+    <!-- reaction 0001    -->
+    <reaction id="0001" reversible="no">
+      <equation>EDC(1) =] R1(2) + R2-2(4)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.064257E+15</A>
+           <b>0.0</b>
+           <E units="kcal/mol">84.103550</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>EDC(1):1.0</reactants>
+      <products>R1(2):1.0 R2-2(4):1</products>
+    </reaction>
+
+    <!-- reaction 0002    -->
+    <reaction id="0002" reversible="no">
+      <equation>CCl4(5) =] R1(2) + R8(6)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.504878E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">94.026960</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>CCl4(5):1.0</reactants>
+      <products>R1(2):1.0 R8(6):1</products>
+    </reaction>
+
+    <!-- reaction 0003    -->
+    <reaction id="0003" reversible="no">
+      <equation>R1(2) + EDC(1) =] HCl(7) + R3(8)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>3.618386E+09</A>
+           <b>0.0</b>
+           <E units="kcal/mol">1.674640</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 EDC(1):1</reactants>
+      <products>HCl(7):1.0 R3(8):1</products>
+    </reaction>
+
+    <!-- reaction 0004    -->
+    <reaction id="0004" reversible="no">
+      <equation>R5-2(11) + EDC(1) =] VCM(10) + R3(8)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.200000E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">8.256940</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R5-2(11):1.0 EDC(1):1</reactants>
+      <products>VCM(10):1.0 R3(8):1</products>
+    </reaction>
+
+    <!-- reaction 0005    -->
+    <reaction id="0005" reversible="no">
+      <equation>R2-2(4) + EDC(1) =] R3(8) + EC(12)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.682202E+09</A>
+           <b>0.0</b>
+           <E units="kcal/mol">10.047850</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R2-2(4):1.0 EDC(1):1</reactants>
+      <products>R3(8):1.0 EC(12):1</products>
+    </reaction>
+
+    <!-- reaction 0006    -->
+    <reaction id="0006" reversible="no">
+      <equation>R4(13) + EDC(1) =] R3(8) + 1,1(14)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">10.765550</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R4(13):1.0 EDC(1):1</reactants>
+      <products>R3(8):1.0 1,1(14):1</products>
+    </reaction>
+
+    <!-- reaction 0007    -->
+    <reaction id="0007" reversible="no">
+      <equation>R6-1(15) + EDC(1) =] R3(8) + 1,1,2(16)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>2.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">11.483250</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R6-1(15):1.0 EDC(1):1</reactants>
+      <products>R3(8):1.0 1,1,2(16):1</products>
+    </reaction>
+
+    <!-- reaction 0008    -->
+    <reaction id="0008" reversible="no">
+      <equation>R7-1(18) + EDC(1) =] 1,1,2,2(21) + R3(8)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">13.397130</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R7-1(18):1.0 EDC(1):1</reactants>
+      <products>1,1,2,2(21):1.0 R3(8):1</products>
+    </reaction>
+
+    <!-- reaction 0009    -->
+    <reaction id="0009" reversible="no">
+      <equation>R8(6) + EDC(1) =] CHCl3(22) + R3(8)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>9.931347E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">15.071770</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R8(6):1.0 EDC(1):1</reactants>
+      <products>CHCl3(22):1.0 R3(8):1</products>
+    </reaction>
+
+    <!-- reaction 0010    -->
+    <reaction id="0010" reversible="no">
+      <equation>R1(2) + VCM(10) =] R4(13)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>7.485452E+07</A>
+           <b>0.0</b>
+           <E units="kcal/mol">0.000000</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 VCM(10):1</reactants>
+      <products>R4(13):1.0</products>
+    </reaction>
+
+    <!-- reaction 0011    -->
+    <reaction id="0011" reversible="no">
+      <equation>R1(2) + VCM(10) =] HCl(7) + R5-2(11)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.200000E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">12.383230</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 VCM(10):1</reactants>
+      <products>HCl(7):1.0 R5-2(11):1</products>
+    </reaction>
+
+    <!-- reaction 0012    -->
+    <reaction id="0012" reversible="no">
+      <equation>R5-2(11) + VCM(10) =] R1(2) + 2-CP(24)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">7.416270</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R5-2(11):1.0 VCM(10):1</reactants>
+      <products>R1(2):1.0 2-CP(24):1</products>
+    </reaction>
+
+    <!-- reaction 0013    -->
+    <reaction id="0013" reversible="no">
+      <equation>VCM(10) + R4(13) =] R1(2) + C4H6Cl2(25)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>8.244045E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">4.569560</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>VCM(10):1.0 R4(13):1</reactants>
+      <products>R1(2):1.0 C4H6Cl2(25):1</products>
+    </reaction>
+
+    <!-- reaction 0014    -->
+    <reaction id="0014" reversible="no">
+      <equation>VCM(10) + R2-2(4) =] R5-2(11) + EC(12)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>3.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">14.593300</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>VCM(10):1.0 R2-2(4):1</reactants>
+      <products>R5-2(11):1.0 EC(12):1</products>
+    </reaction>
+
+    <!-- reaction 0015    -->
+    <reaction id="0015" reversible="no">
+      <equation>R3(8) =] R1(2) + VCM(10)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.589327E+14</A>
+           <b>0.0</b>
+           <E units="kcal/mol">19.182210</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R3(8):1.0</reactants>
+      <products>R1(2):1.0 VCM(10):1</products>
+    </reaction>
+
+    <!-- reaction 0016    -->
+    <reaction id="0016" reversible="no">
+      <equation>R5-2(11) =] R1(2) + C2H2(26)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>4.602750E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">22.242200</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R5-2(11):1.0</reactants>
+      <products>R1(2):1.0 C2H2(26):1</products>
+    </reaction>
+
+    <!-- reaction 0017    -->
+    <reaction id="0017" reversible="no">
+      <equation>R6-1(15) =] R1(2) + 1,1-Di(27)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>2.000000E+13</A>
+           <b>0.0</b>
+           <E units="kcal/mol">16.746410</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R6-1(15):1.0</reactants>
+      <products>R1(2):1.0 1,1-Di(27):1</products>
+    </reaction>
+
+    <!-- reaction 0018    -->
+    <reaction id="0018" reversible="no">
+      <equation>R7-1(18) =] R1(2) + Tri(29)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>2.500000E+13</A>
+           <b>0.0</b>
+           <E units="kcal/mol">15.734650</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R7-1(18):1.0</reactants>
+      <products>R1(2):1.0 Tri(29):1</products>
+    </reaction>
+
+    <!-- reaction 0019    -->
+    <reaction id="0019" reversible="no">
+      <equation>2 C2H2(26) + R5-2(11) =] C6H6(30) + R1(2)</equation>
+      <order species="C2H2(26)">1.0</order>
+      <order species="R5-2(11)">1.0</order>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.053509E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">4.784690</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>C2H2(26):2.0 R5-2(11):1</reactants>
+      <products>C6H6(30):1.0 R1(2):1</products>
+    </reaction>
+
+    <!-- reaction 0020    -->
+    <reaction id="0020" reversible="no">
+      <equation>R1(2) + EC(12) =] HCl(7) + R2-2(4)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>7.081281E+09</A>
+           <b>0.0</b>
+           <E units="kcal/mol">0.956940</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 EC(12):1</reactants>
+      <products>HCl(7):1.0 R2-2(4):1</products>
+    </reaction>
+
+    <!-- reaction 0021    -->
+    <reaction id="0021" reversible="no">
+      <equation>R1(2) + 1,1(14) =] HCl(7) + R4(13)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.200000E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">1.435410</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 1,1(14):1</reactants>
+      <products>HCl(7):1.0 R4(13):1</products>
+    </reaction>
+
+    <!-- reaction 0022    -->
+    <reaction id="0022" reversible="no">
+      <equation>R1(2) + 1,1,2(16) =] HCl(7) + R6-1(15)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>2.264436E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">3.588520</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 1,1,2(16):1</reactants>
+      <products>HCl(7):1.0 R6-1(15):1</products>
+    </reaction>
+
+    <!-- reaction 0023    -->
+    <reaction id="0023" reversible="no">
+      <equation>R1(2) + 1,1,2,2(21) =] HCl(7) + R7-1(18)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.700000E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">4.066990</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 1,1,2,2(21):1</reactants>
+      <products>HCl(7):1.0 R7-1(18):1</products>
+    </reaction>
+
+    <!-- reaction 0024    -->
+    <reaction id="0024" reversible="no">
+      <equation>R1(2) + CHCl3(22) =] HCl(7) + R8(6)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.600000E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">3.349280</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 CHCl3(22):1</reactants>
+      <products>HCl(7):1.0 R8(6):1</products>
+    </reaction>
+
+    <!-- reaction 0025    -->
+    <reaction id="0025" reversible="no">
+      <equation>CCl4(5) + R5-2(11) =] R8(6) + 1,1-Di(27)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">7.894740</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>CCl4(5):1.0 R5-2(11):1</reactants>
+      <products>R8(6):1.0 1,1-Di(27):1</products>
+    </reaction>
+
+    <!-- reaction 0026    -->
+    <reaction id="0026" reversible="no">
+      <equation>CCl4(5) + R4(13) =] R8(6) + 1,1,2(16)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>3.460607E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">8.287210</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>CCl4(5):1.0 R4(13):1</reactants>
+      <products>R8(6):1.0 1,1,2(16):1</products>
+    </reaction>
+
+    <!-- reaction 0027    -->
+    <reaction id="0027" reversible="no">
+      <equation>CCl4(5) + R6-1(15) =] R8(6) + 1,1,2,2(21)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.000000E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">7.894740</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>CCl4(5):1.0 R6-1(15):1</reactants>
+      <products>R8(6):1.0 1,1,2,2(21):1</products>
+    </reaction>
+
+    <!-- reaction 0028    -->
+    <reaction id="0028" reversible="no">
+      <equation>R1(2) + R2-2(4) =] HCl(7) + VCM(10)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.000000E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">2.993790</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 R2-2(4):1</reactants>
+      <products>HCl(7):1.0 VCM(10):1</products>
+    </reaction>
+
+    <!-- reaction 0029    -->
+    <reaction id="0029" reversible="no">
+      <equation>R1(2) + R3(8) =] HCl(7) + 1,1-Di(27)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>8.992671E+09</A>
+           <b>0.0</b>
+           <E units="kcal/mol">2.870810</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 R3(8):1</reactants>
+      <products>HCl(7):1.0 1,1-Di(27):1</products>
+    </reaction>
+
+    <!-- reaction 0030    -->
+    <reaction id="0030" reversible="no">
+      <equation>R8(6) + R6-1(15) =] CCl4(5) + 1,1-Di(27)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.000000E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">3.110050</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R8(6):1.0 R6-1(15):1</reactants>
+      <products>CCl4(5):1.0 1,1-Di(27):1</products>
+    </reaction>
+
+    <!-- reaction 0031    -->
+    <reaction id="0031" reversible="no">
+      <equation>C2H2(26) + 2 R1(2)  =] 2 C(34) + 2 HCl(7)</equation>
+      <order species="C2H2(26)">1.0</order>
+      <order species="R1(2)">1.0</order>
+      <rateCoeff>
+        <Arrhenius>
+           <A>1.600000E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">17.273560</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>C2H2(26):1.0 R1(2):2.0</reactants>
+      <products>C(34):2.0 HCl(7):2.0</products>
+    </reaction>
+
+    <!-- reaction 0032    -->
+    <reaction id="0032" reversible="no">
+      <equation>R1(2) + VCM(10) =] R3(8)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>4.069139E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">3.693500</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 VCM(10):1</reactants>
+      <products>R3(8):1.0</products>
+    </reaction>
+
+    <!-- reaction 0033    -->
+    <reaction id="0033" reversible="no">
+      <equation>R1(2) + C2H2(26) =] R5-2(11)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>6.567441E+08</A>
+           <b>0.0</b>
+           <E units="kcal/mol">1.102470</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 C2H2(26):1</reactants>
+      <products>R5-2(11):1.0</products>
+    </reaction>
+
+    <!-- reaction 0034    -->
+    <reaction id="0034" reversible="no">
+      <equation>R1(2) + 1,1-Di(27) =] R6-1(15)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>4.329112E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">2.216400</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 1,1-Di(27):1</reactants>
+      <products>R6-1(15):1.0</products>
+    </reaction>
+
+    <!-- reaction 0035    -->
+    <reaction id="0035" reversible="no">
+      <equation>R1(2) + Tri(29) =] R7-1(18)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>3.303444E+10</A>
+           <b>0.0</b>
+           <E units="kcal/mol">5.127770</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R1(2):1.0 Tri(29):1</reactants>
+      <products>R7-1(18):1.0</products>
+    </reaction>
+
+    <!-- reaction 0036    -->
+    <reaction id="0036" reversible="no">
+      <equation>R8(6) + 1,1,2,2(21) =] CCl4(5) + R6-1(15)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>5.574840E+11</A>
+           <b>0.0</b>
+           <E units="kcal/mol">11.244020</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>R8(6):1.0 1,1,2,2(21):1</reactants>
+      <products>CCl4(5):1.0 R6-1(15):1</products>
+    </reaction>
+
+    <!-- reaction 0037    -->
+    <reaction id="0037" reversible="no">
+      <equation>C4H6Cl2(25) =] C4H6CL(31) + R1(2)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>8.953933E+12</A>
+           <b>0.0</b>
+           <E units="kcal/mol">66.697100</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>C4H6Cl2(25):1.0</reactants>
+      <products>C4H6CL(31):1.0 R1(2):1</products>
+    </reaction>
+
+    <!-- reaction 0038    -->
+    <reaction id="0038" reversible="no">
+      <equation>C4H6CL(31) =] C4H6(33) + R1(2)</equation>
+      <rateCoeff>
+        <Arrhenius>
+           <A>2.624976E+13</A>
+           <b>0.0</b>
+           <E units="kcal/mol">34.469570</E>
+        </Arrhenius>
+      </rateCoeff>
+      <reactants>C4H6CL(31):1.0</reactants>
+      <products>C4H6(33):1.0 R1(2):1</products>
+    </reaction>
+  </reactionData>
+</ctml>

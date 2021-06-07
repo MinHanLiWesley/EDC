@@ -9,7 +9,7 @@ ideal_gas(name='gas',
                      R6-1(15)     1,1,2(16)    R7-1(18)     1,1,2,2(21)
                      CHCl3(22)    2-CP(24)     C4H6Cl2(25)  C2H2(26)
                      1,1-Di(27)   Tri(29)      C6H6(30)     C4H6CL(31)
-                     CL2(32)      C4H6(33)""",
+                     CL2(32)      C4H6(33)     C(34)""",
           reactions='all',
           transport='Mix',
           initial_state=state(temperature=300.0, pressure=OneAtm))
@@ -23,6 +23,7 @@ element(symbol='D', atomic_mass=2.014)
 element(symbol='Oi', atomic_mass=18.0)
 element(symbol='T', atomic_mass=3.016)
 element(symbol='X', atomic_mass=195.083)
+element(symbol='L', atomic_mass=0.001)
 #-------------------------------------------------------------------------------
 # Species data
 #-------------------------------------------------------------------------------
@@ -453,6 +454,27 @@ species(name='C4H6(33)',
                                 well_depth=357.002,
                                 rot_relax=1.0))
 
+
+species(name = "C(34)",
+    atoms = " C:1",
+    thermo = (
+       NASA( [  200.00,  1000.00], [  5.149876130E+00,  -1.367097880E-02,
+                4.918005990E-05,  -4.847430260E-08,   1.666939560E-11,
+               -1.024664760E+04,  -4.641303760E+00] ),
+       NASA( [ 1000.00,  3500.00], [  7.485149500E-02,   1.339094670E-02,
+               -5.732858090E-06,   1.222925350E-09,  -1.018152300E-13,
+               -9.468344590E+03,   1.843731800E+01] )
+             ),
+    transport = gas_transport(
+                     geom = "atom",
+                     diam =     3.75,
+                     well_depth =   141.40,
+                     polar =     2.60,
+                     rot_relax =    13.00),
+    note = "L 8/88"
+       )
+
+
 #-------------------------------------------------------------------------------
 # Reaction data
 #-------------------------------------------------------------------------------
@@ -569,7 +591,8 @@ reaction('R7-1(18) => R1(2) + Tri(29)', [2.500000e+13, 0.0, 15.73465])
 #  Flux pairs: C2H2(26), C6H6(30); R5-2(11), R1(2);
 
 # Reaction 19
-reaction('2 C2H2(26) + R5-2(11) => C6H6(30) + R1(2)', [1.053509e+14, 0.0, 4.78469])
+reaction('2 C2H2(26) + R5-2(11) => C6H6(30) + R1(2)', [1.053509e+14, 0.0, 4.78469],
+         order='C2H2(26):1.00 R5-2(11):1.00')
 #  Reaction index: Chemkin #20; RMG #20
 #  Library reaction: 2009_Schirmeister_EDC
 #  Flux pairs: EC(12), R2-2(4); R1(2), HCl(7);
@@ -636,45 +659,52 @@ reaction('R1(2) + R3(8) => HCl(7) + 1,1-Di(27)', [8.992671e+12, 0.0, 2.87081])
 
 # Reaction 30
 reaction('R8(6) + R6-1(15) => CCl4(5) + 1,1-Di(27)', [1.000000e+13, 0.0, 3.11005])
-#  Reaction index: Chemkin #32; RMG #32
+#  Reaction index: Chemkin #31; RMG #31
 #  Library reaction: 2009_Schirmeister_EDC
-#  Flux pairs: R1(2), R3(8) ; VCM(10), R3(8);
+#  Flux pairs: C2H2(26), C(34); R1(2), HCl(7)
 
 # Reaction 31
+reaction('C2H2(26) + 2 R1(2)  => 2 C(34) + 2 HCl(7)', [1.600000e+14, 0.0, 17.27356],
+         order='C2H2(26):1.00 R1(2):1.00 ')
+#  Reaction index: Chemkin #32; RMG #32
+#  Library reaction: 2009_Schirmeister_EDC
+#  Flux pairs: R1(2), R3(8); VCM(10), R3(8);
+
+# Reaction 32
 reaction('R1(2) + VCM(10) => R3(8)', [4.069139e+14, 0.0, 3.6935])
 #  Reaction index: Chemkin #33; RMG #33
 #  Library reaction: 2009_Schirmeister_EDC
-#  Flux pairs: R1(2), R5-2(11) ; C2H2(26), R5-2(11);
+#  Flux pairs: R1(2), R5-2(11); C2H2(26), R5-2(11);
 
-# Reaction 32
+# Reaction 33
 reaction('R1(2) + C2H2(26) => R5-2(11)', [6.567441e+11, 0.0, 1.10247])
 #  Reaction index: Chemkin #34; RMG #34
 #  Library reaction: 2009_Schirmeister_EDC
 #  Flux pairs: R1(2), R6-1(15) ; 1,1-Di(27), R6-1(15);
 
-# Reaction 33
+# Reaction 34
 reaction('R1(2) + 1,1-Di(27) => R6-1(15)', [4.329112e+13, 0.0, 2.2164])
 #  Reaction index: Chemkin #35; RMG #35
 #  Library reaction: 2009_Schirmeister_EDC
-#  Flux pairs: R1(2), R7-1(18) ; Tri(29), R7-1(18);
+#  Flux pairs: R1(2), R7-1(18); Tri(29), R7-1(18);
 
-# Reaction 34
+# Reaction 35
 reaction('R1(2) + Tri(29) => R7-1(18)', [3.303444e+13, 0.0, 5.12777])
 #  Reaction index: Chemkin #36; RMG #36
 #  Library reaction: 2009_Schirmeister_EDC
-#  Flux pairs: 1,1,2,2(21), R6-1(15) ; R8(6), CCl4(5);
+#  Flux pairs: 1,1,2,2(21), R6-1(15); R8(6), CCl4(5);
 
-# Reaction 35
+# Reaction 36
 reaction('R8(6) + 1,1,2,2(21) => CCl4(5) + R6-1(15)', [5.574840e+14, 0.0, 11.24402])
 #  Reaction index: Chemkin #37; RMG #37
 #  Library reaction: 2009_Schirmeister_EDC
-#  Flux pairs: S(25), C4H6CL(31) ; S(25), R1(2);
+#  Flux pairs: C4H6Cl2(25), C4H6CL(31); C4H6Cl2(25), R1(2);
 
-# Reaction 36
+# Reaction 37
 reaction('C4H6Cl2(25) => C4H6CL(31) + R1(2)', [8.953933e+12, 0.0, 66.6971])
 #  Reaction index: Chemkin #38; RMG #38
 #  Library reaction: 2009_Schirmeister_EDC
-#  Flux pairs: C4H6CL(31), C4H6(33) ; C4H6CL(31), R1(2);
+#  Flux pairs: C4H6CL(31), C4H6(33); C4H6CL(31), R1(2);
 
-# Reaction 37
+# Reaction 38
 reaction('C4H6CL(31) => C4H6(33) + R1(2)', [2.624976e+13, 0.0, 34.46957])

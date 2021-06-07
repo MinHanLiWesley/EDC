@@ -46,6 +46,9 @@ tmp='tmp.sh'
 # for mass in 27 32 36
 
 # for i in 0.129 0.13 0.131 0.128
+
+
+
 # for mass in 27 32 36
 # do
 #   for ((  pin=104  ;  pin<=144  ;  pin=pin+ 10))
@@ -56,7 +59,7 @@ tmp='tmp.sh'
 #       do
 #         head -14 ${file_name} >> ${tmp}
 #         pind=$(echo "scale=1;$pin/10" | bc)
-#         echo "python createTrainingData_prevX.py  $mass $pind $ccl $temp " >> ${tmp}
+#         echo "python createTrainingData_newparams.py  $mass $pind  $ccl $temp   " >> ${tmp}
 #         tail -5 ${file_name} >> ${tmp}
 #         mv ${tmp} ${file_name}
 #         qsub ${file_name}
@@ -65,9 +68,9 @@ tmp='tmp.sh'
 #   done
 # done
 
-for mass in 22 27 36
+for mass in 22  27  36
 
-# for i in 0.129 0.13 0.131 0.128
+# # for i in 0.129 0.13 0.131 0.128
 do
   for ((  pin=124  ;  pin<=144  ;  pin=pin+ 20))
   do
@@ -80,7 +83,7 @@ do
 
           head -14 ${file_name} >> ${tmp}
           pind=$(echo "scale=1;$pin/10" | bc)
-          echo "python createTrainingData_prevX.py  $mass $pind $T_out $ccl $temp " >> ${tmp}
+          echo "python createTrainingData_newparams_rand.py  $mass $pind $T_out $ccl $temp " >> ${tmp}
           tail -5 ${file_name} >> ${tmp}
           mv ${tmp} ${file_name}
           qsub ${file_name}

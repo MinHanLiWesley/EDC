@@ -7,7 +7,7 @@ PIN=13
 TIN=350
 # TOUT=
 NAME=$PIN~$TIN~59.5_3
-DIR='0529'
+DIR='0606'
 TAR=59.5
 
 source ~/.bashrc
@@ -31,7 +31,7 @@ echo "=========================================================="
 # python -u hyper_sc.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
 # python -u hyper_noconstraint.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
 # python -u hyper_470.py --name $NAME --pin $PIN --tin $TIN | tee $NAME.log
-python -u ray_test.py | tee $DIR/ML5.log
+python -u ray_test.py | tee $DIR/ML2.log
 
 
 
