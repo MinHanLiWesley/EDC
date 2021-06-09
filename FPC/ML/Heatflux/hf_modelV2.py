@@ -16,14 +16,15 @@ from keras import backend as K
 from scipy.optimize.optimize import fminbound
 import tensorflow as tf
 import itertools
+from functools import partial
 NAME='0606_FPC_modelV11'
 def objective_function(delta_T, hf_obj, prev_y,raw_T_list,mfr=53.053,p=13,ccl4=1000,
                        mole_cracking_heat=171, Cp=0.29, Area=pi*11.1*2.54*18/100):                       
-    print(f"delta_T:{delta_T}")
-    print(f"hf_onj:{hf_obj}")
+
     T_list = raw_T_list + [raw_T_list[-1]+delta_T]
-    print(f"Tubes {len(T_list)-1}:")
-    print(T_list)
+    print(f"\nTubes {len(T_list)-1}:")
+    print(list(np.round(np.hstack(T_list),2)))
+    
     compos,t,t_sum = EDC_cracking(T_list,p,ccl4,mfr,n_pfr=len(T_list)-1)
     with open(f'../results/{NAME}/clf.pickle', 'rb') as f:
         scaler = pickle.load(f)
@@ -31,26 +32,39 @@ def objective_function(delta_T, hf_obj, prev_y,raw_T_list,mfr=53.053,p=13,ccl4=1
     model = build_model()
     model.load_weights(f"../results/{NAME}/model.h5")
     x_predict=np.hstack([T_list[-2], T_list[-1], compos,
-                     p, ccl4, t, t_sum, prev_y]).reshape(1,-1)
+                     p, ccl4, t_sum, t, prev_y]).reshape(1,-1)
     rescaled_X_predict = scaler.transform(x_predict[:, :-1])
     x_predict = [rescaled_X_predict[:, 0:2],
                     rescaled_X_predict[:, 2:], x_predict[:, -1]]
     X = float(model.predict(x_predict))
-    print(f"X:{X}")
+    print(f"prev_y:{prev_y*100:.2f}%")
+    print(f"X:{X*100:.2f}%")
+
+    print(f"delta_X:{(X-prev_y)*100:.2f}%")
+    print(f"delta_T:{delta_T}")
     mfr *= 1000  # T/H to kg/H
     EDC_cracked = (X-prev_y)*mfr  # already / 100
     
     Q1 = mfr * Cp * delta_T
+
     print(f"Q1:{Q1}")
-    if X > prev_y:
-        Q2 = EDC_cracked * mole_cracking_heat
-    else:
-        Q2 = 100000000
+
+    Q2 = EDC_cracked * mole_cracking_heat
+
     print(f"Q2:{Q2}")
+    print(f"hf_obj:{hf_obj}")
     hf = (Q1+Q2)/Area  # surface area
     print(f"hf_calculated:{hf}")
+    if delta_T > 25:
+        Q1 *= 1e4
+    if X <= prev_y:
+        Q2 = 1e15*abs(X-prev_y)
+    hf = (Q1+Q2)/Area
     print(f"hf loss: {abs(hf-hf_obj)}")
-    return abs(hf-hf_obj)
+    if(abs(hf-hf_obj)< 500):
+        return 0
+    else:
+        return abs(hf-hf_obj)/1000
 
 def build_model(lr=0.001):
     first_input = Input(shape=(2,), name='Input_layer_1')
@@ -91,7 +105,7 @@ def EDC_cracking(
         pressure_0,
         CCl4_X_0,
         mass_flow_rate,
-        reaction_mech="../../KM/2009_Schirmeister_EDC/chem_annotated_irreversible.cti",
+        reaction_mech='../../KM/2009_Schirmeister_EDC/test.cti',
         n_steps=1000,
         n_pfr=22,
         length=18,
@@ -130,7 +144,7 @@ def EDC_cracking(
     if CCl4_X_0 > 1:  # ppm
         CCl4_X_0 = float(CCl4_X_0) / 1000000
     T_0 = 273.15 + T_list[0]  # inlet temperature [K]
-    pressure_0 *= ct.one_atm
+    pressure_0 = pressure_0* 98066.5 + ct.one_atm
     spcs = ct.Species.listFromFile(reaction_mech)
     for spc in spcs[::-1]:
         if spc.composition == {'C': 2.0, 'Cl': 2.0, 'H': 4.0} and spc.charge == 0:
@@ -177,7 +191,7 @@ def EDC_cracking(
     # compositions of output stream in each PFR reactor
     compositions = [None] * n_pfr
     states = ct.SolutionArray(r.thermo)
-
+    
     cracking_rates = [0]
     for i, T in enumerate(T_list[1:]):
         Ti = T_list[i] + 273.15
@@ -210,6 +224,24 @@ def EDC_cracking(
         t_total = np.sum(t)
     return compositions[-1], t[-1], t_total
 
+class MinimizeStopper(object):
+    def __init__(self, f=objective_function, tau=10):
+        self.fun = f                     # set the objective function
+        self.best_x = None
+        self.best_func = np.inf
+        self.tau = tau                   # set the user-desired threshold
+
+    def __call__(self, xk, convergence=None,  *args, **kwds):
+        fval = self.fun(xk, *args, **kwds)
+        if fval < self.best_func:
+            self.best_func = fval
+            self.best_x = xk
+        if self.best_func <= self.tau:
+            print("Terminating optimization: objective function threshold triggered")
+            print(self.best_x)
+            return True
+        else:
+            return False
 
 def optimize_hf(Te, Ti=350., target_X=55.0, mfr=53.053, p=13., CCl4=1000,
                 mole_cracking_heat=171, Cp=0.29, SurArea=pi*11.1*2.54*18/100):
@@ -218,18 +250,17 @@ def optimize_hf(Te, Ti=350., target_X=55.0, mfr=53.053, p=13., CCl4=1000,
     ratio = [0.045775715, 0.052760646, 0.054246201, 0.057755337, 0.059452529, 0.060304555, 0.06103342,
              0.060060211, 0.058149083, 0.052729307, 0.048923541, 0.045456762, 0.042852356, 0.04072963,
              0.038601821, 0.036790655, 0.0348499, 0.032971834, 0.031425517, 0.029733461, 0.028328363, 0.027069159]
-    reaction_mech = '../../KM/2009_Schirmeister_EDC/test.cti'
     T_list = [Ti]
     X=[0]
-    bounds=[[8,25],[12,25],[12,25],[12,25],[10,20],[5,18],[5,18],[5,18],[2,10],[1,8],[1,6],[0,3],[0,3],[0,2],[0,2],[0,1],[0,1],[0,1]]
+    bounds=[[8,25],[8,25],[8,25],[8,25],[5,20],[3,18],[3,18],[3,18],[1,10],[1,8],[1,6],[0,3],[0,3],[0,2],[0,2],[0,1],[0,1],[0,1]]
     for i in range(22):
         # res = fminbound(objective_function,bounds[i][0],bounds[i][1],args=(ratio[i]*Total_hf,X[-1],T_list),
             # disp=3)
         # res = basinhopping(objective_function,bounds[i][0],interval=5)
-        res = minimize(objective_function,bounds[i][0],tol=0.001,args=(ratio[i]*Total_hf,X[-1],T_list))
-        # res = fmin(objective_function,2,ftol = 500,maxiter=1000,args=(ratio[i]*Total_hf,X[-1],T_list),
-        #     disp=True)
-        T_list.append(T_list[-1]+res)
+        # res = minimize(objective_function,bounds[i][0],method='Nelder-Mead',args=(ratio[i]*Total_hf,X[-1],T_list),tol=1e-2,ptions={'fatol': 10})
+        res = fmin(objective_function,1,xtol=0.05,maxiter=1000,args=(ratio[i]*Total_hf,X[-1],T_list),
+            disp=True)
+        T_list.append(T_list[-1]+res[0])
         compos,t,t_sum = EDC_cracking(T_list,p,CCl4,mfr,n_pfr=len(T_list)-1)
         with open(f'../results/{NAME}/clf.pickle', 'rb') as f:
             scaler = pickle.load(f)
@@ -237,15 +268,21 @@ def optimize_hf(Te, Ti=350., target_X=55.0, mfr=53.053, p=13., CCl4=1000,
         model = build_model()
         model.load_weights(f"../results/{NAME}/model.h5")
         x_predict=np.hstack([T_list[-2], T_list[-1], compos,
-                        p, CCl4, t, t_sum, X[-1]]).reshape(1,-1)
+                        p, CCl4, t_sum, t, X[-1]]).reshape(1,-1)
         rescaled_X_predict = scaler.transform(x_predict[:, :-1])
         x_predict = [rescaled_X_predict[:, 0:2],
                         rescaled_X_predict[:, 2:], x_predict[:, -1]]
         X.append(float(model.predict(x_predict)))
-
-    print(T_list)
+    print('T_list:')
+    print(','.join(map(str(T_list))))
     print(X)
         
 
 if __name__ == '__main__':
-    optimize_hf(Te=465.)
+    import argparse
+    parser = argparse.ArgumentParser(description='model parameters.')
+    parser.add_argument('--te', required=True, type=float,
+                        help='name of the experiment')
+    args = parser.parse_args()
+    Te = args.te
+    optimize_hf(Te=Te)

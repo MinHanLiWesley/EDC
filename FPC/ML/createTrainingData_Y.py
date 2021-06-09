@@ -55,7 +55,7 @@ def EDC_cracking(
         CCl4_X_0 = float(CCl4_X_0) / 1000000
     print(f"cracking {CCl4_X_0}")
     T_0 = 273.15 + T_list[0]  # inlet temperature [K]
-    # pressure_0 = pressure_0* 98066.5 + ct.one_atm
+    # pressure_0*= ct.one_atm
     pressure_0 = pressure_0* 98066.5 + ct.one_atm
     spcs = ct.Species.listFromFile(reaction_mech)
     for spc in spcs[::-1]:

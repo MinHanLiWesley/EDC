@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+#PBS -l select=1:ncpus=1:mpiprocs=2:ompthreads=2
+#PBS -q workq
+#PBS -j oe
+#PBS -m abe
+source ~/.bashrc
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/wesley/anaconda3/lib/
+cd /home/wesley/EDC/FPC/ML/Heatflux
+echo "=========================================================="
+echo "Starting on : $(date)"
+echo "Running on node : $(hostname)"
+echo "Current directory : $(pwd)"
+echo "Current job ID : $PBS_JOBID"
+echo "=========================================================="
+python -u hf_modelV2.py --te 467.0 | tee 0607_V2/hf1_467.0.log 
+
+echo "Job Ended at $(date)"
+echo '======================================================='
+
+conda deactivate

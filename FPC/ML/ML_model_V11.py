@@ -35,7 +35,7 @@ from keras.callbacks import CSVLogger
 from keras.utils import plot_model
 from keras import backend as K
 import tensorflow as tf
-
+from math import pi
 from createTrainingData_Y import EDC_cracking
 
 """
@@ -416,7 +416,7 @@ def train_model(X_train=None, X_test=None, y_train=None, y_test=None, X_texas=No
 
 
 def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
-            n_steps, n_pfr, length, area, save_fig=False, name='predict', fold_no=None, iter_CCl4=False, FPC=True, print_cracking=False, loss=False, single=False):
+            n_steps, n_pfr, length, area, save_fig=False, name='predict', fold_no=None, iter_CCl4=False, FPC=True, print_cracking=False, loss=False, single=False,heatflux=False):
     """
     Load the saved parameters of StandardScaler() and rebuild the ML model to
     do predictions.
@@ -573,14 +573,14 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
     if FPC:
         results.pop('Choi', None)
         results.pop('Schirmeister', None)
-        # results.pop('CANSPEN', None)
+        results.pop('CANSPEN', None)
         results.pop('CANSPEN(original)', None)
-        results.pop('ML', None)
-        results.pop('FPC', None)
-    # if 'texas' in name:
-    #     results['texas'] = {'cracking_rates': [0, 0.0052, 0.0136, 0.0264, 0.0442, 0.0676, 0.0960, 0.1284,
-    #                         0.1636, 0.2002, 0.2367, 0.2719, 0.3055, 0.3373,
-    #                         0.3675, 0.3962, 0.4234, 0.4493, 0.4739, 0.4972, 0.5194, 0.5405, 0.5605]}
+        # results.pop('ML', None)
+        # results.pop('FPC', None)
+    if 'texas' in name:
+        results['texas'] = {'cracking_rates': [0, 0.0052, 0.0136, 0.0264, 0.0442, 0.0676, 0.0960, 0.1284,
+                            0.1636, 0.2002, 0.2367, 0.2719, 0.3055, 0.3373,
+                            0.3675, 0.3962, 0.4234, 0.4493, 0.4739, 0.4972, 0.5194, 0.5405, 0.5605]}
     # results['Aspen'] = {'cracking_rates': [0, 0.00010555656346777909, 0.00773889044657361, 0.12253220299847101, 0.4358534962862759, 1.4704257448060143, 5.112888346445432, 11.641819366330763, 18.94575052365951, 25.486337297202212, 30.76803285448039, 34.8256884542011, 38.00622976145317, 40.79299505753382, 43.378386743854904, 45.74631871484883, 48.01451925032849, 50.2036598439742, 52.28708883794319]
         # }
     # results['Aspen'] = {'cracking_rates': [0, -0.00010583145035880648, 0.0009689762662690171, 0.01348210211497003, 0.8388811004271801, 2.730716959970969, 7.646919342690484, 14.525045768666189, 22.740428438697478, 32.100788650470335, 42.09960856107712, 51.95102532807749, 61.238835194317545, 69.81190150253171, 77.50084148372945, 84.0347010330249, 89.25910463844127, 93.12546648304223, 95.75025685430445]
@@ -642,8 +642,8 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
         #                     marker='o', label='AI')
         ax2.set_ylabel('Cracking rates (%)')
         ax2.set_ylim(-5, 100)
-        # text_crack = f"final:{(results['ML']['cracking_rates'][-1]*100):.2f}%"
-        # fig.text(0.85, 0.90, text_crack, fontsize=9)
+        text_crack = f"final:{(results['ML']['cracking_rates'][-1]*100):.2f}%"
+        fig.text(0.85, 0.90, text_crack, fontsize=9)
         labs = [l.get_label() for l in lns]
         ax1.legend(lns, labs, loc='lower right', frameon=True)
 
@@ -667,7 +667,36 @@ def predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
                 PLOTPATH, f'predict/{name}/CCl4_{CCl4_X_0:.6f}_mass_{mass_flow_rate}_temp_{T_list[0]}_{name}.png'))
             with open(os.path.join(PLOTPATH, f'predict/{name}/Temperature_profile.txt'), 'w') as f:
                 f.write(str(T_list))
+    if heatflux:
+        HF=[]
+        X = results['ML']['cracking_rates']
+        for i in range(22):
+            mfr = mass_flow_rate * 1000  # T/H to kg/H
+            EDC_cracked = (X[i+1]-X[i])*mfr  # already / 100
+            Cp= 0.29
+            mole_cracking_heat = 171
+            SurArea=pi*11.1*2.54*18/100
+            Q1 = mfr * Cp * (T_list[i+1]-T_list[i])
+            Q2 = EDC_cracked * mole_cracking_heat
+            hf = (Q1+Q2)/SurArea
+            HF.append(hf)
+        print(f"HF: ",end='')
+        print(','.join(map(str,np.round(HF,2))))
+        fig, ax1 = plt.subplots()
+        ln = ax1.plot(range(1,len(T_list)), HF, color='g',
+                marker='o', label='HeatFlux')
+        ax1.set_ylim(0, 30000)
+        ax1.set_xlabel("PFR index")
+        ax1.set_ylabel("HeatFlux(Kcal/hr/m2)")
+        # ax1.grid()
+        plt.xticks(range(1,len(HF)+1))
 
+        # ax1.legend(ln, 'Heatflux', loc='lower right', frameon=True)
+        plt.title('HeatFlux curve')
+        if not os.path.exists(os.path.join(PLOTPATH, "predict")):
+            os.mkdir(os.path.join(PLOTPATH, "predict"))
+        plt.savefig(os.path.join(
+            PLOTPATH, 'predict', '{}_hf.png'.format(name)))
     return loss
 
 
@@ -1225,7 +1254,7 @@ if __name__ == '__main__':
             #           448, 449, 449, 450, 450, 451, 453, 454, 454, 455, 457, 459]
             # T_list=[350, 368, 377, 391, 408, 421, 427, 434, 441, 445, 445, 446, 450, 451, 451, 451, 453, 454, 455, 457, 458, 459, 459]
             # T_list=[350, 380, 396, 413, 428, 436, 444, 453, 459,463, 465, 467, 469, 470, 471, 472, 473, 474, 475]
-            # T_list = [348.3, 368.3, 388.3, 405.8, 421.8, 435.3, 446.3, 455.3, 462.3, 467.7, 470.7,
+            # T_list = [348.3, 368.8, 388.3, 405.8, 421.8, 435.3, 446.3, 455.3, 462.3, 467.7, 470.7,
             #           472.7, 474.1, 475.3, 476.5, 477.6, 478.7, 479.7, 480.6, 481.5, 482.3, 483.1, 483.9]
             # T_list=[350.0, 366.97, 383.41, 398.97, 413.3, 426.04, 436.84, 445.35, 451.37, 455.29, 457.67, 459.03, 459.74, 460.17, 460.59, 461.05, 461.5, 461.93, 462.31, 462.6, 462.78, 462.81, 462.85]
             # T_list=[348.3,362.9,387.2,413.5,442.7,458.1,459.6,461.8,464.7,466.9,467.6,469.8,470.5,472.0,473.4,475.7,477.8,478.6,479.3,480.1,480.8,482.2,483.9]
@@ -1235,26 +1264,32 @@ if __name__ == '__main__':
             #           458.15, 459.985495, 460.75741101, 461.06, 461.38341908,
             #           461.80144588, 462.28376314, 462.80005359, 463.32, 463.8132851,
             #           464.24959163, 464.59860235, 464.83]
+            # T_list = [350.0, 365.35, 383.9, 400.85, 416.2, 429.95, 440.5, 450.25, 455.6, 459.35, 460.6, 461.55, 462.35, 463.15, 463.65, 464.15, 464.65, 465.15, 465.65, 466.15, 466.45, 466.55, 466.66]
+            T_list=[350.0, 364.55, 383.1, 400.05, 415.4, 428.75, 439.3, 448.25, 454.25, 458.2, 459.15, 460.15, 461.15, 461.85, 462.15, 462.45, 463.15, 463.65, 464.15, 464.65, 464.95, 465.05, 465.18]
             # T_list = [350., 368.21, 385.38, 401.26, 415.62,428.21, 438.80, 447.15, 453.13, 457.08,459.47, 460.72, 461.26, 461.49,461.73,462.04, 462.41, 462.83 ,463.28,463.744,464.20, 464.64, 465.07]
             # T_list = [347, 358, 383, 413, 438, 454, 456, 458, 460, 462, 464, 466, 468, 470, 472, 474, 476, 477, 477, 478, 479, 480, 481]
-            pressure_0 = 11.4
+            # pressure_0 = 11.4
             # pressure_0 = 10.33
-            # pressure_0 = 12.4
-            # CCl4_X_0 = 500
-            CCl4_X_0 = 0
-            # mass_flow_rate = 43.8
-            mass_flow_rate = 36
-            # mass_flow_rate = 53
+            print("T_list: ",end='')
+            print(','.join(map(str,T_list)))
+            pressure_0 = 13
+            # pressure_0 = 10.33
+            CCl4_X_0 = 1000
+            # CCl4_X_0 = 0
+            # mass_flow_rate = 48.15
+            # mass_flow_rate = 36
+            mass_flow_rate = 53
             n_steps = CSTR
             # n_pfr = len(T_list)-1
             # length = 16.3
             length = 18
             n_pfr = len(T_list)-1
             # area = 3.14 * (186.3 / 1000) ** 2 / 4
-            area = 3.14 * (202.3 / 1000) ** 2 / 4
+            # area = 3.14 * (202.3 / 1000) ** 2 / 4
             # area = 3.14 * (238.76 / 1000) ** 2 / 4
-            # area = 3.14 * (262 / 1000) ** 2 / 4
-
+            area = 3.14 * (262 / 1000) ** 2 / 4
+            # area = pi*(11.1*2.54/100) ** 2 /4
+            heatflux=True
             # if n_pfr == 18:
             #     area = 3.14 * (202.3 / 1000) ** 2 / 4
             # elif n_pfr == 22:
@@ -1264,14 +1299,14 @@ if __name__ == '__main__':
             # name = '36_12.4_350_orginal'
             # name = '36_11.4_320_orginal_test5'
             # name = 'texas48'
-            # name = '30_350_5'
-            name = '20_340'
+            name = '30_465'
+            # name = '20_340'
             single = True
             # Prediction
             print('Starting prediction...')
             if single:
                 loss = predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
-                               n_steps, n_pfr, length, area, save_fig=True, name=name, print_cracking=True, FPC=True, single=single)
+                               n_steps, n_pfr, length, area, save_fig=True, name=name, print_cracking=True, FPC=True, single=single,heatflux=True)
             else:
                 for CCl4_X_0 in np.linspace(0, 2500, 21):
                     loss = predict(reaction_mech, T_list, pressure_0, CCl4_X_0, mass_flow_rate,
@@ -1289,3 +1324,5 @@ if __name__ == '__main__':
                         writer.append_data(image)
 
                 print('Mean absolute error of `{}` is {:.5f}'.format(NAME, loss))
+
+
